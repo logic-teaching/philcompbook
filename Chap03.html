@@ -378,7 +378,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turing-on-turing-machines">Turing on Turing machines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-universal-machine-and-diagonalization">The universal machine and diagonalization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-universal-machine">The universal machine</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-existence-of-the-univerasal-machine">The existence of the univerasal machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-existence-of-the-universal-machine">The existence of the universal machine</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagonalization-and-the-halting-set">Diagonalization and the halting set</a></li>
@@ -554,7 +554,7 @@ if you are halting-state then do nothing</p></li>
 </div>
 <p>The program begins by sweeping-right, and when it sees a <span class="math notranslate nohighlight">\(b\)</span>, it switches into the state saw-first <span class="math notranslate nohighlight">\(b\)</span>. In this state, it then looks for another <span class="math notranslate nohighlight">\(b\)</span> and changes it to an <span class="math notranslate nohighlight">\(r\)</span>.</p>
 <p>Here is the state diagram for this Turing machine program:</p>
-<p><img alt="Example 3" src="_images/turing-ex03.png" /></p>
+<p><img alt="Example 3" src="_images/turing-ex03v2.png" /></p>
 <p>There are three states in this Turing machine model and so three circles. Perhaps what is distinctive about this diagram, in contradistinction to the previous diagrams, is that the arrow marking the transition from the saw-first-<span class="math notranslate nohighlight">\(b\)</span> state to the halting-state has two labels on it, reflective of the fact that there are two circumstances in which it makes this transition: first if it sees another <span class="math notranslate nohighlight">\(b\)</span> (in which case it changes it to an <span class="math notranslate nohighlight">\(r\)</span>), and second if it sees a blank (this would happen if there was no second <span class="math notranslate nohighlight">\(b\)</span>).</p>
 </section>
 </section>
@@ -623,8 +623,8 @@ if you are halting-state then do nothing</p></li>
 <p>The notation <span class="math notranslate nohighlight">\( \cong\)</span> means that if either reaches a halting state, then the other does, and they have the same result on the tape.</p>
 <p>Here I am appealing to a convention whereby we code numbers as strings in some natural way.</p>
 </section>
-<section id="the-existence-of-the-univerasal-machine">
-<h3>The existence of the univerasal machine<a class="headerlink" href="#the-existence-of-the-univerasal-machine" title="Link to this heading">#</a></h3>
+<section id="the-existence-of-the-universal-machine">
+<h3>The existence of the universal machine<a class="headerlink" href="#the-existence-of-the-universal-machine" title="Link to this heading">#</a></h3>
 <p>Why should there exist a universal machine?</p>
 <p>Well, each program is just a finite set of instructions about a finite set of symbols, which we can represent as a finite string of symbols.</p>
 <p>Hence, program <span class="math notranslate nohighlight">\(e_0\)</span> on input <span class="math notranslate nohighlight">\((e,n)\)</span> just inspects <span class="math notranslate nohighlight">\(e\)</span> and figures out which (if any) Turing machine program it represents, and then it proceeds to run input <span class="math notranslate nohighlight">\(n\)</span> on this Turing machine program.</p>
@@ -647,7 +647,7 @@ if you are halting-state then do nothing</p></li>
     <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">φ_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">reuturn</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="mi">0</span>
 </pre></div>
 </div>
 <p>Then we get a contradiction as follows.</p>
@@ -773,7 +773,7 @@ if you are halting-state then do nothing</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turing-on-turing-machines">Turing on Turing machines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-universal-machine-and-diagonalization">The universal machine and diagonalization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-universal-machine">The universal machine</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-existence-of-the-univerasal-machine">The existence of the univerasal machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-existence-of-the-universal-machine">The existence of the universal machine</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagonalization-and-the-halting-set">Diagonalization and the halting set</a></li>
