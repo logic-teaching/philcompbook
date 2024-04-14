@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Philcomp &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 1" href="Chap01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/intro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Philcomp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aims-and-goals">Aims and goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequistes">Prerequistes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-and-examples">Code and examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outline">Outline</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="philcomp">
+<h1>Philcomp<a class="headerlink" href="#philcomp" title="Link to this heading">#</a></h1>
+<section id="aims-and-goals">
+<h2>Aims and goals<a class="headerlink" href="#aims-and-goals" title="Link to this heading">#</a></h2>
+<p>This is an overview of philosophy of computation. We are going to start with the founding figures of Turing, Church, and Kleene and look at different conceptual analyses of computation (bounded and local action, beta reduction of lambda terms) which are related to the different models of computation (Turing machines, lambda calculi). Then we are going to look at effects of natural non-computability (Gödel’s disjunction) and the non-computability of methods of verification (Rice’s theorem). Then we are going to do topics such as:</p>
+<ul class="simple">
+<li><p>the apparent absoluteness of computation</p></li>
+<li><p>the confluence of different models of computation</p></li>
+<li><p>nature of feasibility (what is the intuitive notion)</p></li>
+<li><p>how semantics for procedures differs from semantics for indicative statements</p></li>
+<li><p>neural network models and its relation to computational theory of mind</p></li>
+<li><p>models of learning and its relation to reliability of inductive methods</p></li>
+<li><p>how computer learning is apparently different than human learning</p></li>
+<li><p>how fairness and explanation of machine learning methods can be assessed</p></li>
+<li><p>the physical implementation of computation and challenges from quantum computation.</p></li>
+</ul>
+</section>
+<section id="prerequistes">
+<h2>Prerequistes<a class="headerlink" href="#prerequistes" title="Link to this heading">#</a></h2>
+<p>This course does not presuppose any prior familiarity with the theory of computation or with programming. In terms of prior knowledge, this is structured so that its topic is to computation roughly what medical ethics is to medicine. Everyone should be able to get a lot out of it, due in part to the ubiquity of computation in our everyday lives. We will use the historical development to orientate the discussion.</p>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
+<p>Thanks to the wonderful students in <a class="reference external" href="https://bruinlearn.ucla.edu/courses/186473">UCLA’s Phlios 128 in Spring 2024</a> for their feedback on this material.</p>
+</section>
+<section id="code-and-examples">
+<h2>Code and examples<a class="headerlink" href="#code-and-examples" title="Link to this heading">#</a></h2>
+<p>Philosophy works best when there are good examples at play to motivate a position or to assess a position. And it is all the better when it is easy for everyone, with just a little bit of time and creativity, to come up with the examples. The recent popularity of python has made coming up with worked out examples easier than ever. Hence, there are many bits of python code and other code scattered throughout the text, mostly to illustrate key ideas, but also to provide an easy way to work out specific examples.</p>
+<p>For the python code, one can:</p>
+<ul class="simple">
+<li><p>click on the <i class="fa fa-rocket" aria-hidden="true"></i> icons at the top center-right of each chapter page, which will launch the page in a <a class="reference external" href="https://mybinder.org">binder</a> which does not require you to install anything on your machine (but you won’t be able to save anything)</p></li>
+</ul>
+<p>Or one can just copy and paste the code into your favorite Python interpreter and run it. There are lots of easy ways to run python these days, including the following:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.programiz.com/python-programming/online-compiler/">Programiz</a> (no set-up required; but don’t use this if you want/need to easily save)</p></li>
+<li><p><a class="reference external" href="https://jupyter.idre.ucla.edu/hub/login?next=%2Fhub%2F">UCLA Jupyterhub</a> (virtually no set-up required; but requires UCLA sign on; your institution probably has Juptyerhub)</p></li>
+<li><p><a class="reference external" href="https://www.anaconda.com/anaconda-navigator">Anaconda Navigator</a> (requires about an hour to set up; for use on desktop machines; just watch some youtube videos if you need help getting started). Anaconda also has come out with <a class="reference external" href="https://www.anaconda.com/">a web based platform</a>, but I have less experience with this.</p></li>
+</ul>
+<p>For the other kinds of code that show up, there is link to some an online interpeter given where possible and one can just cut and paste the code.</p>
+</section>
+<section id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Link to this heading">#</a></h2>
+<p>The rough plan is as follows, where each Chapter corresponds to a lecture. There is a reference given which gives one a little sense of what we are going to look at.</p>
+<p>Chapter 1: recursion in the 20s, primitive recursion and Skolem <span id="id1">[<a class="reference internal" href="references.html#id53" title="Thoralf Skolem. Begründung der elementaren Arithmetik durch die rekurrierende Denkweise ohne Anwendung scheinbarer Veränderlichen mit unendlichem Ausdehnungsbereich. Videnskapsselskapets skrifter, I. Matematisk-naturvidenskabelig klasse, 1923.">Skolem, 1923</a>]</span> <span id="id2">[<a class="reference internal" href="references.html#id54" title="Thoraf Skolem. The foundations of elementary arithmetic established by means of the recursive mode of thought, without the use of apparent variables ranging over infinite domains. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 302–333. Harvard University Press, 1967.">Skolem, 1967</a>]</span>,</p>
+<p>Chapter 2: recursion in the 20s, Hilbert and BHK <span id="id3">[<a class="reference internal" href="references.html#id56" title="David Hilbert. Über das unendliche. Mathematische Annalen, 95(1):161–190, 1926.">Hilbert, 1926</a>]</span>, <span id="id4">[<a class="reference internal" href="references.html#id71" title="David Hilbert. On the infinite. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 367–392. Harvard University Press, 1967.">Hilbert, 1967</a>]</span>, <span id="id5">[<a class="reference internal" href="references.html#id45" title="L E J Brouwer. Brouwer's Cambridge Lectures on Intuitionism. Cambridge University Press, Cambridge-New York, 1981.">Brouwer, 1981</a>]</span>, <span id="id6">[<a class="reference internal" href="references.html#id38" title="Arend Heyting. Intuitionism. An Introduction. North-Holland, Amsterdam, 1956.">Heyting, 1956</a>]</span>, <span id="id7">[<a class="reference internal" href="references.html#id17" title="Arend Heyting. Die intuitionistische Grundlegung der Mathematik. Erkenntnis, 2:106-115, 1931.">Heyting, 1931</a>]</span></p>
+<p>Chapter 3:  Turing machine model, boundedness and locality conditions. <span id="id8">[<a class="reference internal" href="references.html#id65" title="A M Turing. On computable numbers, with an application to the Entscheidungsproblem. Proceedings of the London Mathematical Society, s2-42(1):230–265, 1937.">Turing, 1937</a>]</span>, <span id="id9">[<a class="reference internal" href="references.html#id66" title="Wilfried Sieg. On computability. In Andrew Irvine, editor, Philosophy of Mathematics, volume 4 of Handbook of the Philosophy of Science, pages 549–630. North-Holland, Amsterdam, 2009.">Sieg, 2009</a>]</span>, <span id="id10">[<a class="reference internal" href="references.html#id78" title="Robin Gandy. Church's thesis and principles for mechanisms. In Jon Barwise, H Jerome Keisler, and Kenneth Kunen, editors, Studies in Logic and the Foundations of Mathematics, volume 101, pages 123–148. Elsevier, 1980.">Gandy, 1980</a>]</span></p>
+<p>Chapter 4: Some non-computable sets and some reducibilities. <span id="id11">[<a class="reference internal" href="references.html#id24" title="A. N. Kolmogorov. Zur Deutung der intuitionistischen Logik. Mathematische Zeitschrift, 35:58-65, 1932.">Kolmogorov, 1932</a>]</span>, <span id="id12">[<a class="reference internal" href="references.html#id25" title="A. N. Kolmogorov. On the interpretation of intuitionistic logic. In Paolo Mancosu, editor, From Brouwer to Hilbert: The Debate on the Foundations of Mathematics in the 1920s, pages 328-334. Oxford University Press, New York, 1998.">Kolmogorov, 1998</a>]</span>, <span id="id13">[<a class="reference internal" href="references.html#id3" title="Matthias Jenny. Counterpossibles in science: the case of relative computability. Nous, 52(3):530–560, 2018.">Jenny, 2018</a>]</span></p>
+<p>Chapter 5: Untyped lambda calculus, origin story of LISP and scheme; computation as reduction.</p>
+<p>Chapter 6: Curry-Howard isomorphism and proof verification; a glance at Lean. <span id="id14">[<a class="reference internal" href="references.html#id76" title="Jean Gallier. On the correspondence between proofs and λ-terms. In Ph de Groote, editor, The Curry-Howard Isomorphism, volume 8 of Cahiers du Centre de Logique, pages 55–138. Academia-Erasme, Louvain, 1995.">Gallier, 1995</a>]</span></p>
+<p>Chapter 7: Church-Turing thesis, confluence arguments, conceptual analysis vs. Carnapian explication. <span id="id15">[<a class="reference internal" href="references.html#id77" title="Robin Gandy. The Confluence of Ideas in 1936. In R Herken, editor, The Universal Turing Machine – A Half Century Later, pages 51–102. Oxford University Press, Oxford, 1988.">Gandy, 1988</a>]</span>, <span id="id16">[<a class="reference internal" href="references.html#id70" title="Stephen Cole Kleene. Church's thesis. In Introduction to Metamathematics, Bibliotheca Mathematica, pages 317–323. North-Holland, 1952.">Kleene, 1952</a>]</span></p>
+<p>Chapter 8: Absoluteness of computation vs. relativity of proof; Godel’s disjunction. <span id="id17">[<a class="reference internal" href="references.html#id75" title="Kurt Gödel. Remarks before the princeton bicentennial conference on problems in mathematics. In Collected works. Vol. II. Publications 1938–1974, pages 150–153. Clarendon, New York, 1990.">Gödel, 1990</a>]</span>, <span id="id18">[<a class="reference internal" href="references.html#id74" title="Kurt Gödel. Some basic theorems on the foundations of mathematics and their implications [the Gibbs lecture]. In Collected Works. Vol. III. Unpublished Lectures and Essays, pages 304–323. Clarendon, New York, 1995.">Gödel, 1995</a>]</span></p>
+<p>Chapter 9: Feasibility and why philosophers should care about it. <span id="id19">[<a class="reference internal" href="references.html#id83" title="Scott Aaronson. Why philosophers should care about computational complexity. In B Jack Copeland, Carl J Posy, and Oron Shagrir, editors, Computability: Turing, Gödel, Church, and Beyond, pages 261–328. MIT Press, 2013.">Aaronson, 2013</a>]</span></p>
+<p>Chapter 10: What programs mean: denotational. <span id="id20">[<a class="reference internal" href="references.html#id67" title="Dana S Scott and Christopher Strachey. Toward a mathematical semantics for computer languages. Volume 1. Oxford University Computing Laboratory, Programming Research Group Oxford, 1971.">Scott and Strachey, 1971</a>]</span>, <span id="id21">[<a class="reference internal" href="references.html#id16" title="Glynn Winskel. The Formal Semantics of Programming Languages: An Introduction. MIT Press, 1993.">Winskel, 1993</a>]</span></p>
+<p>Chapter 11: What programs mean: operational. <span id="id22">[<a class="reference internal" href="references.html#id15" title="Raymond Turner. Understanding programming languages. Minds and Machines, 17(2):203–216, 2007.">Turner, 2007</a>]</span>, <span id="id23">[<a class="reference internal" href="references.html#id14" title="Benjamin C Pierce. Types and Programming Languages. MIT Press, 2002.">Pierce, 2002</a>]</span></p>
+<p>Chapter 12: Neural networks. <span id="id24">[<a class="reference internal" href="references.html#id13" title="Hava T Siegelmann. Neural Networks and Analog Computation: Beyond the Turing Limit. Springer, 2012.">Siegelmann, 2012</a>]</span></p>
+<p>Chapter 13: Computational theory of mind. <span id="id25">[<a class="reference internal" href="references.html#id79" title="Shimon Edelman. Computing the Mind: How the Mind Really Works. Oxford University Press, USA, 2008.">Edelman, 2008</a>]</span></p>
+<p>Chapter 14: Vapnik on statistical learning theory. <span id="id26">[<a class="reference internal" href="references.html#id63" title="Vladimir Naumovich Vapnik. Statistical Learning Theory. Wiley, 1998.">Vapnik, 1998</a>]</span>, <span id="id27">[<a class="reference internal" href="references.html#id64" title="Vladimir Vapnik. The Nature of Statistical Learning Theory. Springer, 2000.">Vapnik, 2000</a>]</span></p>
+<p>Chapter 15: Harman on machine learning. <span id="id28">[<a class="reference internal" href="references.html#id72" title="Gilbert Harman and Sanjeev Kulkarni. Reliable Reasoning: Induction and Statistical Learning Theory. MIT Press, 2012.">Harman and Kulkarni, 2012</a>]</span>, <span id="id29">[<a class="reference internal" href="references.html#id73" title="Sanjeev Kulkarni and Gilbert Harman. An Elementary Introduction to Statistical Learning Theory. Wiley, 2011.">Kulkarni and Harman, 2011</a>]</span></p>
+<p>Chapter 16: Buckner on deep learning, Dehane on human learning. <span id="id30">[<a class="reference internal" href="references.html#id80" title="Cameron J Buckner. From Deep Learning to Rational Machines. Oxford University Press, 2024.">Buckner, 2024</a>]</span>, <span id="id31">[<a class="reference internal" href="references.html#id12" title="Stanislas Dehaene. How We Learn: Why Brains Learn Better Than Any Machine . . . for Now. Penguin, 2021.">Dehaene, 2021</a>]</span></p>
+<p>Chapter 17: Machine learning fairness. <span id="id32">[<a class="reference internal" href="references.html#id81" title="Solon Barocas, Moritz Hardt, and Arvind Narayanan. Fairness and Machine Learning: Limitations and Opportunities. MIT Press, 2023.">Barocas <em>et al.</em>, 2023</a>]</span></p>
+<p>Chapter 18: Explanations and AI. <span id="id33">[<a class="reference internal" href="references.html#id11" title="Christoph Molnar. Interpretable Machine Learning: A Guide For Making Black Box Models Explainable. Independently published, 2022.">Molnar, 2022</a>]</span></p>
+<p>Chapter 19: Physical computation. <span id="id34">[<a class="reference internal" href="references.html#id69" title="Oron Shagrir. The Nature of Physical Computation. Oxford University Press, 2022.">Shagrir, 2022</a>]</span>, <span id="id35">[<a class="reference internal" href="references.html#id68" title="Gualtiero Piccinini. Physical Computation: A Mechanistic Account. OUP Oxford, 2015.">Piccinini, 2015</a>]</span></p>
+<p>Chapter 20: Challenges from quantum computation. <span id="id36">[<a class="reference internal" href="references.html#id10" title="Michael A Nielsen and Isaac L Chuang. Quantum Computation and Quantum Information: 10th Anniversary Edition. Cambridge University Press, anniversary edition edition, 2011.">Nielsen and Chuang, 2011</a>]</span></p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="Chap01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aims-and-goals">Aims and goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequistes">Prerequistes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-and-examples">Code and examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outline">Outline</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

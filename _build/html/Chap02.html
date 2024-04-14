@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 2 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chap02';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 3" href="Chap03.html" />
+    <link rel="prev" title="Chapter 1" href="Chap01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Chap02.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chap02.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hilbert-program">The Hilbert program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-mathematics-existence-is-consistency-in-the-wide-sense">In mathematics, existence is consistency in the wide sense</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proving-consistency-in-the-wide-sense">Proving consistency in the wide sense</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-poincare-circularity-objection">The Poincaré circularity objection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hilbert-response">The Hilbert response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-word-on-terminology">A word on terminology</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finitism">Finitism</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contentul-induction">Contentul induction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tait-s-thesis-finitism-is-primitive-recursive-arithmetic">Tait’s Thesis: finitism is primitive recursive arithmetic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brouwer">Brouwer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-act">The first act</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brouwer-on-the-revision-of-logic">Brouwer on the revision of logic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-negation-is-single-negation">Triple negation is single negation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pi-example">The pi example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heyting-and-bhk">Heyting and BHK</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-traditional-statement-of-bhk">The traditional statement of BHK</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heyting-s-notion-of-construction">Heyting’s notion of construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kreisel-and-sundholm-on-the-second-constructions">Kreisel and Sundholm on the second constructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dummett-s-appropriation-of-bhk">Dummett’s appropriation of BHK</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-2">
+<h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Link to this heading">#</a></h1>
+<p>We continue our survey the precursors to the notion of computation in the 1920s. Hilbert was motiviated to define a notion of contentful arithmetic as part of his program for proving the consistency of higher mathematics (consistency in the wide sense, what is often called conservation). This notion of contentful arithmetic seems to involve constructing and deconstructing numerals consisered as symbols which are tokened in a quasi-perceptual manner. In Brouwer and Heyting, we find an alternative idea emerging from the debates in the foundations of mathematics: mathematical assertions involve a primitive notion of construction, which involves the ability to act on other constructions.</p>
+<section id="the-hilbert-program">
+<h2>The Hilbert program<a class="headerlink" href="#the-hilbert-program" title="Link to this heading">#</a></h2>
+<section id="in-mathematics-existence-is-consistency-in-the-wide-sense">
+<h3>In mathematics, existence is consistency in the wide sense<a class="headerlink" href="#in-mathematics-existence-is-consistency-in-the-wide-sense" title="Link to this heading">#</a></h3>
+<p>Both Poincaré in 1891 and Hilbert in 1899 voice the view that in mathematics, existence just comes down to consistency with what is already known:</p>
+<p>Poincaré in 1891, speaking about non-Euclidean geometries:</p>
+<blockquote>
+<div><p>A mathematical entity exists provided its definition implies no contradiction, either in itself, or with the propositions already admitted (Poincaré 1891 p. 772, <span id="id1">[<a class="reference internal" href="references.html#id34" title="Henri Poincaré. La science et l'hypothèse. Flammarion, Paris, 1902.">Poincaré, 1902</a>]</span> p. 59, <span id="id2">[<a class="reference internal" href="references.html#id33" title="Henri Poincaré. The Foundations of Science: Science and Hypothesis, The Value of Science, Science and Method. Science Press, New York, 1913.">Poincaré, 1913</a>]</span> p. 61)</p>
+</div></blockquote>
+<p>Hilbert, in letter to Frege 1899, on Hilbert’s work on founding geometry in the real numbers (and vice-versa):</p>
+<blockquote>
+<div><p>You write: “[…] Out of the truth of the axioms follows that they do not contradict one another.” It interested me greatly to hear you make this very claim since as long as I have thought, written, and lectured on these matters, I have said exactly the opposite: when arbitrarily laid down axioms do not in any of their consequences contradict one another, then they are true, and the things defined through them exist. That is for me the criterion of truth and existence. (<span id="id3">[<a class="reference internal" href="references.html#id39" title="Gottlob Frege. Nachgelassene Schriften und wissenschaftlicher Briefwechsel. Meiner, Hamburg, 1983.">Frege, 1983</a>]</span> vol 2 p. 66, <span id="id4">[<a class="reference internal" href="references.html#id40" title="Gottlob Frege. Philosophical and Mathematical Correspondence. Basil Blackwell, 1980.">Frege, 1980</a>]</span> pp. 39-40).</p>
+</div></blockquote>
+</section>
+<section id="proving-consistency-in-the-wide-sense">
+<h3>Proving consistency in the wide sense<a class="headerlink" href="#proving-consistency-in-the-wide-sense" title="Link to this heading">#</a></h3>
+<p>In his talk at the 1900 International Congress of Mathematicians, Hilbert had included the consistency of the analysis and the real numbers as the second problem in his famous list of problems (<span id="id5">[<a class="reference internal" href="references.html#id37" title="David Hilbert. Mathematische Probleme. Vortrag, gehalten auf dem internationalen Mathematiker-Congress zu Paris 1900. Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse, pages 253–297, 1900.">Hilbert, 1900</a>]</span> p. 264-266).</p>
+<p>Hilbert suggests that while in geometry one can prove consistency by finding a model, in arithmetic one needs a “direct way” to prove consistency (<span id="id6">[<a class="reference internal" href="references.html#id37" title="David Hilbert. Mathematische Probleme. Vortrag, gehalten auf dem internationalen Mathematiker-Congress zu Paris 1900. Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse, pages 253–297, 1900.">Hilbert, 1900</a>]</span> p. 265).</p>
+<p>Hilbert only elaborated on what this direct way might be in his talk at the 1904 International Congress of Mathematicians (<span id="id7">[<a class="reference internal" href="references.html#id9" title="David Hilbert. Über die Grundlagen der Logik und der Arithmetik. In A Krazer, editor, Verhandlungen des dritten Internationalen Mathematiker-Kongresses in Heidelberg vom 8. bis 13. August 1904, pages 174–85. Teubner, Leipzig, 1905.">Hilbert, 1905</a>]</span>, reprinted in <span id="id8">[<a class="reference internal" href="references.html#id8" title="Jean van Heijenoort. From Frege to Gödel : A Source Book in Mathematical Logic, 1879-1931. Harvard University Press, Cambridge, 1967.">van Heijenoort, 1967</a>]</span>).</p>
+<p>While the details are at best sketched, Hilbert’s idea seems to be to prove consistency of this system by showing that one cannot prove an identity asserting that some iterate of terms formed from successor and zero is equal to zero. This was to be done, apparently, by an examination of the structure of the identities which one can prove in the system. (<span id="id9">[<a class="reference internal" href="references.html#id9" title="David Hilbert. Über die Grundlagen der Logik und der Arithmetik. In A Krazer, editor, Verhandlungen des dritten Internationalen Mathematiker-Kongresses in Heidelberg vom 8. bis 13. August 1904, pages 174–85. Teubner, Leipzig, 1905.">Hilbert, 1905</a>]</span> p. 180, <span id="id10">[<a class="reference internal" href="references.html#id8" title="Jean van Heijenoort. From Frege to Gödel : A Source Book in Mathematical Logic, 1879-1931. Harvard University Press, Cambridge, 1967.">van Heijenoort, 1967</a>]</span> p. 134).</p>
+</section>
+<section id="the-poincare-circularity-objection">
+<h3>The Poincaré circularity objection<a class="headerlink" href="#the-poincare-circularity-objection" title="Link to this heading">#</a></h3>
+<p>Poincaré objected that that Hilbert’s consistency proof would proceed by mathematical induction on length of proof, and so cannot possibly be used to secure the consistency of mathematical induction:</p>
+<blockquote>
+<div><p>If these propositions [derived in the system] are infinite in number, this direct verification [of consistency] can no longer be made; recourse must be had to procedures where in general it is necessary to invoke just this principle of complete [mathematical] induction which is precisely the thing to be proved (<span id="id11">[<a class="reference internal" href="references.html#id32" title="Henri Poincaré. Les mathématiques et la logique. Revue de métaphysique et de morale, 13:815–835, 1905.">Poincaré, 1905</a>]</span> p. 820)</p>
+</div></blockquote>
+<p>We saw Skolem last time repeating this point in 1923.</p>
+</section>
+<section id="the-hilbert-response">
+<h3>The Hilbert response<a class="headerlink" href="#the-hilbert-response" title="Link to this heading">#</a></h3>
+<p>In the early 1920s, Hilbert had a response to this Poincaré circularity objection.</p>
+<p>Namely, one should distinguish between two different types of arithmetic: there was <em>contentful arithmetic</em> and <em>formal arithmetic</em>.</p>
+<p>Further, in consistency proofs, what was happening was that one was showing by contentful mathematical induction that axiom systems containing formal mathematical induction were consistent.</p>
+<p>This went hand in hand with Hilbert and his students and coauthors Zermelo, Ackermann, Gentzen, and Bernays expending a whole lot of time formalizing different systems of arithmetic and set theory.</p>
+</section>
+<section id="a-word-on-terminology">
+<h3>A word on terminology<a class="headerlink" href="#a-word-on-terminology" title="Link to this heading">#</a></h3>
+<p>A synonym for <em>contentful arithmetic</em> in Hilbert and the secondary literature is <em>finitism</em>.</p>
+<p>Sometimes <em>finitism</em> might be used slightly more broadly to dennote whatever more general theoretical position about reasoning there is (in Hilbert) which motivates a restriction to contentful arithmetic.</p>
+</section>
+</section>
+<section id="finitism">
+<h2>Finitism<a class="headerlink" href="#finitism" title="Link to this heading">#</a></h2>
+<section id="contentul-induction">
+<h3>Contentul induction<a class="headerlink" href="#contentul-induction" title="Link to this heading">#</a></h3>
+<p>Hilbert’s paradigmatic example of contentful mathematical induction is the proof of the commutativity of addition. Assuming that associativity is already established, he describes a procedure recursive in <span class="math notranslate nohighlight">\(b\)</span> for showing that <span class="math notranslate nohighlight">\(a+b=b+a\)</span>. We illustrate it here in the case of <span class="math notranslate nohighlight">\(a=1\)</span>.</p>
+<p>To show that <span class="math notranslate nohighlight">\(1+2=2+1\)</span>, one argues as follows, where the first and last identities are definitions of <span class="math notranslate nohighlight">\(2\)</span> and the middle identity  is given by associativity:</p>
+<div class="math notranslate nohighlight">
+\[1+2 = 1+(1+1) = (1+1)+1 = 2+1\]</div>
+<p>Likewise, to show that <span class="math notranslate nohighlight">\(1+3=3+1\)</span>, one argues as follows, where  the first and last identities are given by definition of <span class="math notranslate nohighlight">\(3\)</span>, the second identity is by the case of commutativity already established, and the third identity is by associativity:</p>
+<div class="math notranslate nohighlight">
+\[1+3 = 1+(1+2) = 1+(2+1) = (1+2)+1 = 3+1\]</div>
+<p>Hilbert described this kind of contentful mathematical induction as follows:</p>
+<blockquote>
+<div><p>And in particular, regarding the proof just given that <span class="math notranslate nohighlight">\(\mathfrak{a}+\mathfrak{b}=\mathfrak{b}+\mathfrak{a}\)</span>, I should like to stress that this proof is merely a procedure that rests on the construction and deconstruction of number-signs and that it is essentially different from the principle that plays such a prominent role in higher arithmetic, namely, the principle of complete induction or of inference from <span class="math notranslate nohighlight">\(n\)</span> to <span class="math notranslate nohighlight">\(n+1\)</span> (<span id="id12">[<a class="reference internal" href="references.html#id7" title="David Hilbert. Neubegründung der Mathematik. Erste Mitteilung. Abhandlungen aus dem Mathematischen Seminar der Universitat Hamburg, 1(1):157–177, 1922.">Hilbert, 1922</a>]</span> p. 164).</p>
+</div></blockquote>
+<p>The idea seems to be that contentful mathematical inductions are underwritten by effective procedures on numbers conceived as symbols.</p>
+<p>In “On the infinite” he discusses the same example and suggests that it has something to do with intuition in the Kantian sense, that is with a quasi-perceptual notion:</p>
+<blockquote>
+<div><p>Here, too the contentual correctness of this communication can be proved by contentual inference, and we can go very far with this intuitive, contentual kind of treatment (<span id="id13">[<a class="reference internal" href="references.html#id56" title="David Hilbert. Über das unendliche. Mathematische Annalen, 95(1):161–190, 1926.">Hilbert, 1926</a>]</span> p. 172).</p>
+</div></blockquote>
+<p>He further suggests that only arithmetical sentences formed by affixing a block of universal quantifiers to a quantifier-free sentence are contentful, and that sentences with existential quantifiers are not contentful.</p>
+<blockquote>
+<div><p>[…] such a passage to the infinite is no more permitted without special investigation and perhaps certain precautionary measures than the passage from a finite to an infinite product in analysis, and initially it has no meaning at all (<span id="id14">[<a class="reference internal" href="references.html#id56" title="David Hilbert. Über das unendliche. Mathematische Annalen, 95(1):161–190, 1926.">Hilbert, 1926</a>]</span> p. 173)</p>
+</div></blockquote>
+</section>
+<section id="tait-s-thesis-finitism-is-primitive-recursive-arithmetic">
+<h3>Tait’s Thesis: finitism is primitive recursive arithmetic<a class="headerlink" href="#tait-s-thesis-finitism-is-primitive-recursive-arithmetic" title="Link to this heading">#</a></h3>
+<p>It was argued in the secondary literature, by Tait <span id="id15">[<a class="reference internal" href="references.html#id31" title="W. W. Tait. Finitism. The Journal of Philosophy, 78(9):524-546, 1981.">Tait, 1981</a>]</span>, that Hilbert’s contentful arithmetic could be identified with an axiomatized version of primitive recursive arithmetic. This is a theory which is based on primitive recursion.</p>
+<p>That, of course, seems quite natural, when you think about the similarity of what Skolem was doing and what Hilbert was doing.</p>
+<p>Some evidence contra Tait’s thesis:</p>
+<ul class="simple">
+<li><p>it was two separate people doing it, in apparent independence of one another.</p></li>
+<li><p>the appeal to intuition and the revision of logic are not to be found in Skolem</p></li>
+<li><p>And note that Hilbert seemed unperturbed about the Ackermann function, which he disussed in “On the Infinite.”</p></li>
+</ul>
+<p>Further, scholars such as Zach <span id="id16">[<a class="reference internal" href="references.html#id29" title="Richard Zach. The practice of finitism: epsilon calculus and consistency proofs in Hilbert's program. Synthese, 137(1-2):211-259, 2003.">Zach, 2003</a>]</span> note that Hilbert and his school seemed to be using non-primitive recursive functions all over the place.</p>
+<p>And when you read the final work of Hilbert and his school, you hear things like this, which cast doubt on Tait’s thesis (in this, <span class="math notranslate nohighlight">\(Z_{\mu}\)</span> is a system which has the strength of at least first-order Peano arithmetic):</p>
+<blockquote>
+<div><p>The question arises as to whether finitary methods are in a position to exceed the domain of inferences formalizable in <span class="math notranslate nohighlight">\(\mathsf{Z}_{\mu}\)</span>. [<span class="math notranslate nohighlight">\(\mathbb{P}\)</span>] This question is admittedly, as so formulated, not precise; because we have introduced the expression “finitary” not as a sharply delimited endpoint, but rather as a designation of a methodological guideline, which would enable us to recognize certain kinds of concept formation and certain kinds of inferences as definitely finitary and others as definitely not finitary, but which however delivers no exact separating line between those which satisfy the demands of the finitary method and those which do not (<span id="id17">[<a class="reference internal" href="references.html#id36" title="David Hilbert and Paul Bernays. Grundlagen der Mathematik. Volume II. Springer, Berlin, first edition, 1939.">Hilbert and Bernays, 1939</a>]</span> pp. 347-348)</p>
+</div></blockquote>
+</section>
+</section>
+<section id="brouwer">
+<h2>Brouwer<a class="headerlink" href="#brouwer" title="Link to this heading">#</a></h2>
+<section id="the-first-act">
+<h3>The first act<a class="headerlink" href="#the-first-act" title="Link to this heading">#</a></h3>
+<p>In lectures in Cambridge in 1927 and Berlin in 1930, Brouwer described his position this way:</p>
+<blockquote>
+<div><p><strong>The first act of intuitionism</strong>: The unreserved disentanglement of mathematics from mathematical language and correspondingly from the linguistic appearance of theoretical logic. Intuitionistic mathematics is a completely language-free construction of the human spirit which develops in perfect exactness out of the basal intuition of one-in-twoness, that is, out of the insentient abstraction of the intellectually existing ur-phenomenon of a moment of life coming undone in two qualitatively different things, one of them giving away to the other and yet being steadily felt in memory (<span id="id18">[<a class="reference internal" href="references.html#id44" title="L E J Brouwer. Intuitionismus. Wissenschaftsverlag, Mannheim, 1992.">Brouwer, 1992</a>]</span> p. 21)</p>
+</div></blockquote>
+<p>To the modern ear, this sounds uncareful and uninteresting.</p>
+<p>There is a way of putting the point that makes him sound more reasonable and more interesting.</p>
+<p>First, Brouwer’s view is that knowledge of some mathematics is linked to the experience of time. Many philosophers including Kant and Hilbert thought it was linked to experience, and Poincaré adverted to the synthetic apriori in thinking about arithmetic.</p>
+<p>Second, Brouwer’s view is that basic mathematical knowledge is not mediated by language. This aspect of Brouwer’s thought goes back to Part III of his 1907 dissertation, entitled “Mathematics and Logic.”</p>
+<blockquote>
+<div><p>It is true that mathematics is quite independent of the material world, but <em>to exist</em> in mathematics means: to be constructed by intuition; and the question whether a corresponding language is consistent is not only unimportant in itself, it is also not a test for mathematical existence (<span id="id19">[<a class="reference internal" href="references.html#id46" title="L. E. J. Brouwer. Collected Works 1. Philosophy and Foundations of Mathematics. North Holland, Amsterdam, 1975. Edited by Arend Heyting.">Brouwer, 1975</a>]</span> p. 96)</p>
+</div></blockquote>
+</section>
+<section id="brouwer-on-the-revision-of-logic">
+<h3>Brouwer on the revision of logic<a class="headerlink" href="#brouwer-on-the-revision-of-logic" title="Link to this heading">#</a></h3>
+<p>Early on, in the early 1900s, Hilbert had made some claims that implicated the bold contention that all mathematical problems can be solved.</p>
+<p>Brouwer objected to this, early on, saying that the only reason to believe it was law of excluded middle (LEM), namely <span class="math notranslate nohighlight">\(\varphi\vee \neg \varphi\)</span>.</p>
+<p>Brouwer’s reasoning towards this conclusion, in a 1908 essay, is the following, where he seems to be identifying <span class="math notranslate nohighlight">\(\varphi\)</span> with the accomplishment of a construction (in the sense of an embedding) and he is identifying <span class="math notranslate nohighlight">\(\neg \varphi\)</span> with a construction witnessing the failure of the first construction:</p>
+<blockquote>
+<div><p>[…] in mathematics this [LEM] means that for every supposed imbedding of a system into another, satisfying certain conditions, we can either accomplish such an imbedding by construction, or we can arrive by construction at the arrestment of the process which would lead to the imbedding (<span id="id20">[<a class="reference internal" href="references.html#id49" title="Luitzen Egbertus Jan Brouwer. De onbetrouwbaarheid der logische principes. Tijdschrift voor Wijsbegeerte, 2:152-158, 1908.">Brouwer, 1908</a>]</span>, <span id="id21">[<a class="reference internal" href="references.html#id46" title="L. E. J. Brouwer. Collected Works 1. Philosophy and Foundations of Mathematics. North Holland, Amsterdam, 1975. Edited by Arend Heyting.">Brouwer, 1975</a>]</span> p. 109).</p>
+</div></blockquote>
+</section>
+<section id="triple-negation-is-single-negation">
+<h3>Triple negation is single negation<a class="headerlink" href="#triple-negation-is-single-negation" title="Link to this heading">#</a></h3>
+<p>In a 1923 essay, Brouwer considers the objection that since he denies the equivalence of <span class="math notranslate nohighlight">\(\varphi\)</span> and <span class="math notranslate nohighlight">\(\neg\neg\varphi\)</span>, he will actually have to mean infinitely different things by the various points in the sequence</p>
+<div class="math notranslate nohighlight">
+\[\varphi, \hspace{5mm} \neg \varphi, \hspace{5mm} \neg \neg \varphi, \hspace{5mm} \neg \neg \neg \varphi, \ldots\]</div>
+<p>Brouwer responds to this objection by proving that <span class="math notranslate nohighlight">\(\neg \varphi\)</span> is equivalent to <span class="math notranslate nohighlight">\(\neg\neg\neg\varphi\)</span>.</p>
+<p>His proof involves viewing <span class="math notranslate nohighlight">\(\neg \varphi\)</span> as saying that “<span class="math notranslate nohighlight">\(\varphi\)</span> leads to absurdity,” which is of course a theorem of intuitionistic logic as we now conceive it (<span id="id22">[<a class="reference internal" href="references.html#id48" title="Luitzen Egbertus Jan Brouwer. Intuıtionistische splitsing van mathematische grondbegrippen. Nederl. Akad. Wetensch. Verslagen, 32:877–880, 1923.">Brouwer, 1923</a>]</span>, <span id="id23">[<a class="reference internal" href="references.html#id47" title="L E J Brouwer. Intuitionistische Zerlegung mathematischer Grundbegriffe. Jahresbericht der Deutschen Mathematiker-Vereinigung, 33:251–256, 1925.">Brouwer, 1925</a>]</span>, <span id="id24">[<a class="reference internal" href="references.html#id46" title="L. E. J. Brouwer. Collected Works 1. Philosophy and Foundations of Mathematics. North Holland, Amsterdam, 1975. Edited by Arend Heyting.">Brouwer, 1975</a>]</span> p. 277)</p>
+</section>
+<section id="the-pi-example">
+<h3>The pi example<a class="headerlink" href="#the-pi-example" title="Link to this heading">#</a></h3>
+<p>In the Berlin and Cambridge lectures, Brouwer always frames the discussion around a specific example pertaining to the number <span class="math notranslate nohighlight">\(\pi\)</span> and its decimal expansion, an initial segment of which we display here:</p>
+<div class="math notranslate nohighlight">
+\[\pi = 3.141592653589793238462643\ldots\]</div>
+<p>He considers the claim <span class="math notranslate nohighlight">\(\psi\)</span> that “there is a consecutive sequence <span class="math notranslate nohighlight">\(0123456789\)</span> somewhere in the decimal expansion of <span class="math notranslate nohighlight">\(\pi\)</span>.”</p>
+<p>As far as this example goes, the uncontentious thing we can all agree on is that no one presently knows whether <span class="math notranslate nohighlight">\(\psi\)</span> is true or whether <span class="math notranslate nohighlight">\(\neg \psi\)</span> is true.</p>
+<p>In the Berlin lectures, Brouwer argues that we are not justified in  asserting either <span class="math notranslate nohighlight">\(\psi\)</span> or that “<span class="math notranslate nohighlight">\(\psi\)</span> could not occur” (<span id="id25">[<a class="reference internal" href="references.html#id44" title="L E J Brouwer. Intuitionismus. Wissenschaftsverlag, Mannheim, 1992.">Brouwer, 1992</a>]</span> p. 21)</p>
+<p>In the Cambridge lectures, he argues that <span class="math notranslate nohighlight">\(\psi \vee \neg \psi\)</span> is “devoid of sense” (<span id="id26">[<a class="reference internal" href="references.html#id45" title="L E J Brouwer. Brouwer's Cambridge Lectures on Intuitionism. Cambridge University Press, Cambridge-New York, 1981.">Brouwer, 1981</a>]</span> p. 6).</p>
+</section>
+</section>
+<section id="heyting-and-bhk">
+<h2>Heyting and BHK<a class="headerlink" href="#heyting-and-bhk" title="Link to this heading">#</a></h2>
+<section id="the-traditional-statement-of-bhk">
+<h3>The traditional statement of BHK<a class="headerlink" href="#the-traditional-statement-of-bhk" title="Link to this heading">#</a></h3>
+<p>The Brouwer-Heyting-Kolmogorov (BHK) interpretation of intuitionistic logic takes the assertability-conditions of the logical connectives to be spelt out in terms of proofs and constructions on proofs. The traditional statement of this, due to Heyting in his short 1956 book <em>Intuitionism</em>, is as follows (<span id="id27">[<a class="reference internal" href="references.html#id38" title="Arend Heyting. Intuitionism. An Introduction. North-Holland, Amsterdam, 1956.">Heyting, 1956</a>]</span>; Heyting was saying this back in the early 1930s <span id="id28">[<a class="reference internal" href="references.html#id17" title="Arend Heyting. Die intuitionistische Grundlegung der Mathematik. Erkenntnis, 2:106-115, 1931.">Heyting, 1931</a>]</span>)</p>
+<p><em>Conjunction</em>: “The <em>conjunction</em> <span class="math notranslate nohighlight">\(\wedge\)</span> gives no difficulty. <span class="math notranslate nohighlight">\(\mathfrak{p} \wedge \mathfrak{q}\)</span> can be asserted if and only if both <span class="math notranslate nohighlight">\(\mathfrak{p}\)</span> and <span class="math notranslate nohighlight">\(\mathfrak{q}\)</span> can be asserted.”</p>
+<p><em>Disjunction</em>: “<span class="math notranslate nohighlight">\(\mathfrak{p} \vee \mathfrak{q}\)</span> can be asserted if and only if at least one of the propositions <span class="math notranslate nohighlight">\(\mathfrak{p}\)</span> and <span class="math notranslate nohighlight">\(\mathfrak{q}\)</span> can be asserted.”</p>
+<p><em>Arrow</em>: “The <em>implication</em> <span class="math notranslate nohighlight">\(\mathfrak{p}\rightarrow\mathfrak{q}\)</span> can be asserted, if and only if we possess a construction <span class="math notranslate nohighlight">\(\mathfrak{r}\)</span>, which, joined to any construction proving <span class="math notranslate nohighlight">\(\mathfrak{p}\)</span> (supposing that the latter be effected), would automatically effect a construction proving <span class="math notranslate nohighlight">\(\mathfrak{q}\)</span>.”</p>
+<p><em>Universal</em> “Let <span class="math notranslate nohighlight">\(\mathfrak{p}(x)\)</span> be a predicate of one variable <span class="math notranslate nohighlight">\(x\)</span>, this variable ranging over a given mathematical species <span class="math notranslate nohighlight">\(Q\)</span>. Then <span class="math notranslate nohighlight">\(\vdash (\forall x) \mathfrak{p}(x)\)</span> means that <span class="math notranslate nohighlight">\(\mathfrak{p}(x)\)</span> is true for every <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(Q\)</span>; in other words, we possess a general method of construction which, if any element <span class="math notranslate nohighlight">\(a\)</span> of <span class="math notranslate nohighlight">\(Q\)</span> is chosen, yields by specialization the construction <span class="math notranslate nohighlight">\(\mathfrak{p}(a)\)</span>.”</p>
+<p><em>Existential</em>: “The existential quantifier will be interpreted in a strong way. <span class="math notranslate nohighlight">\((\exists x) \mathfrak{p}(x)\)</span> will be true if and only if an element <span class="math notranslate nohighlight">\(a\)</span> of <span class="math notranslate nohighlight">\(Q\)</span> for which <span class="math notranslate nohighlight">\(\mathfrak{p}(a)\)</span> is true has actually been constructed.”</p>
+<p>(<span id="id29">[<a class="reference internal" href="references.html#id38" title="Arend Heyting. Intuitionism. An Introduction. North-Holland, Amsterdam, 1956.">Heyting, 1956</a>]</span> pp. 102-103, 106-107).</p>
+</section>
+<section id="heyting-s-notion-of-construction">
+<h3>Heyting’s notion of construction<a class="headerlink" href="#heyting-s-notion-of-construction" title="Link to this heading">#</a></h3>
+<p>The notion of construction is treated by Heyting as a primitive, and we are not given a definition of it or an analysis of it.</p>
+<p>Note that in the clause for arrow (and universal):</p>
+<ol class="arabic simple">
+<li><p>Constructions need to be constructions which are instrinsically connected to proofs.</p></li>
+<li><p>Constructions need to act on other constructions.</p></li>
+</ol>
+<p>The first point makes constructions different than computations in our modern sense. Our computations can operate on strings which can code proofs, but this connection is incidental rather than essential.</p>
+<p>The second point suggests that constructions in Heyting’s sense are going to be a little different than the paradigmatic examples of constructions in elementary point-line geometry.</p>
+</section>
+<section id="kreisel-and-sundholm-on-the-second-constructions">
+<h3>Kreisel and Sundholm on the second constructions<a class="headerlink" href="#kreisel-and-sundholm-on-the-second-constructions" title="Link to this heading">#</a></h3>
+<p>A traditional puzzle in the secondary literature around BHK is whether the arrow and universal clauses need to have ‘second constructions’ which show that the first construction does what it is supposed to do.</p>
+<p>Kreisel built this into his formal “theory of constructions” (<span id="id30">[<a class="reference internal" href="references.html#id35" title="Georg Kreisel. Foundations of intuitionistic logic. In Logic, Methodology and Philosophy of Science (Proc. 1960 Internat. Congr.), pages 198–210. Stanford University Press, Stanford, 1962.">Kreisel, 1962</a>]</span>). This made the inductive definition of proof simpler since the bare universal over constructions then gets trapped inside the statement about what the second construction does.</p>
+<p>Sunholm <span id="id31">[<a class="reference internal" href="references.html#id30" title="Göran Sundholm. Constructions, Proofs and the Meaning of Logical Constants. Journal of Philosophical Logic, 12(2):151–172, 1983.">Sundholm, 1983</a>]</span> suggests that Kreisel is conflating ‘construction as process’ and ‘construction as product.’ He thinks that it is the former which Heyting was concerned with, and that the second clauses are not needed. Sunhdolm’s idea is that the process of construction just automatically brings with it the evidentary qualities needed to establish the proof.</p>
+</section>
+<section id="dummett-s-appropriation-of-bhk">
+<h3>Dummett’s appropriation of BHK<a class="headerlink" href="#dummett-s-appropriation-of-bhk" title="Link to this heading">#</a></h3>
+<p>Dummett essentially suggests taking BHK as a template for an alternative approach to semantics. This is already in his earliest paper:</p>
+<blockquote>
+<div><p>What I have done here is transfer to ordinary statements what the intuitionists say about mathematical statements’’ (<span id="id32">[<a class="reference internal" href="references.html#id43" title="Michael Dummett. Truth. Proceedings of the Aristotelian Society, 59(1):141–62, 1959.">Dummett, 1959</a>]</span> p. 160, <span id="id33">[<a class="reference internal" href="references.html#id42" title="Michael Dummett. Truth and Other Enigmas. Harvard University Press, Cambridge, 1978.">Dummett, 1978</a>]</span> 1978 p. 17, p. xxiv)</p>
+</div></blockquote>
+<p>Instead of taking meaning to be given by truth-conditions, we should take it to be given by proof-conditions or more generally by assertability-conditions. The idea would be to extend BHK from mathematical language to all language by importing the verificationism of the 1930s to handle the atomic cases of ordinary language. That is, for the atomic cases, we specify what the observational correlate of observable predicates like “red” is, and use this to identify the assertability-condition of the associated atomic claims.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chap01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chap03.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hilbert-program">The Hilbert program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-mathematics-existence-is-consistency-in-the-wide-sense">In mathematics, existence is consistency in the wide sense</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proving-consistency-in-the-wide-sense">Proving consistency in the wide sense</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-poincare-circularity-objection">The Poincaré circularity objection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hilbert-response">The Hilbert response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-word-on-terminology">A word on terminology</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finitism">Finitism</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contentul-induction">Contentul induction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tait-s-thesis-finitism-is-primitive-recursive-arithmetic">Tait’s Thesis: finitism is primitive recursive arithmetic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brouwer">Brouwer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-act">The first act</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brouwer-on-the-revision-of-logic">Brouwer on the revision of logic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-negation-is-single-negation">Triple negation is single negation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pi-example">The pi example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heyting-and-bhk">Heyting and BHK</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-traditional-statement-of-bhk">The traditional statement of BHK</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heyting-s-notion-of-construction">Heyting’s notion of construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kreisel-and-sundholm-on-the-second-constructions">Kreisel and Sundholm on the second constructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dummett-s-appropriation-of-bhk">Dummett’s appropriation of BHK</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
