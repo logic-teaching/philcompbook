@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -479,22 +479,14 @@ n+m = \begin{cases}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># this calls up python tutor (https://pythontutor.com), </span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># which for very simple programs steps one through the computation</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">metakernel</span> <span class="kn">import</span> <span class="n">register_ipython_magics</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">register_ipython_magics</span><span class="p">()</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;metakernel&#39;
-</pre></div>
-</div>
-</div>
 </details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">tutor</span>
 
@@ -507,12 +499,13 @@ add(5,2)
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
         <iframe
             width="100%"
             height="500"
-            src="https://pythontutor.com/iframe-embed.html#code=%0A%23%20moral%3A%20modern%20implementations%20use%20the%20same%20%0A%23%20primitive%20recursive%20definition%20schema%20%0A%23%20and%20evaluation%20procedure%0A%0Adef%20add%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20return%20add%28n%2Cm-1%29%2B1%0A%0Aadd%285%2C2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
+            src="https://pythontutor.com/iframe-embed.html#code=%0Adef%20add%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20return%20add%28n%2Cm-1%29%2B1%0A%0Aadd%285%2C2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
             frameborder="0"
             allowfullscreen
             
@@ -535,9 +528,6 @@ n*m = \begin{cases}
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">tutor</span>
 
-# here is a python implementation, 
-# where we use the built-in addition function
-
 def mult(n,m):
     if m ==0:
         return 0
@@ -548,10 +538,16 @@ mult(5,2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://pythontutor.com/iframe-embed.html#code=%0Adef%20mult%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20return%20mult%28n%2Cm-1%29%2Bn%0A%0Amult%285%2C2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 <p>Below is a version where we appeal explicitly to our prior definition of addition instead of the built in version of addition. However, if one looks at it with the python tutor, it takes longer (about 63 steps).</p>
 <div class="cell docutils container">
@@ -572,6 +568,17 @@ mult(5,2)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://pythontutor.com/iframe-embed.html#code=%0Adef%20add%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20return%20add%28n%2Cm-1%29%2B1%0A%0Adef%20mult%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20return%20add%28mult%28n%2Cm-1%29%2Cn%29%0A%0Amult%285%2C2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 </section>
 </section>
@@ -619,10 +626,16 @@ flip(&#39;aba&#39;)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;bab&#39;
-</pre></div>
-</div>
-</div>
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="500"
+            src="https://pythontutor.com/iframe-embed.html#code=%0A%23%20a%20simple%20python%20program%20for%20flipping%20a%27s%20to%20b%27s%0A%23%20and%20vice%20versa%20in%20a%20string%20of%20a%27s%20and%20b%27s.%0A%0Adef%20flip%28str%29%3A%0A%20%20%20%20if%20str%20%3D%3D%27%27%3A%0A%20%20%20%20%20%20%20%20return%20%27%27%0A%20%20%20%20if%20str%5B-1%5D%20%3D%3D%20%27a%27%3A%0A%20%20%20%20%20%20%20%20return%20flip%28str%5B%3A-1%5D%29%2B%27b%27%0A%20%20%20%20if%20str%5B-1%5D%20%3D%3D%20%27b%27%3A%0A%20%20%20%20%20%20%20%20return%20flip%28str%5B%3A-1%5D%29%2B%27a%27%20%20%20%20%0Aflip%28%27aba%27%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 </section>
 </section>
@@ -687,7 +700,7 @@ n*m = \begin{cases}
 <h2>The map<a class="headerlink" href="#the-map" title="Link to this heading">#</a></h2>
 <p>We’re going to be looking at a number of different notions of computation in this course.</p>
 <p>There are two maps we will use to orientate ourselves.</p>
-<p>The come from <span id="id1">[<a class="reference internal" href="references.html#id10" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> p. 104 and the cover of <span id="id2">[<a class="reference internal" href="references.html#id50" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span></p>
+<p>The come from <span id="id1">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id11" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> p. 104 and the cover of <span id="id2">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id51" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span></p>
 <p>This is the basic map, and <a class="reference download internal" download="" href="_downloads/44fa9d8598100ea8b5c7284d48c0d4b8/map-handout.pdf"><span class="xref download myst">see here</span></a> for a standalone version of it:</p>
 <p><img alt="The map" src="_images/map.png" /></p>
 <p>The map on left is of non-computable sets of numbers. The bottom is the computable or recursive sets of numbers.</p>
@@ -713,10 +726,10 @@ n*m = \begin{cases}
 <h3>Why Skolem needed to define primitive recursion<a class="headerlink" href="#why-skolem-needed-to-define-primitive-recursion" title="Link to this heading">#</a></h3>
 <p>Skolem was moved to try to figure out how much mathematics could be done just with concepts related to number:</p>
 <blockquote>
-<div><p>If we consider the general theorems of arithmetic to be functional assertions and take the recursive mode of thought as a basis, then that science can be founded in a rigorous way without the use of [quantifiers] (<span id="id4">[<a class="reference internal" href="references.html#id44" title="Thoraf Skolem. Some remarks on axiomatized set theory. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 390–301. Harvard University Press, 1967.">Skolem, 1967</a>]</span> p. 304)</p>
+<div><p>If we consider the general theorems of arithmetic to be functional assertions and take the recursive mode of thought as a basis, then that science can be founded in a rigorous way without the use of [quantifiers] (<span id="id4">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id45" title="Thoraf Skolem. Some remarks on axiomatized set theory. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 390–301. Harvard University Press, 1967.">Skolem, 1967</a>]</span> p. 304)</p>
 </div></blockquote>
 <blockquote>
-<div><p>It occurred to me [in autumn of 1919] that already the use of logical variables that they call “real” would surely suffice to provide a foundation for a large part of mathematics (<span id="id5">[<a class="reference internal" href="references.html#id47" title="Thoraf Skolem. The foundations of elementary arithmetic established by means of the recursive mode of thought, without the use of apparent variables ranging over infinite domains. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 302–333. Harvard University Press, 1967.">Skolem, 1967</a>]</span> p. 332).</p>
+<div><p>It occurred to me [in autumn of 1919] that already the use of logical variables that they call “real” would surely suffice to provide a foundation for a large part of mathematics (<span id="id5">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id48" title="Thoraf Skolem. The foundations of elementary arithmetic established by means of the recursive mode of thought, without the use of apparent variables ranging over infinite domains. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 302–333. Harvard University Press, 1967.">Skolem, 1967</a>]</span> p. 332).</p>
 </div></blockquote>
 <p>Since Skolem wanted to base mathematics off of recursion, he needed to <em>define recursion</em> and then show that a whole lot of mathematics was computable.</p>
 <p>And Skolem’s definition of recursion was the notion of primitive recursive function.</p>
@@ -744,7 +757,7 @@ n*m = \begin{cases}
     n &amp; \text{if } \ell\geq 2
 \end{cases}
 \end{split}\]</div>
-<p>A function like this was found simulatenously by Sudan (see <span id="id7">[<a class="reference internal" href="references.html#id53" title="Cristian Calude, Solomon Marcus, and Ionel Tevy. The first example of a recursive function which is not primitive recursive. Historia Math., 6(4):380–384, 1979.">Calude <em>et al.</em>, 1979</a>]</span>)</p>
+<p>A function like this was found simulatenously by Sudan (see <span id="id7">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id54" title="Cristian Calude, Solomon Marcus, and Ionel Tevy. The first example of a recursive function which is not primitive recursive. Historia Math., 6(4):380–384, 1979.">Calude <em>et al.</em>, 1979</a>]</span>)</p>
 <p>Experience suggests that this definition is hard to parse.</p>
 </section>
 </section>
@@ -755,13 +768,13 @@ n*m = \begin{cases}
 <p><span class="math notranslate nohighlight">\(\varphi_1(n,m)= n*m\)</span></p>
 <p><span class="math notranslate nohighlight">\(\varphi_2(n,m) = n^m\)</span></p>
 <p><span class="math notranslate nohighlight">\(\varphi_3(n,m) = n^{n^{\cdots^n}}\)</span>, with <span class="math notranslate nohighlight">\(m\)</span>-many <span class="math notranslate nohighlight">\(n\)</span>’s in the exponent.</p>
-<p>Ackermann showed that it was not primitive recursive by showing that <span class="math notranslate nohighlight">\(\varphi(n,n,n)\)</span> grew faster than any primitive recursive function. For a proof see<span id="id8">[<a class="reference internal" href="references.html#id52" title="René Cori and Daniel Lascar. Mathematical Logic. Volume 2. Oxford University Press, Oxford, 2001.">Cori and Lascar, 2001</a>]</span> <span class="math notranslate nohighlight">\(\S\S\)</span> 5.1, 5.2.1.</p>
+<p>Ackermann showed that it was not primitive recursive by showing that <span class="math notranslate nohighlight">\(\varphi(n,n,n)\)</span> grew faster than any primitive recursive function. For a proof see<span id="id8">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id53" title="René Cori and Daniel Lascar. Mathematical Logic. Volume 2. Oxford University Press, Oxford, 2001.">Cori and Lascar, 2001</a>]</span> <span class="math notranslate nohighlight">\(\S\S\)</span> 5.1, 5.2.1.</p>
 <p>Unsurprisingly then, the Ackermann function is nearly impossible to compute on modern computers (see below)</p>
 <section id="public-comment-on-the-ackermann-function-in-the-1920s">
 <h3>Public comment on the Ackermann function in the 1920s<a class="headerlink" href="#public-comment-on-the-ackermann-function-in-the-1920s" title="Link to this heading">#</a></h3>
 <p>At the time, the only public comment on the computability of this function was due to Ackerman’s advisor Hilbert,who wrote that</p>
 <blockquote>
-<div><p>To be sure, we could now define <span class="math notranslate nohighlight">\(\varphi_{\ell}(n,m)\)</span> for variable <span class="math notranslate nohighlight">\(\ell\)</span> by means of substitutions and recursions, but these recursion would not be ordinary, stepwise ones; rather, we would be led to a manifold simulatenous recursion, that is a recursion on different variables at once, and a resolution of it into ordinary, stepwise recursions would be possible only if we make use of the notion of function variable (<span id="id9">[<a class="reference internal" href="references.html#id64" title="David Hilbert. On the infinite. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 367–392. Harvard University Press, 1967.">Hilbert, 1967</a>]</span> p. 388).</p>
+<div><p>To be sure, we could now define <span class="math notranslate nohighlight">\(\varphi_{\ell}(n,m)\)</span> for variable <span class="math notranslate nohighlight">\(\ell\)</span> by means of substitutions and recursions, but these recursion would not be ordinary, stepwise ones; rather, we would be led to a manifold simulatenous recursion, that is a recursion on different variables at once, and a resolution of it into ordinary, stepwise recursions would be possible only if we make use of the notion of function variable (<span id="id9">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id65" title="David Hilbert. On the infinite. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 367–392. Harvard University Press, 1967.">Hilbert, 1967</a>]</span> p. 388).</p>
 </div></blockquote>
 <p>From our perspective, what this shows is that the concept of recursion was in a bit of a flux in the 1920s. Primitive recursion was the paradigm they were working with, but they knew that there were functions which were recursive in some more general sense but which we were not primitive recursive.</p>
 <div class="cell docutils container">
@@ -797,8 +810,8 @@ n*m = \begin{cases}
 <p>Hilbert showed that these are ideals are always finitely generated (the <em>Hilbert Basis Theorem</em>, which also holds when the rationals are replaced by other fields).</p>
 <p>This implies that any ascending chain of ideals <span class="math notranslate nohighlight">\(I_0 \subseteq I_1 \subseteq I_s\subseteq\cdots\)</span> eventually stops growing, e.g. there is <span class="math notranslate nohighlight">\(s\)</span> such that <span class="math notranslate nohighlight">\(I_t=I_s\)</span> for all <span class="math notranslate nohighlight">\(t\geq s\)</span>.</p>
 <p>Further, if <span class="math notranslate nohighlight">\(I_s\)</span> is generated by polynomials of degree <span class="math notranslate nohighlight">\(\leq s\)</span>, then all such chains stop at the same time, depending only on <span class="math notranslate nohighlight">\(N\)</span>.</p>
-<p>The problem of computing from <span class="math notranslate nohighlight">\(N\)</span> this stopping number is not primitive recursive. Indeed, it is an Ackermann-like function. See <span id="id10">[<a class="reference internal" href="references.html#id43" title="Guillermo Moreno Socías. Length of polynomial ascending chains and primitive recursiveness. Math. Scand., 71(2):181–205, 1992.">Socías, 1992</a>]</span>.</p>
-<p>More generally, computational aspects of algebra geometry seem are good source of computable but hard to compute functions and operations. These flow in part from the Buchberger algorithm. See <span id="id11">[<a class="reference internal" href="references.html#id51" title="David A Cox, John Little, and Donal O'Shea. Ideals, Varieties, and Algorithms. Springer International Publishing, 1997.">Cox <em>et al.</em>, 1997</a>]</span> and <span id="id12">[<a class="reference internal" href="references.html#id11" title="Stephen George Simpson. Subsystems of Second Order Arithmetic. Cambridge University Press, second edition, May 2009.">Simpson, 2009</a>]</span>.</p>
+<p>The problem of computing from <span class="math notranslate nohighlight">\(N\)</span> this stopping number is not primitive recursive. Indeed, it is an Ackermann-like function. See <span id="id10">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id44" title="Guillermo Moreno Socías. Length of polynomial ascending chains and primitive recursiveness. Math. Scand., 71(2):181–205, 1992.">Socías, 1992</a>]</span>.</p>
+<p>More generally, computational aspects of algebra geometry seem are good source of computable but hard to compute functions and operations. These flow in part from the Buchberger algorithm. See <span id="id11">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id52" title="David A Cox, John Little, and Donal O'Shea. Ideals, Varieties, and Algorithms. Springer International Publishing, 1997.">Cox <em>et al.</em>, 1997</a>]</span> and <span id="id12">[<a class="reference internal" href=".venv/lib/python3.12/site-packages/jupyter_book/book_template/markdown.html#id12" title="Stephen George Simpson. Subsystems of Second Order Arithmetic. Cambridge University Press, second edition, May 2009.">Simpson, 2009</a>]</span>.</p>
 </section>
 </section>
 </section>
