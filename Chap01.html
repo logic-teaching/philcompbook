@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Philcomp Week 1 Tuesday &#8212; Philcomp</title>
+    <title>Chapter 1 &#8212; Philcomp</title>
   
   
   
@@ -179,15 +179,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Philcomp Week 1 Tuesday</a></li>
-
-
-
-
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap02.html">Philcomp Week 1 Thursday</a></li>
 
 
@@ -372,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Philcomp Week 1 Tuesday</h1>
+    <h1>Chapter 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,17 +374,41 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Philcomp Week 1 Tuesday</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-for-course">Plan for course</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-idea-and-examples">Primitive recursion idea and examples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-on-strings">Primitive recursion on strings</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-formal-definition">Primitive recursion formal definition</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-map">The map</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#skolem-on-primitive-recursive-functions">Skolem on primitive recursive functions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-primitive-recursion">The limits of primitive recursion</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-idea-and-examples">Primitive recursion idea and examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-primitive-recursion">Definition (primitive recursion)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-addition">Example (addition)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-with-python-tutor">Visualizing with Python tutor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-multiplication">Example (multiplication)</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-on-strings">Primitive recursion on strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-primitive-recursion-on-strings">Definition (primitive recursion on strings)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-flipping-a-s-to-b-s">Example (flipping a’s to b’s)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-formal-definition">Primitive recursion formal definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-definition-by-primitive-recursion-binary-functions">Definition (definition by primitive recursion, binary functions)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-addition-redeux">Example (addition redeux)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-multiplication-redeux">Example (multiplication redeux)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-primitive-recursive-functions">Definition (primitive recursive functions)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-map">The map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skolem-on-primitive-recursive-functions">Skolem on primitive recursive functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skolem-on-foundations">Skolem on foundations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-skolem-needed-to-define-primitive-recursion">Why Skolem needed to define primitive recursion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-primitive-recursion">The limits of primitive recursion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-ackermann-function">Definition (Ackermann function)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intuition-behind-the-ackermann-function">Intuition behind the Ackermann function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-comment-on-the-ackermann-function-in-the-1920s">Public comment on the Ackermann function in the 1920s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ackermann-function-in-mathematical-nature">The Ackermann function in mathematical nature</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -403,50 +419,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="philcomp-week-1-tuesday">
-<h1>Philcomp Week 1 Tuesday<a class="headerlink" href="#philcomp-week-1-tuesday" title="Link to this heading">#</a></h1>
-<p><strong>Outline</strong></p>
-<p><a class="reference internal" href="#Plan-for-course"><span class="xref myst">Plan for course</span></a></p>
-<p><a class="reference internal" href="#Primitive-recursion-idea-and-examples"><span class="xref myst">Primitive recursion idea and examples</span></a></p>
-<p><a class="reference internal" href="#Primitive-recursion-on-strings"><span class="xref myst">Primitive recursion on strings</span></a></p>
-<p><a class="reference internal" href="#Primitive-recursion-formal-definition"><span class="xref myst">Primitive recursion formal definition</span></a></p>
-<p><a class="reference internal" href="#The-map"><span class="xref myst">The map</span></a></p>
-<p><a class="reference internal" href="#Skolem-on-primitive-recursive-functions"><span class="xref myst">Skolem on primitive recursive functions</span></a></p>
-<p><a class="reference internal" href="#the-limits-of-primitive-recursion"><span class="xref myst">The limits of primitive recursion</span></a></p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="plan-for-course">
-<h1>Plan for course<a class="headerlink" href="#plan-for-course" title="Link to this heading">#</a></h1>
-<p>Our plan for this course is to do an overview of the the philosophy of computation.</p>
-<p>We’re going to starts with founding figures of Turing, Church, and Kleene and look at different conceptual analyses of computation (bounded and local search, beta reduction of lambda terms) which are related to the different models of computation (Turing machines, lambda calculi).</p>
-<p>Then we’re going to look at effects of natural non-computability (Gödel’s disjunction) and the non-computability of methods of verification (Rice’s theorem).</p>
-<p>Then we’re going to do topics such as:</p>
-<ul class="simple">
-<li><p>the apparent absoluteness of computation</p></li>
-<li><p>the confluence of different models of computation</p></li>
-<li><p>nature of feasibility (what is the intuitive notion)</p></li>
-<li><p>how semantics for procedures differs from semantics for indicative statements</p></li>
-<li><p>neural network models and its relation to computational theory of mind</p></li>
-<li><p>models of learning and its relation to reliability of inductive methods</p></li>
-<li><p>how computer learning is apparently different than human learning</p></li>
-<li><p>how fairness and explanation of machine learning methods can be assessed</p></li>
-<li><p>the physical implementation of computation and challenges from quantum computation.</p></li>
-</ul>
-<p>This course does not presuppose any prior familiarity with computation or ability to program.</p>
-<p>In terms of prior knowledge, I am going to structure this course so that it is to computation roughly what medical ethics is to medicine.</p>
-<p>Everyone should be able to get a lot out of it, due in part to the ubiquity of computation in our everyday lives.</p>
-<p>To help faciliate this, we are going to use the historical development to orientate the discussion.</p>
-<p>Everything really begins in the 1930s with Turing and Church.</p>
-<p>But since this is week 1, we will ease into it by looking at precurors to computation in the 1920s.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="primitive-recursion-idea-and-examples">
-<h1>Primitive recursion idea and examples<a class="headerlink" href="#primitive-recursion-idea-and-examples" title="Link to this heading">#</a></h1>
-<p><strong>The idea</strong> (of primitive recursion)</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-1">
+<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Link to this heading">#</a></h1>
+<section id="primitive-recursion-idea-and-examples">
+<h2>Primitive recursion idea and examples<a class="headerlink" href="#primitive-recursion-idea-and-examples" title="Link to this heading">#</a></h2>
+<section id="definition-primitive-recursion">
+<h3>Definition (primitive recursion)<a class="headerlink" href="#definition-primitive-recursion" title="Link to this heading">#</a></h3>
 <p>Define a function <span class="math notranslate nohighlight">\(f\)</span> on natural numbers by specifying</p>
 <p><em>Base</em>: how it is defined on input <span class="math notranslate nohighlight">\(m=0\)</span></p>
 <p><em>Iterator</em>: how it is defined on <span class="math notranslate nohighlight">\(m&gt;0\)</span> in terms of how it is defined on the previous step <span class="math notranslate nohighlight">\(m-1\)</span>.</p>
 <p>To figure out the value of e.g. <span class="math notranslate nohighlight">\(f(3)\)</span>, write it in terms of <span class="math notranslate nohighlight">\(f(2)\)</span> and the iterator; then write <span class="math notranslate nohighlight">\(f(2)\)</span> in terms of <span class="math notranslate nohighlight">\(f(1)\)</span> and the iterator; then write <span class="math notranslate nohighlight">\(f(1)\)</span> in terms of <span class="math notranslate nohighlight">\(f(0)\)</span> and the iterator; then use base to figure out <span class="math notranslate nohighlight">\(f(0)\)</span>.</p>
-<hr class="docutils" />
-<p><strong>Example</strong> (addition)</p>
+</section>
+<section id="example-addition">
+<h3>Example (addition)<a class="headerlink" href="#example-addition" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 n+m = \begin{cases}
@@ -475,18 +460,32 @@ n+m = \begin{cases}
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for the next cell you might need to first load</span>
-
-<span class="c1"># ! pip install metakernel</span>
-
-<span class="c1"># just remove &#39;#&#39; from previous line and press shift + return</span>
+</section>
+<section id="visualizing-with-python-tutor">
+<h3>Visualizing with Python tutor<a class="headerlink" href="#visualizing-with-python-tutor" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://pythontutor.com">Python tutor</a> allows one to ‘step through’ very simple progrmas. To run it, one needs</p>
+<ol class="arabic simple">
+<li><p>to move to an interpretor (see discussion on intro page). The easiest way to do this is to click on the <i class="fa fa-rocket" aria-hidden="true"></i> icon at the top center-right, which will launch the page in a <a class="reference external" href="https://mybinder.org">binder</a> which does not require you to install anything on your machine.</p></li>
+<li><p>install the following packages if need be</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! pip install metakernel
 </pre></div>
 </div>
+<ol class="arabic simple" start="3">
+<li><p>Load the relevant packages:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">metakernel</span> <span class="kn">import</span> <span class="n">register_ipython_magics</span>
+<span class="n">register_ipython_magics</span><span class="p">()</span>
+</pre></div>
 </div>
+<ol class="arabic simple" start="4">
+<li><p>Then, at the top of any cell one is interested in running the tutor on, one just puts the following:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">tutor</span>
+</pre></div>
 </div>
-<div class="cell docutils container">
+<p>Below we do this for addition, but it is not going to work correctly if you are just looking at the book as a webpage as opposed to in an interpretor.</p>
+<div class="cell tag_hide docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this calls up python tutor (https://pythontutor.com), </span>
 <span class="c1"># which for very simple programs steps one through the computation</span>
@@ -499,7 +498,7 @@ n+m = \begin{cases}
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># this calls up python tutor (https://pythontutor.com), </span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># which for very simple programs steps one through the computation</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">metakernel</span> <span class="kn">import</span> <span class="n">register_ipython_magics</span>
@@ -513,10 +512,6 @@ n+m = \begin{cases}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">tutor</span>
-
-# moral: modern implementations use the same 
-# primitive recursive definition schema 
-# and evaluation procedure
 
 def add(n,m):
     if m ==0:
@@ -539,8 +534,9 @@ add(5,2)
         ></iframe>
         </div></div>
 </div>
-<hr class="docutils" />
-<p><strong>Example</strong> (multiplication)</p>
+</section>
+<section id="example-multiplication">
+<h3>Example (multiplication)<a class="headerlink" href="#example-multiplication" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 n*m = \begin{cases}
@@ -570,86 +566,40 @@ n*m = \begin{cases}
 </div>
 </div>
 </div>
+<p>Below is a version where we appeal explicitly to our prior definition of addition instead of the built in version of addition. However, if one looks at it with the python tutor, it takes longer (about 63 steps).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">tutor</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">add</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
 
-# note that it takes 14 steps
+<span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">add</span><span class="p">(</span><span class="n">mult</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">n</span><span class="p">)</span>
 
-def mult(n,m):
-    if m ==0:
-        return 0
-    return mult(n,m-1)+n
-
-mult(5,2)
+<span class="n">mult</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="100%"
-            height="500"
-            src="https://pythontutor.com/iframe-embed.html#code=%0A%23%20note%20that%20it%20takes%2014%20steps%0A%0Adef%20mult%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20return%20mult%28n%2Cm-1%29%2Bn%0A%0Amult%285%2C2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## below is a version where we appeal</span>
-<span class="c1">## explicitly to our prior defn of addition</span>
-<span class="c1">## instead of the built in version of addition</span>
-<span class="c1">## note that it takes 63 steps.</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">tutor</span>
-
-def add(n,m):
-    if m ==0:
-        return n
-    return add(n,m-1)+1
-
-def mult(n,m):
-    if m ==0:
-        return 0
-    return add(mult(n,m-1),n)
-
-mult(5,2)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="100%"
-            height="500"
-            src="https://pythontutor.com/iframe-embed.html#code=%0Adef%20add%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20return%20add%28n%2Cm-1%29%2B1%0A%0Adef%20mult%28n%2Cm%29%3A%0A%20%20%20%20if%20m%20%3D%3D0%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20return%20add%28mult%28n%2Cm-1%29%2Cn%29%0A%0Amult%285%2C2%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="primitive-recursion-on-strings">
-<h1>Primitive recursion on strings<a class="headerlink" href="#primitive-recursion-on-strings" title="Link to this heading">#</a></h1>
+</section>
+<section id="primitive-recursion-on-strings">
+<h2>Primitive recursion on strings<a class="headerlink" href="#primitive-recursion-on-strings" title="Link to this heading">#</a></h2>
 <p>In many cases, it is more natural to compute on strings of symbols than on numbers.</p>
 <p>E.g. we could compute on strings from the latin alphabet <span class="math notranslate nohighlight">\(a, b, \ldots, z\)</span>.</p>
-<p><strong>The idea</strong> (of primitive recursion)</p>
+<section id="definition-primitive-recursion-on-strings">
+<h3>Definition (primitive recursion on strings)<a class="headerlink" href="#definition-primitive-recursion-on-strings" title="Link to this heading">#</a></h3>
 <p>Define a function <span class="math notranslate nohighlight">\(f\)</span> on strings by specifying</p>
 <p><em>Base</em>: how it is defined on the the length zero string <span class="math notranslate nohighlight">\(\epsilon\)</span></p>
 <p><em>Iterator</em>: how it is defined on length <span class="math notranslate nohighlight">\(m&gt;0\)</span> strings in terms of how it is defined on length <span class="math notranslate nohighlight">\(m-1\)</span> strings and on the last entry.</p>
 <p>To figure out the value of e.g. <span class="math notranslate nohighlight">\(f(aba)\)</span>, use iterator to compute it in terms of <span class="math notranslate nohighlight">\(f(ab)\)</span> and last entry <span class="math notranslate nohighlight">\(a\)</span>; then use iterator to compute <span class="math notranslate nohighlight">\(f(ab)\)</span> in terms of <span class="math notranslate nohighlight">\(f(a)\)</span> and last entry <span class="math notranslate nohighlight">\(b\)</span>; then compute <span class="math notranslate nohighlight">\(f(\epsilon)\)</span>.</p>
 <p>In this case, the iterator needs to tell you how to act when the last entry is <span class="math notranslate nohighlight">\(a\)</span>, how to act when it is <span class="math notranslate nohighlight">\(b\)</span>, etc.</p>
-<hr class="docutils" />
-<p><strong>Example</strong> (flipping a’s to b’s)</p>
+</section>
+<section id="example-flipping-a-s-to-b-s">
+<h3>Example (flipping a’s to b’s)<a class="headerlink" href="#example-flipping-a-s-to-b-s" title="Link to this heading">#</a></h3>
 <p>Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -663,39 +613,35 @@ mult(5,2)
 <p><span class="math notranslate nohighlight">\(\mathrm{flip}(aba) = \mathrm{flip}(ab)a^{\ast} = \mathrm{flip}(a)b^{\ast}a^{\ast} = a^{\ast} b^{\ast} a^{\ast} = b b^{\ast} a^{\ast}= baa^{\ast} =bab\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">tutor</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %%tutor    # uncomment to call up python tutor</span>
 
-# a simple python program for flipping a&#39;s to b&#39;s
-# and vice versa in a string of a&#39;s and b&#39;s.
+<span class="c1"># a simple python program for flipping a&#39;s to b&#39;s</span>
+<span class="c1"># and vice versa in a string of a&#39;s and b&#39;s.</span>
 
-def flip(str):
-    if str ==&#39;&#39;:
-        return &#39;&#39;
-    if str[-1] == &#39;a&#39;:
-        return flip(str[:-1])+&#39;b&#39;
-    if str[-1] == &#39;b&#39;:
-        return flip(str[:-1])+&#39;a&#39;    
-flip(&#39;aba&#39;)
+<span class="k">def</span> <span class="nf">flip</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">str</span> <span class="o">==</span><span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">flip</span><span class="p">(</span><span class="nb">str</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;b&#39;</span>
+    <span class="k">if</span> <span class="nb">str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">flip</span><span class="p">(</span><span class="nb">str</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;a&#39;</span>    
+<span class="n">flip</span><span class="p">(</span><span class="s1">&#39;aba&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="100%"
-            height="500"
-            src="https://pythontutor.com/iframe-embed.html#code=%0A%23%20a%20simple%20python%20program%20for%20flipping%20a%27s%20to%20b%27s%0A%23%20and%20vice%20versa%20in%20a%20string%20of%20a%27s%20and%20b%27s.%0A%0Adef%20flip%28str%29%3A%0A%20%20%20%20if%20str%20%3D%3D%27%27%3A%0A%20%20%20%20%20%20%20%20return%20%27%27%0A%20%20%20%20if%20str%5B-1%5D%20%3D%3D%20%27a%27%3A%0A%20%20%20%20%20%20%20%20return%20flip%28str%5B%3A-1%5D%29%2B%27b%27%0A%20%20%20%20if%20str%5B-1%5D%20%3D%3D%20%27b%27%3A%0A%20%20%20%20%20%20%20%20return%20flip%28str%5B%3A-1%5D%29%2B%27a%27%20%20%20%20%0Aflip%28%27aba%27%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;bab&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="primitive-recursion-formal-definition">
-<h1>Primitive recursion formal definition<a class="headerlink" href="#primitive-recursion-formal-definition" title="Link to this heading">#</a></h1>
+</section>
+<section id="primitive-recursion-formal-definition">
+<h2>Primitive recursion formal definition<a class="headerlink" href="#primitive-recursion-formal-definition" title="Link to this heading">#</a></h2>
 <p>Since it is in keeping with the historical record, we’ll present the formal definition in terms of computation on numbers rather than strings.</p>
-<p><strong>Definition</strong> (Definition by primitive recursion, binary functions)</p>
+<section id="definition-definition-by-primitive-recursion-binary-functions">
+<h3>Definition (definition by primitive recursion, binary functions)<a class="headerlink" href="#definition-definition-by-primitive-recursion-binary-functions" title="Link to this heading">#</a></h3>
 <p>Suppose a <em>base function</em> <span class="math notranslate nohighlight">\(B:\mathbb{N}\rightarrow \mathbb{N}\)</span> and an <em>iterator function</em> <span class="math notranslate nohighlight">\(I:\mathbb{N}^{3}\rightarrow \mathbb{N}\)</span> are given. Then the function <span class="math notranslate nohighlight">\(f:\mathbb{N}^{2}\rightarrow \mathbb{N}\)</span> defined by <em>primitive recursion</em> from this base and iterator is the function which satisfies the following, for all <span class="math notranslate nohighlight">\(n,m\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -705,8 +651,9 @@ f(n,m) = \begin{cases}
 \end{cases}
 \end{split}\]</div>
 <p>One can similarly define unary, ternary functions by primitive recursion.</p>
-<hr class="docutils" />
-<p><strong>Example</strong> (Addition)</p>
+</section>
+<section id="example-addition-redeux">
+<h3>Example (addition redeux)<a class="headerlink" href="#example-addition-redeux" title="Link to this heading">#</a></h3>
 <p>We must find functions <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(I\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -719,8 +666,9 @@ n+m = \begin{cases}
 <p>Then we check:</p>
 <p><span class="math notranslate nohighlight">\(n+0 =n= B(n)\)</span></p>
 <p><span class="math notranslate nohighlight">\(n+m = n+(m-1)+1 = I(n,m-1,n+(m-1))\)</span>.</p>
-<hr class="docutils" />
-<p><strong>Example</strong> (Multiplication)</p>
+</section>
+<section id="example-multiplication-redeux">
+<h3>Example (multiplication redeux)<a class="headerlink" href="#example-multiplication-redeux" title="Link to this heading">#</a></h3>
 <p>We must find functions <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(I\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -733,8 +681,9 @@ n*m = \begin{cases}
 <p>Then we check:</p>
 <p><span class="math notranslate nohighlight">\(n*0 =0= B(n)\)</span></p>
 <p><span class="math notranslate nohighlight">\(n*m = n*(m-1)+n = I(n,m-1,n\ast(m-1))\)</span>.</p>
-<hr class="docutils" />
-<p><strong>Definition</strong> (Primitive Recursive Functions)</p>
+</section>
+<section id="definition-primitive-recursive-functions">
+<h3>Definition (primitive recursive functions)<a class="headerlink" href="#definition-primitive-recursive-functions" title="Link to this heading">#</a></h3>
 <p>The <em>primitive recursive functions</em> on natural numbers are defined as follows:</p>
 <ul class="simple">
 <li><p>The identity function and constant functions and successor function <span class="math notranslate nohighlight">\(S(n)=n+1\)</span> are primitive recursive. Further, the projection functions e.g. <span class="math notranslate nohighlight">\(f(n,m)=m\)</span> and <span class="math notranslate nohighlight">\(g(n,m)=n\)</span> are primitive recursive.</p></li>
@@ -744,20 +693,23 @@ n*m = \begin{cases}
 </ul>
 <p>In other words: primitive recursive functions are closure of successor and projection and identity under composition and definition by primitive recursion.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="the-map">
-<h1>The map<a class="headerlink" href="#the-map" title="Link to this heading">#</a></h1>
+</section>
+<section id="the-map">
+<h2>The map<a class="headerlink" href="#the-map" title="Link to this heading">#</a></h2>
 <p>We’re going to be looking at a number of different notions of computation in this course.</p>
 <p>There are two maps we will use to orientate ourselves.</p>
 <p>The come from p. 104 of Soare 2016 and the cover of Immerman (see references).</p>
 <p>This is the basic map:</p>
-<p><img alt="The map" src="map.png" /></p>
+<p><img alt="The map" src="_images/map.png" /></p>
 <p>The map on left is of non-computable sets of numbers. The bottom is the computable or recursive sets of numbers.</p>
 <p>The map on right zooms in on the computable sets of numbers and classifies them further.</p>
 <p>This is the map with primtive recursive sets highlighted:</p>
-<p><img alt="The map with pra highlighted" src="map-pra.png" /></p>
+<p><img alt="The map with pra highlighted" src="_images/map-pra.png" /></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="skolem-on-primitive-recursive-functions">
-<h1>Skolem on primitive recursive functions<a class="headerlink" href="#skolem-on-primitive-recursive-functions" title="Link to this heading">#</a></h1>
+<section id="skolem-on-primitive-recursive-functions">
+<h2>Skolem on primitive recursive functions<a class="headerlink" href="#skolem-on-primitive-recursive-functions" title="Link to this heading">#</a></h2>
+<section id="skolem-on-foundations">
+<h3>Skolem on foundations<a class="headerlink" href="#skolem-on-foundations" title="Link to this heading">#</a></h3>
 <p>The first to define the primitive recursive function was Skolem in the 1920s.</p>
 <p>Skolem was motivated by considerations in the foundations of mathematics.</p>
 <p>He thought that set theory was not a good foundation for mathematics, for reasons including the following:</p>
@@ -765,24 +717,28 @@ n*m = \begin{cases}
 <li><p>There is no absolute notion of set– it depends rather on what first-order model of set theory you are in (this is related to his epynmous paradox).</p></li>
 <li><p>It is circular to base number on set, since to prove things about sets you will need to prove things by mathematical induction, which presupposes numbers (this point, or a version of it, was originally made by Poincaré against the early Hilbert).</p></li>
 </ul>
-<p>While set theory is widely used and applicable today, these two considerations of Skolem still resonate in modern philosophy of mathematics (see Button-Walsh 2016).</p>
+<p>While set theory is widely used and applicable today, these two considerations of Skolem still resonate in modern philosophy of mathematics (see <span id="id1">[]</span>).</p>
 <p>Our interest right now is in what Skolem thought the solution was.</p>
-<hr class="docutils" />
+</section>
+<section id="why-skolem-needed-to-define-primitive-recursion">
+<h3>Why Skolem needed to define primitive recursion<a class="headerlink" href="#why-skolem-needed-to-define-primitive-recursion" title="Link to this heading">#</a></h3>
 <p>Skolem was moved to try to figure out how much mathematics could be done just with concepts related to number:</p>
 <blockquote>
-<div><p>If we consider the general theorems of arithmetic to be functional assertions and take the recursive mode of thought as a basis, then that science can be founded in a rigorous way without the use of [quantifiers] (Skolem 1967a p. 304)</p>
+<div><p>If we consider the general theorems of arithmetic to be functional assertions and take the recursive mode of thought as a basis, then that science can be founded in a rigorous way without the use of [quantifiers] (<span id="id2">[<a class="reference internal" href="references.html#id44" title="Thoraf Skolem. Some remarks on axiomatized set theory. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 390–301. Harvard University Press, 1967.">Skolem, 1967</a>]</span> p. 304)</p>
 </div></blockquote>
 <blockquote>
-<div><p>It occurred to me [in autumn of 1919] that already the use of logical variables that they call “real” would surely suffice to provide a foundation for a large part of mathematics (Skolem 1967b p. 332).</p>
+<div><p>It occurred to me [in autumn of 1919] that already the use of logical variables that they call “real” would surely suffice to provide a foundation for a large part of mathematics (<span id="id3">[<a class="reference internal" href="references.html#id47" title="Thoraf Skolem. The foundations of elementary arithmetic established by means of the recursive mode of thought, without the use of apparent variables ranging over infinite domains. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 302–333. Harvard University Press, 1967.">Skolem, 1967</a>]</span> p. 332).</p>
 </div></blockquote>
 <p>Since Skolem wanted to base mathematics off of recursion, he needed to <em>define recursion</em> and then show that a whole lot of mathematics was computable.</p>
 <p>And Skolem’s definition of recursion was the notion of primitive recursive function.</p>
 <p>It is not clear if Skolem is presenting this as an axiomatization or as something else.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="the-limits-of-primitive-recursion">
-<h1>The limits of primitive recursion<a class="headerlink" href="#the-limits-of-primitive-recursion" title="Link to this heading">#</a></h1>
-<p>In 1925 (published in 1928), Ackermann found a function which was recursive in some sense and which was not primitive recursive. It is:</p>
-<p><strong>Definition</strong> (Ackermann function)</p>
+</section>
+<section id="the-limits-of-primitive-recursion">
+<h2>The limits of primitive recursion<a class="headerlink" href="#the-limits-of-primitive-recursion" title="Link to this heading">#</a></h2>
+<section id="definition-ackermann-function">
+<h3>Definition (Ackermann function)<a class="headerlink" href="#definition-ackermann-function" title="Link to this heading">#</a></h3>
+<p>In 1925 (published in <span id="id4">[]</span>), Ackermann found a function which was recursive in some sense and which was not primitive recursive. It is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \varphi_{\ell}(n,m) = \begin{cases}
@@ -799,20 +755,24 @@ n*m = \begin{cases}
     n &amp; \text{if } \ell\geq 2
 \end{cases}
 \end{split}\]</div>
-<p>A function like this was found simulatenously by Sudan; see Claude et. al. 1979.</p>
+<p>A function like this was found simulatenously by Sudan (see <span id="id5">[<a class="reference internal" href="references.html#id53" title="Cristian Calude, Solomon Marcus, and Ionel Tevy. The first example of a recursive function which is not primitive recursive. Historia Math., 6(4):380–384, 1979.">Calude <em>et al.</em>, 1979</a>]</span>)</p>
 <p>Experience suggests that this definition is hard to parse.</p>
-<hr class="docutils" />
+</section>
+</section>
+<section id="intuition-behind-the-ackermann-function">
+<h2>Intuition behind the Ackermann function<a class="headerlink" href="#intuition-behind-the-ackermann-function" title="Link to this heading">#</a></h2>
 <p>The Ackermann function becomes more intuitive when one realizes that it is designed so that:</p>
 <p><span class="math notranslate nohighlight">\(\varphi_0(n,m)= n+m\)</span></p>
 <p><span class="math notranslate nohighlight">\(\varphi_1(n,m)= n*m\)</span></p>
 <p><span class="math notranslate nohighlight">\(\varphi_2(n,m) = n^m\)</span></p>
 <p><span class="math notranslate nohighlight">\(\varphi_3(n,m) = n^{n^{\cdots^n}}\)</span>, with <span class="math notranslate nohighlight">\(m\)</span>-many <span class="math notranslate nohighlight">\(n\)</span>’s in the exponent.</p>
-<p>Ackermann showed that it was not primitive recursive by showing that <span class="math notranslate nohighlight">\(\varphi(n,n,n)\)</span> grew faster than any primitive recursive function. For a proof see Cori-Lascar 2001.</p>
-<p>Unsurprisingly then, the Ackermann function is nearly impossible to compute on modern computers (see two cell/slides ahead).</p>
-<hr class="docutils" />
+<p>Ackermann showed that it was not primitive recursive by showing that <span class="math notranslate nohighlight">\(\varphi(n,n,n)\)</span> grew faster than any primitive recursive function. For a proof see<span id="id6">[<a class="reference internal" href="references.html#id52" title="René Cori and Daniel Lascar. Mathematical Logic. Volume 2. Oxford University Press, Oxford, 2001.">Cori and Lascar, 2001</a>]</span> <span class="math notranslate nohighlight">\(\S\S\)</span> 5.1, 5.2.1.</p>
+<p>Unsurprisingly then, the Ackermann function is nearly impossible to compute on modern computers (see below)</p>
+<section id="public-comment-on-the-ackermann-function-in-the-1920s">
+<h3>Public comment on the Ackermann function in the 1920s<a class="headerlink" href="#public-comment-on-the-ackermann-function-in-the-1920s" title="Link to this heading">#</a></h3>
 <p>At the time, the only public comment on the computability of this function was due to Ackerman’s advisor Hilbert,who wrote that</p>
 <blockquote>
-<div><p>To be sure, we could now define <span class="math notranslate nohighlight">\(\varphi_{\ell}(n,m)\)</span> for variable <span class="math notranslate nohighlight">\(\ell\)</span> by means of substitutions and recursions, but these recursion would not be ordinary, stepwise ones; rather, we would be led to a manifold simulatenous recursion, that is a recursion on different variables at once, and a resolution of it into ordinary, stepwise recursions would be possible only if we make use of the notion of function variable (Hilbert 1967 p. 388; original from 1926).</p>
+<div><p>To be sure, we could now define <span class="math notranslate nohighlight">\(\varphi_{\ell}(n,m)\)</span> for variable <span class="math notranslate nohighlight">\(\ell\)</span> by means of substitutions and recursions, but these recursion would not be ordinary, stepwise ones; rather, we would be led to a manifold simulatenous recursion, that is a recursion on different variables at once, and a resolution of it into ordinary, stepwise recursions would be possible only if we make use of the notion of function variable (<span id="id7">[<a class="reference internal" href="references.html#id64" title="David Hilbert. On the infinite. In Jean Van Heijenoort, editor, From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931, pages 367–392. Harvard University Press, 1967.">Hilbert, 1967</a>]</span> p. 388).</p>
 </div></blockquote>
 <p>From our perspective, what this shows is that the concept of recursion was in a bit of a flux in the 1920s. Primitive recursion was the paradigm they were working with, but they knew that there were functions which were recursive in some more general sense but which we were not primitive recursive.</p>
 <div class="cell docutils container">
@@ -840,32 +800,18 @@ n*m = \begin{cases}
 </div>
 </div>
 </div>
-<hr class="docutils" />
+</section>
+<section id="the-ackermann-function-in-mathematical-nature">
+<h3>The Ackermann function in mathematical nature<a class="headerlink" href="#the-ackermann-function-in-mathematical-nature" title="Link to this heading">#</a></h3>
 <p>The Ackermann function shows up occasionally in mathematical nature.</p>
 <p>A subset <span class="math notranslate nohighlight">\(I\)</span> of polynomials <span class="math notranslate nohighlight">\(\mathbb{Q}[X_1, \ldots, X_N]\)</span> is an <em>ideal</em> if it is closed under addition, and by multiplication by other polynomials.</p>
 <p>Hilbert showed that these are ideals are always finitely generated (the <em>Hilbert Basis Theorem</em>, which also holds when the rationals are replaced by other fields).</p>
 <p>This implies that any ascending chain of ideals <span class="math notranslate nohighlight">\(I_0 \subseteq I_1 \subseteq I_s\subseteq\cdots\)</span> eventually stops growing, e.g. there is <span class="math notranslate nohighlight">\(s\)</span> such that <span class="math notranslate nohighlight">\(I_t=I_s\)</span> for all <span class="math notranslate nohighlight">\(t\geq s\)</span>.</p>
 <p>Further, if <span class="math notranslate nohighlight">\(I_s\)</span> is generated by polynomials of degree <span class="math notranslate nohighlight">\(\leq s\)</span>, then all such chains stop at the same time, depending only on <span class="math notranslate nohighlight">\(N\)</span>.</p>
-<p>The problem of computing from <span class="math notranslate nohighlight">\(N\)</span> this stopping number is not primitive recursive. Indeed, it is an Ackermann-like function. See Socias 1992.</p>
-<p>More generally, computational aspects of algebra geometry seem are good source of computable but hard to compute functions and operations. These flow in part from the Buchberger algorithm. See Cox et. al. 1997 and Simpson 1988</p>
+<p>The problem of computing from <span class="math notranslate nohighlight">\(N\)</span> this stopping number is not primitive recursive. Indeed, it is an Ackermann-like function. See <span id="id8">[<a class="reference internal" href="references.html#id43" title="Guillermo Moreno Socías. Length of polynomial ascending chains and primitive recursiveness. Math. Scand., 71(2):181–205, 1992.">Socías, 1992</a>]</span>.</p>
+<p>More generally, computational aspects of algebra geometry seem are good source of computable but hard to compute functions and operations. These flow in part from the Buchberger algorithm. See <span id="id9">[<a class="reference internal" href="references.html#id51" title="David A Cox, John Little, and Donal O'Shea. Ideals, Varieties, and Algorithms. Springer International Publishing, 1997.">Cox <em>et al.</em>, 1997</a>]</span> and <span id="id10">[<a class="reference internal" href="references.html#id11" title="Stephen George Simpson. Subsystems of Second Order Arithmetic. Cambridge University Press, second edition, May 2009.">Simpson, 2009</a>]</span>.</p>
 </section>
-<hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="references">
-<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
-<p>Ackermann, W. (1928). Zum Hilbertschen Aufbau der reellen Zahlen. Mathematische Annalen, 99, 118–133. <a class="reference external" href="https://doi.org/10.1007/BF01459088">https://doi.org/10.1007/BF01459088</a></p>
-<p>Button, T., &amp; Walsh, S. (2016). Structure and Categoricity: Determinacy of Reference and Truth Value in the Philosophy of Mathematics. Philosophia Mathematica. Series III, 24(3), 283–307. <a class="reference external" href="http://dx.doi.org/10.1093/philmat/nkw007">http://dx.doi.org/10.1093/philmat/nkw007</a></p>
-<p>Calude, C., Marcus, S., &amp; Tevy, I. (1979). The first example of a recursive function which is not primitive recursive. Historia Mathematica, 6(4), 380–384. <a class="reference external" href="http://dx.doi.org/10.1016/0315-0860(79)90024-7">http://dx.doi.org/10.1016/0315-0860(79)90024-7</a></p>
-<p>Cori, R., &amp; Lascar, D. (2001). 5.1, 5.2.1 Primitive Recursive Functions and Sets; Ackermann’s function. In Mathematical Logic (Vol. 2, pp. 8–22). Oxford: Oxford University Press.</p>
-<p>Cox, D. A., Little, J., &amp; O’Shea, D. (1997). Ideals, Varieties, and Algorithms. Springer. <a class="reference external" href="https://link.springer.com/book/10.1007/978-3-319-16721-3">https://link.springer.com/book/10.1007/978-3-319-16721-3</a></p>
-<p>Immerman, N. (2012). Descriptive Complexity. Springer. <a class="reference external" href="https://people.cs.umass.edu/~immerman/book/descriptiveComplexity.html">https://people.cs.umass.edu/~immerman/book/descriptiveComplexity.html</a></p>
-<p>Hilbert, D. (1967). On the Infinite. In J. Van Heijenoort (Ed.), From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931 (pp. 367–392). Harvard University Press.</p>
-<p>Originally published as: Hilbert, D. (1926). Über das Unendliche. Mathematische Annalen, 95(1), 161–190. <a class="reference external" href="https://doi.org/10.1007/BF01206605">https://doi.org/10.1007/BF01206605</a></p>
-<p>Simpson, S. G. (1988). Ordinal numbers and the Hilbert basis theorem. Journal of Symbolic Logic, 53(3), 961–974. <a class="reference external" href="https://doi.org/10.2307/2274585">https://doi.org/10.2307/2274585</a></p>
-<p>Skolem, T. (1967a). The foundations of elementary arithmetic established by means of the recursive mode of thought, without the use of apparent variables ranging over infinite domains. In J. Van Heijenoort (Ed.), From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931 (pp. 302–333). Harvard University Press.</p>
-<p>Originally published as: Skolem, T. (1923a). Begründung der elementaren Arithmetik durch die rekurrierende Denkweise ohne Anwendung scheinbarer Veränderlichen mit unendlichem Ausdehnungsbereich. Videnskapsselskapets skrifter, I. Matematisk-naturvidenskabelig klasse, 6. Reprinted in: Skolem, T. (1970). Selected Works in Logic, By Th. Skolem. Edited by Jens Erik Fenstad.</p>
-<p>Skolem, T. (1967b). Some remarks on axiomatized set theory. In J. Van Heijenoort (Ed.), From Frege to Gödel: A Source Book in Mathematical Logic, 1879-1931 (pp. 390–301). Harvard University Press.</p>
-<p>Originally published as: Skolem, T. (1923b). Einige Bemerkungen zur axiomatischen Begründung der Mengenlehre. In Matematikerkongressen i Helsingfors den 4-7 Juli 1922, Den femte skandinaviska matematikerskongressen, Redogörelse (pp. 217–232). Helsinki: Akademiska Bokhandeln. Repreinted in: Skolem, T. (1970). Selected Works in Logic, By Th. Skolem. Edited by Jens Erik Fenstad.</p>
-<p>Socías, G. M. (1992). Length of Polynomial Ascending Chains and Primitive Recursiveness. Mathematica Scandinavica, 71(2), 181–205. <a class="reference external" href="https://www.jstor.org/stable/24492715">https://www.jstor.org/stable/24492715</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -932,17 +878,41 @@ n*m = \begin{cases}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Philcomp Week 1 Tuesday</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-for-course">Plan for course</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-idea-and-examples">Primitive recursion idea and examples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-on-strings">Primitive recursion on strings</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-formal-definition">Primitive recursion formal definition</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-map">The map</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#skolem-on-primitive-recursive-functions">Skolem on primitive recursive functions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-primitive-recursion">The limits of primitive recursion</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-idea-and-examples">Primitive recursion idea and examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-primitive-recursion">Definition (primitive recursion)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-addition">Example (addition)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-with-python-tutor">Visualizing with Python tutor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-multiplication">Example (multiplication)</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-on-strings">Primitive recursion on strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-primitive-recursion-on-strings">Definition (primitive recursion on strings)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-flipping-a-s-to-b-s">Example (flipping a’s to b’s)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-recursion-formal-definition">Primitive recursion formal definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-definition-by-primitive-recursion-binary-functions">Definition (definition by primitive recursion, binary functions)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-addition-redeux">Example (addition redeux)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-multiplication-redeux">Example (multiplication redeux)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-primitive-recursive-functions">Definition (primitive recursive functions)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-map">The map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skolem-on-primitive-recursive-functions">Skolem on primitive recursive functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skolem-on-foundations">Skolem on foundations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-skolem-needed-to-define-primitive-recursion">Why Skolem needed to define primitive recursion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-primitive-recursion">The limits of primitive recursion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-ackermann-function">Definition (Ackermann function)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intuition-behind-the-ackermann-function">Intuition behind the Ackermann function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-comment-on-the-ackermann-function-in-the-1920s">Public comment on the Ackermann function in the 1920s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ackermann-function-in-mathematical-nature">The Ackermann function in mathematical nature</a></li>
+</ul>
+</li>
+</ul>
   </nav></div>
 
 </div></div>

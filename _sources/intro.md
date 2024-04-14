@@ -2,7 +2,7 @@
 
 ## Aims and goals
 
-This is an overview of philosophy of computation. We are going to starts with founding figures of Turing, Church, and Kleene and look at different conceptual analyses of computation (bounded and local search, beta reduction of lambda terms) which are related to the different models of computation (Turing machines, lambda calculi). Then we're going to look at effects of natural non-computability (Gödel's disjunction) and the non-computability of methods of verification (Rice's theorem). Then we're going to do topics such as:
+This is an overview of philosophy of computation. We are going to start with the founding figures of Turing, Church, and Kleene and look at different conceptual analyses of computation (bounded and local action, beta reduction of lambda terms) which are related to the different models of computation (Turing machines, lambda calculi). Then we are going to look at effects of natural non-computability (Gödel's disjunction) and the non-computability of methods of verification (Rice's theorem). Then we are going to do topics such as:
 
 - the apparent absoluteness of computation
 - the confluence of different models of computation
@@ -20,11 +20,11 @@ This course does not presuppose any prior familiarity with the theory of computa
 
 ## Acknowledgements
 
-Thanks to the wonderful students in [UCLA's Phlios 128 in Spring 2024](https://bruinlearn.ucla.edu/courses/186473) for their feedback on this material. This material owes a lot to my advisors [Peter Cholak](https://math.nd.edu/people/faculty/peter-cholak/) and [Mic Detlefsen](https://dailynous.com/2019/10/23/michael-detlefsen-1948-2019/), from whom I first learned the theory of computation and the philosophy of mathematics which primarily orientates my own thinking about these questions.
+Thanks to the wonderful students in [UCLA's Phlios 128 in Spring 2024](https://bruinlearn.ucla.edu/courses/186473) for their feedback on this material.
 
 ## Code and examples
 
-Philosophy works best when there are good examples at play to motivate a position or to assess a position. And it is all the better when it is easy for everyone, with just a little bit of time and creativity, to come up with the examples. The recent popularity of python has made coming up with worked out examples easier than ever. Hence, there are many bits of python code and other code scattered throughout the text, mostly to illustrate key ideas with nice graphics, but also to provide an easy way to work out specific examples. 
+Philosophy works best when there are good examples at play to motivate a position or to assess a position. And it is all the better when it is easy for everyone, with just a little bit of time and creativity, to come up with the examples. The recent popularity of python has made coming up with worked out examples easier than ever. Hence, there are many bits of python code and other code scattered throughout the text, mostly to illustrate key ideas, but also to provide an easy way to work out specific examples. 
 
 For the python code, one can:
 

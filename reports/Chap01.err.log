@@ -28,7 +28,7 @@ register_ipython_magics()
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[3], line 4[0m
+Cell [0;32mIn[2], line 4[0m
 [1;32m      1[0m [38;5;66;03m# this calls up python tutor (https://pythontutor.com), [39;00m
 [1;32m      2[0m [38;5;66;03m# which for very simple programs steps one through the computation[39;00m
 [0;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmetakernel[39;00m [38;5;28;01mimport[39;00m register_ipython_magics
