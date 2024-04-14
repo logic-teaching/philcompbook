@@ -183,7 +183,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 4</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -364,7 +363,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 4</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-the-halting-set">Recall the halting set</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-computability-in-truth-and-theories">Non-computability in truth and theories</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kleene-s-characterization-of-computability-in-terms-of-definability">Kleene’s characterization of computability in terms of definability</a></li>
@@ -384,18 +382,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#randomness-and-initial-segment-complexity">Randomness and initial segment complexity</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-are-doing-when-we-are-studying-non-computability">What we are doing when we are studying non-computability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-1">Puzzle, version 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-2">Puzzle, version 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-1-degrees-of-difficulty">Response 1: degrees of difficulty</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-2-counterpossibles">Response 2: counterpossibles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-3-agent-meets-nature">Response 3: agent meets nature</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-are-doing-when-we-are-studying-non-computability">What we are doing when we are studying non-computability</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-1">Puzzle, version 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-2">Puzzle, version 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-1-degrees-of-difficulty">Response 1: degrees of difficulty</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-2-counterpossibles">Response 2: counterpossibles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-3-agent-meets-nature">Response 3: agent meets nature</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -529,28 +524,27 @@ document.write(`
 <p>E.g. why is <span class="math notranslate nohighlight">\(010101010101\ldots\)</span> not random? Because its initial segments have a short description: ‘repeat 0 and 1’, which is short because it takes like less than 20 characters.</p>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="what-we-are-doing-when-we-are-studying-non-computability">
-<h1>What we are doing when we are studying non-computability<a class="headerlink" href="#what-we-are-doing-when-we-are-studying-non-computability" title="Link to this heading">#</a></h1>
+<section id="what-we-are-doing-when-we-are-studying-non-computability">
+<h2>What we are doing when we are studying non-computability<a class="headerlink" href="#what-we-are-doing-when-we-are-studying-non-computability" title="Link to this heading">#</a></h2>
 <section id="puzzle-version-1">
-<h2>Puzzle, version 1<a class="headerlink" href="#puzzle-version-1" title="Link to this heading">#</a></h2>
+<h3>Puzzle, version 1<a class="headerlink" href="#puzzle-version-1" title="Link to this heading">#</a></h3>
 <p>The following proposal seems plausible: computability is an epistemic constraint on human agents. The intended import is something like the following: the only sets that we can know about are computable, the only theories that we can grasp are computable, the only rings and continuous functions which we can work with are computable.</p>
 <p>(Caveat: contemporary epistemology studies what propositions one knows, not what sets one knows. But perhaps we might say that to know a set is to be in a position to know, of a given number when presented with it, whether it is in the set or not in the set).</p>
 <p>The puzzle: if you agree with the proposal, isn’t the study of non-computable sets <em>not</em> the kind of inquiry that results in knowledge? Hence, what do you think that you’re doing when you are thinking about non-computable sets?</p>
 </section>
 <section id="puzzle-version-2">
-<h2>Puzzle, version 2<a class="headerlink" href="#puzzle-version-2" title="Link to this heading">#</a></h2>
+<h3>Puzzle, version 2<a class="headerlink" href="#puzzle-version-2" title="Link to this heading">#</a></h3>
 <p>The following proposal seems plausible: physical computers can only compute sets of natural numbers which are computable. Indeed, something stronger is most likely true: physical computers can only compute sets of natural numbers which are feasibly computable.</p>
 <p>The puzzle: if you agree with the proposal, then why study non-computable sets at all, since there is no hope of actually implementing them on devices we actually use?</p>
 </section>
 <section id="response-1-degrees-of-difficulty">
-<h2>Response 1: degrees of difficulty<a class="headerlink" href="#response-1-degrees-of-difficulty" title="Link to this heading">#</a></h2>
+<h3>Response 1: degrees of difficulty<a class="headerlink" href="#response-1-degrees-of-difficulty" title="Link to this heading">#</a></h3>
 <p>Humans are interested in problems and how to solve them. Some problems are harder than others. One way to measure degree of difficulty is  by showing that a method of solving one problem leads to a method for solving the other problem. You can understand the degree of diffulcty of a problem without being able to solve that problem yourself.</p>
 <p>Kolmogorov <span id="id12">[<a class="reference internal" href="references.html#id24" title="A. N. Kolmogorov. Zur Deutung der intuitionistischen Logik. Mathematische Zeitschrift, 35:58-65, 1932.">Kolmogorov, 1932</a>]</span> <span id="id13">[<a class="reference internal" href="references.html#id25" title="A. N. Kolmogorov. On the interpretation of intuitionistic logic. In Paolo Mancosu, editor, From Brouwer to Hilbert: The Debate on the Foundations of Mathematics in the 1920s, pages 328-334. Oxford University Press, New York, 1998.">Kolmogorov, 1998</a>]</span> thought that this was what mathematical assertions were: claims about relative degrees of difficulty of solving mathematical problems. This is the basis of his problem interpretation of intuitionistic logic. E.g. he thinks <span class="math notranslate nohighlight">\(p\rightarrow q\)</span> means that one has a method by which to go from any method for solving problem <span class="math notranslate nohighlight">\(p\)</span> to a method for solving problem <span class="math notranslate nohighlight">\(q\)</span>.</p>
 <p>Hence what you are doing in studying non-computability is just studying the <em>computational</em> degree of difficulty of a problem. See <span id="id14">[<a class="reference internal" href="references.html#id28">Dean, 2015</a>]</span>, <span id="id15">[<a class="reference internal" href="references.html#id27" title="Walter Dean and Alberto Naibo. Recursive Functions. https://plato.stanford.edu/archives/sum2024/entries/recursive-functions/, 2024.">Dean and Naibo, 2024</a>]</span> Section 3.5 and <span id="id16">[<a class="reference internal" href="references.html#id4" title="Stephen G Simpson. Degrees of unsolvability: a tutorial. In Evolving Computability, 83–94. Springer International Publishing, 2015.">Simpson, 2015</a>]</span>.</p>
 </section>
 <section id="response-2-counterpossibles">
-<h2>Response 2: counterpossibles<a class="headerlink" href="#response-2-counterpossibles" title="Link to this heading">#</a></h2>
+<h3>Response 2: counterpossibles<a class="headerlink" href="#response-2-counterpossibles" title="Link to this heading">#</a></h3>
 <p>Consider:</p>
 <ol class="arabic simple">
 <li><p>If New York City was in California, then New York City would be the biggest city in California.</p></li>
@@ -563,10 +557,11 @@ document.write(`
 <p>The antecedent of 1’ is true and the antecedent of 2’ is false. Jenny thinks that the map is essentially the study of things like 2’. He views the theory of computation as a science dealing in counterpossibles and hence as a way to make the minority view more intelligble.</p>
 </section>
 <section id="response-3-agent-meets-nature">
-<h2>Response 3: agent meets nature<a class="headerlink" href="#response-3-agent-meets-nature" title="Link to this heading">#</a></h2>
+<h3>Response 3: agent meets nature<a class="headerlink" href="#response-3-agent-meets-nature" title="Link to this heading">#</a></h3>
 <p>A third response is that one can study the relation between the computable agents and the possibly non-computable nature that they are encountering.</p>
 <p>This is the perspective of <span id="id18">[<a class="reference internal" href="references.html#id23">Huttegger <em>et al.</em>, 2024</a>]</span>. The agent has a computable random variable and a computable probability assignment, but they are updating on a Martin-Löf random data stream.</p>
 <p>Maybe there is some dim analogue of this Gödel-like examples above: as an agent you are working with a computable commutative ring, and for various purposes you have to consult some external object like a prime ideal.</p>
+</section>
 </section>
 </section>
 
@@ -634,7 +629,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 4</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-the-halting-set">Recall the halting set</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-computability-in-truth-and-theories">Non-computability in truth and theories</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kleene-s-characterization-of-computability-in-terms-of-definability">Kleene’s characterization of computability in terms of definability</a></li>
@@ -654,18 +648,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#randomness-and-initial-segment-complexity">Randomness and initial segment complexity</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-are-doing-when-we-are-studying-non-computability">What we are doing when we are studying non-computability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-1">Puzzle, version 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-2">Puzzle, version 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-1-degrees-of-difficulty">Response 1: degrees of difficulty</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-2-counterpossibles">Response 2: counterpossibles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-3-agent-meets-nature">Response 3: agent meets nature</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-are-doing-when-we-are-studying-non-computability">What we are doing when we are studying non-computability</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-1">Puzzle, version 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puzzle-version-2">Puzzle, version 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-1-degrees-of-difficulty">Response 1: degrees of difficulty</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-2-counterpossibles">Response 2: counterpossibles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-3-agent-meets-nature">Response 3: agent meets nature</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
