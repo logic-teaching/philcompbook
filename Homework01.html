@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -184,7 +184,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 1</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -365,12 +364,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Homework 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4">Problem 4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5">Problem 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6">Problem 6</a></li>
@@ -379,9 +375,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9">Problem 9</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10">Problem 10</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -423,21 +416,21 @@ f(m) = \begin{cases}
 \end{split}\]</div>
 <p>Show that factorial <span class="math notranslate nohighlight">\(f(n)=n!\)</span> is primitive recursive by finding a base number <span class="math notranslate nohighlight">\(b\)</span> and iterator <span class="math notranslate nohighlight">\(I\)</span> which define it, and where we already know from previous work that <span class="math notranslate nohighlight">\(I\)</span> is primitive recursive.</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="problem-3">
-<h1>Problem 3<a class="headerlink" href="#problem-3" title="Link to this heading">#</a></h1>
+<section id="problem-3">
+<h2>Problem 3<a class="headerlink" href="#problem-3" title="Link to this heading">#</a></h2>
 <p>Show that the following predecessor function is primitive recursive:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{pred}(m) = \begin{cases}
     0 &amp; \text{if } m = 0 \\ 
     m-1 &amp; \text{if } m&gt;0
 \end{cases}\end{split}\]</div>
-<p><em>Note</em>: this example is, to my knowlede, the reason why we allow the iterator to have one more argument than the function which it defines.</p>
+<p><em>Note</em>: this example is, to my knowledge, the reason why we allow the iterator to have one more argument than the function which it defines.</p>
+</section>
 <section id="problem-4">
 <h2>Problem 4<a class="headerlink" href="#problem-4" title="Link to this heading">#</a></h2>
 <p>Recall <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap01.html#definition-ackermann-function">the Ackermann function</a> <span class="math notranslate nohighlight">\(\varphi_{\ell}(n,m)\)</span></p>
-<p>Give yourself one page and try to calculuate as much of <span class="math notranslate nohighlight">\(\varphi_3(3,3)\)</span> as you can.</p>
-<p>The moral of this exercise is that it is very natural to see the Turing machine model as emerging from an attempt to describe the process of evaluating a function like this: the cells of the tape are the different locations on the page, the machine head is the pencil or pen, and the instructions are the rules embedded in the different defintional clauses of the function.</p>
+<p>Give yourself one page and try to calculate as much of <span class="math notranslate nohighlight">\(\varphi_3(3,3)\)</span> as you can.</p>
+<p>The moral of this exercise is that it is very natural to see the Turing machine model as emerging from an attempt to describe the process of evaluating a function like this: the cells of the tape are the different locations on the page, the machine head is the pencil or pen, and the instructions are the rules embedded in the different definitional clauses of the function.</p>
 </section>
 <section id="problem-5">
 <h2>Problem 5<a class="headerlink" href="#problem-5" title="Link to this heading">#</a></h2>
@@ -545,12 +538,9 @@ f(m) = \begin{cases}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Homework 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4">Problem 4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5">Problem 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6">Problem 6</a></li>
@@ -559,9 +549,6 @@ f(m) = \begin{cases}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9">Problem 9</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10">Problem 10</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
