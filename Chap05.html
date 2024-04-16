@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 5 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chap05';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Chap05.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chap05.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 5</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-notation">Lambda notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beta-reduction">Beta reduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-relation">Reduction relation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combinators">The combinators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-most-famous-combinators">The three most famous combinators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-the-action-of-identity-bird">Proposition (the action of identity bird)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary-identity-acting-on-itself-bird">Corollary (identity acting on itself bird)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-the-action-of-kestral">Proposition (the action of Kestral)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-the-action-of-starling">Proposition (the action of starling)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary-skk-acts-like-i">Corollary (SKK acts like I)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#untypedness">Untypedness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#associativity-conventions">Associativity conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterated-lambda-abstracts">Iterated lambda abstracts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-non-convergent-terms">The non-convergent terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">Looping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crashing">Crashing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalizing-convergence">Formalizing convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-and-normalizable">Normal and normalizable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#church-rosser-theorem">Church-Rosser Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary-normal-forms-are-unique">Corollary (normal forms are unique)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-numbers">Defining the numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterates-of-successor">Iterates of successor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#church-numerals">Church numerals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-definable">Lambda definable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-equivalence-of-lambda-definability-and-computable">Theorem (equivalence of lambda definability and computable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-fixed-point-theorem">Theorem (fixed point theorem)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-5">
+<h1>Chapter 5<a class="headerlink" href="#chapter-5" title="Link to this heading">#</a></h1>
+<p>In this chapter we go over the untyped lambda calculus. This was invented by Church in the early 1930s and was one of the original definitions of computability.</p>
+<section id="lambda-notation">
+<h2>Lambda notation<a class="headerlink" href="#lambda-notation" title="Link to this heading">#</a></h2>
+<p>The lambda notation is a simple notation system designed to describe the input-output behaviour of functions that are equipped with a distinguished rule. The basic idea is to take a rule like <span class="math notranslate nohighlight">\(2v+5\)</span> and add a preface <span class="math notranslate nohighlight">\(\lambda v.\)</span> to turn the rule into a function.</p>
+<p>For example</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda v. 2v+5\)</span>, for example, is a name for the function “multiply by two and then add five.”</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda v. 3v+5\)</span> is a name for the function “multiply by three and then add five.”</p></li>
+</ul>
+<p>This process of function-formation is called <em>lambda-abstraction</em>, and the resulting expressions which begin with <span class="math notranslate nohighlight">\(\lambda\)</span>’s are called <em>lambda abstracts</em>.</p>
+<p>To describe the input-output behaviour, one writes things like the following:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\lambda v. 2v+5)(1) = 2\cdot 1+5 = 7\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\((\lambda v. 2v+5)(2) = 2\cdot 2 +5 = 9\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\lambda v. 3v+5)(1) = 3\cdot 1 +5 = 8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\lambda v. 3v+5)(2) = 3\cdot 2+ 5 = 11\)</span>.</p></li>
+</ul>
+<p>The name given to inputting a value into a function written with lambda-abstraction, as is done in <span class="math notranslate nohighlight">\((\lambda v. 2v+5)(1)\)</span>, is <em>application</em>.</p>
+<p>Using this notation, we can also describe functions that take two or more variables. For instance, <span class="math notranslate nohighlight">\(\lambda u. \lambda v. u\cdot v+5\)</span> is the function that given two inputs, multiplies them together and then adds five.</p>
+<p>The notation for input-output behaviour illustrated in the previous equations carries over here as well:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\lambda u. \lambda v. u\cdot v+5)(2) = \lambda v.2\cdot v+5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(((\lambda u. \lambda v. u\cdot v+5)(2))(1) = (\lambda v.2\cdot v+5)(1) = 2\cdot 1+5 = 7\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\lambda u. \lambda v. u\cdot v+5)(3) = \lambda v.3\cdot v+5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(((\lambda u. \lambda v. u\cdot v+5)(3))(1) = (\lambda v.3\cdot v+5)(1) = 3\cdot 1 +5 = 8\)</span></p></li>
+</ul>
+</section>
+<section id="beta-reduction">
+<h2>Beta reduction<a class="headerlink" href="#beta-reduction" title="Link to this heading">#</a></h2>
+<p>The lambda calculus is, in the first instance, simply an attempt to axiomatize the rules for lambda-abstraction and application implicit in such simple calculations.</p>
+<p>On the basis of these examples, it is natural to expect that <span class="math notranslate nohighlight">\((\lambda u.M)N\)</span> is the result of replacing <span class="math notranslate nohighlight">\(u\)</span> by <span class="math notranslate nohighlight">\(N\)</span> throughout <span class="math notranslate nohighlight">\(M\)</span>.</p>
+<p>If we use <span class="math notranslate nohighlight">\(M[u:=N]\)</span> for the latter, we define a <em>one-step beta reduction</em> as follows:</p>
+<div class="math notranslate nohighlight">
+\[(\lambda u.M)N \triangleright_1 M[u:=N]\]</div>
+<p>The intended interpretation of a one-step beta reduction is the following: when one inputs in the value <span class="math notranslate nohighlight">\(N\)</span> into the function <span class="math notranslate nohighlight">\(\lambda u. M\)</span>, one goes through the term <span class="math notranslate nohighlight">\(M\)</span>, and everywhere where one sees an instance of the variable <span class="math notranslate nohighlight">\(u\)</span>, one replaces it with the input value <span class="math notranslate nohighlight">\(N\)</span>, and the result of doing so is <span class="math notranslate nohighlight">\(M[u:=N]\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(M = 2\cdot u+5\)</span> and <span class="math notranslate nohighlight">\(N=1\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\((\lambda u.M)(N) =(\lambda u. 2\cdot u+5)(1)\triangleright_1 2\cdot 1+5\)</span>,</p>
+<p>Just as with the rules for quantifiers in predicate logic, so with Axiom Beta one should <em>only do the substitution if no free variables become bound as a result of the substitution</em>:</p>
+<p>E.g. from <span class="math notranslate nohighlight">\(\forall \; x \; \exists \; y \; x\cdot y=-1\)</span>, we do not allow ourselves to infer <span class="math notranslate nohighlight">\(\exists \; y \; y^2 = -1\)</span>.</p>
+<p>Likewise, from <span class="math notranslate nohighlight">\((\lambda x \; \lambda y . \; x\cdot y)(y)\)</span> we do not allow ourselves to reduce to <span class="math notranslate nohighlight">\(\lambda y . y^2\)</span></p>
+<section id="reduction-relation">
+<h3>Reduction relation<a class="headerlink" href="#reduction-relation" title="Link to this heading">#</a></h3>
+<p>We write <span class="math notranslate nohighlight">\(M\triangleright N\)</span> if one can use just any number of one-step beta reductions to get from <span class="math notranslate nohighlight">\(M\)</span> to <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<p>That is, <span class="math notranslate nohighlight">\(\triangleright\)</span> the transitive closure of the one-step beta-reduction relation <span class="math notranslate nohighlight">\(\triangleright_1\)</span>.</p>
+</section>
+</section>
+<section id="the-combinators">
+<h2>The combinators<a class="headerlink" href="#the-combinators" title="Link to this heading">#</a></h2>
+<section id="the-three-most-famous-combinators">
+<h3>The three most famous combinators<a class="headerlink" href="#the-three-most-famous-combinators" title="Link to this heading">#</a></h3>
+<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id1">[<a class="reference internal" href="references.html#id6" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, November 2000.">Smullyan, 2000</a>]</span>:</p>
+<ul class="simple">
+<li><p><em>Identity bird</em> (<em>I</em>) is <span class="math notranslate nohighlight">\(\lambda x.x\)</span></p></li>
+<li><p><em>Kestrel</em>  (<em>K</em>) is <span class="math notranslate nohighlight">\(\lambda xy.  x\)</span></p></li>
+<li><p><em>Starling</em> (<em>S</em>) is <span class="math notranslate nohighlight">\(\lambda xyz. xz(yz)\)</span></p></li>
+</ul>
+</section>
+<section id="proposition-the-action-of-identity-bird">
+<h3>Proposition (the action of identity bird)<a class="headerlink" href="#proposition-the-action-of-identity-bird" title="Link to this heading">#</a></h3>
+<p>For all terms <span class="math notranslate nohighlight">\(M\)</span>, one has <span class="math notranslate nohighlight">\(IM \triangleright M\)</span>.</p>
+<p><em>Proof</em></p>
+<p><span class="math notranslate nohighlight">\(IM = (\lambda x. x)M = M\)</span></p>
+</section>
+<section id="corollary-identity-acting-on-itself-bird">
+<h3>Corollary (identity acting on itself bird)<a class="headerlink" href="#corollary-identity-acting-on-itself-bird" title="Link to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(II \triangleright I\)</span></p>
+<p><em>Proof</em></p>
+<p>Let <span class="math notranslate nohighlight">\(M\)</span> be <span class="math notranslate nohighlight">\(I\)</span> in the above.</p>
+</section>
+<section id="proposition-the-action-of-kestral">
+<h3>Proposition (the action of Kestral)<a class="headerlink" href="#proposition-the-action-of-kestral" title="Link to this heading">#</a></h3>
+<p>For any terms <span class="math notranslate nohighlight">\(M,N\)</span> one has <span class="math notranslate nohighlight">\(KMN \triangleright M\)</span>.</p>
+<p><em>Proof</em>:</p>
+<p><span class="math notranslate nohighlight">\((\lambda xy.  x)MN = (\lambda y.M)N = M\)</span></p>
+</section>
+<section id="proposition-the-action-of-starling">
+<h3>Proposition (the action of starling)<a class="headerlink" href="#proposition-the-action-of-starling" title="Link to this heading">#</a></h3>
+<p>For any terms <span class="math notranslate nohighlight">\(P,Q,R\)</span> one has <span class="math notranslate nohighlight">\(SPQR \triangleright PR(QR)\)</span></p>
+<p><em>Proof</em></p>
+<p><span class="math notranslate nohighlight">\(SPQR = (\lambda xyz. xz(yz))PQR = (\lambda yz. Pz(yz))QR = (\lambda z. Pz(Qz))R = PR(QR)\)</span></p>
+</section>
+<section id="corollary-skk-acts-like-i">
+<h3>Corollary (SKK acts like I)<a class="headerlink" href="#corollary-skk-acts-like-i" title="Link to this heading">#</a></h3>
+<p>For any terms <span class="math notranslate nohighlight">\(M\)</span>, one has <span class="math notranslate nohighlight">\(SKKM \triangleright M\)</span>.</p>
+<p><em>Proof</em>:</p>
+<p>Let <span class="math notranslate nohighlight">\(P, Q\)</span> be <span class="math notranslate nohighlight">\(K\)</span> and let <span class="math notranslate nohighlight">\(M\)</span> be <span class="math notranslate nohighlight">\(R\)</span>. Then by the above one has</p>
+<p><span class="math notranslate nohighlight">\(SKKM = KM(KM)= M\)</span>, where the last identity follows from the action of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+</section>
+</section>
+<section id="untypedness">
+<h2>Untypedness<a class="headerlink" href="#untypedness" title="Link to this heading">#</a></h2>
+<p>The untyped nature of this calclus is evident in claims like <span class="math notranslate nohighlight">\(II\triangleright I\)</span>. For instance, if <span class="math notranslate nohighlight">\(I\)</span> was just the identity function on natural numbers, it would make no sense to input in <span class="math notranslate nohighlight">\(I\)</span> to itself.</p>
+<p>Here’s what Church says about this in his 1951 book:</p>
+<blockquote>
+<div><p>In particular it is not excluded that one of the elements of the range of arguments of a function <span class="math notranslate nohighlight">\(f\)</span> should be the function <span class="math notranslate nohighlight">\(f\)</span> itself. This possibility has frequently been denied, and indeed, if a function is defined as a correspondence between two previously given ranges, the reason for the denial is clear. Here, however, we regard the operation or rule of correspondence, which constitutes the function, as being first given, and the range of arguments then determined as consisting of the things to which the operation is applicable (<span id="id2">[<a class="reference internal" href="references.html#id4" title="Alonzo Church. The Calculi of Lambda-conversion. Princeton University Press, 1951.">Church, 1951</a>]</span> p. 2).</p>
+</div></blockquote>
+<p>Hence on Church’s way of thinking, since his calculus is one which tries to describe rules rather than the extensional functions which they determine, one should just take the rule to have primacy, and try to determine its range of application as one goes along. For instance, presumably identity is applicable to anything.</p>
+</section>
+<section id="associativity-conventions">
+<h2>Associativity conventions<a class="headerlink" href="#associativity-conventions" title="Link to this heading">#</a></h2>
+<section id="application">
+<h3>Application<a class="headerlink" href="#application" title="Link to this heading">#</a></h3>
+<p>Application associates to the <strong>left</strong></p>
+<p>That is, <span class="math notranslate nohighlight">\(MNO\)</span> means <span class="math notranslate nohighlight">\((MN)O\)</span></p>
+<p>For instance,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(MNOP\)</span> means <span class="math notranslate nohighlight">\(((MN)O)P\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(MN(OP)\)</span> means <span class="math notranslate nohighlight">\((MN)(OP)\)</span></p></li>
+</ul>
+</section>
+<section id="iterated-lambda-abstracts">
+<h3>Iterated lambda abstracts<a class="headerlink" href="#iterated-lambda-abstracts" title="Link to this heading">#</a></h3>
+<p>Nested lambda abstracts associate to the <strong>right</strong></p>
+<p>That is, <span class="math notranslate nohighlight">\(\lambda xyz. M\)</span> means <span class="math notranslate nohighlight">\(\lambda x. (\lambda y. (\lambda z . M))\)</span></p>
+</section>
+</section>
+<section id="the-non-convergent-terms">
+<h2>The non-convergent terms<a class="headerlink" href="#the-non-convergent-terms" title="Link to this heading">#</a></h2>
+<section id="looping">
+<h3>Looping<a class="headerlink" href="#looping" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(M\)</span> be <span class="math notranslate nohighlight">\((\lambda x. xx)(\lambda x. xx)\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(M\triangleright M\)</span></p>
+<p><em>Proof</em></p>
+<p>Let <span class="math notranslate nohighlight">\(N\)</span> be <span class="math notranslate nohighlight">\((\lambda x. xx)\)</span>, so that <span class="math notranslate nohighlight">\(M\)</span> is <span class="math notranslate nohighlight">\(NN\)</span>.</p>
+<p>Then one has <span class="math notranslate nohighlight">\(M = (\lambda x. xx)N \triangleright NN = M\)</span>.</p>
+</section>
+<section id="crashing">
+<h3>Crashing<a class="headerlink" href="#crashing" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(M\)</span> be <span class="math notranslate nohighlight">\((\lambda x. xxy)(\lambda x. xxy)\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(M\triangleright My\)</span></p>
+<p><em>Proof</em>:</p>
+<p>Let <span class="math notranslate nohighlight">\(N\)</span> be <span class="math notranslate nohighlight">\((\lambda x. xxy)\)</span>, so that <span class="math notranslate nohighlight">\(M\)</span> is <span class="math notranslate nohighlight">\(NN\)</span>.</p>
+<p>Then one has <span class="math notranslate nohighlight">\(M= (\lambda x. xxy)N \triangleright NNy = My\)</span>.</p>
+</section>
+</section>
+<section id="formalizing-convergence">
+<h2>Formalizing convergence<a class="headerlink" href="#formalizing-convergence" title="Link to this heading">#</a></h2>
+<section id="normal-and-normalizable">
+<h3>Normal and normalizable<a class="headerlink" href="#normal-and-normalizable" title="Link to this heading">#</a></h3>
+<p>We say that <span class="math notranslate nohighlight">\(L\)</span> is <em>normal</em> if no further beta-reductions can be appplied to it.</p>
+<p>We say that <span class="math notranslate nohighlight">\(L\)</span> is <em>normalizable</em> if there is normal <span class="math notranslate nohighlight">\(M\)</span> such that <span class="math notranslate nohighlight">\(L\triangleright M\)</span>.</p>
+</section>
+<section id="church-rosser-theorem">
+<h3>Church-Rosser Theorem<a class="headerlink" href="#church-rosser-theorem" title="Link to this heading">#</a></h3>
+<p>If <span class="math notranslate nohighlight">\(L\triangleright M\)</span> and <span class="math notranslate nohighlight">\(L\triangleright N\)</span>, then there is <span class="math notranslate nohighlight">\(O\)</span> such that <span class="math notranslate nohighlight">\(M \triangleright O\)</span> and <span class="math notranslate nohighlight">\(N\triangleright O\)</span>.</p>
+<p><em>Proof</em>:</p>
+<p>This is a hard theorem. See e.g. <span id="id3">[<a class="reference internal" href="references.html#id5" title="Roger Hindley and Jonathan Seldin. Lambda-Calculus and Combinators: An Introduction. Cambridge University Press, July 2008.">Hindley and Seldin, 2008</a>]</span> p. 14 and Appendix A2.</p>
+</section>
+<section id="corollary-normal-forms-are-unique">
+<h3>Corollary (normal forms are unique)<a class="headerlink" href="#corollary-normal-forms-are-unique" title="Link to this heading">#</a></h3>
+<p>If a term is normalizable, then its normal form is unique.</p>
+<p><em>Proof</em>:</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(L\triangleright M\)</span> And  <span class="math notranslate nohighlight">\(L\triangleright N\)</span>, and both <span class="math notranslate nohighlight">\(M,N\)</span> are normal. Then by Church-Rosser, there is <span class="math notranslate nohighlight">\(O\)</span> such that <span class="math notranslate nohighlight">\(M \triangleright O\)</span> and <span class="math notranslate nohighlight">\(N\triangleright O\)</span>. But since <span class="math notranslate nohighlight">\(M,N\)</span> are normal, no further beta-reductions can be applied to them. Hence they are identical (module change of bound variables).</p>
+</section>
+</section>
+<section id="defining-the-numbers">
+<h2>Defining the numbers<a class="headerlink" href="#defining-the-numbers" title="Link to this heading">#</a></h2>
+<section id="iterates-of-successor">
+<h3>Iterates of successor<a class="headerlink" href="#iterates-of-successor" title="Link to this heading">#</a></h3>
+<p>One way to think about numbers is a follows.</p>
+<p>There is <span class="math notranslate nohighlight">\(0\)</span>, and there is the successor function which sends <span class="math notranslate nohighlight">\(x\)</span> to <span class="math notranslate nohighlight">\(x+1\)</span>, and the numbers are just</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0 = 0\)</span>, i.e. 0 is the first</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 = 0+1\)</span>, i.e. 1 is the result of applying successor <em>once</em> to the first thing</p></li>
+<li><p><span class="math notranslate nohighlight">\(2 = (0+1)+1\)</span>, i.e. 2 is the result of applying successor <em>twice</em> to the first thing</p></li>
+<li><p><span class="math notranslate nohighlight">\(3 = ((0+1)+1)+1\)</span>, i.e. 3 is the result of applying successor <em>thrice</em> to the first thing</p></li>
+</ul>
+<p>To implement these in the untyped lambda calculus, one needs to find some functions that correspond to these ideas.</p>
+</section>
+<section id="church-numerals">
+<h3>Church numerals<a class="headerlink" href="#church-numerals" title="Link to this heading">#</a></h3>
+<p>Church’s idea was to lambda abstract over the successor and zero and define, for each nuatural number <span class="math notranslate nohighlight">\(n\)</span>, the <em>Church numeral</em> <span class="math notranslate nohighlight">\(\ulcorner n\urcorner\)</span> as follows:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\ulcorner 0\urcorner\)</span> is <span class="math notranslate nohighlight">\(\lambda S. \lambda z. z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ulcorner 1\urcorner\)</span> is <span class="math notranslate nohighlight">\(\lambda S. \lambda z. Sz\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ulcorner 2\urcorner\)</span> is <span class="math notranslate nohighlight">\(\lambda S. \lambda z. SSz\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ulcorner 3\urcorner\)</span> is <span class="math notranslate nohighlight">\(\lambda S. \lambda z. SSSz\)</span></p></li>
+</ul>
+<p>etc.</p>
+<p>Note that on this way of talking, <span class="math notranslate nohighlight">\(n\)</span> is a natural number (whatever that is), and <span class="math notranslate nohighlight">\(\ulcorner n\urcorner\)</span> is a term in the untyped lambda calculus.</p>
+<p>Key point about definition: each Church numeral is normal.</p>
+</section>
+<section id="lambda-definable">
+<h3>Lambda definable<a class="headerlink" href="#lambda-definable" title="Link to this heading">#</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f:\mathbb{N}\rightarrow \mathbb{N}\)</span> is <em>lambda definable</em> if there is a term <span class="math notranslate nohighlight">\(M\)</span> of the untype lambda calculus such that for all <span class="math notranslate nohighlight">\(n,m\)</span> one has</p>
+<p><span class="math notranslate nohighlight">\(f(n)=m\)</span> iff <span class="math notranslate nohighlight">\(M\ulcorner n\urcorner \triangleright \ulcorner m\urcorner\)</span></p>
+<p>Note that each <span class="math notranslate nohighlight">\(M\ulcorner n\urcorner\)</span> is thereby normalizable, since <span class="math notranslate nohighlight">\( \ulcorner m\urcorner\)</span> is normal.</p>
+<p>Hence we have Church’s basic idea: computation can be understood in terms of successive beta reduction (i.e. normalization) of terms which represent the numbers.</p>
+</section>
+<section id="theorem-equivalence-of-lambda-definability-and-computable">
+<h3>Theorem (equivalence of lambda definability and computable)<a class="headerlink" href="#theorem-equivalence-of-lambda-definability-and-computable" title="Link to this heading">#</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f:\mathbb{N}\rightarrow \mathbb{N}\)</span> is computable by a Turing machine iff it is lambda definable.</p>
+<p>For the right to left direction, one simply implements beta-reduction on a Turing machine. The Church-Rosser theorem says no matter how you reduce you will eventaully get to the right answer.</p>
+<p>The hard part of the left to right direction is the fixed point theorem.</p>
+</section>
+<section id="theorem-fixed-point-theorem">
+<h3>Theorem (fixed point theorem)<a class="headerlink" href="#theorem-fixed-point-theorem" title="Link to this heading">#</a></h3>
+<p>For each lambda-term <span class="math notranslate nohighlight">\(M\)</span> there is a lambda-term <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(MN \triangleright N\)</span></p>
+<p><em>Proof</em></p>
+<p>Let <span class="math notranslate nohighlight">\(W\)</span> be <span class="math notranslate nohighlight">\(\lambda x. v(xx)\)</span>, and let <span class="math notranslate nohighlight">\(N\)</span> be <span class="math notranslate nohighlight">\((\lambda v.WW)M\)</span>. Then one has</p>
+<p><span class="math notranslate nohighlight">\(MN \hspace{2mm} = \hspace{2mm}M((\lambda v.WW)M)\)</span> by definition of <span class="math notranslate nohighlight">\(N\)</span></p>
+<p><span class="math notranslate nohighlight">\(\hspace{10mm} \triangleright \hspace{2mm}M(W[v:=M]W[v:=M]) \)</span> by beta reduction</p>
+<p><span class="math notranslate nohighlight">\(\hspace{10mm} = \hspace{2mm}(\lambda x. M(xx)) W[v:=M]\)</span> by definition of <span class="math notranslate nohighlight">\(W\)</span> on the left</p>
+<p><span class="math notranslate nohighlight">\(\hspace{10mm}=\hspace{2mm} (\lambda x. M(xx))(\lambda x. M(xx))\)</span> by definition of <span class="math notranslate nohighlight">\(W\)</span> on the right</p>
+<p><span class="math notranslate nohighlight">\(\hspace{10mm}\triangleright\hspace{2mm} (\lambda v.WW)M\)</span> by beta reduction</p>
+<p><span class="math notranslate nohighlight">\(\hspace{10mm}=\hspace{2mm} N\)</span> by definition of <span class="math notranslate nohighlight">\(N\)</span></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-notation">Lambda notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beta-reduction">Beta reduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-relation">Reduction relation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combinators">The combinators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-most-famous-combinators">The three most famous combinators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-the-action-of-identity-bird">Proposition (the action of identity bird)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary-identity-acting-on-itself-bird">Corollary (identity acting on itself bird)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-the-action-of-kestral">Proposition (the action of Kestral)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-the-action-of-starling">Proposition (the action of starling)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary-skk-acts-like-i">Corollary (SKK acts like I)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#untypedness">Untypedness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#associativity-conventions">Associativity conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterated-lambda-abstracts">Iterated lambda abstracts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-non-convergent-terms">The non-convergent terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">Looping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crashing">Crashing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalizing-convergence">Formalizing convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-and-normalizable">Normal and normalizable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#church-rosser-theorem">Church-Rosser Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corollary-normal-forms-are-unique">Corollary (normal forms are unique)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-numbers">Defining the numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterates-of-successor">Iterates of successor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#church-numerals">Church numerals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-definable">Lambda definable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-equivalence-of-lambda-definability-and-computable">Theorem (equivalence of lambda definability and computable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-fixed-point-theorem">Theorem (fixed point theorem)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
