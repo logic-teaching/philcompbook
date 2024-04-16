@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -62,6 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chap05';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Homework 1" href="Homework01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -608,7 +608,10 @@ document.write(`
 <section id="theorem-equivalence-of-lambda-definability-and-computable">
 <h3>Theorem (equivalence of lambda definability and computable)<a class="headerlink" href="#theorem-equivalence-of-lambda-definability-and-computable" title="Link to this heading">#</a></h3>
 <p>A function <span class="math notranslate nohighlight">\(f:\mathbb{N}\rightarrow \mathbb{N}\)</span> is computable by a Turing machine iff it is lambda definable.</p>
-<p>For the right to left direction, one simply implements beta-reduction on a Turing machine. The Church-Rosser theorem says no matter how you reduce you will eventaully get to the right answer.</p>
+<p>For the right-to-left direction, one simply implements beta-reduction on a Turing machine. The Church-Rosser theorem says no matter how you reduce you will eventaully get to the right answer. Indeed, Church even says that  beta reduction provides an intuitive algorithm for the calculation of the values:</p>
+<blockquote>
+<div><p>It is clear that, in the case of any <span class="math notranslate nohighlight">\(\lambda\)</span>-definable fucntion of positive integers, the process of reduction of formulas to normal form procides an algorithm for the effective calculation of particular values of the function (<span id="id4">[<a class="reference internal" href="references.html#id2" title="Alonzo Church. An unsolvable problem of elementary number theory. Amer. J. Math., 58(2):345–363, 1936.">Church, 1936</a>]</span> p. 349, see remark on effectively calucluability on p. 356).</p>
+</div></blockquote>
 <p>The hard part of the left to right direction is the fixed point theorem.</p>
 </section>
 <section id="theorem-fixed-point-theorem">
@@ -656,6 +659,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Homework01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Homework 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
