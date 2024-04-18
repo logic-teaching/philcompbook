@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 6 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chap06';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Chapter 5" href="Chap05.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap05.html">Chapter 5</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Chap06.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chap06.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 6</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rice-s-theorem">Rice’s Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-the-halting-set">Recall the halting set</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-extensional">Definition (extensional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remark-closed-under-boolean-operations">Remark (closed under boolean operations)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-extensional">Examples (extensional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-non-extensional">Examples (non-extensional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Rice’s Theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morals-for-verification">Morals for verification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uridea-of-verification-as-proof">Uridea of verification as proof:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curry-howard-and-a-glimpse-at-lean">Curry-Howard and a glimpse at Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-the-three-most-famous-combinators">Recall the three most famous combinators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typing-identity-bird">Typing identity bird</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-write-function-types-with-arrow">We write function types with arrow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typing-kestrel">Typing Kestrel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typing-starling">Typing Starling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-you-forget-about-the-terms-these-are-tautologies">When you forget about the terms these are tautologies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curry-howard-isomorphism">The Curry-Howard isomorphism</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-code">Lean code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-combinator">I combinator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-combinator">K combinator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-combinator">S combinator</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof-and-program-verification">Proof and program verification</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-6">
+<h1>Chapter 6<a class="headerlink" href="#chapter-6" title="Link to this heading">#</a></h1>
+<section id="rice-s-theorem">
+<h2>Rice’s Theorem<a class="headerlink" href="#rice-s-theorem" title="Link to this heading">#</a></h2>
+<section id="recall-the-halting-set">
+<h3>Recall the halting set<a class="headerlink" href="#recall-the-halting-set" title="Link to this heading">#</a></h3>
+<p>The halting set is <span class="math notranslate nohighlight">\(K = \{e: \varphi_e(e)\downarrow\}\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(e\)</span> in <span class="math notranslate nohighlight">\(K\)</span> iff there is a stage <span class="math notranslate nohighlight">\(s\)</span> where the <span class="math notranslate nohighlight">\(e\)</span>-th machine on <span class="math notranslate nohighlight">\(e\)</span>-th input is in a halting state.</p>
+<p>Further, note that given fixed <span class="math notranslate nohighlight">\(e,s\)</span>, we can compute whether <span class="math notranslate nohighlight">\(e\)</span>-th machine on <span class="math notranslate nohighlight">\(e\)</span>-th input is in a halting state. We just run the machine <span class="math notranslate nohighlight">\(s\)</span> steps and see whether we are in a halting state. Recall a halting state is just one which issues no further instructions.</p>
+</section>
+<section id="definition-extensional">
+<h3>Definition (extensional)<a class="headerlink" href="#definition-extensional" title="Link to this heading">#</a></h3>
+<p>A property of a Turing machine program is <em>extensional</em> if it just concerns the input-output behavior of the program.</p>
+<p>Equivalently, a property of a Turing machine program is extensional if for all <span class="math notranslate nohighlight">\(e,i\)</span>, if  <span class="math notranslate nohighlight">\(\varphi_e\cong \varphi_i\)</span> (i.e. the one halts iff the other does and they have the same output) then <span class="math notranslate nohighlight">\(\varphi_e\)</span> has the property iff <span class="math notranslate nohighlight">\(\varphi_i\)</span> has the property.</p>
+</section>
+<section id="remark-closed-under-boolean-operations">
+<h3>Remark (closed under boolean operations)<a class="headerlink" href="#remark-closed-under-boolean-operations" title="Link to this heading">#</a></h3>
+<p>The extensional properties of Turing machines are closed under Boolean operations. E.g. suppose that <span class="math notranslate nohighlight">\(P,Q\)</span> are two extensional properties. Then, by definition, for all <span class="math notranslate nohighlight">\(e,i\)</span>, if  <span class="math notranslate nohighlight">\(\varphi_e\cong \varphi_i\)</span> then:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi_e\)</span> has <span class="math notranslate nohighlight">\(P\)</span> iff <span class="math notranslate nohighlight">\(\varphi_i\)</span> has P$.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_e\)</span> has <span class="math notranslate nohighlight">\(Q\)</span> iff <span class="math notranslate nohighlight">\(\varphi_i\)</span> has Q$.</p></li>
+</ul>
+<p>From what it follows that for all <span class="math notranslate nohighlight">\(e,i\)</span>, if  <span class="math notranslate nohighlight">\(\varphi_e\cong \varphi_i\)</span> then:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi_e\)</span> has <span class="math notranslate nohighlight">\(P\wedge Q\)</span> iff <span class="math notranslate nohighlight">\(\varphi_i\)</span> has <span class="math notranslate nohighlight">\(P\wedge Q\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_e\)</span> has <span class="math notranslate nohighlight">\(P\vee Q\)</span> iff <span class="math notranslate nohighlight">\(\varphi_i\)</span> has <span class="math notranslate nohighlight">\(P\vee Q\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_e\)</span> has <span class="math notranslate nohighlight">\(P\rightarrow Q\)</span> iff <span class="math notranslate nohighlight">\(\varphi_i\)</span> has <span class="math notranslate nohighlight">\(P\rightarrow Q\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_e\)</span> has <span class="math notranslate nohighlight">\(\neg P\)</span> iff <span class="math notranslate nohighlight">\(\varphi_i\)</span> has <span class="math notranslate nohighlight">\(\neg P\)</span></p></li>
+</ul>
+</section>
+<section id="examples-extensional">
+<h3>Examples (extensional)<a class="headerlink" href="#examples-extensional" title="Link to this heading">#</a></h3>
+<p>Here are some notions of extensional properties of Turing machines <span class="math notranslate nohighlight">\(\varphi_e\)</span> conceived of as acting on numbers:</p>
+<ul class="simple">
+<li><p>Total: for all <span class="math notranslate nohighlight">\(n\)</span> there is <span class="math notranslate nohighlight">\(m\)</span> with <span class="math notranslate nohighlight">\(\varphi_e(n)\downarrow m\)</span></p></li>
+<li><p>Total and constant: total and there is <span class="math notranslate nohighlight">\(m\)</span> such that all <span class="math notranslate nohighlight">\(n\)</span> one has <span class="math notranslate nohighlight">\(\varphi_e(n)\downarrow m\)</span>.</p></li>
+<li><p>Total and non-constant: total and there are <span class="math notranslate nohighlight">\(n,n^{\prime}\)</span> with <span class="math notranslate nohighlight">\(\varphi_e(n)\downarrow \neq \varphi_e(n^{\prime})\downarrow\)</span>.</p></li>
+<li><p>Halts on infinitely many values: for all <span class="math notranslate nohighlight">\(n\)</span> there is <span class="math notranslate nohighlight">\(m\geq n\)</span> such that <span class="math notranslate nohighlight">\(\varphi_e(m)\downarrow\)</span></p></li>
+</ul>
+</section>
+<section id="examples-non-extensional">
+<h3>Examples (non-extensional)<a class="headerlink" href="#examples-non-extensional" title="Link to this heading">#</a></h3>
+<p>Here are some notions of non-extensional properties of Turing machines <span class="math notranslate nohighlight">\(\varphi_e\)</span> conceived of as acting on numbers:</p>
+<ul class="simple">
+<li><p>Having exactly 5 internal states. (This is non-extensional b/c one can always add on a bunch of dummy states that don’t affect the ultimate outputs).</p></li>
+<li><p>Having instructions which say go right, but none which say go left (This is non-extensional on our usual two-way tape set up since one can add an instruction at the beginning that says ‘go left’ then immediately ‘go right’).</p></li>
+<li><p>Being such that the program converges fast, say, within polynomial time of length of the input. For, just add on dummy instructions which go back and forth across the tape <span class="math notranslate nohighlight">\(2^n\)</span> many times before proceeding with the original program.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Rice’s Theorem<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(P\)</span> be an extensional property of Turing machine programs.</p>
+<p>Consider the set <span class="math notranslate nohighlight">\(A=\{e: \varphi_e\)</span> has <span class="math notranslate nohighlight">\(P \}\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is not everything and <span class="math notranslate nohighlight">\(A\)</span> is not empty.</p>
+<p>Then <span class="math notranslate nohighlight">\(A\)</span> is non-computable.</p>
+<p><em>Proof</em>: (following <span id="id2">[<a class="reference internal" href="references.html#id23" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> p. 16):</p>
+<p>Since <span class="math notranslate nohighlight">\(A\)</span> is not everything and <span class="math notranslate nohighlight">\(A\)</span> is not empty, choose <span class="math notranslate nohighlight">\(c\)</span> not in <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(d\)</span> in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Without loss of generality, assume that <span class="math notranslate nohighlight">\(c\)</span> does not halt on any input (‘c’ for crash). If this assumption is not met, run the argument on the complement of <span class="math notranslate nohighlight">\(A\)</span> (since a set is computable iff its complement is).</p>
+<p>Consider the following computable function <span class="math notranslate nohighlight">\(r\)</span> (for ‘Rice’) and how it acts on input <span class="math notranslate nohighlight">\(e\)</span>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">r</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">index</span> <span class="k">for</span> <span class="n">Turing</span> <span class="n">machine</span> <span class="n">program</span> <span class="n">which</span> <span class="n">on</span> <span class="nb">input</span> <span class="n">y</span>
+    <span class="n">searches</span> <span class="k">for</span> <span class="n">a</span> <span class="n">stage</span> <span class="n">s</span> <span class="n">where</span> <span class="n">φ_e</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="n">converges</span>
+    <span class="ow">and</span> <span class="k">if</span> <span class="n">it</span> <span class="n">finds</span> <span class="n">it</span> <span class="n">runs</span> <span class="n">φ_d</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Claim 1: for all <span class="math notranslate nohighlight">\(e\)</span>, if <span class="math notranslate nohighlight">\(e\)</span> in <span class="math notranslate nohighlight">\(K\)</span>, then <span class="math notranslate nohighlight">\(r(e)\)</span> in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(e\)</span> in <span class="math notranslate nohighlight">\(K\)</span>. Then eventually there is a stage <span class="math notranslate nohighlight">\(s\)</span> where <span class="math notranslate nohighlight">\(\varphi_e(e)\)</span> converges, and given <span class="math notranslate nohighlight">\(e,s\)</span> we can compute when this happens. The <span class="math notranslate nohighlight">\(\varphi_{r(e)}(y)\)</span> is the same as <span class="math notranslate nohighlight">\(\varphi_d(y)\)</span> in terms of convergence and ouputs, for all <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(d\)</span> is <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A\)</span> is extensional, <span class="math notranslate nohighlight">\(r(e)\)</span> is in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Claim 2: for all <span class="math notranslate nohighlight">\(e\)</span>, if <span class="math notranslate nohighlight">\(e\)</span> not in <span class="math notranslate nohighlight">\(K\)</span>, then <span class="math notranslate nohighlight">\(r(e)\)</span> not in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(e\)</span> not in <span class="math notranslate nohighlight">\(K\)</span>. Then program <span class="math notranslate nohighlight">\(\varphi_{r(e)}(y)\)</span> crashes on all inputs <span class="math notranslate nohighlight">\(y\)</span>, since it just keeps on searching and never returns anything. So it has the same input-output behavior as program <span class="math notranslate nohighlight">\(\varphi_c\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(c\)</span> is not in <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A\)</span> is extensional, <span class="math notranslate nohighlight">\(r(e)\)</span> is not in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Claim 3: <span class="math notranslate nohighlight">\(A\)</span> is not computable.</p>
+<p>Suppose not. Then <span class="math notranslate nohighlight">\(A\)</span> is computable.</p>
+<p>In claims 1,2 we showed that <span class="math notranslate nohighlight">\(r\)</span> has the following feature:</p>
+<p>For all <span class="math notranslate nohighlight">\(e\)</span>: <span class="math notranslate nohighlight">\(e\)</span> in <span class="math notranslate nohighlight">\(K\)</span> iff <span class="math notranslate nohighlight">\(r(e)\)</span> in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(r\)</span> is computable and <span class="math notranslate nohighlight">\(A\)</span> is computable, <span class="math notranslate nohighlight">\(K\)</span> would be computable, a contradiction.</p>
+</section>
+</section>
+<section id="morals-for-verification">
+<h2>Morals for verification<a class="headerlink" href="#morals-for-verification" title="Link to this heading">#</a></h2>
+<p>You have worked really hard and have written a program to solve some task.</p>
+<p>How do you know that it actually accomplishes the task?</p>
+<p>You could run it on a few inputs and check that it works, but this will at best be an inductive kind of evidence (interesting question why this isn’t viewed as enough).</p>
+<p>Couldn’t you just, with a little extra work, write a second program that checks that your first program accomplished its task?</p>
+<p>Rice’s theorem says that the answer is a resounding <strong>no</strong> when the task is specified in terms of input-output behaviour.</p>
+<p>Moral 1 of Rice’s Theorem for verification: verification cannot be automated.</p>
+<p>Moral 2 of the setup of Rice’s Theorem: input-output behaviors can be specified by formulas of logic.</p>
+<p>Return to the examples:</p>
+<ul class="simple">
+<li><p>Total: <span class="math notranslate nohighlight">\(\forall \; n \; \exists \; m \; \varphi_e(n)\downarrow m\)</span></p></li>
+<li><p>Total and constant: total and <span class="math notranslate nohighlight">\(\exists \; m \; \forall \; n \; \varphi_e(n)\downarrow m\)</span>.</p></li>
+<li><p>Total and non-constant: total and <span class="math notranslate nohighlight">\(\exists \; n,n^{\prime} \; \varphi_e(n)\downarrow \neq \varphi_e(n^{\prime})\downarrow\)</span>.</p></li>
+<li><p>Halts on infinitely many values: <span class="math notranslate nohighlight">\(\forall \; n \; \exists \; m \; (m\geq n\rightarrow \varphi_e(m)\downarrow)\)</span></p></li>
+</ul>
+<section id="uridea-of-verification-as-proof">
+<h3>Uridea of verification as proof:<a class="headerlink" href="#uridea-of-verification-as-proof" title="Link to this heading">#</a></h3>
+<p>Blend your writing of the program <span class="math notranslate nohighlight">\(e\)</span> itself with a mathematical proof that the program <span class="math notranslate nohighlight">\(e\)</span> does what you want it to do.</p>
+<p>Given some extensional task <span class="math notranslate nohighlight">\(P\)</span>, express it in logical terms as a formula, and then produce a program <span class="math notranslate nohighlight">\(e\)</span> which is simulatenously a proof that <span class="math notranslate nohighlight">\(e\)</span> has property <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>This is in some sense not new: our proofs in mathematics (or elsewhere) are proofs <span class="math notranslate nohighlight">\(e\)</span> of some claim <span class="math notranslate nohighlight">\(P\)</span>, and experience suggests that good proofs often contain procedures embeded inside them.</p>
+</section>
+</section>
+<section id="curry-howard-and-a-glimpse-at-lean">
+<h2>Curry-Howard and a glimpse at Lean<a class="headerlink" href="#curry-howard-and-a-glimpse-at-lean" title="Link to this heading">#</a></h2>
+<section id="recall-the-three-most-famous-combinators">
+<h3>Recall the three most famous combinators<a class="headerlink" href="#recall-the-three-most-famous-combinators" title="Link to this heading">#</a></h3>
+<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id3">[<a class="reference internal" href="references.html#id6" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, November 2000.">Smullyan, 2000</a>]</span>:</p>
+<ul class="simple">
+<li><p><em>Identity bird</em> (<em>I</em>) is <span class="math notranslate nohighlight">\(\lambda x.x\)</span></p></li>
+<li><p><em>Kestrel</em>  (<em>K</em>) is <span class="math notranslate nohighlight">\(\lambda xy.  x\)</span></p></li>
+<li><p><em>Starling</em> (<em>S</em>) is <span class="math notranslate nohighlight">\(\lambda xyz. xz(yz)\)</span></p></li>
+</ul>
+</section>
+<section id="typing-identity-bird">
+<h3>Typing identity bird<a class="headerlink" href="#typing-identity-bird" title="Link to this heading">#</a></h3>
+<p>In the untyped lambda calculus, we didn’t assign any types to these objects.</p>
+<p>But obviously given a type or kind of things <span class="math notranslate nohighlight">\(A\)</span>, one should have that <span class="math notranslate nohighlight">\(\lambda x: A. x\)</span> is function from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Let us agree to write the type of functions from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(A\)</span> as <span class="math notranslate nohighlight">\(A\rightarrow A\)</span>.</p>
+<p>Hence, we have found that <span class="math notranslate nohighlight">\(I:A\rightarrow A\)</span>.</p>
+</section>
+<section id="we-write-function-types-with-arrow">
+<h3>We write function types with arrow<a class="headerlink" href="#we-write-function-types-with-arrow" title="Link to this heading">#</a></h3>
+<p>More generally let us write the type of functions from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span> as <span class="math notranslate nohighlight">\(A\rightarrow B\)</span></p>
+</section>
+<section id="typing-kestrel">
+<h3>Typing Kestrel<a class="headerlink" href="#typing-kestrel" title="Link to this heading">#</a></h3>
+<p>Suppose that we have a type of objects <span class="math notranslate nohighlight">\(A\)</span> and a type <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Then if <span class="math notranslate nohighlight">\(x\)</span> has type <span class="math notranslate nohighlight">\(A\)</span>, written <span class="math notranslate nohighlight">\(x:A\)</span>, we should have that <span class="math notranslate nohighlight">\(\lambda y: B . x\)</span> has type <span class="math notranslate nohighlight">\(B\rightarrow A\)</span>.</p>
+<p>Likewise, <span class="math notranslate nohighlight">\(\lambda x:A . \lambda y:B . x\)</span> has type <span class="math notranslate nohighlight">\(A\rightarrow (B\rightarrow A)\)</span>.</p>
+<p>Hence <span class="math notranslate nohighlight">\(K:A\rightarrow (B\rightarrow A)\)</span>.</p>
+</section>
+<section id="typing-starling">
+<h3>Typing Starling<a class="headerlink" href="#typing-starling" title="Link to this heading">#</a></h3>
+<p>Suppose that we have three types of objects <span class="math notranslate nohighlight">\(A,B,C\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(x:A\rightarrow (B\rightarrow C)\)</span> and <span class="math notranslate nohighlight">\(y:A\rightarrow B\)</span> and <span class="math notranslate nohighlight">\(z:A\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(xz: B\rightarrow C\)</span>, since you just fed the <span class="math notranslate nohighlight">\(z:A\)</span> value into the <span class="math notranslate nohighlight">\(x:A\rightarrow (B\rightarrow C)\)</span> function and so outputted something in <span class="math notranslate nohighlight">\(B\rightarrow C\)</span>.</p>
+<p>And <span class="math notranslate nohighlight">\(yz:B\)</span>, since you just fed the <span class="math notranslate nohighlight">\(z:A\)</span> value into the <span class="math notranslate nohighlight">\(y:A\rightarrow B\)</span> function and so outputted something in <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Finally <span class="math notranslate nohighlight">\(xz (yz):C\)</span> since you just fed the <span class="math notranslate nohighlight">\(yz:B\)</span> value into the <span class="math notranslate nohighlight">\(xz: B\rightarrow C\)</span> function, and it resulted in something in <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p>Moving back up, one then has:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda z:A . xz (yz)\)</span> has type <span class="math notranslate nohighlight">\(A\rightarrow C\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda y:A\rightarrow B . \lambda z:A . xz (yz)\)</span> has type <span class="math notranslate nohighlight">\((A\rightarrow B)\rightarrow (A\rightarrow C)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda x: A\rightarrow (B\rightarrow C) . \lambda y:A\rightarrow B . \lambda z:A . xz (yz)\)</span> has type <span class="math notranslate nohighlight">\((A\rightarrow (B\rightarrow C))\rightarrow ((A\rightarrow B)\rightarrow (A\rightarrow C))\)</span>.</p></li>
+</ul>
+</section>
+<section id="when-you-forget-about-the-terms-these-are-tautologies">
+<h3>When you forget about the terms these are tautologies<a class="headerlink" href="#when-you-forget-about-the-terms-these-are-tautologies" title="Link to this heading">#</a></h3>
+<p>The following are all tautologies of intuitionistic logic:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\rightarrow A\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A\rightarrow (B\rightarrow A)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((A\rightarrow (B\rightarrow C))\rightarrow ((A\rightarrow B)\rightarrow (A\rightarrow C))\)</span></p></li>
+</ul>
+<p>(Write out the proofs)</p>
+</section>
+<section id="the-curry-howard-isomorphism">
+<h3>The Curry-Howard isomorphism<a class="headerlink" href="#the-curry-howard-isomorphism" title="Link to this heading">#</a></h3>
+<p>This is not an accident.</p>
+<p>The <em>Curry-Howard</em> isomorphism says that whenever you type something in our very simple typed lambda calculus, what is the “type side” is a theorem of intuitionistic propositional logic; and moreover, whenever you have a theorem of intuitionistic propositional logic, you can decorate with our a lambda term in our simply typed lambda calculus.</p>
+</section>
+</section>
+<section id="lean-code">
+<h2>Lean code<a class="headerlink" href="#lean-code" title="Link to this heading">#</a></h2>
+<p>Run these on: <a class="reference external" href="https://leanprover-community.github.io">https://leanprover-community.github.io</a></p>
+<section id="i-combinator">
+<h3>I combinator<a class="headerlink" href="#i-combinator" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variables</span> <span class="n">A</span> <span class="p">:</span> <span class="n">Prop</span>
+
+<span class="n">variable</span> <span class="n">hx</span> <span class="p">:</span> <span class="n">A</span>
+
+<span class="c1">#check hx</span>
+</pre></div>
+</div>
+</section>
+<section id="k-combinator">
+<h3>K combinator<a class="headerlink" href="#k-combinator" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variables</span> <span class="n">A</span> <span class="n">B</span> <span class="p">:</span> <span class="n">Prop</span>
+
+<span class="n">variable</span> <span class="n">hx</span> <span class="p">:</span> <span class="n">A</span>
+<span class="n">variable</span> <span class="n">hy</span> <span class="p">:</span> <span class="n">B</span>
+
+<span class="c1">#check hx</span>
+</pre></div>
+</div>
+</section>
+<section id="s-combinator">
+<h3>S combinator<a class="headerlink" href="#s-combinator" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>variables A B C : Prop
+
+variable hx : A → (B → C)
+variable hy : A → B
+variable hz : A
+
+#check hy hz
+#check hx hz
+#check (hx hz) (hy hz)
+</pre></div>
+</div>
+</section>
+</section>
+<section id="proof-and-program-verification">
+<h2>Proof and program verification<a class="headerlink" href="#proof-and-program-verification" title="Link to this heading">#</a></h2>
+<p>One of the original aims of logic, as it developed in the late 19th and early 20th century, was to provide a way to argue rigorously about mathematics and the kinds of set theory or type theory that it seems to necessarily involve. The chief means of achieving this was to develop deductive systems very much like what one learns in introductory logic, and to train people in them. At the end of this training, the ideal outcome was to be able to do proofs effortlessly and without really thinking about the deductive system too much, just like one reads words on the page effortlessly and without really thinking about the underlying phonetics too much.</p>
+<p>There are two problems with this. First, the deductive system from elementary logic do not have any set theory (or type theory) built into it, and so one has to learn this separately and undergo a kind of second training (if one’s goal is proofs in mathematics). Second, this kind of rigor does not help with the kind of error that we tend to be worried about in mathematics today. Today the worry tends to be mathematical proofs are so big and the product of so many hands and so many generations, that error will creep in not by a lapse in rigor by one individual hand as by miscommunications and mismatches in the hand-off of one mathematician to another.</p>
+<p>For these reasons, people have been interested in tools for the mechanical verification of proofs. It needs to be like proof-checkers for elementary logic classes, but it needs to have some set theory or type-theory built in. And it needs to be responsive to the social nature of mathematics: I need to be able to take your proof and apply it to my setting, ideally without having to recapitulate the proof line by line for my specific purpose. Of course, in traditional mathematics, I just believe your proof or I check it myself, but if we want to mechanically verify then we need to do something else.</p>
+<p>Many important proof verification systems, like <a class="reference external" href="https://coq.inria.fr/">Coq</a> and <a class="reference external" href="https://leanprover.github.io/">Lean</a> and <a class="reference external" href="https://agda.readthedocs.io/en/v2.6.3/getting-started/what-is-agda.html">Agda</a>, are built on extensions of the simply typed lambda calculus, extensions which go beyond the implicational fragment. They have the type theory built-in, which handles the need for some set theory or type theory. And since they are built on intimations of BHK, the proofs come with a built-in way to “apply it” to any setting. E.g. if you prove <span class="math notranslate nohighlight">\(p\rightarrow q\)</span>, then your proof-term is a way to go from any proof of <span class="math notranslate nohighlight">\(p\)</span> to a proof of <span class="math notranslate nohighlight">\(q\)</span>. And then I can just apply that proof-term to my proof of <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<p>These systems are built on intuitionsitic logic rather than classical logic. We have suggested that <span class="math notranslate nohighlight">\(p\rightarrow q\)</span> is to be thought of as all the functions which take you from proofs of <span class="math notranslate nohighlight">\(p\)</span> to proof of <span class="math notranslate nohighlight">\(q\)</span>. And it is not too hard to see that <span class="math notranslate nohighlight">\(p\wedge q\)</span> is going to consist of pairs of proofs, one of <span class="math notranslate nohighlight">\(p\)</span> and one of <span class="math notranslate nohighlight">\(q\)</span>. And <span class="math notranslate nohighlight">\(p\vee q\)</span> is going to consist of proofs of either <span class="math notranslate nohighlight">\(p\)</span> or <span class="math notranslate nohighlight">\(q\)</span> along with a specification of which. And <span class="math notranslate nohighlight">\(\bot\)</span> is going to be the empty set or some uninstantiated type. But then it is not obvious that <span class="math notranslate nohighlight">\(p\vee (p\rightarrow \bot)\)</span> should consist of all the proofs: after all, there are going to be proofs that aren’t proofs of <span class="math notranslate nohighlight">\(p\)</span> and aren’t refutations of <span class="math notranslate nohighlight">\(p\)</span>. Hence, in short, these approaches are all intuitionistic since on all the obvious interpretations of the propositional connectives as set-like entities, it’s not clear that <span class="math notranslate nohighlight">\(p\vee (p\rightarrow \bot)\)</span> is going to have the same status as tautology for which most anything will count as a proof.</p>
+<p>A final reason that these proof assistants are being developed nowadays is, as suggested by our above discussion of Rice’s theorem, <span class="math notranslate nohighlight">\(M:P\)</span> can be interpreted both as “M is a proof of P”, as well as “M is a program that accomplishes P.” While we can’t say more about the theory of computation in this course, this should not be too surprising, given all the BHK-like talk of constructions we had today. Hence, in a word, these systems are simultaneously ways of verifying that programs, in a certain functional programming language, do what they say they are going to do.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chap05.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 5</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rice-s-theorem">Rice’s Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-the-halting-set">Recall the halting set</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-extensional">Definition (extensional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remark-closed-under-boolean-operations">Remark (closed under boolean operations)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-extensional">Examples (extensional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-non-extensional">Examples (non-extensional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Rice’s Theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morals-for-verification">Morals for verification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uridea-of-verification-as-proof">Uridea of verification as proof:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curry-howard-and-a-glimpse-at-lean">Curry-Howard and a glimpse at Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-the-three-most-famous-combinators">Recall the three most famous combinators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typing-identity-bird">Typing identity bird</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-write-function-types-with-arrow">We write function types with arrow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typing-kestrel">Typing Kestrel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typing-starling">Typing Starling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-you-forget-about-the-terms-these-are-tautologies">When you forget about the terms these are tautologies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curry-howard-isomorphism">The Curry-Howard isomorphism</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lean-code">Lean code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-combinator">I combinator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-combinator">K combinator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-combinator">S combinator</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof-and-program-verification">Proof and program verification</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
