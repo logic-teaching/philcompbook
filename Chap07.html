@@ -423,13 +423,14 @@ document.write(`
 <div><p>We know examples in mathematics of general questions, such that any particular instance of the question can be answered by a preassigned uniform method. More precisely, in such an example, there is an infinite class of particular questions, and a procedure in relation to that class, both being described in advance, such that if we thereafter select any particular question of the class, the procedure will surely apply and lead us to a definite answer, either “yes” or “no,” to the particular question asked. [P] Similarly, we may have a <em>calculation procedure</em> or <em>algorithm</em> (and hence <em>a calculation</em> problem) in relation to a general question which requires for an answer, not “yes” and “no”, but the exhbiting of some object (<span id="id5">[<a class="reference internal" href="references.html#id77" title="Stephen Cole Kleene. Introduction to Metamathematics. Bibliotheca Mathematica. North-Holland, 1952.">Kleene, 1952</a>]</span> p. 317)</p>
 </div></blockquote>
 <p>As for examples which do not satisfy the condition, he considers a set of natural numbers, like the halting set, which can be defined by a <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-formula <span class="math notranslate nohighlight">\(\exists \; y \; R(x,y)\)</span> but not a <span class="math notranslate nohighlight">\(\Pi_1\)</span>-formula (and so is not recursive, per his theorem).</p>
-<p>He then considers the function <span class="math notranslate nohighlight">\(f\)</span> given by
-$<span class="math notranslate nohighlight">\(
+<p>He then considers the function <span class="math notranslate nohighlight">\(f\)</span> given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 f(x) = \begin{cases}
-    y+1 &amp; \text{if \)</span>y<span class="math notranslate nohighlight">\( is least with \)</span>R(x,y)<span class="math notranslate nohighlight">\(} \\ 
+    y+1 &amp; \text{if $y$ is least with $R(x,y)$} \\ 
     0 &amp; \text{otherwise}
 \end{cases}
-\)</span>$</p>
+\end{split}\]</div>
 <p>This is not effectively calculable, according to Kleene, because while it suggests a search procedure to determine the value of <span class="math notranslate nohighlight">\(f(x)\)</span>, namely start checking whether <span class="math notranslate nohighlight">\(R(x,0), R(x,1), R(x,2), \ldots\)</span>, nonetheless</p>
 <blockquote>
 <div><p>the completion of the examination of all [countably infinitely many] propositions, which the classical definition envigages, is impossible for a human computor  (<span id="id6">[<a class="reference internal" href="references.html#id77" title="Stephen Cole Kleene. Introduction to Metamathematics. Bibliotheca Mathematica. North-Holland, 1952.">Kleene, 1952</a>]</span> p. 317)</p>
