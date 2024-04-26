@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 8 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chap08';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Chapter 7" href="Chap07.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap05.html">Chapter 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap06.html">Chapter 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap07.html">Chapter 7</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Chap08.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chap08.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 8</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-theorems">Gödel’s Theorems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-first-incompleteness-theorem">Gödel’s First Incompleteness Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robinson-s-q">Robinson’s Q</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peano-arithmetic-pa-and-i-sigma-0-1">Peano arithmetic PA and <span class="math notranslate nohighlight">\(I\Sigma^0_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-first-incompleteness-theorem-redeux">Gödel’s First Incompleteness Theorem (redeux)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-proof-idea">The proof idea</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-second-incompleteness-theorem">Gödel’s Second Incompleteness Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brief-remarks-on-the-second-theorem">Brief remarks on the second theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-disjunction">Gödel’s Disjunction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-statement-in-the-gibb-s-lecture">The statement in the Gibb’s lecture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-disjunction-is-a-primae-facie-puzzle">Why the disjunction is a <em>primae facie</em> puzzle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-ways-out-and-some-ways-to-develop-it">Some ways out and some ways to develop it</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-on-the-disjunction">Gödel on the disjunction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-1931-conference">The 1931 conference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implications-of-the-first-disjunct-for-logicism-a-la-carnap">The implications of the first disjunct for logicism à la Carnap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications-for-logicism-a-la-carnap">Implications for logicism à la Carnap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-own-view-conceptual-realism">Gödel’s own view conceptual realism</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-godel-respond-to-the-disjunction">How does Gödel respond to the disjunction?</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-8">
+<h1>Chapter 8<a class="headerlink" href="#chapter-8" title="Link to this heading">#</a></h1>
+<p>In Chapter 4, we looked at Gödel’s Incompleteness Theorem as a source of non-computable sets. In this chapter we look at it as a puzzle about whehther there is a tension between</p>
+<ul class="simple">
+<li><p>computability as a constraint on human theorizing or intellectual ability</p></li>
+<li><p>epistemic “completeness,” in the sense of always being in a position to resolve questions of a certain kind in the affirmative or in the negative.</p></li>
+</ul>
+<p>We do so in reference to Gödel’s famous Gibbs lecture <span id="id1">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span>.</p>
+<section id="godel-s-theorems">
+<h2>Gödel’s Theorems<a class="headerlink" href="#godel-s-theorems" title="Link to this heading">#</a></h2>
+<section id="godel-s-first-incompleteness-theorem">
+<h3>Gödel’s First Incompleteness Theorem<a class="headerlink" href="#godel-s-first-incompleteness-theorem" title="Link to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(T\)</span> is a theory in an extension of the language of arithmetic.</p>
+<p>Then <span class="math notranslate nohighlight">\(T\)</span> cannot have all four of the following properties:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T\)</span> contains Robinson’s <span class="math notranslate nohighlight">\(Q\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is deductively consistent</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is computable</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is deductively complete</p></li>
+</ol>
+</section>
+<section id="robinson-s-q">
+<h3>Robinson’s Q<a class="headerlink" href="#robinson-s-q" title="Link to this heading">#</a></h3>
+<p>This is a set of eight axioms which describe behavior of zero and successor and less than and which contain the primitive recursive definitions of plus and times:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\forall \; x \; \forall \; y \; (S(x)=S(y)\rightarrow x=y)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \; x \; S(x)\neq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \; x \; (x\neq 0\rightarrow \exists \; w \; x=S(w))\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \; x \; x+0=x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \; x \; \forall \; y \; x+S(y)=S(x+y)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \; x \; x\cdot 0 =0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \; x\; x\cdot S(y)=x\cdot y +x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \; x \; \forall \; y \; (x\leq y \leftrightarrow \exists \; z \; z+x=y)\)</span></p></li>
+</ol>
+<p>The language of arithmetic is just the language of these axioms: zero, successor, addition, multiplication, plus, times.</p>
+<p>Note that axiom 4-5 are the primitive recursive definition of addition; and axioms 6-7 are the primitive recursive definition of multiplication.</p>
+</section>
+<section id="peano-arithmetic-pa-and-i-sigma-0-1">
+<h3>Peano arithmetic PA and <span class="math notranslate nohighlight">\(I\Sigma^0_1\)</span><a class="headerlink" href="#peano-arithmetic-pa-and-i-sigma-0-1" title="Link to this heading">#</a></h3>
+<p><em>Peano arithmetic</em> (<em>PA</em>) is just Robinon’s Q plus all instances of the first-order induction schema:</p>
+<div class="math notranslate nohighlight">
+\[[\varphi(0) \wedge \forall \; x \; (\varphi(x)\rightarrow \varphi(S(x))]\rightarrow [\forall \; x \; \varphi(x)]\]</div>
+<p>The theory <span class="math notranslate nohighlight">\(I\Sigma^0_1\)</span> is jsut Robinson’s Q plus all instances of the induction schema where <span class="math notranslate nohighlight">\(\varphi(x)\)</span> is a <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-formula.</p>
+</section>
+<section id="godel-s-first-incompleteness-theorem-redeux">
+<h3>Gödel’s First Incompleteness Theorem (redeux)<a class="headerlink" href="#godel-s-first-incompleteness-theorem-redeux" title="Link to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(T\)</span> is a theory in an extension of the language of arithmetic.</p>
+<p>Then <span class="math notranslate nohighlight">\(T\)</span> cannot have all four of the following properties:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T\)</span> contains Robinson’s <span class="math notranslate nohighlight">\(Q\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is deductively consistent</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is computable</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is deductively complete</p></li>
+</ol>
+</section>
+<section id="the-proof-idea">
+<h3>The proof idea<a class="headerlink" href="#the-proof-idea" title="Link to this heading">#</a></h3>
+<p>The proof is hard and would take awhile to do carefully. But I can say briefly and accurately a word about the proof idea.</p>
+<p>The proof starts by assuming 1-3 and then</p>
+<ul class="simple">
+<li><p>shows that there is a <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-sentence <span class="math notranslate nohighlight">\(\varphi\)</span> which “says of itself” that it is not provable,</p></li>
+<li><p>argues that <span class="math notranslate nohighlight">\(T\)</span> does not prove <span class="math notranslate nohighlight">\(\varphi\)</span>: if it did, then <span class="math notranslate nohighlight">\(Q\)</span> would know that it did (<span class="math notranslate nohighlight">\(Q\)</span> knows all true <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-statements) and then <span class="math notranslate nohighlight">\(T\)</span> would know that it did, and then by “what <span class="math notranslate nohighlight">\(\varphi\)</span> says” <span class="math notranslate nohighlight">\(T\)</span> would prove <span class="math notranslate nohighlight">\(\neg \varphi\)</span>, contradicting deductive consistency.</p></li>
+<li><p>argues that <span class="math notranslate nohighlight">\(T\)</span> does not prove <span class="math notranslate nohighlight">\(\neg \varphi\)</span>: by a more complicated version of the previous argument which goes through “the Rosser trick”</p></li>
+</ul>
+</section>
+<section id="godel-s-second-incompleteness-theorem">
+<h3>Gödel’s Second Incompleteness Theorem<a class="headerlink" href="#godel-s-second-incompleteness-theorem" title="Link to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(T\)</span> is a theory in an extension of the language of arithmetic.</p>
+<p>Suppose further that <span class="math notranslate nohighlight">\(T\)</span> has the following three properites:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T\)</span> contains <span class="math notranslate nohighlight">\(I\Sigma^0_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is true on the standard model</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is computable</p></li>
+</ol>
+<p>Then</p>
+<ol class="arabic simple" start="4">
+<li><p><span class="math notranslate nohighlight">\(T\)</span> does not prove or disprove <span class="math notranslate nohighlight">\(Con(T)\)</span>, the statement which expresses the deductive consistency of <span class="math notranslate nohighlight">\(T\)</span>, i.e. the statement which says that there is no proof of a contradiction from <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+</ol>
+</section>
+<section id="brief-remarks-on-the-second-theorem">
+<h3>Brief remarks on the second theorem<a class="headerlink" href="#brief-remarks-on-the-second-theorem" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The second theorem is proven by “internalizing” the proof of the first theorem. I.e. take a carefully written down version of the first theorem, and then note to yourself that this can all be formalized in any theory containing <span class="math notranslate nohighlight">\(I\Sigma^0_1\)</span>. The difficulty will be in convinving yourself that this is true. It can be made easier by reducing it to verifying the so-called derivability conditions.</p></li>
+<li><p>The second theorem complicates any attempt to say that Gödel’s Theorem gives one examples of statements which are unknowable. For, presumably you have some strong reasons for thinking that <span class="math notranslate nohighlight">\(T\)</span> is consistent, and those might even be apriori in character. And the thought is that these reasons might well then transfer to <span class="math notranslate nohighlight">\(Con(T)\)</span>.</p></li>
+</ul>
+</section>
+</section>
+<section id="godel-s-disjunction">
+<h2>Gödel’s Disjunction<a class="headerlink" href="#godel-s-disjunction" title="Link to this heading">#</a></h2>
+<section id="the-statement-in-the-gibb-s-lecture">
+<h3>The statement in the Gibb’s lecture<a class="headerlink" href="#the-statement-in-the-gibb-s-lecture" title="Link to this heading">#</a></h3>
+<p>In his 1951 talk “Some basic theorems on the foundations of mathematics and their implications” (also known as the Gibbs lecture), Gödel says the following:</p>
+<blockquote>
+<div><p>So the following disjunctive conclusion is inevitable: <em>Either mathematics is incompletable in this sense, that its evident axioms can never be comprised in a finite rule, that is to say, the human mind (even within the realm of pure mathematics) infinitely surpasses the powers of any finite machine, or else there exist absolutely unsolvable diophantine problems of the type specified</em> (where the case that both terms of the disjunction are true is not excluded, so that there are, strictly speaking, three alternatives) (<span id="id2">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 310)</p>
+</div></blockquote>
+<p>By a “diophantine problem” Gödel is referring to the fact that the sentences which show deductive incompleteness are <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-formulas and so can be– after a long reduction – expressed in terms of existence of solutions to polynomial equations, known as Diophatine equations. To my knowledge the details of this reduction were only worked out by Matiyasevich in the course of his decisive contribution to the resultion of Hilbert’s 10th problem.</p>
+</section>
+<section id="why-the-disjunction-is-a-primae-facie-puzzle">
+<h3>Why the disjunction is a <em>primae facie</em> puzzle<a class="headerlink" href="#why-the-disjunction-is-a-primae-facie-puzzle" title="Link to this heading">#</a></h3>
+<p>One way of understanding G”odel’s disjunction is then as follows. Consider the following theory <span class="math notranslate nohighlight">\(T\)</span> in an extension of the language of arithmetic:</p>
+<p><span class="math notranslate nohighlight">\(T = \{ \varphi:\)</span> I have a good reason to believe <span class="math notranslate nohighlight">\(\varphi \}\)</span></p>
+<p>Assuming that <span class="math notranslate nohighlight">\(T\)</span> contains Robinson’s <span class="math notranslate nohighlight">\(Q\)</span> and is deductively consistent, it then follows that at least one of the following happens:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is not computable</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is not deductively complete</p></li>
+</ol>
+<p>The choice of <span class="math notranslate nohighlight">\(T\)</span> is designed to make it hard to figure out <em>apriori</em> which of 1-2 is true:</p>
+<ul class="simple">
+<li><p><em>Why the first disjunction is hard to assent to</em>: Since <span class="math notranslate nohighlight">\(T\)</span> is defined in terms of a certain kind of human ability, if <span class="math notranslate nohighlight">\(T\)</span> is not computable, then presumably there is some aspect of the types of reasons that we can give that resists being formalised in an algorithmic manner. To many contemporory thinkers this seems implausible since the human mind seems to be well-modeled in various ways by Turing machines.</p></li>
+<li><p><em>Why the second disjunction is hard to assent to</em>: we sketched up above Gödel’s Second Incompleteness Theorem, on which the incomplete sentence <span class="math notranslate nohighlight">\(Con(T)\)</span> expresses the consistency of <span class="math notranslate nohighlight">\(T\)</span>. But given the description of <span class="math notranslate nohighlight">\(T\)</span> and an assumption that what we have good reason to believe we have good reason to be consistent, one should have a good reason to believe <span class="math notranslate nohighlight">\(Con(T)\)</span> and so <span class="math notranslate nohighlight">\(Con(T)\)</span> should be in <span class="math notranslate nohighlight">\(T\)</span> and thus deducible from <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+</ul>
+</section>
+<section id="some-ways-out-and-some-ways-to-develop-it">
+<h3>Some ways out and some ways to develop it<a class="headerlink" href="#some-ways-out-and-some-ways-to-develop-it" title="Link to this heading">#</a></h3>
+<p>This was a way of making vivid why the disjunction is a primae facie puzzle.</p>
+<p>Of course there are some ways out and some ways to develop it, which merit careful consideration:</p>
+<ul class="simple">
+<li><p>One could deny that there’s anything puzzling about knowing a true disjunction but not knowing which disjunct is true. E.g. “I know that I should go left or right but I don’t know which” is not a puzzle, it is just life.</p></li>
+<li><p>One should try to make clear what the relevant epstemic notion of “good reason” is. I put it in there since it is easy and short and I think that we all have some grip on the notion. But it is clearly a notion that would benefit from further analysis or explication. Feel free to replace it with your preferred concept which carries with it positive epistemic valence. Gödel himself describes it in terms of “evident axioms” about mathematics (<span id="id3">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 309).</p></li>
+<li><p>One could push back on my remarks about the first disjunction by saying: maybe human mentality is computable but human intellectual abilities somehow push to the limits of the relevant kind of mentality and so need not be computable.</p></li>
+<li><p>One could push back on my remarks about the second disjunction by suggesting that it rests on a discredited epistemic idea that knowledge entails some kind of higher-order knowledge. To be sure, higher-order knowledge seems rare in the ordinary course of events when we think about what we know about the external world. But it seems at least a little more plausible when we think about mathematics.</p></li>
+<li><p>There are subtletiess in the interpretation of the second theorem about whether the sentence really <em>expresses</em> consistency (<span id="id4">[<a class="reference internal" href="references.html#id8" title="Solomon Feferman. Intensionality in mathematics. Journal of Philosophical Logic, 14(1):41–55, 1985.">Feferman, 1985</a>]</span>, <span id="id5">[<a class="reference internal" href="references.html#id9" title="Michael Detlefsen. What does gödel's second theorem say. Philos. Math., 9(1):37–71, 2001.">Detlefsen, 2001</a>]</span>).</p></li>
+</ul>
+</section>
+</section>
+<section id="godel-on-the-disjunction">
+<h2>Gödel on the disjunction<a class="headerlink" href="#godel-on-the-disjunction" title="Link to this heading">#</a></h2>
+<section id="the-1931-conference">
+<h3>The 1931 conference<a class="headerlink" href="#the-1931-conference" title="Link to this heading">#</a></h3>
+<p>G”odel first presented his Incompleteness Theorem at a 1931 conference on the foundations of mathematics at Königsberg (<span id="id6">[<a class="reference internal" href="references.html#id3" title="Kurt Gödel. Collected Works. Vol. I. Publications 1929-1936. Clarendon, New York, 1986. Edited by Solomon Feferman et. al.">Gödel, 1986</a>]</span> pp. 196 ff). At the conference,</p>
+<ul class="simple">
+<li><p>von Neumann defended the Hilbert program (or formalism)</p></li>
+<li><p>Carnap defended a version of logicism</p></li>
+<li><p>Heyting defended Brouwer’s intuitionism.</p></li>
+</ul>
+<p>These papers of von Neumann, Heyting, and Carnap are in the standard anthology on the philosophy of mathematics as representatives of these three main schools in the philosophy of mathematics (<span id="id7">[<a class="reference internal" href="references.html#id7" title="Paul Benacerraf and Hilary Putnam. Philosophy of Mathematics: Selected Readings. Cambridge University Press, Cambridge, second edition, 1983.">Benacerraf and Putnam, 1983</a>]</span> pp. 41-65,<span id="id8">[<a class="reference internal" href="references.html#id6" title="Johann v Neumann. Die formalistische grundlegung der mathematik. Erkenntnis, 2(1):116–121, 1931.">Neumann, 1931</a>]</span>, <span id="id9">[<a class="reference internal" href="references.html#id32" title="Arend Heyting. Die intuitionistische Grundlegung der Mathematik. Erkenntnis, 2:106-115, 1931.">Heyting, 1931</a>]</span>, <span id="id10">[<a class="reference internal" href="references.html#id5" title="Rudolf Carnap. Die logizistische Grundlegung der Mathematik. Erkenntnis, 2(1):91–105, 1931.">Carnap, 1931</a>]</span>).</p>
+<p>One way of understanding Gödel’s 1951 Gibbs lecture is by drawing out the consequences of his disjunction for some of these schools. I am going to focus on intuitionism and logicism since that is what Gödel devotes the most attention to.</p>
+</section>
+<section id="the-implications-of-the-first-disjunct-for-logicism-a-la-carnap">
+<h3>The implications of the first disjunct for logicism à la Carnap<a class="headerlink" href="#the-implications-of-the-first-disjunct-for-logicism-a-la-carnap" title="Link to this heading">#</a></h3>
+<p>In the 1931 conference, Browuer’s student Heyting opened his contribution this way:</p>
+<blockquote>
+<div><p>The intuitionist mathematician proposes to do mathematics as a natural function of his intellect, as a free, vital activity of thought. For him, mathematics is a production of the human mind. He uses language, both natural and formalized, only for communicating thoughts, i.e. to get others or himself to follow his own mathematical ideas. Such a lingusitics accompaniment is not a representation of mathematics; still less is it mathematics itself (<span id="id11">[<a class="reference internal" href="references.html#id32" title="Arend Heyting. Die intuitionistische Grundlegung der Mathematik. Erkenntnis, 2:106-115, 1931.">Heyting, 1931</a>]</span> p. 106, {cite}`Benacerraf1983aa p. 52).</p>
+</div></blockquote>
+<p>This of course echos what we heard from Brouwer himself in Chapter 2.</p>
+<p>Here is what Gödel says about the second disjunct:</p>
+<blockquote>
+<div><p>On the other hand, the second alternative, where there exist absolutely undecidable mathematical propositions, seems to disprove the view that mathematics is only our creation; for the creator necesssarily knows all properties of his creatures, because they can’t have any others except those he has given to them (<span id="id12">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 311).</p>
+</div></blockquote>
+<blockquote>
+<div><p>As far as the second alternative is concenred, one might object that the  constructor need not necessarily know <em>every</em> property of what he constructs. For example, we build machines and still cannot predict their behaviour in every detail. But this objection is very poor. For we don’t create the machines out of nothing, but built them out of some given material. If the situation were similar in mathematics, then this material or basis for our constructions would be something and would force some realistic viewpoint upon us even if certain other ingredients of mathematics were of our own creation (<span id="id13">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 312).</p>
+</div></blockquote>
+<p>This passage deserves careful reconstruction, but perhaps as a first attempt we can suggest that the argument goes something like this:</p>
+<ul class="simple">
+<li><p>Take whatever “material basis” the intuitionist is willing to grant, like constructions or proofs or the like. Collect together everything we can assert about them into a theory <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+<li><p>The intuitionist will be forced into the second disjunct, and so there will be claims <span class="math notranslate nohighlight">\(\varphi\)</span> about their constructions and proofs such that they cannot assert <span class="math notranslate nohighlight">\(\varphi\)</span> and they cannot assert <span class="math notranslate nohighlight">\(\neg \varphi\)</span>.</p></li>
+<li><p>Brouwer and his followers (think back to the <span class="math notranslate nohighlight">\(\pi\)</span> example), were happy to banish such epistemically undecidable sentences out of the realm of the mathematically meaningful. But since <span class="math notranslate nohighlight">\(\varphi\)</span> pertains to their own view about constructions and proofs, this seems implausible.</p></li>
+</ul>
+</section>
+<section id="implications-for-logicism-a-la-carnap">
+<h3>Implications for logicism à la Carnap<a class="headerlink" href="#implications-for-logicism-a-la-carnap" title="Link to this heading">#</a></h3>
+<p>At the 1931 conference, Carnap wrote the exposition and defense of the logicist view. He closes by saying:</p>
+<blockquote>
+<div><p>Logicism as here described has several features in common both with intuitionism and with formalism. It shares with intuitionism a constructivistic tendency with respect to definition, a tendency which Frege also emphatically endorsed. A concept may not be introduced axiomatically but must be constructed from undefined, primitive concepts step by step through explicit definition (<span id="id14">[<a class="reference internal" href="references.html#id5" title="Rudolf Carnap. Die logizistische Grundlegung der Mathematik. Erkenntnis, 2(1):91–105, 1931.">Carnap, 1931</a>]</span> pp. 104-105, <span id="id15">[<a class="reference internal" href="references.html#id7" title="Paul Benacerraf and Hilary Putnam. Philosophy of Mathematics: Selected Readings. Cambridge University Press, Cambridge, second edition, 1983.">Benacerraf and Putnam, 1983</a>]</span> p. 52).</p>
+</div></blockquote>
+<p>Earlier Carnap stated the logicist view as:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The <em>concepts</em> of mathematics can be derived from logical concepts through explicit definitions. [\P] 2. The <em>theorems</em> of mathematics can be derived from logical axioms through purely logical deduction. (<span id="id16">[<a class="reference internal" href="references.html#id5" title="Rudolf Carnap. Die logizistische Grundlegung der Mathematik. Erkenntnis, 2(1):91–105, 1931.">Carnap, 1931</a>]</span>pp. 91-92, <span id="id17">[<a class="reference internal" href="references.html#id7" title="Paul Benacerraf and Hilary Putnam. Philosophy of Mathematics: Selected Readings. Cambridge University Press, Cambridge, second edition, 1983.">Benacerraf and Putnam, 1983</a>]</span> p. 41).</p></li>
+</ol>
+</div></blockquote>
+<p>Here is the problem that Gödel saw with this:</p>
+<blockquote>
+<div><p>Therefore the simplest version of the view in question would consist in the assertion that mathematical propositions are true solely owing to the definitions of the terms occurring in them, that is, that by successively replacing all terms by their definietia, any theorem can be reduced to an explicit tautology <span class="math notranslate nohighlight">\(a=a\)</span>. [… But this] would immediately yield a mechanical procedure for deciding the truth or falsehood of every mathematical proposition. Such a procedure, however, cannot exist, not even for number theory (<span id="id18">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 317).</p>
+</div></blockquote>
+<p>Hence, Gödel is imagining a version of Carnap’s 1-2 on which every true proposition of mathematics gets reduced to some specific tautology like <span class="math notranslate nohighlight">\(a=a\)</span>. Then presumably every false proposition of mathematics would get reduced to some specific contradiction like <span class="math notranslate nohighlight">\(a\neq a\)</span>. If this were true, then G”odel is just noting that there would be a computable deductively complete extension of <span class="math notranslate nohighlight">\(PA\)</span>, since the procedure would just be: do the reduction and figure out whether you reduced to <span class="math notranslate nohighlight">\(a=a\)</span> or <span class="math notranslate nohighlight">\(a\neq a\)</span>, and in the former case put it in the extension and in the second case don’t put it in the extension.</p>
+<p>G”odel also suggests that versions of Carnap’s program could fall afoul of the Second Incompleteness Theorem:</p>
+<blockquote>
+<div><p>Namely, it follows by the metatheorems mentioned that a proof for the tautological character is at the same time a proof for their consistency, and cannot be achieved with any \emph{weaker} means of proof than are contained in the axioms themselves (<span id="id19">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 317).</p>
+</div></blockquote>
+<p>The thought here seems to be that if one succeeded in proving, in <span class="math notranslate nohighlight">\(PA\)</span>, that every axiom of <span class="math notranslate nohighlight">\(PA\)</span> was equivalent in some sense to a tautology, then this would be a proof, in <span class="math notranslate nohighlight">\(PA\)</span>, that <span class="math notranslate nohighlight">\(PA\)</span> was consistent since <span class="math notranslate nohighlight">\(0=1\)</span> cannot be derived from a collection of tautologies.</p>
+</section>
+<section id="godel-s-own-view-conceptual-realism">
+<h3>Gödel’s own view conceptual realism<a class="headerlink" href="#godel-s-own-view-conceptual-realism" title="Link to this heading">#</a></h3>
+<p>At the end of the Gibb’s lecture, Gödel describes his own view as a kind of platonism:</p>
+<blockquote>
+<div><p>Thereby I mean the view that mathematics describes a non-sensual reality, which exists independently both of the acts and of the dispositions of the human mind and is only preceived, probably perceived very incompletely, by the human mind (<span id="id20">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 323)</p>
+</div></blockquote>
+<p>It is usually referred to now as conceptual realism, due to passages like the following, where Gödel suggests that what is true of sets is just what follows from the concept of set:</p>
+<blockquote>
+<div><p>I wish to repeat that “analytic” here does not mean “true owing to our definitions,” but rather “true owing to the nature of the concepts occurring [therein]” in contradistinction to “true owing to the properties and behavior of things.” This concept of analytic is so far from meaning “void of content” that it is perfectly possible that an analytic proposition might be undecidable (or decidable only with a [certain] probability).  (<span id="id21">[<a class="reference internal" href="references.html#id2" title="Kurt Gödel. Collected Works. Vol. III. Unpublished Lectures and Essays. Clarendon, New York, 1995.">Gödel, 1995</a>]</span> p. 321)</p>
+</div></blockquote>
+</section>
+<section id="how-does-godel-respond-to-the-disjunction">
+<h3>How does Gödel respond to the disjunction?<a class="headerlink" href="#how-does-godel-respond-to-the-disjunction" title="Link to this heading">#</a></h3>
+<p>I don’t think that the Gibbs’ lecture is entirely clear on this.</p>
+<p>Conceptual realism would explain the second disjunct. There are just some things which are true but which we can’t know: the concepts make them true but our ways of knowing are limited.</p>
+<p>But recall the pressure on the second disjunct, e.g. that <span class="math notranslate nohighlight">\(Con(T)\)</span> should be in <span class="math notranslate nohighlight">\(T\)</span>. In other parts of Gödel’s work, there is the idea that <span class="math notranslate nohighlight">\(Con(T)\)</span> is known to us on the basis of our knowledge of a higher system, say <span class="math notranslate nohighlight">\(T^{\prime}\)</span>:</p>
+<blockquote>
+<div><p>[…] the true reason for the incompleteness inherent in all formal systems of mathematics is that the formation of even higher types can be continued into the transfinite […] while in any formal system at most denumerably many of them are available. For it can be shown that the undecidable propositions constructed here become decidable whenever appropriate higher types are added [\ldots] An analogous situation prevails for the axioms system of set theory (<span id="id22">[<a class="reference internal" href="references.html#id4" title="Kurt Gödel. Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. Monatshefte für Mathematik und Physik, 38(1):173–198, December 1931.">Gödel, 1931</a>]</span> p. 191 fn 48a, <span id="id23">[<a class="reference internal" href="references.html#id3" title="Kurt Gödel. Collected Works. Vol. I. Publications 1929-1936. Clarendon, New York, 1986. Edited by Solomon Feferman et. al.">Gödel, 1986</a>]</span> p. 180 fn 48a).</p>
+</div></blockquote>
+<p>It is exactly this “inexhaustibility of mathematics” with which Gödel begins the lecture. This might lend itself to the idea that the first disjunct is true since this inexhaustibility cannot be computationally captured.</p>
+<p>Hence there are hints in Gödel’s Gibbs lecture for reasons why he might endorse both disjuncts.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chap07.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 7</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-theorems">Gödel’s Theorems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-first-incompleteness-theorem">Gödel’s First Incompleteness Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robinson-s-q">Robinson’s Q</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peano-arithmetic-pa-and-i-sigma-0-1">Peano arithmetic PA and <span class="math notranslate nohighlight">\(I\Sigma^0_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-first-incompleteness-theorem-redeux">Gödel’s First Incompleteness Theorem (redeux)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-proof-idea">The proof idea</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-second-incompleteness-theorem">Gödel’s Second Incompleteness Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brief-remarks-on-the-second-theorem">Brief remarks on the second theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-disjunction">Gödel’s Disjunction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-statement-in-the-gibb-s-lecture">The statement in the Gibb’s lecture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-disjunction-is-a-primae-facie-puzzle">Why the disjunction is a <em>primae facie</em> puzzle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-ways-out-and-some-ways-to-develop-it">Some ways out and some ways to develop it</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-on-the-disjunction">Gödel on the disjunction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-1931-conference">The 1931 conference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implications-of-the-first-disjunct-for-logicism-a-la-carnap">The implications of the first disjunct for logicism à la Carnap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications-for-logicism-a-la-carnap">Implications for logicism à la Carnap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#godel-s-own-view-conceptual-realism">Gödel’s own view conceptual realism</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-godel-respond-to-the-disjunction">How does Gödel respond to the disjunction?</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
