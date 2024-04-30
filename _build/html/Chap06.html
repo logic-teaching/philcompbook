@@ -188,6 +188,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap07.html">Chapter 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap09.html">Chapter 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -464,7 +465,7 @@ document.write(`
 <p>Consider the set <span class="math notranslate nohighlight">\(A=\{e: \varphi_e\)</span> has <span class="math notranslate nohighlight">\(P \}\)</span>.</p>
 <p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is not everything and <span class="math notranslate nohighlight">\(A\)</span> is not empty.</p>
 <p>Then <span class="math notranslate nohighlight">\(A\)</span> is non-computable.</p>
-<p><em>Proof</em>: (following <span id="id2">[<a class="reference internal" href="references.html#id33" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> p. 16):</p>
+<p><em>Proof</em>: (following <span id="id2">[<a class="reference internal" href="references.html#id37" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> p. 16):</p>
 <p>Since <span class="math notranslate nohighlight">\(A\)</span> is not everything and <span class="math notranslate nohighlight">\(A\)</span> is not empty, choose <span class="math notranslate nohighlight">\(c\)</span> not in <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(d\)</span> in <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <p>Without loss of generality, assume that <span class="math notranslate nohighlight">\(c\)</span> does not halt on any input (‘c’ for crash). If this assumption is not met, run the argument on the complement of <span class="math notranslate nohighlight">\(A\)</span> (since a set is computable iff its complement is).</p>
 <p>Consider the following computable function <span class="math notranslate nohighlight">\(r\)</span> (for ‘Rice’) and how it acts on input <span class="math notranslate nohighlight">\(e\)</span>:</p>
@@ -514,7 +515,7 @@ document.write(`
 <h2>Curry-Howard and a glimpse at Lean<a class="headerlink" href="#curry-howard-and-a-glimpse-at-lean" title="Link to this heading">#</a></h2>
 <section id="recall-the-three-most-famous-combinators">
 <h3>Recall the three most famous combinators<a class="headerlink" href="#recall-the-three-most-famous-combinators" title="Link to this heading">#</a></h3>
-<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id3">[<a class="reference internal" href="references.html#id16" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, November 2000.">Smullyan, 2000</a>]</span>:</p>
+<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id3">[<a class="reference internal" href="references.html#id20" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, November 2000.">Smullyan, 2000</a>]</span>:</p>
 <ul class="simple">
 <li><p><em>Identity bird</em> (<em>I</em>) is <span class="math notranslate nohighlight">\(\lambda x.x\)</span></p></li>
 <li><p><em>Kestrel</em>  (<em>K</em>) is <span class="math notranslate nohighlight">\(\lambda xy.  x\)</span></p></li>

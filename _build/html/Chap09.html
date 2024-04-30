@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 9 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chap09';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Chapter 8" href="Chap08.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap05.html">Chapter 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap06.html">Chapter 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap07.html">Chapter 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Chap09.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chap09.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 9</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivations">Motivations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-class-p-and-exp">The class P and EXP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-worst-case-running-time-function-of-a-machine">Definition (worst case running time function of a machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-polynomial-vs-exponential-time-complexity-of-a-machine">Definition (polynomial vs. exponential time complexity of a machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-polynomial-running-times">Examples of polynomial running times</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-exponential-running-time">Examples of exponential running time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-the-class-p-the-class-exp">Definition (The class P, the class EXP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-problems-in-p">Examples of problems in P:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-there-is-a-problem-in-exp-but-not-p">Proposition: there is a problem in EXP but not P</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-class-np">The class NP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fagin-s-theorem-machine-indpenedent-characterization-of-np">Fagin’s Theorem (Machine indpenedent characterization of NP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-problems-in-np">Examples of problems in NP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#status-and-significance-of-p-np">Status and significance of P=NP</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressures-on-feasibility-from-both-sides">Pressures on feasibility from both sides</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressures-to-go-down-from-p">Pressures to go down from P</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressures-to-go-up-from-p">Pressures to go up from P</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-9">
+<h1>Chapter 9<a class="headerlink" href="#chapter-9" title="Link to this heading">#</a></h1>
+<p>Today we introduce the polynomial time comptuable sets, which are often regarded as good contendor for what is feasibly computable.</p>
+<p>There will be lots of classes today, and it will be useful to have at hand <a class="reference download internal" download="" href="_downloads/44fa9d8598100ea8b5c7284d48c0d4b8/map-handout.pdf"><span class="xref download myst">the map</span></a>.</p>
+<section id="motivations">
+<h2>Motivations<a class="headerlink" href="#motivations" title="Link to this heading">#</a></h2>
+<p>Here is Cobham, in one of the original articles on the subject:</p>
+<blockquote>
+<div><p>The subject of my talk is perhaps most directly indicated by simply asking two questions: first, is it harder to multiply than to add? And second, why? I grant I have put the first of these questions rather loosely; nevertheless, I think that the answer, ought to be: <em>yes</em>. It is the second, which asks for a justification of this answer which provides the challenge (<span id="id1">[<a class="reference internal" href="references.html#id5" title="Alan Cobham. The intrinsic computational difficulty of functions. In Logic, Methodology and Philos. Sci. (Proc. 1964 Internat. Congr.), 24–30. North-Holland, Amsterdam, 1965.">Cobham, 1965</a>]</span> p. 24)</p>
+</div></blockquote>
+<p>Here is Aaronson, a prominent complexity theorist:</p>
+<blockquote>
+<div><p>I think of the polynomial-exponential gap as occupying a “middle ground” between two other sorts of gaps […]  The trouble with small quantitative gaps is that they are too sensitive to “mundane” modeling choices and the details of technology. But the [other gaps have] the opposite problem: [of being] serenely <em>in</em>sensitive to distinctions that we actually care about, such as between finding a solution and verifying it […] (<span id="id2">[<a class="reference internal" href="references.html#id102" title="Scott Aaronson. Why philosophers should care about computational complexity. In B Jack Copeland, Carl J Posy, and Oron Shagrir, editors, Computability: Turing, Gödel, Church, and Beyond, pages 261–328. MIT Press, 2013.">Aaronson, 2013</a>]</span> p. 270)</p>
+</div></blockquote>
+<p>Note that the distinctions we have come across so far are ostensibly inadequate to this task:</p>
+<ul class="simple">
+<li><p>Addition and multiplication are trivially primitive recursive and hence computable. We spoke of the study of non-computable functions and sets as a study of level of difficulty, but on this measure both addition and multiplication are equally and maximally non-difficult.</p></li>
+<li><p>If verifying a solution to a given task is computable, then so is finding the solution to a given task: one just brute force searches among all possible solutions and verifies as one proceeds whether it is a genuine solution.</p></li>
+<li><p>At first blush, one might think that the Turing machine model is a poor framework for studying these fine-grained problems because so much depends on the “details of the technology” e.g. the details of the way that the tape and head is organized.</p></li>
+</ul>
+</section>
+<section id="the-class-p-and-exp">
+<h2>The class P and EXP<a class="headerlink" href="#the-class-p-and-exp" title="Link to this heading">#</a></h2>
+<section id="definition-worst-case-running-time-function-of-a-machine">
+<h3>Definition (worst case running time function of a machine)<a class="headerlink" href="#definition-worst-case-running-time-function-of-a-machine" title="Link to this heading">#</a></h3>
+<p>Suppose that a Turing machine <span class="math notranslate nohighlight">\(M\)</span> halts on all inputs.</p>
+<p>Recall that the number of symbols is assumed to be finite.</p>
+<p>Then for each <span class="math notranslate nohighlight">\(n\)</span>, there are only finitely many strings of symbols of length <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>For each <span class="math notranslate nohighlight">\(n\)</span>, let <span class="math notranslate nohighlight">\(f(n)\)</span> be the maximum number of steps which machine <span class="math notranslate nohighlight">\(M\)</span> takes to halt on inputs of length <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Then this running time function <span class="math notranslate nohighlight">\(f\)</span> is <em>the worst-case running time function</em> of <span class="math notranslate nohighlight">\(M\)</span>.</p>
+</section>
+<section id="definition-polynomial-vs-exponential-time-complexity-of-a-machine">
+<h3>Definition (polynomial vs. exponential time complexity of a machine)<a class="headerlink" href="#definition-polynomial-vs-exponential-time-complexity-of-a-machine" title="Link to this heading">#</a></h3>
+<p>The worst-case running time <span class="math notranslate nohighlight">\(f\)</span> is <em>polynomial</em> if there is a polynomial <span class="math notranslate nohighlight">\(p(n)\)</span> and constant <span class="math notranslate nohighlight">\(n_0\geq 0\)</span> such that <span class="math notranslate nohighlight">\(f(n)\leq c\cdot p(n)\)</span> for all <span class="math notranslate nohighlight">\(n\geq n_0\)</span>.</p>
+<p>Since the first term of a polynomial on the natural numbers eventually dominates the other terms, this is equivalent to there being constants <span class="math notranslate nohighlight">\(k&gt;0, n_0\geq 0, c&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(n)\leq c\cdot n^k\)</span> for all <span class="math notranslate nohighlight">\(n\geq n_0\)</span>.</p>
+<p>Likewise, the worse-case running time <span class="math notranslate nohighlight">\(f\)</span> is <em>exponential</em> if <span class="math notranslate nohighlight">\(k&gt;0, n_0\geq 0, c&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(n)\leq c\cdot 2^{n^k}\)</span> for all <span class="math notranslate nohighlight">\(n\geq n_0\)</span>.</p>
+<p>The Turing machine <span class="math notranslate nohighlight">\(M\)</span> is itself said to be <em>polynomial-time</em> (resp. <em>exponential</em>) if its worst-case running time function is polynomial (resp. <em>exponential</em>).</p>
+</section>
+<section id="examples-of-polynomial-running-times">
+<h3>Examples of polynomial running times<a class="headerlink" href="#examples-of-polynomial-running-times" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><em>Sweeping across and then halting</em>: Consider the Turing machine that just reads the input tape from left to right and then halts. This has running time <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p><em>Sweeping there and back and then halting</em>: Consider the Turing machine that just reads the input tape from left to right and then goes right to left back across the tape and halts at the first cell. This has running time <span class="math notranslate nohighlight">\(2n\)</span>.</p></li>
+<li><p><em>Making a duplicate of input</em>: Consider the Turing machine that duplicates its input tape by repeatedly sweeping from left to right and back and copying a single cell on each sweep. If the input has length <span class="math notranslate nohighlight">\(n\)</span>, it has to sweep <span class="math notranslate nohighlight">\(n\)</span>-many times and each sweep takes <span class="math notranslate nohighlight">\(2n\)</span>-steps, counting both back and forth. Then it has running time <span class="math notranslate nohighlight">\(2n\cdot n = 2n^2\)</span>.</p></li>
+</ul>
+</section>
+<section id="examples-of-exponential-running-time">
+<h3>Examples of exponential running time<a class="headerlink" href="#examples-of-exponential-running-time" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><em>From a string of <span class="math notranslate nohighlight">\(n\)</span> ones, make a string of <span class="math notranslate nohighlight">\(2^n\)</span> ones</em>: Consider the Turing machine that when given an input of <span class="math notranslate nohighlight">\(n\)</span>-many <span class="math notranslate nohighlight">\(1\)</span>’s, moves over to the right and writes two ones, and then sweeps back and forth doubling the second block of ones and crossing one off the first block of ones on each sweep. This has worst case running time <span class="math notranslate nohighlight">\(\sum_{i=1}^n (2(2^i)^2+(n-i))\)</span>, which with a little patience you can see is equal to <span class="math notranslate nohighlight">\(1/6 (3 n^2 - 3 n + 4^{n + 2} - 16)\)</span>.</p></li>
+</ul>
+</section>
+<section id="definition-the-class-p-the-class-exp">
+<h3>Definition (The class P, the class EXP)<a class="headerlink" href="#definition-the-class-p-the-class-exp" title="Link to this heading">#</a></h3>
+<p>A set <span class="math notranslate nohighlight">\(A\)</span> of strings from some finite alphabet is <em>polynomial time computable</em> or in the class <em>P</em> if there is a polynomial time machine which computes it.</p>
+<p>A set <span class="math notranslate nohighlight">\(A\)</span> of strings from some finite alphabet is <em>exponential time computable</em> or in the class <em>EXP</em> if there is an exponential time machine which computes it.</p>
+<p>Note that in this definition we are concerned with sets rather than functions (there are analogous definitions for functions, but P and EXP are by tradition reserved for sets).</p>
+</section>
+<section id="examples-of-problems-in-p">
+<h3>Examples of problems in P:<a class="headerlink" href="#examples-of-problems-in-p" title="Link to this heading">#</a></h3>
+<p>Here are some traditional examples, along with a word about why the example is indeed in P, although it should be flagged that this is a mere sketch and more work is needed to establish a polynomial bound:</p>
+<ul class="simple">
+<li><p><em>Whether there is a path <span class="math notranslate nohighlight">\(s\)</span> to <span class="math notranslate nohighlight">\(t\)</span> in a graph (i.e. graph traversal problem)</em>: just explore graph starting from <span class="math notranslate nohighlight">\(s\)</span> and mark what you have explored and see when you are done if you have marked <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p><em>Whether two numbers are relatively prime (i.e. have no common divisor)</em>: apply Euclidean algorithm, which involves successively cutting the two numbers at least by half in alternate stages.</p></li>
+<li><p><em>Whether a string is a well-formed formula</em>: apply “balance of parentheses” test plus fact that “no proper initial segment of a wff is a wff”.</p></li>
+<li><p><em>Whether a string is a proof</em>: check that each line is a well-formed formula, and then check that each line is an axiom or follows from earlier lines by rules.</p></li>
+</ul>
+</section>
+<section id="proposition-there-is-a-problem-in-exp-but-not-p">
+<h3>Proposition: there is a problem in EXP but not P<a class="headerlink" href="#proposition-there-is-a-problem-in-exp-but-not-p" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(C = \{e: \varphi_e(e)\downarrow\)</span> in <span class="math notranslate nohighlight">\(\leq 2^e\)</span> steps <span class="math notranslate nohighlight">\(\}\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(C\)</span> is in EXP but not in P.</p>
+<p><em>Note</em>: there is a much harder and more general theorem, whose proof is similar to the one we offer, called the <em>Time hierarchy theorem</em> (<span id="id3">[<a class="reference internal" href="references.html#id25" title="Michael Sipser. Introduction to the Theory of Computation. Cengage Learning, 3 edition, 2012.">Sipser, 2012</a>]</span> pp. 369 ff).</p>
+<p><em>Proof</em>:</p>
+<p>If one pays close attention to the construction of the universal machine <span class="math notranslate nohighlight">\(\varphi_{e_0}\)</span>, one sees that if <span class="math notranslate nohighlight">\(\varphi_e(n)\downarrow \)</span> in <span class="math notranslate nohighlight">\(\leq s\)</span> steps, then <span class="math notranslate nohighlight">\(\varphi_{e_0}(e,n)\downarrow\)</span> in <span class="math notranslate nohighlight">\(\leq s^2\)</span> steps.</p>
+<p>Note that if <span class="math notranslate nohighlight">\(s\leq 2^e\)</span>, then <span class="math notranslate nohighlight">\(s^2 \leq 2^{e^2}\)</span>, and so <span class="math notranslate nohighlight">\(C\)</span> is in EXP.</p>
+<p>Suppose for reductio that <span class="math notranslate nohighlight">\(C\)</span> was in P.</p>
+<p>Then the following program, call it <span class="math notranslate nohighlight">\(i\)</span>, has worst case running time which is polynomial:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">φ_i</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">C</span><span class="p">:</span>                                <span class="c1"># insert witness to C being in P</span>
+        <span class="k">return</span> <span class="n">φ_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>                       <span class="c1"># call up universal machine</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Choose constants <span class="math notranslate nohighlight">\(c,k,n_0\)</span> such that for all <span class="math notranslate nohighlight">\(n\geq n_0\)</span> one has that <span class="math notranslate nohighlight">\(\varphi_i(n)\downarrow\)</span> in <span class="math notranslate nohighlight">\(\leq c\cdot n^k\)</span> many steps.</p>
+<p>Without loss of generality, <span class="math notranslate nohighlight">\(i\geq n_0\)</span> and <span class="math notranslate nohighlight">\(i^k\leq 2^i\)</span>. Otherwise by put a bunch of non-active states and instructions in <span class="math notranslate nohighlight">\(i\)</span> to make it bigger.</p>
+<p>Then <span class="math notranslate nohighlight">\(i\)</span> in <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p>But then by definition of <span class="math notranslate nohighlight">\(φ_i(i)\)</span> we get that <span class="math notranslate nohighlight">\(φ_i(i)=φ_i(i)+1\)</span>, a contradiction.</p>
+</section>
+</section>
+<section id="the-class-np">
+<h2>The class NP<a class="headerlink" href="#the-class-np" title="Link to this heading">#</a></h2>
+<section id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
+<p>A set <span class="math notranslate nohighlight">\(A\)</span> of strings in some finite alphabet is in the class <em>NP</em> if there is a polynomial <span class="math notranslate nohighlight">\(p\)</span> and a polynomial time machine <span class="math notranslate nohighlight">\(\varphi_i\)</span> such that for all strings <span class="math notranslate nohighlight">\(x\)</span></p>
+<p><span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(A\)</span> iff there is <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(\left|y\right|\leq p(\left|x\right|)\)</span> such that <span class="math notranslate nohighlight">\(\varphi_i(x,y)\downarrow=1\)</span>.</p>
+<p>In this context, such a <span class="math notranslate nohighlight">\(y\)</span> is said to be a <em>certificate</em> for <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</section>
+<section id="fagin-s-theorem-machine-indpenedent-characterization-of-np">
+<h3>Fagin’s Theorem (Machine indpenedent characterization of NP)<a class="headerlink" href="#fagin-s-theorem-machine-indpenedent-characterization-of-np" title="Link to this heading">#</a></h3>
+<p>A set <span class="math notranslate nohighlight">\(A\)</span> of finite models in some finite relational signature is in NP iff there is a an formula <span class="math notranslate nohighlight">\(\varphi(F)\)</span> of first-order logic with new relation symbol <span class="math notranslate nohighlight">\(F\)</span> such that <span class="math notranslate nohighlight">\(M\)</span> in <span class="math notranslate nohighlight">\(A\)</span> iff <span class="math notranslate nohighlight">\(M\models \exists \; F\; \varphi(F)\)</span>.</p>
+<p>(<span id="id4">[<a class="reference internal" href="references.html#id3" title="Ronald Fagin. Contributions to the model theory of finite structures. University of California, Berkeley, 1973.">Fagin, 1973</a>]</span>, <span id="id5">[<a class="reference internal" href="references.html#id76" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> pp. 115 ff)</p>
+</section>
+<section id="examples-of-problems-in-np">
+<h3>Examples of problems in NP<a class="headerlink" href="#examples-of-problems-in-np" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><em>Whether there is a path between nodes <span class="math notranslate nohighlight">\(s,t\)</span> in a graph that visits each node exactly one (i.e. Hamiltonian path problem)</em>: simply say that there is a binary relation <span class="math notranslate nohighlight">\(&lt;\)</span> which linearly orders the graph such that <span class="math notranslate nohighlight">\(s\)</span> is the first element in the ordering, and <span class="math notranslate nohighlight">\(t\)</span> is the the last element in the ordering, and <span class="math notranslate nohighlight">\(x&lt;y\)</span> with no <span class="math notranslate nohighlight">\(x&lt;y'&lt;y\)</span> only if there is an edge from <span class="math notranslate nohighlight">\(x\)</span> to <span class="math notranslate nohighlight">\(y\)</span>. In this case, the ordering <span class="math notranslate nohighlight">\(&lt;\)</span> is the certificate.</p></li>
+<li><p><em>Whether a number is composite (i.e. not prime)</em>: view the number as a finite linear order <span class="math notranslate nohighlight">\(M\)</span>, and say that it has two non-empty subsets <span class="math notranslate nohighlight">\(X,Y\)</span> each of which has more than one element such that <span class="math notranslate nohighlight">\(M\)</span> has the same cardinality as <span class="math notranslate nohighlight">\(X\times Y\)</span>, where you write that out in terms of an existential quantifier over a binary relation which encodes a bijection <span class="math notranslate nohighlight">\(f\)</span> between <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(X\times Y\)</span>. In this case, the tripe <span class="math notranslate nohighlight">\(X,Y,f\)</span> is the certificate.</p></li>
+<li><p><em>Whether a formula of propositional logic is satisfiable</em>: view the formula as a mathematical function of its atomic formulas, and then say there is an assignment of the atomic formulas to zero and one such that the value of the formula is one. The assignment is the certificate.</p></li>
+</ul>
+</section>
+<section id="status-and-significance-of-p-np">
+<h3>Status and significance of P=NP<a class="headerlink" href="#status-and-significance-of-p-np" title="Link to this heading">#</a></h3>
+<p>It is unknown whether P=NP. It is likewise unknown whether NP=EXP. I think that the majority view is that P <span class="math notranslate nohighlight">\(\subsetneq\)</span> NP <span class="math notranslate nohighlight">\(\subsetneq\)</span> EXP.</p>
+<p>The view adumbrated by Aaronson in the opening as to their being an intuitive difference between finding a solution and verifying that it is a solution would be borne out if</p>
+<ol class="arabic simple">
+<li><p>P <span class="math notranslate nohighlight">\(\neq\)</span> NP</p></li>
+<li><p>P is a good analysis (explication) of the difficulty of verifying solutionhood</p></li>
+<li><p>NP is a good analysis (explication) of the difficulty of finding a solution</p></li>
+</ol>
+<p>Broadly similiar sentiments conclusions be found by quick glance at complexity theory texts:</p>
+<blockquote>
+<div><p>When someone finally proves P <span class="math notranslate nohighlight">\(\neq\)</span> NP, this will truly show that mathematicians – as well as other creative individuals– cannot uniformly and feasibly be replaced by machine (<span id="id6">[<a class="reference internal" href="references.html#id76" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> p. 245)</p>
+</div></blockquote>
+<blockquote>
+<div><p>Recognizing the correctness of an answer is often easier than coming up with the answer. Appreciating a Beethoven sonata is far easier than composing the sonata; verifying the solidity of a design for a suspension bridge is easier (to a civil engineer anyway!) than coming up with a good design; verifying the proof of a theorem is easier than coming up with a proof itself […] and so forth. In such cases, coming up with the right answer seems to involve <em>exhaustive search</em> over an exponentially large set. The P versus NP question aks whether exhaustive search can be avoided in general (<span id="id7">[<a class="reference internal" href="references.html#id4" title="Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach. Cambridge University Press, April 2009.">Arora and Barak, 2009</a>]</span> pp. 57-58).</p>
+</div></blockquote>
+<p>Obviously lots of attention has been paid to 1 by computer scientists and mathematicians, and rightly so.</p>
+<p>But I do not think that philosophers have paid sufficient attention to 2-3, and it is not obvious to me that a more capacious sense of ‘verification’ or ‘recognition of correctness’ can be sustained. I don’t think that I have anything like a good contendor for a counterexample, but am merely suggesting that it is not obvious to me that there is a univocal sense of ‘recognition of correctness’ at work in e.g. Arora-Barak’s sonota, bridge, and proof examples, although I recognize a notion of recognition of correctness in each.</p>
+</section>
+</section>
+<section id="pressures-on-feasibility-from-both-sides">
+<h2>Pressures on feasibility from both sides<a class="headerlink" href="#pressures-on-feasibility-from-both-sides" title="Link to this heading">#</a></h2>
+<section id="pressures-to-go-down-from-p">
+<h3>Pressures to go down from P<a class="headerlink" href="#pressures-to-go-down-from-p" title="Link to this heading">#</a></h3>
+<p>Consider Immerman’s remarks in his book and his SEP article:</p>
+<blockquote>
+<div><p>[Truly feasible] inqueries are the queries that can be computed exactly with an “affordable” amount of time and hardware, on all “reasonably sized” instances (<code class="docutils literal notranslate"><span class="pre">Immerman2012-em</span></code> p. 41).</p>
+</div></blockquote>
+<blockquote>
+<div><p>Note that this [‘truly feasible’] is not a mathematically defined class, but rather an intuitive notion of those problems that can be solved exactly, for all the instances of reasonable size, within a reasonable amount of time, using a computer that we can afford. […] There are problems in P requiring <span class="math notranslate nohighlight">\(n^{1,000}\)</span> time for problems of size n and thus not feasible. […] The number of steps required for problems of size n [occurring in nature] tends to be less than <span class="math notranslate nohighlight">\(cn^k\)</span> with small multiplicative constants <span class="math notranslate nohighlight">\(c\)</span>, and very small exponents, <span class="math notranslate nohighlight">\(k\)</span>, i.e., <span class="math notranslate nohighlight">\(k\leq 2\)</span> (<span id="id8">[<a class="reference internal" href="references.html#id2">Immerman, 2021</a>]</span> \S{4.1}).</p>
+</div></blockquote>
+<p>Hence to the extent that one builds into the notion of feasibility not just the asympotic bounds, but the hardware and time constraints we actually have, one gets a proper subset of P as the candidate for true feasibility.</p>
+<p>But if one is building in constraints on what we can actually do, in the amount of life and time afforded us, one raises the concern of why asympotic bounds are appropriate at all. This is what Aaronson is worrying about at the end of his article:</p>
+<blockquote>
+<div><p>But as a matter of logic, asymptotic statements need not have <em>any implications whatsoever</em> for the finite values of n (say, 10,000) that humans actually care about, nor can any finite amount of experimental data confirm or refute an asymptotic claim  (<span id="id9">[<a class="reference internal" href="references.html#id102" title="Scott Aaronson. Why philosophers should care about computational complexity. In B Jack Copeland, Carl J Posy, and Oron Shagrir, editors, Computability: Turing, Gödel, Church, and Beyond, pages 261–328. MIT Press, 2013.">Aaronson, 2013</a>]</span> p. 312)</p>
+</div></blockquote>
+<p>Presumably part of the way to adjudicate this is to say that the <span class="math notranslate nohighlight">\(n\)</span> and the <span class="math notranslate nohighlight">\(k\)</span> in the bounds <span class="math notranslate nohighlight">\(n^k\)</span> are playing two different roles: we want <span class="math notranslate nohighlight">\(n\)</span> to vary since my input may be different than your input, but we want to set some upper bounds on <span class="math notranslate nohighlight">\(k\)</span> since it may seem plausible that whatever our various inputs, we are bound beneth a <span class="math notranslate nohighlight">\(k\)</span> power of them for some small <span class="math notranslate nohighlight">\(k\)</span>. But adjudicating this debate about the communicative content of asympotic results in complexity theory derserves more care than I am able to give it here.</p>
+</section>
+<section id="pressures-to-go-up-from-p">
+<h3>Pressures to go up from P<a class="headerlink" href="#pressures-to-go-up-from-p" title="Link to this heading">#</a></h3>
+<p>Consider the machine-independent chracterizations of P due to Cobham and discussed by Aaronson:</p>
+<p>A function <span class="math notranslate nohighlight">\(f:\mathbb{N}^n\rightarrow \mathbb{N}\)</span> is comptuable with worse case polynomial running time iff it is in the smallest class which</p>
+<ol class="arabic simple">
+<li><p>contains the contains: pairing, addition, multiplcation, the number of bits in binary representation, projection, the bit function, slicing of a bit, and the smash function <span class="math notranslate nohighlight">\(x\mapsto 2^{\left|x\right|^2}\)</span>.</p></li>
+<li><p>is closed under composition and bounded recursion, namely:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+g(x,k) = \begin{cases}
+    f(g(x, \lfloor \frac{k}{2}\rfloor )) &amp; \text{if $k&gt;1$} \\ 
+    x &amp; \text{if  $k=1$} 
+\end{cases}
+\end{split}\]</div>
+<p>provided that <span class="math notranslate nohighlight">\(\left|f(x)\right|\leq \left|x\right|\)</span>.</p>
+<p>Suppose that one viewed this as being part of a successful conceptual analysis of truly feasible, issuing in a Church-like thesis:</p>
+<ul class="simple">
+<li><p>A function is truly feasible iff it is in the class described by Coham.</p></li>
+</ul>
+<p>Then the “easy direction” of this would be again the right-to-left direction, and it would be warranted by inspection in the case of 1, and for 2 by observations such as the following:</p>
+<blockquote>
+<div><p>So, too, the number of steps involved in the extraction of square roots, calculation of quotients, etc. can be bounded by polynomials in the length of the numbers involved, and this seems to be a property of simple functions in general (<span id="id10">[<a class="reference internal" href="references.html#id5" title="Alan Cobham. The intrinsic computational difficulty of functions. In Logic, Methodology and Philos. Sci. (Proc. 1964 Internat. Congr.), 24–30. North-Holland, Amsterdam, 1965.">Cobham, 1965</a>]</span> p. 28).</p>
+</div></blockquote>
+<p>But if one takes this view, it is easy to see that P is a subset of the truly feasible functions. To the extent that one thinks that the other direction is hard, there will be pressure to go up, not down.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chap08.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 8</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivations">Motivations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-class-p-and-exp">The class P and EXP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-worst-case-running-time-function-of-a-machine">Definition (worst case running time function of a machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-polynomial-vs-exponential-time-complexity-of-a-machine">Definition (polynomial vs. exponential time complexity of a machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-polynomial-running-times">Examples of polynomial running times</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-exponential-running-time">Examples of exponential running time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-the-class-p-the-class-exp">Definition (The class P, the class EXP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-problems-in-p">Examples of problems in P:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-there-is-a-problem-in-exp-but-not-p">Proposition: there is a problem in EXP but not P</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-class-np">The class NP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fagin-s-theorem-machine-indpenedent-characterization-of-np">Fagin’s Theorem (Machine indpenedent characterization of NP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-problems-in-np">Examples of problems in NP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#status-and-significance-of-p-np">Status and significance of P=NP</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressures-on-feasibility-from-both-sides">Pressures on feasibility from both sides</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressures-to-go-down-from-p">Pressures to go down from P</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressures-to-go-up-from-p">Pressures to go up from P</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
