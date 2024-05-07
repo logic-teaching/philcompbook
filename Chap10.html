@@ -1,0 +1,1103 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 10 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chap10';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Chapter 9" href="Chap09.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap05.html">Chapter 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap06.html">Chapter 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap07.html">Chapter 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap09.html">Chapter 9</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Chap10.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chap10.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 10</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-semantics-for-algorithms">A semantics for algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#three-simple-algorithms">Three simple algorithms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-1">Algorithm 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-2">Algorithm 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-3">Algorithm 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-observation-the-first-two-algorithms-compute-multiply-by-2">Initial observation: the first two algorithms compute ‘multiply by 2’</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-observation-two-thoughts-on-h-3">Initial observation: two thoughts on <span class="math notranslate nohighlight">\(h(3)\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formal-langugage-rec">The formal langugage REC</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rudiments-of-the-language">The rudiments of the language</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-terms-of-the-language">The terms of the language</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#booleans">Booleans</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Algorithm 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulas">Formulas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-theory-and-partial-orders">Domain theory and partial orders</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-orders">Partial orders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-partial-orders">Complete partial orders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-for-fixed-points">Looking for fixed points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuous-functions">The continuous functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-non-examples">Examples and non-examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-then-else-is-continuous">If then else is continuous</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuous-functions-are-themselves-a-cpo">The continuous functions are themselves a cpo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-existence-of-lease-fixed-points">Theorem (existence of lease fixed points)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explaining-and-illustrating-the-denotational-semantics">Explaining and illustrating the denotational semantics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-idea">The fundamental idea</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-1">Illustrating with Algorithm 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-2">Illustrating with Algorithm 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-2-further">Illustrating with Algorithm 2 further</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-3-call-by-name-and-call-by-value">Illustrating with Algorithm 3 call-by-name and call-by-value</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-10">
+<h1>Chapter 10<a class="headerlink" href="#chapter-10" title="Link to this heading">#</a></h1>
+<section id="a-semantics-for-algorithms">
+<h2>A semantics for algorithms<a class="headerlink" href="#a-semantics-for-algorithms" title="Link to this heading">#</a></h2>
+<p>We’re looking towards the denotational semantics for programming languages with an eye towards two questions:</p>
+<p><strong>Intensionality</strong>: How can one construct a traditional semantics for <em>intensional</em> notions like procedures? The sense of <em>intensional</em> is the opposite of the <em>extensional</em> from Rice’s theorem, namely, dealing only with input-output behavior.</p>
+<p><strong>Partiality</strong>: How can one construct a traditional semantics for <em>partial</em> notions like procedures? The sense of <em>partial</em> is just <em>not total</em>.</p>
+<p>Each of these brings with it a certain challenge:</p>
+<p><em>Challenge for intensionality</em>: the traditional intensional approach to semantics goes through modal logic and partial worlds. But since in computation we are dealing with numbers and strings which are the same in every world and every situation, ostensibly modal logic does not apply.</p>
+<p><em>Challenge for partiality</em>: Traditional semantics are compositional: the denotation of the whole is a mathematical function of the denotation of the parts. If partiality was implemented in terms of certain denotations not being totally defined, then there is going to be widespread denotation failure: any partiality embedded deep in a relative clause is going to make the entire denotation be partial. However, one might have wanted a way to succeed in assigning denotations to expressions featuring partiality.</p>
+</section>
+<section id="three-simple-algorithms">
+<h2>Three simple algorithms<a class="headerlink" href="#three-simple-algorithms" title="Link to this heading">#</a></h2>
+<p>For the purposes of illustration, we will take as our base object natural numbers and we will presume that successor, addition, partial subtraction are implemented in some reasonable way.</p>
+<section id="algorithm-1">
+<h3>Algorithm 1<a class="headerlink" href="#algorithm-1" title="Link to this heading">#</a></h3>
+<p>This is a single algorithm, whose procedure is “add the input to itself.”</p>
+<p>In symbols:</p>
+<p><span class="math notranslate nohighlight">\(f(x)=x+x\)</span></p>
+</section>
+<section id="algorithm-2">
+<h3>Algorithm 2<a class="headerlink" href="#algorithm-2" title="Link to this heading">#</a></h3>
+<p>This concerns a pair of intertwined algorithms.</p>
+<ul class="simple">
+<li><p>The first is the procedure “return zero on input <span class="math notranslate nohighlight">\(x=0\)</span>, else return one plus the result of the second procedure applied to input <span class="math notranslate nohighlight">\(x-1\)</span>.”</p></li>
+<li><p>The second is the procedure “return one plus the result of the first procedure.”</p></li>
+</ul>
+<p>In symbols:</p>
+<p><span class="math notranslate nohighlight">\(f(x)=\)</span> if <span class="math notranslate nohighlight">\(x=0\)</span> then <span class="math notranslate nohighlight">\(0\)</span> else <span class="math notranslate nohighlight">\(g(x-1)+1\)</span></p>
+<p><span class="math notranslate nohighlight">\(g(y)= f(x)+1\)</span></p>
+</section>
+<section id="algorithm-3">
+<h3>Algorithm 3<a class="headerlink" href="#algorithm-3" title="Link to this heading">#</a></h3>
+<p>This concerns a triple of intertwined algorithms:</p>
+<ul class="simple">
+<li><p>The first is the procedure “add one to the result of applying the procedure”</p></li>
+<li><p>The second is “return 1”</p></li>
+<li><p>The third is “do the first procedure and then the second procedure.”</p></li>
+</ul>
+<p>In symbols:</p>
+<p><span class="math notranslate nohighlight">\(f(x)=f(x)+1\)</span></p>
+<p><span class="math notranslate nohighlight">\(g(x)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(h(x)=g(f(x))\)</span></p>
+</section>
+<section id="initial-observation-the-first-two-algorithms-compute-multiply-by-2">
+<h3>Initial observation: the first two algorithms compute ‘multiply by 2’<a class="headerlink" href="#initial-observation-the-first-two-algorithms-compute-multiply-by-2" title="Link to this heading">#</a></h3>
+<p>A moment’s reflection will indicate that both Algorithm 1 and Algorithm 2 compute the function which sends <span class="math notranslate nohighlight">\(n\)</span> to <span class="math notranslate nohighlight">\(2\cdot n\)</span>. To illustrate, let’s focus on <span class="math notranslate nohighlight">\(n=3\)</span>:</p>
+<ul class="simple">
+<li><p>Calculation with Algorithm 1: we get <span class="math notranslate nohighlight">\(f(n)=f(3)=3+3 = 6 = 2\cdot n\)</span>.</p></li>
+<li><p>Calculation with Algorithm 2: we get <span class="math notranslate nohighlight">\(f(n) = f(3) = g(2)+1\)</span>, <span class="math notranslate nohighlight">\(g(2)=f(2)+1\)</span>, <span class="math notranslate nohighlight">\(f(2)=g(1)+1\)</span>, <span class="math notranslate nohighlight">\(g(1) = f(1)+1\)</span>, <span class="math notranslate nohighlight">\(f(1) = g(0)+1\)</span>, <span class="math notranslate nohighlight">\(g(0)=f(0)+1\)</span>, <span class="math notranslate nohighlight">\(f(0)=0\)</span>. Hence <span class="math notranslate nohighlight">\(f(n)=g(2)+1 = f(2)+1+1=f(2)+2 =  g(1)+1+2=f(1)+1+1+2 = f(1)+2+2 = g(0)+1+2+2 = f(0)+1+1+2+2 = 0+2+2+2 = 6 = 2\cdot n\)</span>.</p></li>
+</ul>
+<p>Hence, the difference is that Algorithm 1 computes <span class="math notranslate nohighlight">\(2\cdot n\)</span> by adding <span class="math notranslate nohighlight">\(n\)</span> to itself, whereas Algorithm 2 computes <span class="math notranslate nohighlight">\(2\cdot n\)</span> by counting down from <span class="math notranslate nohighlight">\(n\)</span> and adding two at each step along the way.</p>
+<p>To respect intensionality, we’ll want some way to assign different semantic values to Algorithm 1  and Algorithm 2.</p>
+</section>
+<section id="initial-observation-two-thoughts-on-h-3">
+<h3>Initial observation: two thoughts on <span class="math notranslate nohighlight">\(h(3)\)</span><a class="headerlink" href="#initial-observation-two-thoughts-on-h-3" title="Link to this heading">#</a></h3>
+<p>There’s a similar elementary observation regarding the connection between partiality and Algorithm 3.</p>
+<p>What should this algorithm assign to <span class="math notranslate nohighlight">\(h(3)\)</span>?</p>
+<p>One reasonable answer is that it should not converge, because <span class="math notranslate nohighlight">\(f(3)\)</span> is undefined.</p>
+<p>Another reasonable answer is that it should converge to <span class="math notranslate nohighlight">\(1\)</span>, since the function <span class="math notranslate nohighlight">\(g\)</span> just says that everything gets sent to one.</p>
+<p>We’ll want two different semantics corresponding to these two different answers.</p>
+</section>
+</section>
+<section id="the-formal-langugage-rec">
+<h2>The formal langugage REC<a class="headerlink" href="#the-formal-langugage-rec" title="Link to this heading">#</a></h2>
+<p>This is a simple formal language for writing out algorithms like the ones above.</p>
+<section id="the-rudiments-of-the-language">
+<h3>The rudiments of the language<a class="headerlink" href="#the-rudiments-of-the-language" title="Link to this heading">#</a></h3>
+<p>The language consists of terms built out of the following materials:</p>
+<ul class="simple">
+<li><p>Constant symbols for numbers <span class="math notranslate nohighlight">\({\bf N}=\{\ldots, -2,-1,0,1,2,\ldots\}\)</span></p></li>
+<li><p>Number variables <span class="math notranslate nohighlight">\({\bf Var}=\{\ldots, x,y,z, \ldots\}\)</span></p></li>
+<li><p>Function variables <span class="math notranslate nohighlight">\({\bf Fvar}=\{\ldots, f_{1} ,f_{2}, f_{3},\ldots\}\)</span>, where function symbol <span class="math notranslate nohighlight">\(f_k\)</span> has arity <span class="math notranslate nohighlight">\(a_k\)</span>.</p></li>
+</ul>
+</section>
+<section id="the-terms-of-the-language">
+<h3>The terms of the language<a class="headerlink" href="#the-terms-of-the-language" title="Link to this heading">#</a></h3>
+<p>We inductively define the set of terms by saying that it includes the number constant symbols and number variables, is closed under under the operations of addition, subtraction, and multiplication, is closed under functional application, and is closed under the clauses
+<span class="math notranslate nohighlight">\({\bf if } \ldots {\bf then} \ldots {\bf else} \ldots\)</span>. One indicates that the terms are given in this way by writing:</p>
+<div class="math notranslate nohighlight">
+\[n\hspace{2mm}|\hspace{2mm} x \hspace{2mm}|\hspace{2mm} t_{1}+t_{2} \hspace{2mm}|\hspace{2mm} t_{1}-t_{2} \hspace{2mm}|\hspace{2mm} t_{1}\cdot t_{2} \hspace{2mm}|\hspace{2mm}{\bf if }\hspace{2mm}t_{0}\hspace{2mm}{\bf then}\hspace{2mm}t_{1}\hspace{2mm}{\bf else}\hspace{2mm}t_{2}\hspace{2mm}|\hspace{2mm} f_{i}(t_{1}, \ldots, t_{n})\]</div>
+</section>
+<section id="booleans">
+<h3>Booleans<a class="headerlink" href="#booleans" title="Link to this heading">#</a></h3>
+<p>Here we are thinking always of <span class="math notranslate nohighlight">\(0\)</span> as indicating “true” and all other numbers as indicating “false,” so that the clause</p>
+<div class="math notranslate nohighlight">
+\[{\bf if}\hspace{2mm}t_{0}\hspace{2mm}{\bf then}\hspace{2mm}t_{1}\hspace{2mm}{\bf else}\hspace{2mm}t_{2}\]</div>
+<p>is elliptical for: <span class="math notranslate nohighlight">\({\bf if}\hspace{2mm}t_{0}=0\hspace{2mm}{\bf then}\hspace{2mm}t_{1}\hspace{2mm}{\bf else}\hspace{2mm}t_{2}\)</span>.</p>
+<p>Note that unadorned function variables like~<span class="math notranslate nohighlight">\(f_{1}\)</span> are not terms, but that they become implicated in terms via functional application, in that <span class="math notranslate nohighlight">\(f_{1}(t_{1}, \ldots, t_{n})\)</span> is a term whenever <span class="math notranslate nohighlight">\(t_{1}, \ldots, t_{n}\)</span> are terms.</p>
+</section>
+<section id="id1">
+<h3>Algorithm 2<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Hence, in this precise formalism, our second algorithm would be written as follows, where the relevant difference merely concerns the convention that <span class="math notranslate nohighlight">\(0\)</span> is indicating ``true’’:</p>
+<p><span class="math notranslate nohighlight">\(f(x)=\)</span> if <span class="math notranslate nohighlight">\(x\)</span> then <span class="math notranslate nohighlight">\(0\)</span> else <span class="math notranslate nohighlight">\(g(x-1)+1\)</span>
+<span class="math notranslate nohighlight">\(g(y)= f(x)+1\)</span></p>
+</section>
+<section id="formulas">
+<h3>Formulas<a class="headerlink" href="#formulas" title="Link to this heading">#</a></h3>
+<p>Finally, we can now say what kinds of well-formed formulas there are. In essence, we want to restrict ourselves to things that look very much like Algorithm 1- Algorithm 2. Hence, we say that a <em>declaration</em> is a finite set of formulas of the following form:</p>
+<p><span class="math notranslate nohighlight">\(f_{1}(x_{1}, \ldots, x_{a_{1}}) = t_{1}\)</span></p>
+<p>…</p>
+<p><span class="math notranslate nohighlight">\(f_{k}(x_{1}, \ldots, x_{a_{k}}) = t_{k}\)</span></p>
+<p>In this, <span class="math notranslate nohighlight">\(f_{i}\)</span> is permitted to occur in <span class="math notranslate nohighlight">\(t_{j}\)</span> even when <span class="math notranslate nohighlight">\(i=j\)</span> but no <span class="math notranslate nohighlight">\(f_{i}\)</span> is permitted to occur twice on the left-hand side. Also, keep in mind that in, the subscript <span class="math notranslate nohighlight">\(a_k\)</span> denotes the arity of <span class="math notranslate nohighlight">\(f_k\)</span>, and that the terms~<span class="math notranslate nohighlight">\(t_k\)</span> can include the complex “if … then … else’’ locutions.</p>
+</section>
+</section>
+<section id="domain-theory-and-partial-orders">
+<h2>Domain theory and partial orders<a class="headerlink" href="#domain-theory-and-partial-orders" title="Link to this heading">#</a></h2>
+<p>We just described the syntax. Now let’s describe the semantics. In predicate logic we’re used to the idea that semantics are given in terms of models. In the denotational semantics for programming languages, the analogue of model theory is domain theory.</p>
+<section id="partial-orders">
+<h3>Partial orders<a class="headerlink" href="#partial-orders" title="Link to this heading">#</a></h3>
+<p>Domain theory starts with partial orders, and these are written as a pair <span class="math notranslate nohighlight">\((D, \sqsubseteq)\)</span> of the underlying domain <span class="math notranslate nohighlight">\(D\)</span> and the partial ordering <span class="math notranslate nohighlight">\(\sqsubseteq\)</span> on it. Sometimes in what follows, it will be useful to refer to the following examples:</p>
+<ol class="arabic simple">
+<li><p>The real numbers on the unit interval: <span class="math notranslate nohighlight">\((\mathbb{R}\cap [0,1],\leq)\)</span></p></li>
+<li><p>The powerset of the natural numbers: <span class="math notranslate nohighlight">\((P(\mathbb{N}), \subseteq)\)</span></p></li>
+<li><p>The natural numbers with discrete ordering above an undefined element:  <span class="math notranslate nohighlight">\((\mathbf{N}_{\bot}, \preceq)\)</span>, where <span class="math notranslate nohighlight">\(\mathbf{N}_{\bot} = \{0,1,2,3,...\} \cup \{\bot\}\)</span>, and where <span class="math notranslate nohighlight">\(\bot \preceq n\)</span> for all natural numbers <span class="math notranslate nohighlight">\(n\)</span>, and where <span class="math notranslate nohighlight">\(n\preceq m\)</span> iff <span class="math notranslate nohighlight">\(m=n\)</span> for all natural numbers <span class="math notranslate nohighlight">\(n,m\)</span>.</p></li>
+</ol>
+</section>
+<section id="complete-partial-orders">
+<h3>Complete partial orders<a class="headerlink" href="#complete-partial-orders" title="Link to this heading">#</a></h3>
+<p>All these partial orders are such that if there is a sequence</p>
+<div class="math notranslate nohighlight">
+\[d_{1}\sqsubseteq d_{2}\sqsubseteq d_{3}\cdots \]</div>
+<p>then there is an element <span class="math notranslate nohighlight">\(d\)</span> from <span class="math notranslate nohighlight">\(D\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[n&gt;0\Longrightarrow d_{n}\sqsubseteq d\]</div>
+<p>and for any element <span class="math notranslate nohighlight">\(d^{\prime}\)</span> of <span class="math notranslate nohighlight">\(D\)</span> that also has this latter property, we have <span class="math notranslate nohighlight">\(d\sqsubseteq d^{\prime}\)</span></p>
+<p>One says here that <span class="math notranslate nohighlight">\(d\)</span> is the <em>least upper bound</em> of the sequence <span class="math notranslate nohighlight">\(d_{n}\)</span>.</p>
+<p>Here are some examples:</p>
+<ul class="simple">
+<li><p>In the case of the real numbers, we have <span class="math notranslate nohighlight">\(d=\lim_{n\rightarrow\infty} d_{n}\)</span></p></li>
+<li><p>In the case of subsets of natural numbers, we have <span class="math notranslate nohighlight">\(d=\bigcup_{n&gt;0} d_{n}\)</span>.</p></li>
+</ul>
+<p>In general, whenever a partial order <span class="math notranslate nohighlight">\((D,\sqsubseteq)\)</span> has this property, we shall say that it is a <em>complete partial order</em>, and we shall write <span class="math notranslate nohighlight">\(d=\bigsqcup_{n&gt;0} d_{n}\)</span>.</p>
+<p>Summarizing:</p>
+<p>A <em>complete partial order</em> or <em>cpo</em> is a partial order <span class="math notranslate nohighlight">\((D,\sqsubseteq)\)</span> such that any countable increasing sequence <span class="math notranslate nohighlight">\(d_{1}\sqsubseteq d_{2}\sqsubseteq d_{3}\cdots\)</span> has a least upper bound <span class="math notranslate nohighlight">\(\bigsqcup_{n} d_{n}\)</span>.</p>
+</section>
+<section id="looking-for-fixed-points">
+<h3>Looking for fixed points<a class="headerlink" href="#looking-for-fixed-points" title="Link to this heading">#</a></h3>
+<p>Part of the idea of domain theory is to work with classes of functions <span class="math notranslate nohighlight">\(f:D\rightarrow D\)</span> on a cpo <span class="math notranslate nohighlight">\((D,\sqsubseteq)\)</span> that have fixed points, i.e. points <span class="math notranslate nohighlight">\(d\)</span> such that <span class="math notranslate nohighlight">\(f(d)=d\)</span>. It is particularly expedient to find a class that contains a lot of basic functions and is closed under a lot of natural operations. For in this way, one can tell that a function has a fixed point simply because it is built up from the basic functions using the natural operations.</p>
+</section>
+<section id="the-continuous-functions">
+<h3>The continuous functions<a class="headerlink" href="#the-continuous-functions" title="Link to this heading">#</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f:D\rightarrow E\)</span> between two cpo’s <span class="math notranslate nohighlight">\((D,\sqsubseteq)\)</span> and <span class="math notranslate nohighlight">\((E,\sqsubseteq)\)</span>  is a * continuous function* if it satisfies the two following properties:</p>
+<ol class="arabic simple">
+<li><p><em>Monotonicity</em>: <span class="math notranslate nohighlight">\(d\sqsubseteq d^{\prime}\)</span> implies <span class="math notranslate nohighlight">\(f(d)\sqsubseteq f(d^{\prime})\)</span></p></li>
+<li><p><em>Continuity</em>: <span class="math notranslate nohighlight">\(d_{1}\sqsubseteq d_{2}\sqsubseteq d_{3}\sqsubseteq \cdots\)</span> implies <span class="math notranslate nohighlight">\(\bigsqcup_{n&gt;0} f(d_{n})=f(\bigsqcup_{n&gt;0} d_{n})\)</span></p></li>
+</ol>
+</section>
+<section id="examples-and-non-examples">
+<h3>Examples and non-examples<a class="headerlink" href="#examples-and-non-examples" title="Link to this heading">#</a></h3>
+<p>As always, one can get a better sense of definitions by considering a couple of examples and non-examples.</p>
+<p>On the cpo <span class="math notranslate nohighlight">\((P(\mathbb{N}), \subseteq)\)</span>, one can consider the continuous function <span class="math notranslate nohighlight">\(X\mapsto X\cap Y\)</span>, where <span class="math notranslate nohighlight">\(Y\)</span> is fixed. One verifies:</p>
+<ol class="arabic simple">
+<li><p>If <span class="math notranslate nohighlight">\(X\subseteq X^{\prime}\)</span> then <span class="math notranslate nohighlight">\(X\cap Y\subseteq X^{\prime}\cap Y\)</span></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(X_{1}\subseteq X_{2}\subseteq \cdots\)</span> then <span class="math notranslate nohighlight">\(\bigcup_{n&gt;0} (X_{n}\cap Y) = (\bigcup_{n&gt;0} X_{n})\cap Y\)</span>.</p></li>
+</ol>
+<p>For a simple example of a monotonic but non-continuous function on the cpo <span class="math notranslate nohighlight">\((P(\mathbb{N}), \subseteq)\)</span>, consider the map <span class="math notranslate nohighlight">\(f:P(\mathbb{N})\rightarrow P(\mathbb{N})\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(X)=\begin{cases}
+\emptyset      &amp; \text{if $X$ finite}, \\
+\mathbb{N}      &amp; \text{if $X$ infinite}.
+\end{cases}\end{split}\]</div>
+<p>To see that continuity is violated, consider <span class="math notranslate nohighlight">\(X_{n}=\{1, \ldots, n\}\)</span>, so that</p>
+<div class="math notranslate nohighlight">
+\[\bigsqcup_{n&gt;0} f(X_{n})=\bigcup_{n&gt;0} \emptyset = \emptyset \neq \mathbb{N} =f(\mathbb{N})=f(\bigcup_{n&gt;0} X_{n})=f(\bigsqcup_{n&gt;0} X_{n})\]</div>
+<p>It is likewise easy to show that the identity function is always continuous on any cpo, and that compositions of continuous functions are continuous.</p>
+</section>
+<section id="if-then-else-is-continuous">
+<h3>If then else is continuous<a class="headerlink" href="#if-then-else-is-continuous" title="Link to this heading">#</a></h3>
+<p>Since we regard <span class="math notranslate nohighlight">\(0\)</span> as true and all other numbers as false, we can take if-then-else to be the following function</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{Conditional}:\mathbb{N}_{\bot}\times \mathbb{N}_{\bot}\times \mathbb{N}_{\bot} \rightarrow \mathbb{N}_{\bot}\]</div>
+<p>given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Conditional}(x,y,z)=\begin{cases}
+y      &amp; \text{if $x=0$}, \\
+z      &amp; \text{if $x=1,2,3,\ldots$} \\
+\bot   &amp; \text{if $x=\bot$}
+\end{cases}\end{split}\]</div>
+<p>One can check that this is continuous.</p>
+</section>
+<section id="id2">
+<h3><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+</section>
+<section id="the-continuous-functions-are-themselves-a-cpo">
+<h3>The continuous functions are themselves a cpo<a class="headerlink" href="#the-continuous-functions-are-themselves-a-cpo" title="Link to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\((D, \sqsubseteq)\)</span> and <span class="math notranslate nohighlight">\((E, \sqsubseteq)\)</span> are cpos.</p>
+<p>Then we designate <span class="math notranslate nohighlight">\([D\rightarrow E]\)</span> to be the partial order whose underlying set is the set of all continuous functions <span class="math notranslate nohighlight">\(f:D\rightarrow E\)</span> and whose ordering is given pointwise:</p>
+<div class="math notranslate nohighlight">
+\[f\sqsubseteq g \Longleftrightarrow \forall \; d\in D \; f(d)\sqsubseteq g(d)\]</div>
+<p>Here is how one defines <span class="math notranslate nohighlight">\(\bigsqcup_{n&gt;0} f_n\)</span>:</p>
+<ul class="simple">
+<li><p>Suppose that <span class="math notranslate nohighlight">\(f_1\sqsubseteq f_2\sqsubseteq f_3 \sqsubseteq \cdots\)</span>. Then for each <span class="math notranslate nohighlight">\(d\)</span> from <span class="math notranslate nohighlight">\(D\)</span> one has that <span class="math notranslate nohighlight">\(f_1(d)\sqsubseteq f_2(d)\sqsubseteq f_3(d) \sqsubseteq \cdots\)</span> and hence <span class="math notranslate nohighlight">\(\bigsqcup_{n&gt;0} f_n(d)\)</span> exists for each <span class="math notranslate nohighlight">\(d\)</span> from <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
+<li><p>Then one defines the following function from <span class="math notranslate nohighlight">\(D\)</span> to <span class="math notranslate nohighlight">\(E\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[(\bigsqcup_{n&gt;0} f_n)(d) = \bigsqcup_{n&gt;0} f_n(d)\]</div>
+<p>Obviously this is the least upper bound of the sequence <span class="math notranslate nohighlight">\(f_n\)</span>, but one has to explicitly check that it is continuous.</p>
+<p>To finally get the fixed point theorem, let’s note one more feature that our examples of cpos  all have in common: namely, they all have a least element. So long as we are working with these domains, we can always find fixed points:</p>
+</section>
+<section id="theorem-existence-of-lease-fixed-points">
+<h3>Theorem (existence of lease fixed points)<a class="headerlink" href="#theorem-existence-of-lease-fixed-points" title="Link to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(f:D\rightarrow D\)</span> is a continuous function on the cpo~<span class="math notranslate nohighlight">\((D,\sqsubseteq)\)</span> with least element <span class="math notranslate nohighlight">\(\bot\)</span>. Then there is <span class="math notranslate nohighlight">\(d\)</span> such that <span class="math notranslate nohighlight">\(f(d)=d\)</span>. In particular, one can take:</p>
+<div class="math notranslate nohighlight">
+\[d = \bigsqcup_{n&gt;0} f^{n}(\bot)\]</div>
+<p>Moreover, if <span class="math notranslate nohighlight">\(d^{\prime}\)</span> is also such that <span class="math notranslate nohighlight">\(f(d^{\prime})=d^{\prime}\)</span>, then <span class="math notranslate nohighlight">\(d\sqsubseteq d^{\prime}\)</span>.</p>
+<p>Because the <span class="math notranslate nohighlight">\(d\)</span> in the theorem is necessarily unique, it is sometimes given a special designation, namely <span class="math notranslate nohighlight">\(\mathrm{fixed}(f)\)</span>.</p>
+<p><em>Proof</em>:</p>
+<p>Let’s first show that <span class="math notranslate nohighlight">\(d\)</span> is indeed a fixed point, namely, let’s show <span class="math notranslate nohighlight">\(f(d)=d\)</span>. But this results from the following identities:</p>
+<div class="math notranslate nohighlight">
+\[f(d)=f(\bigsqcup_{n&gt;0} f^{n}(\bot))=\bigsqcup_{n&gt;0} f(f^{n}(\bot)))=\bigsqcup_{n&gt;0} f^{n+1}(\bot)=\bigsqcup_{n&gt;0} f^{n}(\bot)=d\]</div>
+<p>In particular, the first and last identities follows from the definition of <span class="math notranslate nohighlight">\(d\)</span>, while the second equality follows from continuity, the third from the fact that <span class="math notranslate nohighlight">\(f(f^{n}(x))=f^{n+1}(x)\)</span>, and the fourth equality follows from the fact that if two increasing sequences will have the same least upper bound if one is an initial segment of the other.</p>
+<p>Finally, suppose that <span class="math notranslate nohighlight">\(d^{\prime}\)</span> is also such that <span class="math notranslate nohighlight">\(f(d^{\prime})=d^{\prime}\)</span>. It must be shown that <span class="math notranslate nohighlight">\(d\sqsubseteq d^{\prime}\)</span>. First one gets <span class="math notranslate nohighlight">\(f^{n}(\bot)\sqsubseteq d^{\prime}\)</span> by applying monotonicity over and over again:</p>
+<div class="math notranslate nohighlight">
+\[\bot\sqsubseteq d^{\prime}\Longrightarrow f(\bot)\sqsubseteq f(d^{\prime})=d^{\prime}\Longrightarrow f^{2}(\bot)\sqsubseteq f(d^{\prime})=d^{\prime}\]</div>
+<p>Since one has <span class="math notranslate nohighlight">\(f^{n}(\bot)\sqsubseteq d^{\prime}\)</span>, by the definition of a <em>least</em> upper bound one has that <span class="math notranslate nohighlight">\(\bigsqcup_{n&gt;0} f^{n}(\bot)\sqsubseteq d^{\prime}\)</span>, and then one notes that this just says that <span class="math notranslate nohighlight">\(d\sqsubseteq d^{\prime}\)</span>.</p>
+</section>
+</section>
+<section id="explaining-and-illustrating-the-denotational-semantics">
+<h2>Explaining and illustrating the denotational semantics<a class="headerlink" href="#explaining-and-illustrating-the-denotational-semantics" title="Link to this heading">#</a></h2>
+<section id="the-fundamental-idea">
+<h3>The fundamental idea<a class="headerlink" href="#the-fundamental-idea" title="Link to this heading">#</a></h3>
+<p>The basic idea of the denotational semantics is to associate each algorithm to a continuous function and then take the denotation of the algorithm to be the least fixed point of the function.</p>
+<p>What will make this a semantics as opposed to a mere association of set-like things to algorithms is compositionality: the continuous function associated to an algorithm will systematically depend on the continuous functions associated to its parts.</p>
+<p>Before going onto illustrate this idea and then describe the semantics, let’s note in passing that some care must be exercised in saying that the semantic value of an algorithm is the least fixed point.</p>
+<p>For, nothing we have said indicates that the least fixed point assigned to the entire algorithm is a systematic function of the least fixed points assigned to the parts of the algorithm.</p>
+</section>
+<section id="illustrating-with-algorithm-1">
+<h3>Illustrating with Algorithm 1<a class="headerlink" href="#illustrating-with-algorithm-1" title="Link to this heading">#</a></h3>
+<p>Recall this is a single algorithm, whose procedure is “add the input to itself.”</p>
+<p>In symbols: <span class="math notranslate nohighlight">\(f(x)=x+x\)</span></p>
+<p>The continuous function we associate to Algorithm 1 is the function</p>
+<div class="math notranslate nohighlight">
+\[F:[\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]\rightarrow [\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]\]</div>
+<p>which given input <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\([\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]\)</span> outputs the following function from <span class="math notranslate nohighlight">\([\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(F(f)) (x) = x+x\]</div>
+<p>Some notes:</p>
+<ul class="simple">
+<li><p>Obviously <span class="math notranslate nohighlight">\(F(f)\)</span> does not depend on <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p>Further, note that we define addition on the added bottom element <span class="math notranslate nohighlight">\(\bot\)</span> so that <span class="math notranslate nohighlight">\(\bot\)</span> is the output each time <span class="math notranslate nohighlight">\(\bot\)</span> is one of the inputs, that is <span class="math notranslate nohighlight">\(\bot +5 = \bot\)</span> and <span class="math notranslate nohighlight">\(\bot+\bot = \bot\)</span>.</p></li>
+<li><p>Note that the map <span class="math notranslate nohighlight">\(x\mapsto x+x\)</span> is indeed a continuous function from <span class="math notranslate nohighlight">\(\mathbf{N}_{\bot}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{N}_{\bot}\)</span>. For, suppose that <span class="math notranslate nohighlight">\(x\preceq y\)</span>. Then per definition we have that <span class="math notranslate nohighlight">\(x=\bot\)</span> and so <span class="math notranslate nohighlight">\(x+x=\bot \preceq y+y\)</span>.</p></li>
+<li><p>Likewise, <span class="math notranslate nohighlight">\(\bigsqcup_n (x_n+x_n) = (\bigsqcup_n x_n)+(\bigsqcup_n x_n)\)</span> when <span class="math notranslate nohighlight">\(x_0\preceq x_1 \preceq x_2 \preceq \cdots\)</span>. For, if all <span class="math notranslate nohighlight">\(x_n=\bot\)</span> then each of these two sides of the equation is <span class="math notranslate nohighlight">\(\bot\)</span>; while if there is least <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(x_n\succ \bot\)</span> then both sides are equal to <span class="math notranslate nohighlight">\(x_n+x_n\)</span>.</p></li>
+<li><p>Finally, obviously the function <span class="math notranslate nohighlight">\(F\)</span> has a least fixed point, namely the function <span class="math notranslate nohighlight">\(f(x)=x+x\)</span>.</p></li>
+</ul>
+</section>
+<section id="illustrating-with-algorithm-2">
+<h3>Illustrating with Algorithm 2<a class="headerlink" href="#illustrating-with-algorithm-2" title="Link to this heading">#</a></h3>
+<p>This concerns a pair of intertwined algorithms.</p>
+<ul class="simple">
+<li><p>The first is the procedure “return zero on input <span class="math notranslate nohighlight">\(x=0\)</span>, else return one plus the result of the second procedure applied to input <span class="math notranslate nohighlight">\(x-1\)</span>.”</p></li>
+<li><p>The second is the procedure “return one plus the result of the first procedure.”</p></li>
+</ul>
+<p>In symbols:</p>
+<p><span class="math notranslate nohighlight">\(f(x)=\)</span> if <span class="math notranslate nohighlight">\(x=0\)</span> then <span class="math notranslate nohighlight">\(0\)</span> else <span class="math notranslate nohighlight">\(g(x-1)+1\)</span></p>
+<p><span class="math notranslate nohighlight">\(g(y)= f(x)+1\)</span></p>
+<p>The continuous function which we associate to Algorithm 2 is given by <span class="math notranslate nohighlight">\((f,g)\mapsto (F(f,g),G(f,g))\)</span> where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((F(f,g))(x)=\)</span> if <span class="math notranslate nohighlight">\(x\)</span> then <span class="math notranslate nohighlight">\(0\)</span> else <span class="math notranslate nohighlight">\(g(x-1)+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((G(f,g))(y)= f(x)+1\)</span></p></li>
+</ul>
+<p>Let’s try to get clear on the typing. One has that</p>
+<div class="math notranslate nohighlight">
+\[ F,G : [\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]^2 \rightarrow [\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]\]</div>
+<p>Here the partial order structure on <span class="math notranslate nohighlight">\([\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]^2\)</span> is the direct product partial order structure. The argument that <span class="math notranslate nohighlight">\(G\)</span> is continuous is much like the argument for Algorithm 1.</p>
+<p>We argue that <span class="math notranslate nohighlight">\(F\)</span> is continuous. We restrict to checking monotonicity:</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f\sqsubseteq f^{\prime}\)</span> and <span class="math notranslate nohighlight">\(g\sqsubseteq g^{\prime}\)</span>. We must show that <span class="math notranslate nohighlight">\(F(f,g)\sqsubseteq F(f^{\prime}, g^{\prime})\)</span>. Since these are elements of <span class="math notranslate nohighlight">\([\mathbf{N}_{\bot}\rightarrow \mathbf{N}_{\bot}]\)</span>, we must check that for all <span class="math notranslate nohighlight">\(x\)</span> from <span class="math notranslate nohighlight">\(\mathbf{N}_{\bot}\)</span> we have <span class="math notranslate nohighlight">\(F(f,g)(x)\sqsubseteq F(f^{\prime}, g^{\prime})(x)\)</span>.</p>
+<p>First suppose that <span class="math notranslate nohighlight">\(F(f,g)(x)=\bot\)</span>. This happens only if <span class="math notranslate nohighlight">\(x=\bot\)</span>, and so we must likewise have that <span class="math notranslate nohighlight">\(F(f^{\prime}, g^{\prime})(x)=\bot\)</span>.</p>
+<p>Second suppose <span class="math notranslate nohighlight">\(F(f,g)(x)\neq \bot\)</span>, so that <span class="math notranslate nohighlight">\(x\neq \bot\)</span>. If <span class="math notranslate nohighlight">\(x=0\)</span> then both <span class="math notranslate nohighlight">\(F(f,g)(x)=0\)</span> and <span class="math notranslate nohighlight">\(F(f^{\prime},g^{\prime})(x)=0\)</span>. If <span class="math notranslate nohighlight">\(x\)</span> is greater than zero, then one has that <span class="math notranslate nohighlight">\(F(f,g)(x) =g(x-1)+1\)</span> and  <span class="math notranslate nohighlight">\(F(f^{\prime},g^{\prime})(x) =g^{\prime}(x-1)+1\)</span>. But then since <span class="math notranslate nohighlight">\(g\sqsubseteq g^{\prime}\)</span> we have <span class="math notranslate nohighlight">\(F(f,g)(x)\sqsubseteq F(f^{\prime},g^{\prime})(x)\)</span>. This finishes the verification of montonicity.</p>
+</section>
+<section id="illustrating-with-algorithm-2-further">
+<h3>Illustrating with Algorithm 2 further<a class="headerlink" href="#illustrating-with-algorithm-2-further" title="Link to this heading">#</a></h3>
+<p>So let us then calculate, using the Theorem, what the least fixed point is of the functions <span class="math notranslate nohighlight">\((f,g)\mapsto (F(f,g),G(f,g))\)</span>.</p>
+<p>Let us define for each <span class="math notranslate nohighlight">\(s\geq 0\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f_0(x) = \bot\)</span> and <span class="math notranslate nohighlight">\(g_0(y)=\bot\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f_{s+1}(x) = F(f_s, g_s)(x) =\)</span> if <span class="math notranslate nohighlight">\(x\)</span> then <span class="math notranslate nohighlight">\(0\)</span> else <span class="math notranslate nohighlight">\(g_{s}(x-1)+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g_{s+1}(y) = (G(f_s, g_s))(y) =  f_s(x)+1\)</span>.</p></li>
+</ul>
+<p>It then suffices to calculate <span class="math notranslate nohighlight">\(\bigsqcup_s f_s\)</span> and <span class="math notranslate nohighlight">\(\bigsqcup_s g_s\)</span>, and this pair will be the least fixed point. We do this in the following table (which we will fill out in class today or perhaps as part of homework):</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\bot\)</span></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_8\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_8\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_9\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_9\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_{11}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_{11}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="illustrating-with-algorithm-3-call-by-name-and-call-by-value">
+<h3>Illustrating with Algorithm 3 call-by-name and call-by-value<a class="headerlink" href="#illustrating-with-algorithm-3-call-by-name-and-call-by-value" title="Link to this heading">#</a></h3>
+<p>Recall that this concerns a triple of intertwined algorithms:</p>
+<ul class="simple">
+<li><p>The first is the procedure “add one to the result of applying the procedure”</p></li>
+<li><p>The second is “return 1”</p></li>
+<li><p>The third is “do the first procedure and then the second procedure.”</p></li>
+</ul>
+<p>In symbols:</p>
+<p><span class="math notranslate nohighlight">\(f(x)=f(x)+1\)</span></p>
+<p><span class="math notranslate nohighlight">\(g(x)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(h(x)=g(f(x))\)</span></p>
+<p>Here’s one triple of continuous functions which you might assign to \textsf{Algorithm 3}:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((F(f,g,h))(x)=f(x)+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((G(f,g,h))(x)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((H(f,g,h))(x)=g(f(x))\)</span></p></li>
+</ul>
+<p>If we defined the sequences <span class="math notranslate nohighlight">\(f_s,g_s, h_s\)</span> as in the previous paragraph, we would obtain:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f_0(x) =\bot\)</span> and <span class="math notranslate nohighlight">\(g_0(x) =\bot\)</span> and <span class="math notranslate nohighlight">\(h_0(x) =\bot\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f_{s+1}(x)=f_s(x)+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g_{s+1}(x)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(h_{s+1}(x)=g_s(f_s(x))\)</span></p></li>
+</ul>
+<p>But there is a little bit of subtlety here which we did not see before. For, how should we interpret <span class="math notranslate nohighlight">\(g_{s+1}(\bot)\)</span>?</p>
+<p>It kind of seems like from what we wrote that it should be <span class="math notranslate nohighlight">\(g_{s+1}(\bot)=1\)</span>. But note that on this approach, we would have that on the least fixed point <span class="math notranslate nohighlight">\((f,g,h)\)</span> that <span class="math notranslate nohighlight">\(h(3) = g(f(3)) = 1\)</span>, since <span class="math notranslate nohighlight">\(g= \bigsqcup_s g_s\)</span> would always be the function which is identically one.</p>
+<p>And this would correspond to only one of the reasonable options which we mentioned earlier.</p>
+<p>Another natural approach would be to alter <span class="math notranslate nohighlight">\(g_{s+1}\)</span> so that it reads:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}g_{s+1}(x) =  \begin{cases}
+1  &amp; \text{if $x\neq \bot$}, \\
+\bot &amp; \text{otherwise},
+\end{cases}\end{split}\]</div>
+<p>On this approach, we would have that on the least fixed point <span class="math notranslate nohighlight">\((f,g,h)\)</span> that <span class="math notranslate nohighlight">\(h(3) = g(f(3)) = \bot\)</span>, since <span class="math notranslate nohighlight">\(f= \bigsqcup_s f_s\)</span> would always be the function which is identically <span class="math notranslate nohighlight">\(\bot\)</span> and since <span class="math notranslate nohighlight">\(g= \bigsqcup_s g_s\)</span> is always the function <span class="math notranslate nohighlight">\(g_{s+1}\)</span>.</p>
+<p>These two approaches correspond to the <em>Call-by Name</em> and <em>Call-by-Value</em> approaches to the denotational semantics.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chap09.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 9</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-semantics-for-algorithms">A semantics for algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#three-simple-algorithms">Three simple algorithms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-1">Algorithm 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-2">Algorithm 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm-3">Algorithm 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-observation-the-first-two-algorithms-compute-multiply-by-2">Initial observation: the first two algorithms compute ‘multiply by 2’</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-observation-two-thoughts-on-h-3">Initial observation: two thoughts on <span class="math notranslate nohighlight">\(h(3)\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formal-langugage-rec">The formal langugage REC</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rudiments-of-the-language">The rudiments of the language</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-terms-of-the-language">The terms of the language</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#booleans">Booleans</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Algorithm 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulas">Formulas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-theory-and-partial-orders">Domain theory and partial orders</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-orders">Partial orders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-partial-orders">Complete partial orders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-for-fixed-points">Looking for fixed points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuous-functions">The continuous functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-non-examples">Examples and non-examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-then-else-is-continuous">If then else is continuous</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuous-functions-are-themselves-a-cpo">The continuous functions are themselves a cpo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-existence-of-lease-fixed-points">Theorem (existence of lease fixed points)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explaining-and-illustrating-the-denotational-semantics">Explaining and illustrating the denotational semantics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-idea">The fundamental idea</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-1">Illustrating with Algorithm 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-2">Illustrating with Algorithm 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-2-further">Illustrating with Algorithm 2 further</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrating-with-algorithm-3-call-by-name-and-call-by-value">Illustrating with Algorithm 3 call-by-name and call-by-value</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
