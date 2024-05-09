@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chap09';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="References" href="references.html" />
+    <link rel="next" title="Chapter 10" href="Chap10.html" />
     <link rel="prev" title="Chapter 8" href="Chap08.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,6 +189,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Chap07.html">Chapter 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap10.html">Chapter 10</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -411,11 +412,11 @@ document.write(`
 <h2>Motivations<a class="headerlink" href="#motivations" title="Link to this heading">#</a></h2>
 <p>Here is Cobham, in one of the original articles on the subject:</p>
 <blockquote>
-<div><p>The subject of my talk is perhaps most directly indicated by simply asking two questions: first, is it harder to multiply than to add? And second, why? I grant I have put the first of these questions rather loosely; nevertheless, I think that the answer, ought to be: <em>yes</em>. It is the second, which asks for a justification of this answer which provides the challenge (<span id="id1">[<a class="reference internal" href="references.html#id5" title="Alan Cobham. The intrinsic computational difficulty of functions. In Logic, Methodology and Philos. Sci. (Proc. 1964 Internat. Congr.), 24–30. North-Holland, Amsterdam, 1965.">Cobham, 1965</a>]</span> p. 24)</p>
+<div><p>The subject of my talk is perhaps most directly indicated by simply asking two questions: first, is it harder to multiply than to add? And second, why? I grant I have put the first of these questions rather loosely; nevertheless, I think that the answer, ought to be: <em>yes</em>. It is the second, which asks for a justification of this answer which provides the challenge (<span id="id1">[<a class="reference internal" href="references.html#id10" title="Alan Cobham. The intrinsic computational difficulty of functions. In Logic, Methodology and Philos. Sci. (Proc. 1964 Internat. Congr.), 24–30. North-Holland, Amsterdam, 1965.">Cobham, 1965</a>]</span> p. 24)</p>
 </div></blockquote>
 <p>Here is Aaronson, a prominent complexity theorist:</p>
 <blockquote>
-<div><p>I think of the polynomial-exponential gap as occupying a “middle ground” between two other sorts of gaps […]  The trouble with small quantitative gaps is that they are too sensitive to “mundane” modeling choices and the details of technology. But the [other gaps have] the opposite problem: [of being] serenely <em>in</em>sensitive to distinctions that we actually care about, such as between finding a solution and verifying it […] (<span id="id2">[<a class="reference internal" href="references.html#id102" title="Scott Aaronson. Why philosophers should care about computational complexity. In B Jack Copeland, Carl J Posy, and Oron Shagrir, editors, Computability: Turing, Gödel, Church, and Beyond, pages 261–328. MIT Press, 2013.">Aaronson, 2013</a>]</span> p. 270)</p>
+<div><p>I think of the polynomial-exponential gap as occupying a “middle ground” between two other sorts of gaps […]  The trouble with small quantitative gaps is that they are too sensitive to “mundane” modeling choices and the details of technology. But the [other gaps have] the opposite problem: [of being] serenely <em>in</em>sensitive to distinctions that we actually care about, such as between finding a solution and verifying it […] (<span id="id2">[<a class="reference internal" href="references.html#id107" title="Scott Aaronson. Why philosophers should care about computational complexity. In B Jack Copeland, Carl J Posy, and Oron Shagrir, editors, Computability: Turing, Gödel, Church, and Beyond, pages 261–328. MIT Press, 2013.">Aaronson, 2013</a>]</span> p. 270)</p>
 </div></blockquote>
 <p>Note that the distinctions we have come across so far are ostensibly inadequate to this task:</p>
 <ul class="simple">
@@ -474,7 +475,7 @@ document.write(`
 <h3>Proposition: there is a problem in EXP but not P<a class="headerlink" href="#proposition-there-is-a-problem-in-exp-but-not-p" title="Link to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(C = \{e: \varphi_e(e)\downarrow\)</span> in <span class="math notranslate nohighlight">\(\leq 2^e\)</span> steps <span class="math notranslate nohighlight">\(\}\)</span>.</p>
 <p>Then <span class="math notranslate nohighlight">\(C\)</span> is in EXP but not in P.</p>
-<p><em>Note</em>: there is a much harder and more general theorem, whose proof is similar to the one we offer, called the <em>Time hierarchy theorem</em> (<span id="id3">[<a class="reference internal" href="references.html#id25" title="Michael Sipser. Introduction to the Theory of Computation. Cengage Learning, 3 edition, 2012.">Sipser, 2012</a>]</span> pp. 369 ff).</p>
+<p><em>Note</em>: there is a much harder and more general theorem, whose proof is similar to the one we offer, called the <em>Time hierarchy theorem</em> (<span id="id3">[<a class="reference internal" href="references.html#id30" title="Michael Sipser. Introduction to the Theory of Computation. Cengage Learning, 3 edition, 2012.">Sipser, 2012</a>]</span> pp. 369 ff).</p>
 <p><em>Proof</em>:</p>
 <p>If one pays close attention to the construction of the universal machine <span class="math notranslate nohighlight">\(\varphi_{e_0}\)</span>, one sees that if <span class="math notranslate nohighlight">\(\varphi_e(n)\downarrow \)</span> in <span class="math notranslate nohighlight">\(\leq s\)</span> steps, then <span class="math notranslate nohighlight">\(\varphi_{e_0}(e,n)\downarrow\)</span> in <span class="math notranslate nohighlight">\(\leq s^2\)</span> steps.</p>
 <p>Note that if <span class="math notranslate nohighlight">\(s\leq 2^e\)</span>, then <span class="math notranslate nohighlight">\(s^2 \leq 2^{e^2}\)</span>, and so <span class="math notranslate nohighlight">\(C\)</span> is in EXP.</p>
@@ -504,7 +505,7 @@ document.write(`
 <section id="fagin-s-theorem-machine-independent-characterization-of-np">
 <h3>Fagin’s Theorem (Machine independent characterization of NP)<a class="headerlink" href="#fagin-s-theorem-machine-independent-characterization-of-np" title="Link to this heading">#</a></h3>
 <p>A set <span class="math notranslate nohighlight">\(A\)</span> of finite models in some finite relational signature is in NP iff there is a an formula <span class="math notranslate nohighlight">\(\varphi(R_1, \ldots, R_n)\)</span> of first-order logic with new relation symbols <span class="math notranslate nohighlight">\(R_1, \ldots, R_n\)</span> of various aritites such that <span class="math notranslate nohighlight">\(M\)</span> in <span class="math notranslate nohighlight">\(A\)</span> iff <span class="math notranslate nohighlight">\(M\models \exists \; R_1, \ldots, R_n\; \varphi(R_1, \ldots, R_n)\)</span>.</p>
-<p>(<span id="id4">[<a class="reference internal" href="references.html#id3" title="Ronald Fagin. Contributions to the model theory of finite structures. University of California, Berkeley, 1973.">Fagin, 1973</a>]</span>, <span id="id5">[<a class="reference internal" href="references.html#id76" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> pp. 115 ff)</p>
+<p>(<span id="id4">[<a class="reference internal" href="references.html#id8" title="Ronald Fagin. Contributions to the model theory of finite structures. University of California, Berkeley, 1973.">Fagin, 1973</a>]</span>, <span id="id5">[<a class="reference internal" href="references.html#id81" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> pp. 115 ff)</p>
 </section>
 <section id="examples-of-problems-in-np">
 <h3>Examples of problems in NP<a class="headerlink" href="#examples-of-problems-in-np" title="Link to this heading">#</a></h3>
@@ -525,13 +526,13 @@ document.write(`
 </ol>
 <p>Broadly similiar sentiments conclusions be found by quick glance at complexity theory texts:</p>
 <blockquote>
-<div><p>When someone finally proves P <span class="math notranslate nohighlight">\(\neq\)</span> NP, this will truly show that mathematicians – as well as other creative individuals– cannot uniformly and feasibly be replaced by machine (<span id="id6">[<a class="reference internal" href="references.html#id76" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> p. 245)</p>
+<div><p>When someone finally proves P <span class="math notranslate nohighlight">\(\neq\)</span> NP, this will truly show that mathematicians – as well as other creative individuals– cannot uniformly and feasibly be replaced by machine (<span id="id6">[<a class="reference internal" href="references.html#id81" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> p. 245)</p>
 </div></blockquote>
 <blockquote>
-<div><p>Recognizing the correctness of an answer is often easier than coming up with the answer. Appreciating a Beethoven sonata is far easier than composing the sonata; verifying the solidity of a design for a suspension bridge is easier (to a civil engineer anyway!) than coming up with a good design; verifying the proof of a theorem is easier than coming up with a proof itself […] and so forth. In such cases, coming up with the right answer seems to involve <em>exhaustive search</em> over an exponentially large set. The P versus NP question aks whether exhaustive search can be avoided in general (<span id="id7">[<a class="reference internal" href="references.html#id4" title="Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach. Cambridge University Press, April 2009.">Arora and Barak, 2009</a>]</span> pp. 57-58).</p>
+<div><p>Recognizing the correctness of an answer is often easier than coming up with the answer. Appreciating a Beethoven sonata is far easier than composing the sonata; verifying the solidity of a design for a suspension bridge is easier (to a civil engineer anyway!) than coming up with a good design; verifying the proof of a theorem is easier than coming up with a proof itself […] and so forth. In such cases, coming up with the right answer seems to involve <em>exhaustive search</em> over an exponentially large set. The P versus NP question aks whether exhaustive search can be avoided in general (<span id="id7">[<a class="reference internal" href="references.html#id9" title="Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach. Cambridge University Press, April 2009.">Arora and Barak, 2009</a>]</span> pp. 57-58).</p>
 </div></blockquote>
 <p>Obviously lots of attention has been paid to 1 by computer scientists and mathematicians, and rightly so.</p>
-<p>But I do not think that philosophers have paid sufficient attention to 2-3, and it is not obvious to me that a more capacious sense of ‘verification’ or ‘recognition of correctness’ can be sustained. I don’t think that I have anything like a good contendor for a counterexample, but am merely suggesting that it is not obvious to me that there is a univocal sense of ‘recognition of correctness’ at work in e.g. Arora-Barak’s sonota, bridge, and proof examples, although I recognize a notion of recognition of correctness in each.</p>
+<p>But I do not think that philosophers have paid sufficient attention to 2-3, and it is not obvious to me that a more capacious sense of ‘verification’ or ‘recognition of correctness’ can be sustained. I don’t think that I have anything like a good contender for a counterexample, but am merely suggesting that it is not obvious to me that there is a univocal sense of ‘recognition of correctness’ at work in e.g. Arora-Barak’s sonota, bridge, and proof examples, although I recognize a notion of recognition of correctness in each.</p>
 </section>
 </section>
 <section id="pressures-on-feasibility-from-both-sides">
@@ -540,15 +541,15 @@ document.write(`
 <h3>Pressures to go down from P<a class="headerlink" href="#pressures-to-go-down-from-p" title="Link to this heading">#</a></h3>
 <p>Consider Immerman’s remarks in his book and his SEP article:</p>
 <blockquote>
-<div><p>[Truly feasible] inqueries are the queries that can be computed exactly with an “affordable” amount of time and hardware, on all “reasonably sized” instances (<span id="id8">[<a class="reference internal" href="references.html#id76" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> p. 41).</p>
+<div><p>[Truly feasible] inqueries are the queries that can be computed exactly with an “affordable” amount of time and hardware, on all “reasonably sized” instances (<span id="id8">[<a class="reference internal" href="references.html#id81" title="Neil Immerman. Descriptive Complexity. Springer, 2012.">Immerman, 2012</a>]</span> p. 41).</p>
 </div></blockquote>
 <blockquote>
-<div><p>Note that this [‘truly feasible’] is not a mathematically defined class, but rather an intuitive notion of those problems that can be solved exactly, for all the instances of reasonable size, within a reasonable amount of time, using a computer that we can afford. […] There are problems in P requiring <span class="math notranslate nohighlight">\(n^{1,000}\)</span> time for problems of size n and thus not feasible. […] The number of steps required for problems of size n [occurring in nature] tends to be less than <span class="math notranslate nohighlight">\(cn^k\)</span> with small multiplicative constants <span class="math notranslate nohighlight">\(c\)</span>, and very small exponents, <span class="math notranslate nohighlight">\(k\)</span>, i.e., <span class="math notranslate nohighlight">\(k\leq 2\)</span> (<span id="id9">[<a class="reference internal" href="references.html#id2">Immerman, 2021</a>]</span> \S{4.1}).</p>
+<div><p>Note that this [‘truly feasible’] is not a mathematically defined class, but rather an intuitive notion of those problems that can be solved exactly, for all the instances of reasonable size, within a reasonable amount of time, using a computer that we can afford. […] There are problems in P requiring <span class="math notranslate nohighlight">\(n^{1,000}\)</span> time for problems of size n and thus not feasible. […] The number of steps required for problems of size n [occurring in nature] tends to be less than <span class="math notranslate nohighlight">\(cn^k\)</span> with small multiplicative constants <span class="math notranslate nohighlight">\(c\)</span>, and very small exponents, <span class="math notranslate nohighlight">\(k\)</span>, i.e., <span class="math notranslate nohighlight">\(k\leq 2\)</span> (<span id="id9">[<a class="reference internal" href="references.html#id7">Immerman, 2021</a>]</span> \S{4.1}).</p>
 </div></blockquote>
 <p>Hence to the extent that one builds into the notion of feasibility not just the asympotic bounds, but the hardware and time constraints we actually have, one gets a proper subset of P as the candidate for true feasibility.</p>
 <p>But if one is building in constraints on what we can actually do, in the amount of life and time afforded us, one raises the concern of why asympotic bounds are appropriate at all. This is what Aaronson is worrying about at the end of his article:</p>
 <blockquote>
-<div><p>But as a matter of logic, asymptotic statements need not have <em>any implications whatsoever</em> for the finite values of n (say, 10,000) that humans actually care about, nor can any finite amount of experimental data confirm or refute an asymptotic claim  (<span id="id10">[<a class="reference internal" href="references.html#id102" title="Scott Aaronson. Why philosophers should care about computational complexity. In B Jack Copeland, Carl J Posy, and Oron Shagrir, editors, Computability: Turing, Gödel, Church, and Beyond, pages 261–328. MIT Press, 2013.">Aaronson, 2013</a>]</span> p. 312)</p>
+<div><p>But as a matter of logic, asymptotic statements need not have <em>any implications whatsoever</em> for the finite values of n (say, 10,000) that humans actually care about, nor can any finite amount of experimental data confirm or refute an asymptotic claim  (<span id="id10">[<a class="reference internal" href="references.html#id107" title="Scott Aaronson. Why philosophers should care about computational complexity. In B Jack Copeland, Carl J Posy, and Oron Shagrir, editors, Computability: Turing, Gödel, Church, and Beyond, pages 261–328. MIT Press, 2013.">Aaronson, 2013</a>]</span> p. 312)</p>
 </div></blockquote>
 <p>Presumably part of the way to adjudicate this is to say that the <span class="math notranslate nohighlight">\(n\)</span> and the <span class="math notranslate nohighlight">\(k\)</span> in the bounds <span class="math notranslate nohighlight">\(n^k\)</span> are playing two different roles: we want <span class="math notranslate nohighlight">\(n\)</span> to vary since my input may be different than your input, but we want to set some upper bounds on <span class="math notranslate nohighlight">\(k\)</span> since it may seem plausible that whatever our various inputs, we are bound beneth a <span class="math notranslate nohighlight">\(k\)</span> power of them for some small <span class="math notranslate nohighlight">\(k\)</span>. But adjudicating this debate about the communicative content of asympotic results in complexity theory derserves more care than I am able to give it here.</p>
 </section>
@@ -574,7 +575,7 @@ g(x,k) = \begin{cases}
 </ul>
 <p>Then the “easy direction” of this would be again the right-to-left direction, and it would be warranted by inspection in the case of 1, and for 2 by observations such as the following:</p>
 <blockquote>
-<div><p>This class then turns out to have several natural closure properties, being closed in particular under explicit transformation, composition, and limited recursion on notation (digit-by-digit recursion). To be more explicit concerning the latter operation, which incidentally seems quite appropriate to computational work [insert definition of bounded recursion] (<span id="id11">[<a class="reference internal" href="references.html#id5" title="Alan Cobham. The intrinsic computational difficulty of functions. In Logic, Methodology and Philos. Sci. (Proc. 1964 Internat. Congr.), 24–30. North-Holland, Amsterdam, 1965.">Cobham, 1965</a>]</span> p. 28).</p>
+<div><p>This class then turns out to have several natural closure properties, being closed in particular under explicit transformation, composition, and limited recursion on notation (digit-by-digit recursion). To be more explicit concerning the latter operation, which incidentally seems quite appropriate to computational work [insert definition of bounded recursion] (<span id="id11">[<a class="reference internal" href="references.html#id10" title="Alan Cobham. The intrinsic computational difficulty of functions. In Logic, Methodology and Philos. Sci. (Proc. 1964 Internat. Congr.), 24–30. North-Holland, Amsterdam, 1965.">Cobham, 1965</a>]</span> p. 28).</p>
 </div></blockquote>
 <p>But if one takes this view, it is easy to see that P is a subset of the truly feasible functions. To the extent that one thinks that the other direction is hard, there will be pressure to go up, not down.</p>
 </section>
@@ -621,11 +622,11 @@ g(x,k) = \begin{cases}
       </div>
     </a>
     <a class="right-next"
-       href="references.html"
+       href="Chap10.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Chapter 10</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

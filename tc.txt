@@ -1,6 +1,10 @@
 terminal commands for juptyerbook
 
-# update book, be sure you are in Github-Mac . . . use if need be: cd ..
+# update book, be sure you are in Github-Mac
+
+sudo rm -r _build
+
+cd ..
 
 jupyter-book build philcompbook/
 
