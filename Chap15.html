@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter 15 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chap15';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 16" href="Chap16.html" />
+    <link rel="prev" title="Chapter 14" href="Chap14.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap05.html">Chapter 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap06.html">Chapter 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap07.html">Chapter 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap09.html">Chapter 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap10.html">Chapter 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap11.html">Chapter 11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap12.html">Chapter 12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap14.html">Chapter 14</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 15</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chap16.html">Chapter 16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework02.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Chap15.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chap15.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 15</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 15</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shattering">Shattering</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-illustration">An illustration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-notions-shattering-and-break-points">Core notions: shattering and break points</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#main-result">Main result</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-definition-used-for-counting">Auxiliary definition used for counting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition">Proposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Proposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof-of-corollary">Proof of corollary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shattering-and-probability">Shattering and probability</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="chapter-15">
+<h1>Chapter 15<a class="headerlink" href="#chapter-15" title="Link to this heading">#</a></h1>
+<p>In this chapter we review the key notions of <em>shattering</em> and describe why under it one has better probabilistic estimates of the correctness of machine learning algorithms.</p>
+</section>
+<section id="shattering">
+<h1>Shattering<a class="headerlink" href="#shattering" title="Link to this heading">#</a></h1>
+<p>The key idea is that shattering is notion according to which there are few propositions which one can form from worlds. Here we are keeping with the terminology introduced at the end the last chapter, where propositions are conceived as sets of worlds.</p>
+<section id="an-illustration">
+<h2>An illustration<a class="headerlink" href="#an-illustration" title="Link to this heading">#</a></h2>
+<p>Suppose that one has <span class="math notranslate nohighlight">\(n\)</span> points on the Euclidean plane.</p>
+<p>There are <span class="math notranslate nohighlight">\(2^n\)</span> many subsets of these points.</p>
+<p>But how many of them can one generate via lines?</p>
+<p>For instance, consider <span class="math notranslate nohighlight">\(n=5\)</span> and a pentagon of five points, as displayed below, and consider the corner points marked with blue and red circles. There is no way to have a line such that the only points above the line are these: for, once you have a line with both of them above it, the top point of the pentagon will also be above it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Define the number of sides</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># Define the radius</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Define the angles, starting from -pi/2 to make the pentagon symmetric around the y-axis</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Define the x and y coordinates</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angles</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angles</span><span class="p">)</span>
+
+<span class="c1"># Create a plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">.75</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.75</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">.75</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mf">.25</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">.5</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">-</span><span class="mf">.94</span><span class="p">,</span><span class="o">-</span><span class="mf">.30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">pastel_palette</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;ω_1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mf">.94</span><span class="p">,</span><span class="o">-</span><span class="mf">.30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">pastel_palette</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;ω_2&quot;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+
+<span class="c1"># Hide the x-axis and y-axis labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xticklabels</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticklabels</span><span class="o">=</span><span class="p">[])</span>
+
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">27</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">.75</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mf">.25</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">.5</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">27</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">-</span><span class="mf">.94</span><span class="p">,</span><span class="o">-</span><span class="mf">.30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">pastel_palette</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;ω_1&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mf">.94</span><span class="p">,</span><span class="o">-</span><span class="mf">.30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">pastel_palette</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;ω_2&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;pastel_palette&#39; is not defined
+</pre></div>
+</div>
+<img alt="_images/0cd53b53af304faf461a8b3e8d2814838626138b065e2d14f6c3774eef632056.png" src="_images/0cd53b53af304faf461a8b3e8d2814838626138b065e2d14f6c3774eef632056.png" />
+</div>
+</div>
+</section>
+<section id="core-notions-shattering-and-break-points">
+<h2>Core notions: shattering and break points<a class="headerlink" href="#core-notions-shattering-and-break-points" title="Link to this heading">#</a></h2>
+<p>Suppose <span class="math notranslate nohighlight">\(\Omega\)</span> is a set of worlds and <span class="math notranslate nohighlight">\(\mathcal{P}\subseteq \{A\subseteq \Omega\}\)</span> is a set of propositions.</p>
+<p><em>Definition</em>. For a subset <span class="math notranslate nohighlight">\(\Omega_0\subseteq \Omega\)</span>, we define the induced set of propositions <span class="math notranslate nohighlight">\(\mathcal{P}\upharpoonright \Omega_0 = \{A\cap \Omega_0: A\in \mathcal{P}\}\)</span>. Note that <span class="math notranslate nohighlight">\(\mathcal{P}\upharpoonright \Omega_0\subseteq  \{A\subseteq \Omega\}\)</span>.</p>
+<p><em>Definition</em>. A subset <span class="math notranslate nohighlight">\(\Omega_0\)</span> of worlds of size <span class="math notranslate nohighlight">\(k\)</span> is <em><span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-shattered</em> if there are <span class="math notranslate nohighlight">\(2^k\)</span>-many propositions in <span class="math notranslate nohighlight">\(\mathcal{P}\upharpoonright \Omega_0\)</span>.</p>
+<p><em>Definition</em>. A number <span class="math notranslate nohighlight">\(k\geq 1\)</span> is <em><span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point</em> if there is no <span class="math notranslate nohighlight">\(k\)</span>-element subset which is <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-shattered.</p>
+<p>The notion of VC-dimension (see next Chapter) could be defined at this stage, but we put it off for a bit so as not to overload on definitions.</p>
+<p><em>Example</em>. If <span class="math notranslate nohighlight">\(\Omega\)</span> is the real numbers and <span class="math notranslate nohighlight">\(\mathcal{P}\)</span> are the sets defined by lines, then our pentagon example showed that 5 is a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point. With a little effort along the same lines, one can show that 4 is also a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point.</p>
+</section>
+</section>
+<section id="main-result">
+<h1>Main result<a class="headerlink" href="#main-result" title="Link to this heading">#</a></h1>
+<p>Apriori one might have thought that it would be possible for 5 to be a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point but for 8 not to be a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point. But in fact this is not the case. We can put a finer point on this if we define the quantity</p>
+<p><em>Definition</em>. The number <span class="math notranslate nohighlight">\(m_{\mathcal{P}}(n)\)</span> is the maximum size <span class="math notranslate nohighlight">\(\mathcal{P}\upharpoonright \Omega_0\)</span> as <span class="math notranslate nohighlight">\(\Omega_0\)</span> ranges over <span class="math notranslate nohighlight">\(n\)</span>-element sets of worlds. In an equation:</p>
+<div class="math notranslate nohighlight">
+\[m_{\mathcal{P}}(n)=\max\{\left|P\upharpoonright \Omega_0\right|: \left|\Omega_0\right|=n\}\]</div>
+<p><em>Remark</em>. Hence <span class="math notranslate nohighlight">\(k\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point iff <span class="math notranslate nohighlight">\(m_{\mathcal{P}}(k)&lt;2^k\)</span>.</p>
+<p>Then we have following important result:</p>
+<p><em>Corollary</em>. If <span class="math notranslate nohighlight">\(k\geq 1\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point, then for all <span class="math notranslate nohighlight">\(n\geq k\)</span> one has <span class="math notranslate nohighlight">\(m_{\mathcal{P}}(n)\leq c\cdot n^{k-1}\)</span> for some constant <span class="math notranslate nohighlight">\(c&gt;0\)</span>.</p>
+<p>We give the proof in a moment. Note that this implies that if <span class="math notranslate nohighlight">\(k\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point, then <span class="math notranslate nohighlight">\(n\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point for all <span class="math notranslate nohighlight">\(n\geq k\)</span>. This is because <span class="math notranslate nohighlight">\(n^{k-1}\)</span> is far smaller than <span class="math notranslate nohighlight">\(2^n\)</span> when <span class="math notranslate nohighlight">\(k\geq n\)</span>.</p>
+<section id="auxiliary-definition-used-for-counting">
+<h2>Auxiliary definition used for counting<a class="headerlink" href="#auxiliary-definition-used-for-counting" title="Link to this heading">#</a></h2>
+<p>To prove the result, we define:</p>
+<p><em>Definition</em>. For <span class="math notranslate nohighlight">\(n\geq k\)</span> we define <span class="math notranslate nohighlight">\(B_{\mathcal{P}}(n,k)\)</span> as the maximum size of the <span class="math notranslate nohighlight">\(\mathcal{Q}\subseteq \mathcal{P}\upharpoonright \Omega_0\)</span> such that <span class="math notranslate nohighlight">\(\Omega_0\)</span> has <span class="math notranslate nohighlight">\(n\)</span>-elements and no <span class="math notranslate nohighlight">\(k\)</span>-element subset is <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>-shattered.</p>
+<p>We abbreviate <span class="math notranslate nohighlight">\(B_{\mathcal{P}}(n,k)\)</span> as <span class="math notranslate nohighlight">\(B(n,k)\)</span> when <span class="math notranslate nohighlight">\(\mathcal{P}\)</span> is clear from context.</p>
+<p>We need to prove one very difficult proposition.</p>
+</section>
+<section id="proposition">
+<h2>Proposition<a class="headerlink" href="#proposition" title="Link to this heading">#</a></h2>
+<p>For <span class="math notranslate nohighlight">\(n\geq k&gt;1\)</span>, one has <span class="math notranslate nohighlight">\(B(n,k)\leq B(n-1,k)+B(n-1, k-1)\)</span></p>
+<p><em>Proof</em>:</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(B(n,k)\)</span> is given by the size of <span class="math notranslate nohighlight">\(\mathcal{Q}\subseteq \mathcal{P}\upharpoonright \Omega_0\)</span> such that <span class="math notranslate nohighlight">\(\Omega_0\)</span> has <span class="math notranslate nohighlight">\(n\)</span>-elements and no <span class="math notranslate nohighlight">\(k\)</span>-element subset is <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>-shattered.</p>
+<p>Let <span class="math notranslate nohighlight">\(\Omega_1\)</span> be an <span class="math notranslate nohighlight">\((n-1)\)</span>-element subset of it. Note that</p>
+<p>(<span class="math notranslate nohighlight">\(\star\)</span>) no <span class="math notranslate nohighlight">\(k\)</span>-element subset of <span class="math notranslate nohighlight">\(\Omega_1\)</span> is <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>-shattered, since this would be a <span class="math notranslate nohighlight">\(k\)</span>-element subset of <span class="math notranslate nohighlight">\(\Omega_0\)</span> which was <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>-shattered.</p>
+<p>Some propositions <span class="math notranslate nohighlight">\(\mathcal{Q}_1\)</span> in <span class="math notranslate nohighlight">\(\mathcal{Q}\upharpoonright \Omega_1\)</span> will extend to only one proposition in <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>, and others <span class="math notranslate nohighlight">\(\mathcal{Q}_2\)</span> will extend to two propositions in <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>.</p>
+<p>Say that there are <span class="math notranslate nohighlight">\(\ell\)</span> of the first and <span class="math notranslate nohighlight">\(m\)</span> of the second.</p>
+<p>Hence the number of propositions in <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span> is <span class="math notranslate nohighlight">\(\ell+2m= \ell+m+m\)</span>.</p>
+<p>And the number of propositions in <span class="math notranslate nohighlight">\(\mathcal{Q}\upharpoonright \Omega_1\)</span> is <span class="math notranslate nohighlight">\(\ell+m\)</span>.</p>
+<p>Thus <span class="math notranslate nohighlight">\(\ell+m\leq B(n-1,k)\)</span> by (<span class="math notranslate nohighlight">\(\star\)</span>).</p>
+<p>Let <span class="math notranslate nohighlight">\(\Omega_2\)</span> be a <span class="math notranslate nohighlight">\((k-1)\)</span>-element subset of <span class="math notranslate nohighlight">\(\Omega_1\)</span>. Then <span class="math notranslate nohighlight">\(\Omega_2\)</span> is not <span class="math notranslate nohighlight">\(\mathcal{Q}_2\)</span>-shattered:  for, if so then these <span class="math notranslate nohighlight">\(2^{k-1}\)</span> many propositions can be extended to <span class="math notranslate nohighlight">\(2\cdot 2^{k-1}=2^k\)</span> many propositions in <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(m\leq B(n-1,k-1)\)</span></p>
+</section>
+<section id="id1">
+<h2>Proposition<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>For <span class="math notranslate nohighlight">\(n\geq k\geq 1\)</span>, one has <span class="math notranslate nohighlight">\(B(n,k)\leq c\cdot n^{k-1}\)</span>, where <span class="math notranslate nohighlight">\(c=B(2,2)\)</span>.</p>
+<p><em>Proof</em></p>
+<p>For <span class="math notranslate nohighlight">\(k=1\)</span>, we have <span class="math notranslate nohighlight">\(B(n,k)=1\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(k=2\)</span> we argue by induction on <span class="math notranslate nohighlight">\(k\geq 2\)</span>. The case of <span class="math notranslate nohighlight">\(k=2\)</span> is by definition of <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>For the induction step, suppose it holds for <span class="math notranslate nohighlight">\(n\geq k\)</span>; we show it holds for <span class="math notranslate nohighlight">\(n+1\)</span>. By the previous proposition and induction hypothesis we have</p>
+<p><span class="math notranslate nohighlight">\(B(n+1,k)\leq B(n,k)+B(n,k-1)\leq c\cdot n^{k-1}+c\cdot n^{k-2}\leq c\cdot (n+1)^{k-1}\)</span></p>
+<p>where the latter follows by the binomial theorem.</p>
+<p>Now we argue by induction on <span class="math notranslate nohighlight">\(k\geq 1\)</span> that for all <span class="math notranslate nohighlight">\(n\geq k\)</span> we have <span class="math notranslate nohighlight">\(B(n,k)\leq c\cdot n^{k-1}\)</span>. We just did the two base cases. Suppose it holds for <span class="math notranslate nohighlight">\(k\geq 2\)</span>; we show it holds for <span class="math notranslate nohighlight">\(k+1\)</span>. For the base case of <span class="math notranslate nohighlight">\(n=k+1\)</span>, one has <span class="math notranslate nohighlight">\(B(k+1,k+1)\leq 2^{k+1}\leq (k+1)^k = n^{k}\)</span>, where the second inequality follows from <span class="math notranslate nohighlight">\(k\geq 2\)</span>. The induction step follows as up above using the previous proposition.</p>
+</section>
+<section id="proof-of-corollary">
+<h2>Proof of corollary<a class="headerlink" href="#proof-of-corollary" title="Link to this heading">#</a></h2>
+<p>Now we can prove our corollary</p>
+<p><em>Corollary</em>. If <span class="math notranslate nohighlight">\(k\geq 1\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point, then for all <span class="math notranslate nohighlight">\(n\geq k\)</span> one has <span class="math notranslate nohighlight">\(m_{\mathcal{P}}(n)\leq c\cdot n^{k-1}\)</span> for some constant <span class="math notranslate nohighlight">\(c&gt;0\)</span>.</p>
+<p><em>Proof</em>: Suppose that <span class="math notranslate nohighlight">\(k\geq 1\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point. Suppose <span class="math notranslate nohighlight">\(n\geq k\)</span>. Suppose that <span class="math notranslate nohighlight">\(m_{\mathcal{P}}(n)\)</span> is the size of <span class="math notranslate nohighlight">\(\mathcal{Q}=\mathcal{P}\upharpoonright \Omega_0\)</span>. Since <span class="math notranslate nohighlight">\(k\)</span> is a break point, no <span class="math notranslate nohighlight">\(k\)</span>-element subset is <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>-shattered. Then <span class="math notranslate nohighlight">\(m_{\mathcal{P}}(n)\leq B(n,k)\leq c\cdot n^{k-1}\)</span>.</p>
+</section>
+</section>
+<section id="shattering-and-probability">
+<h1>Shattering and probability<a class="headerlink" href="#shattering-and-probability" title="Link to this heading">#</a></h1>
+<p>Suppose <span class="math notranslate nohighlight">\(k\geq 1\)</span> is <span class="math notranslate nohighlight">\(\mathcal{P}\)</span>-break point.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> is a small error term.</p>
+<p>For <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(\mathcal{P}\upharpoonright \Omega_n\)</span> and <span class="math notranslate nohighlight">\(n\geq 0\)</span>, suppose that we have an intuitive notion of <span class="math notranslate nohighlight">\(A\)</span> being at least <span class="math notranslate nohighlight">\(\epsilon\)</span>-wrong about the points in <span class="math notranslate nohighlight">\(\Omega_n\)</span>. Here, being wrong means misclassification.</p>
+<p>Suppose that we describe this event as <span class="math notranslate nohighlight">\(\mathrm{Error}_{n}(A)\)</span>, where we suppress the <span class="math notranslate nohighlight">\(\epsilon\)</span> for the sake of readibility.</p>
+<p>The famous limiting theorems of probability like Strong Law of Large Numbers say that so long as our points are chosen independently, we can be sure that</p>
+<div class="math notranslate nohighlight">
+\[P(\mathrm{Error}_{n}(A))\leq 2\cdot e^{-2\epsilon^2 n}\]</div>
+<p>(In fact, it is a finite version of the Strong Law of Large Numbers which is operative here, namely the Höffding inequality).</p>
+<p>Then we can estimate as follows using the Corollary:</p>
+<p><span class="math notranslate nohighlight">\(P(\bigcup_{A\in \mathcal{P}\upharpoonright \Omega_n} \mathrm{Error}_{n}(A))\)</span></p>
+<p><span class="math notranslate nohighlight">\(\leq \sum_{A\in \mathcal{P}\upharpoonright \Omega_n} P(\mathrm{Error}_{n}(A))\)</span> by subadditivity</p>
+<p><span class="math notranslate nohighlight">\(\leq m_{\mathcal{P}}(n) \cdot 2\cdot e^{-2\epsilon^2 n}\)</span> by previous estimate</p>
+<p><span class="math notranslate nohighlight">\(\leq c\cdot n^{-k} \cdot 2\cdot e^{-2\epsilon^2 n}\)</span> by Corollary</p>
+<p>This expression goes to zero as <span class="math notranslate nohighlight">\(n\)</span> goes to infinity.</p>
+<p>Hence, given a small number like <span class="math notranslate nohighlight">\(.0005\)</span>, we can calculate <span class="math notranslate nohighlight">\(n_0\)</span> such that for all <span class="math notranslate nohighlight">\(n\geq n_0\)</span>, we have</p>
+<p><span class="math notranslate nohighlight">\(P(\bigcup_{A\in \mathcal{P}\upharpoonright \Omega_n} \mathrm{Error}_{n}(A)) \leq .0005\)</span></p>
+<p>It is important that we do this for the union rather than for the individual <span class="math notranslate nohighlight">\(\mathrm{Error}_{n}(A)\)</span>, <strong>since we don’t know before seeing the data points which <span class="math notranslate nohighlight">\(A\)</span> our algorithm is going to choose</strong>.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chap14.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 14</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chap16.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 16</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 15</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shattering">Shattering</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-illustration">An illustration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-notions-shattering-and-break-points">Core notions: shattering and break points</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#main-result">Main result</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-definition-used-for-counting">Auxiliary definition used for counting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition">Proposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Proposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof-of-corollary">Proof of corollary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shattering-and-probability">Shattering and probability</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
