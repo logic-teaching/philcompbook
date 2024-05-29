@@ -489,7 +489,7 @@ document.write(`
 <h2>The combinators<a class="headerlink" href="#the-combinators" title="Link to this heading">#</a></h2>
 <section id="the-three-most-famous-combinators">
 <h3>The three most famous combinators<a class="headerlink" href="#the-three-most-famous-combinators" title="Link to this heading">#</a></h3>
-<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id1">[<a class="reference internal" href="references.html#id34" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, 2000.">Smullyan, 2000</a>]</span>:</p>
+<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id1">[<a class="reference internal" href="references.html#id27" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, November 2000.">Smullyan, 2000</a>]</span>:</p>
 <ul class="simple">
 <li><p><em>Identity bird</em> (<em>I</em>) is <span class="math notranslate nohighlight">\(\lambda x.x\)</span></p></li>
 <li><p><em>Kestrel</em>  (<em>K</em>) is <span class="math notranslate nohighlight">\(\lambda xy.  x\)</span></p></li>
@@ -532,7 +532,7 @@ document.write(`
 <p>The untyped nature of this calclus is evident in claims like <span class="math notranslate nohighlight">\(II\triangleright I\)</span>. For instance, if <span class="math notranslate nohighlight">\(I\)</span> was just the identity function on natural numbers, it would make no sense to input in <span class="math notranslate nohighlight">\(I\)</span> to itself.</p>
 <p>Here’s what Church says about this in his 1951 book:</p>
 <blockquote>
-<div><p>In particular it is not excluded that one of the elements of the range of arguments of a function <span class="math notranslate nohighlight">\(f\)</span> should be the function <span class="math notranslate nohighlight">\(f\)</span> itself. This possibility has frequently been denied, and indeed, if a function is defined as a correspondence between two previously given ranges, the reason for the denial is clear. Here, however, we regard the operation or rule of correspondence, which constitutes the function, as being first given, and the range of arguments then determined as consisting of the things to which the operation is applicable (<span id="id2">[<a class="reference internal" href="references.html#id32" title="Alonzo Church. The Calculi of Lambda-conversion. Princeton University Press, 1951.">Church, 1951</a>]</span> p. 2).</p>
+<div><p>In particular it is not excluded that one of the elements of the range of arguments of a function <span class="math notranslate nohighlight">\(f\)</span> should be the function <span class="math notranslate nohighlight">\(f\)</span> itself. This possibility has frequently been denied, and indeed, if a function is defined as a correspondence between two previously given ranges, the reason for the denial is clear. Here, however, we regard the operation or rule of correspondence, which constitutes the function, as being first given, and the range of arguments then determined as consisting of the things to which the operation is applicable (<span id="id2">[<a class="reference internal" href="references.html#id25" title="Alonzo Church. The Calculi of Lambda-conversion. Princeton University Press, 1951.">Church, 1951</a>]</span> p. 2).</p>
 </div></blockquote>
 <p>Hence on Church’s way of thinking, since his calculus is one which tries to describe rules rather than the extensional functions which they determine, one should just take the rule to have primacy, and try to determine its range of application as one goes along. For instance, presumably identity is applicable to anything.</p>
 </section>
@@ -584,7 +584,7 @@ document.write(`
 <h3>Church-Rosser Theorem<a class="headerlink" href="#church-rosser-theorem" title="Link to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(L\triangleright M\)</span> and <span class="math notranslate nohighlight">\(L\triangleright N\)</span>, then there is <span class="math notranslate nohighlight">\(O\)</span> such that <span class="math notranslate nohighlight">\(M \triangleright O\)</span> and <span class="math notranslate nohighlight">\(N\triangleright O\)</span>.</p>
 <p><em>Proof</em>:</p>
-<p>This is a hard theorem. See e.g. <span id="id3">[<a class="reference internal" href="references.html#id33" title="Roger Hindley and Jonathan Seldin. Lambda-Calculus and Combinators: An Introduction. Cambridge University Press, 2008.">Hindley and Seldin, 2008</a>]</span> p. 14 and Appendix A2.</p>
+<p>This is a hard theorem. See e.g. <span id="id3">[<a class="reference internal" href="references.html#id26" title="Roger Hindley and Jonathan Seldin. Lambda-Calculus and Combinators: An Introduction. Cambridge University Press, July 2008.">Hindley and Seldin, 2008</a>]</span> p. 14 and Appendix A2.</p>
 </section>
 <section id="corollary-normal-forms-are-unique">
 <h3>Corollary (normal forms are unique)<a class="headerlink" href="#corollary-normal-forms-are-unique" title="Link to this heading">#</a></h3>
@@ -632,7 +632,7 @@ document.write(`
 <p>A function <span class="math notranslate nohighlight">\(f:\mathbb{N}\rightarrow \mathbb{N}\)</span> is computable by a Turing machine iff it is lambda definable.</p>
 <p>For the right-to-left direction, one simply implements beta-reduction on a Turing machine. The Church-Rosser theorem says no matter how you reduce you will eventually get to the right answer. Indeed, Church even says that  beta reduction provides an intuitive algorithm for the calculation of the values:</p>
 <blockquote>
-<div><p>It is clear that, in the case of any <span class="math notranslate nohighlight">\(\lambda\)</span>-definable function of positive integers, the process of reduction of formulas to normal form provides an algorithm for the effective calculation of particular values of the function (<span id="id4">[<a class="reference internal" href="references.html#id30" title="Alonzo Church. An unsolvable problem of elementary number theory. American Journal of Mathematics, 58(2):345–363, 1936.">Church, 1936</a>]</span> p. 349, see remark on effectively calculability on p. 356).</p>
+<div><p>It is clear that, in the case of any <span class="math notranslate nohighlight">\(\lambda\)</span>-definable function of positive integers, the process of reduction of formulas to normal form provides an algorithm for the effective calculation of particular values of the function (<span id="id4">[<a class="reference internal" href="references.html#id23" title="Alonzo Church. An unsolvable problem of elementary number theory. Amer. J. Math., 58(2):345–363, 1936.">Church, 1936</a>]</span> p. 349, see remark on effectively calculability on p. 356).</p>
 </div></blockquote>
 <p>The hard part of the left to right direction is the fixed point theorem.</p>
 </section>
