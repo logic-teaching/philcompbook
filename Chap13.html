@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Philcomp</title>
+    <title>Chapter 13 &#8212; Philcomp</title>
   
   
   
@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chap13';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -176,7 +178,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
@@ -190,6 +192,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Chap10.html">Chapter 10</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap11.html">Chapter 11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap12.html">Chapter 12</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 13</a></li>
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Chap14.html">Chapter 14</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap15.html">Chapter 15</a></li>
 
@@ -367,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Chapter 13</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,7 +384,28 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 13</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#functionalism">Functionalism</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implemenation-and-realization">Implemenation and realization.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putnam">Putnam</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-to-functionalism">Challenges to functionalism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-theory-of-mind">Computational theory of mind</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylyshyn">Pylyshyn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-gradations-of-the-position">Different gradations of the position</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-between-computational-theory-of-mind-and-functionalism">Relation between computational theory of mind and functionalism</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-in-principle-be-a-functionalist-but-not-sign-onto-all-of-the-computational-theory-of-mind">How to in-principle be a functionalist but not sign onto all of the computational theory of mind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-in-principle-advocate-for-computational-theory-of-mind-but-not-sign-onto-all-of-functionalism">How to in-principle advocate for computational theory of mind but not sign onto all of functionalism:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-combine-the-two-positions">How to combine the two positions:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-computational-theory-of-mind">Problems with computational theory of mind</a></li>
 </ul>
 
             </nav>
@@ -389,7 +418,106 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  
+  <section id="chapter-13">
+<h1>Chapter 13<a class="headerlink" href="#chapter-13" title="Link to this heading">#</a></h1>
+</section>
+<section id="functionalism">
+<h1>Functionalism<a class="headerlink" href="#functionalism" title="Link to this heading">#</a></h1>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h2>
+<p>Mental states are identified with the functional role that they play in (i) being caused by certain sensory stimuli, certain bodily actions, and certain other mental states, and (ii) causing certain bodily actions and certain other mental states.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<p>Example: pain is just whatever is both (a) caused by pinches, pressures, heat and certain chemicals, and (b) causes characteristic verbal expressions like “ouch” and mental states such as sadness.</p>
+</section>
+<section id="implemenation-and-realization">
+<h2>Implemenation and realization.<a class="headerlink" href="#implemenation-and-realization" title="Link to this heading">#</a></h2>
+<p>The functional role is necessarily paired with a notion of implementation or realization. For instance, C-fiber firing biologically implements pain in humans. It is explicitly left open that there could be different biological implementations of one and the same mental state. E.g. if an alien’s mental state was appropriately related to pinches, and yelps, there is an intuition that it should be called pain.</p>
+</section>
+<section id="putnam">
+<h2>Putnam<a class="headerlink" href="#putnam" title="Link to this heading">#</a></h2>
+<p>Putnam in his “Minds and machines” took as his model the Turing machine:</p>
+<blockquote>
+<div><p>The analogy which has been presented between logical states of a Turing machine and mental states of a human being, on the one hand, and structural states of a Turing machine and physical states of a human being, on the other, is one that I find very suggestive (<span id="id1">[<a class="reference internal" href="references.html#id4" title="Hilary Putnam. Mind, Language and Reality. Cambridge University Press, 1979.">Putnam, 1979</a>]</span> p. 373; paper originally published in 1960)</p>
+</div></blockquote>
+</section>
+</section>
+<section id="challenges-to-functionalism">
+<h1>Challenges to functionalism<a class="headerlink" href="#challenges-to-functionalism" title="Link to this heading">#</a></h1>
+<p>A traditional challenge is qualia. There is something felt sense in which experiencing the vivid bite of fresh pineapple cannot be reducing to what it is caused by and what it causes. You might even be able to imagine someone who is outfitted causally just like us but who is missing these experiences: it is a problem for functionalism if what they are missing is a mental state.</p>
+<p>There are other challenges. But functionalism is something like a dominant framework in contemporary philosophy of mind, or at least a position around which most everyone has to orientate themselves.</p>
+</section>
+<section id="computational-theory-of-mind">
+<h1>Computational theory of mind<a class="headerlink" href="#computational-theory-of-mind" title="Link to this heading">#</a></h1>
+<section id="pylyshyn">
+<h2>Pylyshyn<a class="headerlink" href="#pylyshyn" title="Link to this heading">#</a></h2>
+<p>Pylyshyn from his 1980 “Computation and cognition”:</p>
+<blockquote>
+<div><p>What I wish to focus on here is what I take to be the most fundamental reason why cognition ought to be viewed as computation. That reason rests on the fact that computation is the only worked-out view of process that is both compatible with a materialist view of how a process is realized and that attributes the behavior of the process to the operation of rules upon representations. (<span id="id2">[<a class="reference internal" href="references.html#id2" title="Zenon W Pylyshyn. Computation and cognition. The Behavioral and brain sciences, 3(1):111–132, March 1980.">Pylyshyn, 1980</a>]</span> p. 113).</p>
+</div></blockquote>
+</section>
+<section id="different-gradations-of-the-position">
+<h2>Different gradations of the position<a class="headerlink" href="#different-gradations-of-the-position" title="Link to this heading">#</a></h2>
+<p>There are gradations of the position depending on what force one wants to give to the “ought to be viewed”:</p>
+<ul class="simple">
+<li><p>Mere methodological rule of thumb: be concerned with the rules by which cognition operates and the representations on which it operates.</p></li>
+<li><p>Hypothesis about the nature of mentality: cognitive processes just are procedural operations on representations.</p></li>
+<li><p>The nature of explanations in psychology: the best explanations of cognitive skills and achievements goes by way of an identification of cognitive procedures on representations.</p></li>
+</ul>
+</section>
+</section>
+<section id="relation-between-computational-theory-of-mind-and-functionalism">
+<h1>Relation between computational theory of mind and functionalism<a class="headerlink" href="#relation-between-computational-theory-of-mind-and-functionalism" title="Link to this heading">#</a></h1>
+<p>Computational theory of mind is often paired with functionalism, but there is not a strict entailment one way or the other.</p>
+<section id="how-to-in-principle-be-a-functionalist-but-not-sign-onto-all-of-the-computational-theory-of-mind">
+<h2>How to in-principle be a functionalist but not sign onto all of the computational theory of mind<a class="headerlink" href="#how-to-in-principle-be-a-functionalist-but-not-sign-onto-all-of-the-computational-theory-of-mind" title="Link to this heading">#</a></h2>
+<p>Apriori, one could be a functionalist but deny that the relevant causal processes can be usefully understood as algorithmic:</p>
+<ul class="simple">
+<li><p>maybe they are stochastic or probabilistic in a way that is not amenable to the most obvious algorithmic approaches,</p></li>
+<li><p>maybe they do not issue in or operate on representations in any easily understood way</p></li>
+<li><p>maybe one has some reason to think that they do not necessarily even result in computable procedures.</p></li>
+</ul>
+</section>
+<section id="how-to-in-principle-advocate-for-computational-theory-of-mind-but-not-sign-onto-all-of-functionalism">
+<h2>How to in-principle advocate for computational theory of mind but not sign onto all of functionalism:<a class="headerlink" href="#how-to-in-principle-advocate-for-computational-theory-of-mind-but-not-sign-onto-all-of-functionalism" title="Link to this heading">#</a></h2>
+<p>One could adhere to the computational theory of mind but not feel that one can sign onto all of functionalism:</p>
+<ul class="simple">
+<li><p>Just as one could apriori think that there is something important and distinctive about programs implemented on certain hardware, so one might hold the same about cognitive processes implemented in human brains and bodies.</p></li>
+<li><p>One may think that that evidence tells us that there’s something that plays a certain functional role but we are not in a position to say what the realizer is.</p></li>
+</ul>
+</section>
+<section id="how-to-combine-the-two-positions">
+<h2>How to combine the two positions:<a class="headerlink" href="#how-to-combine-the-two-positions" title="Link to this heading">#</a></h2>
+<p>Edelman presents, in chapter 2, a useful way of combining computational theory of mind and functionalism:</p>
+<blockquote>
+<div><p>I propose to explain the nature of minds in terms of the function of brains, brain function in terms of computation, and computation itself in terms of principled manipulation of representations (<span id="id3">[<a class="reference internal" href="references.html#id112" title="Shimon Edelman. Computing the Mind: How the Mind Really Works. Oxford University Press, USA, 2008.">Edelman, 2008</a>]</span> p. 13).</p>
+</div></blockquote>
+<blockquote>
+<div><p>Minds are what brains do. [<span class="math notranslate nohighlight">\(\rightarrow\)</span>] Brains embody varieties of computation. [<span class="math notranslate nohighlight">\(\rightarrow\)</span>] Computation is formally constrained manipulation of representations” (<span id="id4">[<a class="reference internal" href="references.html#id112" title="Shimon Edelman. Computing the Mind: How the Mind Really Works. Oxford University Press, USA, 2008.">Edelman, 2008</a>]</span> p. 14).</p>
+</div></blockquote>
+<p>There is a very worked out example using neural networks from <span id="id5">[<a class="reference internal" href="references.html#id112" title="Shimon Edelman. Computing the Mind: How the Mind Really Works. Oxford University Press, USA, 2008.">Edelman, 2008</a>]</span> pp. 56-57:</p>
+<blockquote>
+<div><p>over successive iterations, the direction of the weight vector converges to coincide  with the direction of the main elongation of the cloud of inputs (<span id="id6">[<a class="reference internal" href="references.html#id112" title="Shimon Edelman. Computing the Mind: How the Mind Really Works. Oxford University Press, USA, 2008.">Edelman, 2008</a>]</span> p. 57).</p>
+</div></blockquote>
+<blockquote>
+<div><p>What, then can a single neuron compute? As you have just discovered, the answer to this question is this: low-dimensional statistics of its input distribution” (<span id="id7">[<a class="reference internal" href="references.html#id112" title="Shimon Edelman. Computing the Mind: How the Mind Really Works. Oxford University Press, USA, 2008.">Edelman, 2008</a>]</span> p. 57)</p>
+</div></blockquote>
+</section>
+</section>
+<section id="problems-with-computational-theory-of-mind">
+<h1>Problems with computational theory of mind<a class="headerlink" href="#problems-with-computational-theory-of-mind" title="Link to this heading">#</a></h1>
+<p>To the extent that it is wedded with functionalism, it will inherit these problems. A distinct problem is the so-called triviality argument (cf. <span id="id8">[<a class="reference internal" href="references.html#id3" title="Mark Sprevak. Triviality arguments about computational implementation. In Mark Sprevak and Matteo Colombo, editors, The Routledge Handbook of the Computational Mind, pages 175–191. Routledge, September 2018.">Sprevak, 2018</a>]</span>), which purports to show that it is easy to for any physical organism to implement certain kinds of Turing machine. The general template is:</p>
+<ul class="simple">
+<li><p>take any physical organism which changes over time</p></li>
+<li><p>take time-slices to be states</p></li>
+<li><p>view it as a Turing machine acting on an empty input and only moving to the left and shifting state as time moves on</p></li>
+<li><p>if you need more states, make more time-slices</p></li>
+</ul>
+<p>This class of Turing machines corresponds to the deterministic finite automata, which still includes a lot. It computes the regular languages (i.e. regular sets of strings). See ‘regular’ on <a class="reference download internal" download="" href="_downloads/44fa9d8598100ea8b5c7284d48c0d4b8/map-handout.pdf"><span class="xref download myst">the map</span></a> (it is the tiny part at the bottom of the map on the right-hand side).</p>
+<p>An initial reaction to triviality arguments is that it works with “unnatural” notions of states. But this will be difficult for an advocate of both functionalism and computational theory of mind to pursue: she wants to tell us that brains implement Turing machines and that the mentality is captured thereby, but would be equally well captured by other implementations of Turing machines.</p>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -453,7 +581,28 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 13</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#functionalism">Functionalism</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implemenation-and-realization">Implemenation and realization.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putnam">Putnam</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-to-functionalism">Challenges to functionalism</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-theory-of-mind">Computational theory of mind</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylyshyn">Pylyshyn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-gradations-of-the-position">Different gradations of the position</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-between-computational-theory-of-mind-and-functionalism">Relation between computational theory of mind and functionalism</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-in-principle-be-a-functionalist-but-not-sign-onto-all-of-the-computational-theory-of-mind">How to in-principle be a functionalist but not sign onto all of the computational theory of mind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-in-principle-advocate-for-computational-theory-of-mind-but-not-sign-onto-all-of-functionalism">How to in-principle advocate for computational theory of mind but not sign onto all of functionalism:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-combine-the-two-positions">How to combine the two positions:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-computational-theory-of-mind">Problems with computational theory of mind</a></li>
 </ul>
 
   </nav></div>
