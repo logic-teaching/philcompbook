@@ -388,7 +388,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#main-result">Main result</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-definition-used-for-counting">Auxiliary definition used for counting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition">Proposition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Proposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Proposition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof-of-corollary">Proof of corollary</a></li>
 </ul>
 </li>
@@ -408,6 +408,8 @@ document.write(`
   <section id="chapter-15">
 <h1>Chapter 15<a class="headerlink" href="#chapter-15" title="Link to this heading">#</a></h1>
 <p>In this chapter we review the key notions of <em>shattering</em> and describe why under it one has better probabilistic estimates of the correctness of machine learning algorithms.</p>
+<p>The discussion of shattering follows <span id="id1">[<a class="reference internal" href="references.html#id3" title="Yaser S Abu-Mostafa, Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from Data: A Short Course. AMLBook.com, 2012.">Abu-Mostafa <em>et al.</em>, 2012</a>]</span> pp. 41 ff and Simon <span id="id2">[<a class="reference internal" href="references.html#id2" title="Pierre Simon. A Guide to NIP Theories. Cambridge University Press, 2015.">Simon, 2015</a>]</span> Chapter 7. (It was discovered again by Shelah in his study of NIP theories, see Simon for bibliographic information).</p>
+<p>We mostly restrict ourselves to giving intuitive definitions and simple proofs, which are made simpler by giving less precise estimates than what one gets the above sources.</p>
 </section>
 <section id="shattering">
 <h1>Shattering<a class="headerlink" href="#shattering" title="Link to this heading">#</a></h1>
@@ -418,7 +420,12 @@ document.write(`
 <p>There are <span class="math notranslate nohighlight">\(2^n\)</span> many subsets of these points.</p>
 <p>But how many of them can one generate via lines?</p>
 <p>For instance, consider <span class="math notranslate nohighlight">\(n=5\)</span> and a pentagon of five points, as displayed below, and consider the corner points marked with blue and red circles. There is no way to have a line such that the only points above the line are these: for, once you have a line with both of them above it, the top point of the pentagon will also be above it.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -461,6 +468,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
@@ -520,8 +528,8 @@ document.write(`
 <p>Let <span class="math notranslate nohighlight">\(\Omega_2\)</span> be a <span class="math notranslate nohighlight">\((k-1)\)</span>-element subset of <span class="math notranslate nohighlight">\(\Omega_1\)</span>. Then <span class="math notranslate nohighlight">\(\Omega_2\)</span> is not <span class="math notranslate nohighlight">\(\mathcal{Q}_2\)</span>-shattered:  for, if so then these <span class="math notranslate nohighlight">\(2^{k-1}\)</span> many propositions can be extended to <span class="math notranslate nohighlight">\(2\cdot 2^{k-1}=2^k\)</span> many propositions in <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span>.</p>
 <p>Then <span class="math notranslate nohighlight">\(m\leq B(n-1,k-1)\)</span></p>
 </section>
-<section id="id1">
-<h2>Proposition<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>Proposition<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>For <span class="math notranslate nohighlight">\(n\geq k\geq 1\)</span>, one has <span class="math notranslate nohighlight">\(B(n,k)\leq c\cdot n^{k-1}\)</span>, where <span class="math notranslate nohighlight">\(c=B(2,2)\)</span>.</p>
 <p><em>Proof</em></p>
 <p>For <span class="math notranslate nohighlight">\(k=1\)</span>, we have <span class="math notranslate nohighlight">\(B(n,k)=1\)</span>.</p>
@@ -632,7 +640,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#main-result">Main result</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-definition-used-for-counting">Auxiliary definition used for counting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition">Proposition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Proposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Proposition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proof-of-corollary">Proof of corollary</a></li>
 </ul>
 </li>
