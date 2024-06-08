@@ -20,7 +20,6 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 import networkx as nx
 import matplotlib.pyplot as plt
-import pygraphviz
 
 # Create a balanced tree
 G = nx.balanced_tree(2, 3)
@@ -49,12 +48,41 @@ plt.show()
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 3[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnetworkx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnx[39;00m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
-[0;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mpygraphviz[39;00m
-[1;32m      5[0m [38;5;66;03m# Create a balanced tree[39;00m
-[1;32m      6[0m G [38;5;241m=[39m nx[38;5;241m.[39mbalanced_tree([38;5;241m2[39m, [38;5;241m3[39m)
+File [0;32m/opt/anaconda3/lib/python3.11/site-packages/networkx/drawing/nx_agraph.py:295[0m, in [0;36mpygraphviz_layout[0;34m(G, prog, root, args)[0m
+[1;32m    294[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 295[0m     [38;5;28;01mimport[39;00m [38;5;21;01mpygraphviz[39;00m
+[1;32m    296[0m [38;5;28;01mexcept[39;00m [38;5;167;01mImportError[39;00m [38;5;28;01mas[39;00m err:
 
 [0;31mModuleNotFoundError[0m: No module named 'pygraphviz'
+
+The above exception was the direct cause of the following exception:
+
+[0;31mImportError[0m                               Traceback (most recent call last)
+Cell [0;32mIn[1], line 15[0m
+[1;32m     12[0m G [38;5;241m=[39m nx[38;5;241m.[39mrelabel_nodes(G, mapping)
+[1;32m     14[0m [38;5;66;03m# Draw the graph[39;00m
+[0;32m---> 15[0m pos [38;5;241m=[39m nx[38;5;241m.[39mdrawing[38;5;241m.[39mnx_agraph[38;5;241m.[39mgraphviz_layout(G, prog[38;5;241m=[39m[38;5;124m'[39m[38;5;124mdot[39m[38;5;124m'[39m)
+[1;32m     17[0m [38;5;66;03m# Invert the y-coordinates to draw the graph upside down[39;00m
+[1;32m     18[0m pos [38;5;241m=[39m {node: (x, [38;5;241m-[39my) [38;5;28;01mfor[39;00m (node, (x, y)) [38;5;129;01min[39;00m pos[38;5;241m.[39mitems()}
+
+File [0;32m/opt/anaconda3/lib/python3.11/site-packages/networkx/drawing/nx_agraph.py:251[0m, in [0;36mgraphviz_layout[0;34m(G, prog, root, args)[0m
+[1;32m    220[0m [38;5;28;01mdef[39;00m [38;5;21mgraphviz_layout[39m(G, prog[38;5;241m=[39m[38;5;124m"[39m[38;5;124mneato[39m[38;5;124m"[39m, root[38;5;241m=[39m[38;5;28;01mNone[39;00m, args[38;5;241m=[39m[38;5;124m"[39m[38;5;124m"[39m):
+[1;32m    221[0m [38;5;250m    [39m[38;5;124;03m"""Create node positions for G using Graphviz.[39;00m
+[1;32m    222[0m 
+[1;32m    223[0m [38;5;124;03m    Parameters[39;00m
+[0;32m   (...)[0m
+[1;32m    249[0m [38;5;124;03m    see https://gitlab.com/graphviz/graphviz/-/issues/1767 for more info.[39;00m
+[1;32m    250[0m [38;5;124;03m    """[39;00m
+[0;32m--> 251[0m     [38;5;28;01mreturn[39;00m pygraphviz_layout(G, prog[38;5;241m=[39mprog, root[38;5;241m=[39mroot, args[38;5;241m=[39margs)
+
+File [0;32m/opt/anaconda3/lib/python3.11/site-packages/networkx/drawing/nx_agraph.py:297[0m, in [0;36mpygraphviz_layout[0;34m(G, prog, root, args)[0m
+[1;32m    295[0m     [38;5;28;01mimport[39;00m [38;5;21;01mpygraphviz[39;00m
+[1;32m    296[0m [38;5;28;01mexcept[39;00m [38;5;167;01mImportError[39;00m [38;5;28;01mas[39;00m err:
+[0;32m--> 297[0m     [38;5;28;01mraise[39;00m [38;5;167;01mImportError[39;00m(
+[1;32m    298[0m         [38;5;124m"[39m[38;5;124mrequires pygraphviz [39m[38;5;124m"[39m [38;5;124m"[39m[38;5;124mhttp://pygraphviz.github.io/[39m[38;5;124m"[39m
+[1;32m    299[0m     ) [38;5;28;01mfrom[39;00m [38;5;21;01merr[39;00m
+[1;32m    300[0m [38;5;28;01mif[39;00m root [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[1;32m    301[0m     args [38;5;241m+[39m[38;5;241m=[39m [38;5;124mf[39m[38;5;124m"[39m[38;5;124m-Groot=[39m[38;5;132;01m{[39;00mroot[38;5;132;01m}[39;00m[38;5;124m"[39m
+
+[0;31mImportError[0m: requires pygraphviz http://pygraphviz.github.io/
 
