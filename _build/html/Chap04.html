@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -196,6 +196,23 @@
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="Chap14.html">Chapter 14</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap15.html">Chapter 15</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chap16.html">Chapter 16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework02.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap17.html">Chapter 17</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chap18.html">Chapter 18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -433,11 +450,11 @@ document.write(`
 <li><p>it has a definition in terms of a single unbounded existential quantifier over natural numbers, a so-called <span class="math notranslate nohighlight">\(\Sigma_1\)</span>-definition.</p></li>
 <li><p>it has a definition in terms of single unbounded universal quantifier over natural numbers, a so-called <span class="math notranslate nohighlight">\(\Pi_1\)</span>-definition.</p></li>
 </ol>
-<p>For a proof see e.g. <span id="id1">[<a class="reference internal" href="references.html#id42" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> p. 26, <span id="id2">[<a class="reference internal" href="references.html#id30" title="Michael Sipser. Introduction to the Theory of Computation. Cengage Learning, 3 edition, 2012.">Sipser, 2012</a>]</span> p. 209.</p>
+<p>For a proof see e.g. <span id="id1">[<a class="reference internal" href="references.html#id50" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> p. 26, <span id="id2">[<a class="reference internal" href="references.html#id38" title="Michael Sipser. Introduction to the Theory of Computation. Cengage Learning, 3 edition, 2012.">Sipser, 2012</a>]</span> p. 209.</p>
 <p>This is the logician’s preferred characterization of computability. You can use it to show that e.g. the set of primes is computable, since it has a definition only in terms of bounded quantifiers:</p>
 <p>Primes <span class="math notranslate nohighlight">\(=\{n : \; n\geq 1 \wedge \forall \; 1&lt;m\leq n \; \forall \; 1&lt;\ell&lt;n \; n\neq m\cdot \ell\}\)</span></p>
 <p>You are allowed to use addition, multiplication, exponentiation, and less-than in the definition, and any bounded quantifiers (like the one in the example) and all of propositional logic (and, or, negation, if then).</p>
-<p>See e.g. <span id="id3">[<a class="reference internal" href="references.html#id42" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> pp. 80 ff “quantifier manipulation.”</p>
+<p>See e.g. <span id="id3">[<a class="reference internal" href="references.html#id50" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> pp. 80 ff “quantifier manipulation.”</p>
 </section>
 <section id="tarski-s-theorem-on-truth">
 <h3>Tarski’s Theorem on Truth<a class="headerlink" href="#tarski-s-theorem-on-truth" title="Link to this heading">#</a></h3>
@@ -446,14 +463,14 @@ document.write(`
 <p>He used the liar paradox to show that this set was not definable in the natural numbers.</p>
 <p>Hence, by Kleene’s result, it is not computable.</p>
 <p>It is beyond the very top of our map, it is “non-arithmetical”, where this means “not definable in first-order arithmetic.”</p>
-<p>See e.g. <span id="id4">[<a class="reference internal" href="references.html#id44" title="Joseph R Shoenfield. Mathematical Logic. CRC Press, 2018.">Shoenfield, 2018</a>]</span> and <span id="id5">[<a class="reference internal" href="references.html#id29" title="Wolfgang Rautenberg. A Concise Introduction to Mathematical Logic. Springer, July 2010.">Rautenberg, 2010</a>]</span>.</p>
+<p>See e.g. <span id="id4">[<a class="reference internal" href="references.html#id52" title="Joseph R Shoenfield. Mathematical Logic. CRC Press, 2018.">Shoenfield, 2018</a>]</span> and <span id="id5">[<a class="reference internal" href="references.html#id37" title="Wolfgang Rautenberg. A Concise Introduction to Mathematical Logic. Springer, July 2010.">Rautenberg, 2010</a>]</span>.</p>
 </section>
 <section id="godel-s-first-incompleteness-theorem">
 <h3>Gödel’s First Incompleteness Theorem<a class="headerlink" href="#godel-s-first-incompleteness-theorem" title="Link to this heading">#</a></h3>
 <p>Suppose a theory <span class="math notranslate nohighlight">\(T\)</span> contains basic axioms for the arithmetic of addition and multiplication and is deductively consistent, that is, it does not prove a contradiction.</p>
 <p>If <span class="math notranslate nohighlight">\(T\)</span> is computable,</p>
 <p>then <span class="math notranslate nohighlight">\(T\)</span> is deductively incomplete, that is, there is a formula <span class="math notranslate nohighlight">\(\varphi\)</span> such that <span class="math notranslate nohighlight">\(T\)</span> doesn’t prove <span class="math notranslate nohighlight">\(\varphi\)</span> and <span class="math notranslate nohighlight">\(T\)</span> doesn’t prove <span class="math notranslate nohighlight">\(\neg \varphi\)</span>.</p>
-<p>See e.g. <span id="id6">[<a class="reference internal" href="references.html#id44" title="Joseph R Shoenfield. Mathematical Logic. CRC Press, 2018.">Shoenfield, 2018</a>]</span> and <span id="id7">[<a class="reference internal" href="references.html#id29" title="Wolfgang Rautenberg. A Concise Introduction to Mathematical Logic. Springer, July 2010.">Rautenberg, 2010</a>]</span>.</p>
+<p>See e.g. <span id="id6">[<a class="reference internal" href="references.html#id52" title="Joseph R Shoenfield. Mathematical Logic. CRC Press, 2018.">Shoenfield, 2018</a>]</span> and <span id="id7">[<a class="reference internal" href="references.html#id37" title="Wolfgang Rautenberg. A Concise Introduction to Mathematical Logic. Springer, July 2010.">Rautenberg, 2010</a>]</span>.</p>
 </section>
 <section id="godel-s-first-incompleteness-theorem-expressed-contrapositively">
 <h3>Gödel’s First Incompleteness Theorem (expressed contrapositively)<a class="headerlink" href="#godel-s-first-incompleteness-theorem-expressed-contrapositively" title="Link to this heading">#</a></h3>
@@ -469,7 +486,7 @@ document.write(`
 <p>Choose any <em>completion</em> of them, i.e. any way of filling them out so that they ‘make calls’ on all formulas.</p>
 <p>By Gödel’s First Theorem, this is not computable.</p>
 <p>In a word: completions of PA and ZF(C) are not computable.</p>
-<p>See “PA degrees”  in <span id="id8">[<a class="reference internal" href="references.html#id42" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> Chapter 10, pp. 80 ff.</p>
+<p>See “PA degrees”  in <span id="id8">[<a class="reference internal" href="references.html#id50" title="Robert I Soare. Turing Computability. Springer Berlin Heidelberg, 2016.">Soare, 2016</a>]</span> Chapter 10, pp. 80 ff.</p>
 </section>
 <section id="comparing-tarski-and-godel-s-theorems">
 <h3>Comparing Tarski and Gödel’s Theorems<a class="headerlink" href="#comparing-tarski-and-godel-s-theorems" title="Link to this heading">#</a></h3>
@@ -488,7 +505,7 @@ document.write(`
 <li><p>There are computable commutative rings without a computable prime ideal.</p></li>
 <li><p>There are computable uniformly continuous functions from the unit interval to itself without a computable fixed point.</p></li>
 </ol>
-<p>These and many other results are documented in the <span class="math notranslate nohighlight">\(WKL_0\)</span> chapter of <span id="id9">[<a class="reference internal" href="references.html#id43" title="Stephen George Simpson. Subsystems of Second Order Arithmetic. Cambridge University Press, second edition, May 2009.">Simpson, 2009</a>]</span></p>
+<p>These and many other results are documented in the <span class="math notranslate nohighlight">\(WKL_0\)</span> chapter of <span id="id9">[<a class="reference internal" href="references.html#id51" title="Stephen George Simpson. Subsystems of Second Order Arithmetic. Cambridge University Press, second edition, May 2009.">Simpson, 2009</a>]</span></p>
 </section>
 </section>
 <section id="non-computability-and-randomness">
@@ -523,17 +540,17 @@ document.write(`
 <p>A <em>Martin-L”of test</em> is a computable sequence of c.e. opens <span class="math notranslate nohighlight">\(U_0, U_1, \ldots\)</span> such that <span class="math notranslate nohighlight">\(P(U_i)\leq 2^{-i}\)</span>.</p>
 <p>Note that <span class="math notranslate nohighlight">\(P(\bigcap_i U_i)=0\)</span>.</p>
 <p>A point <span class="math notranslate nohighlight">\(\omega\)</span> is <em>Martin-L”of random</em> if <span class="math notranslate nohighlight">\(\omega\)</span> not in <span class="math notranslate nohighlight">\(\bigcap_i U_i\)</span> for any c.e. open.</p>
-<p>See <span id="id10">[<a class="reference internal" href="references.html#id50" title="Rodney G Downey and Denis R Hirschfeldt. Algorithmic Randomness and Complexity. Springer, New York, NY, 2010.">Downey and Hirschfeldt, 2010</a>]</span> and <span id="id11">[<a class="reference internal" href="references.html#id46" title="André Nies. Computability and Randomness. OUP Oxford, 2012.">Nies, 2012</a>]</span></p>
+<p>See <span id="id10">[<a class="reference internal" href="references.html#id58" title="Rodney G Downey and Denis R Hirschfeldt. Algorithmic Randomness and Complexity. Springer, New York, NY, 2010.">Downey and Hirschfeldt, 2010</a>]</span> and <span id="id11">[<a class="reference internal" href="references.html#id54" title="André Nies. Computability and Randomness. OUP Oxford, 2012.">Nies, 2012</a>]</span></p>
 </section>
 <section id="randomness-and-where-it-occurs">
 <h3>Randomness and where it occurs<a class="headerlink" href="#randomness-and-where-it-occurs" title="Link to this heading">#</a></h3>
 <p>Intuitively, a point is Martin-L”of random if it escapes all effective probability zero sets. That is, it is not both effectively and probabilistically impossible.</p>
 <p>Computable points are not random since one can choose <span class="math notranslate nohighlight">\(U_i=[\omega\upharpoonright i]\)</span>, where this refers to the initial segment of <span class="math notranslate nohighlight">\(\omega\)</span> of length <span class="math notranslate nohighlight">\(i\)</span>.</p>
-<p>For a long time, it was not understood where exactly the random points occur on the map to the left. In the 1980s, this was resolved by Kučera−Gács, who showed that they are unbounded as you go up (although it might be up on the <span class="math notranslate nohighlight">\(\Sigma\)</span> side or up on the <span class="math notranslate nohighlight">\(\Pi\)</span> side). See <span id="id12">[<a class="reference internal" href="references.html#id50" title="Rodney G Downey and Denis R Hirschfeldt. Algorithmic Randomness and Complexity. Springer, New York, NY, 2010.">Downey and Hirschfeldt, 2010</a>]</span> Theorem 6.3.10 p. 239.</p>
+<p>For a long time, it was not understood where exactly the random points occur on the map to the left. In the 1980s, this was resolved by Kučera−Gács, who showed that they are unbounded as you go up (although it might be up on the <span class="math notranslate nohighlight">\(\Sigma\)</span> side or up on the <span class="math notranslate nohighlight">\(\Pi\)</span> side). See <span id="id12">[<a class="reference internal" href="references.html#id58" title="Rodney G Downey and Denis R Hirschfeldt. Algorithmic Randomness and Complexity. Springer, New York, NY, 2010.">Downey and Hirschfeldt, 2010</a>]</span> Theorem 6.3.10 p. 239.</p>
 </section>
 <section id="randomness-and-initial-segment-complexity">
 <h3>Randomness and initial segment complexity<a class="headerlink" href="#randomness-and-initial-segment-complexity" title="Link to this heading">#</a></h3>
-<p>In the 1970s, Levin-Schnorr showed that initial segments of Martin-L”of randoms were complex in the sense of Kolmogorov, that is, their initial segments do not effectively have short descriptions. See <span id="id13">[<a class="reference internal" href="references.html#id50" title="Rodney G Downey and Denis R Hirschfeldt. Algorithmic Randomness and Complexity. Springer, New York, NY, 2010.">Downey and Hirschfeldt, 2010</a>]</span> Theorem 8.3.2 p. 326.</p>
+<p>In the 1970s, Levin-Schnorr showed that initial segments of Martin-L”of randoms were complex in the sense of Kolmogorov, that is, their initial segments do not effectively have short descriptions. See <span id="id13">[<a class="reference internal" href="references.html#id58" title="Rodney G Downey and Denis R Hirschfeldt. Algorithmic Randomness and Complexity. Springer, New York, NY, 2010.">Downey and Hirschfeldt, 2010</a>]</span> Theorem 8.3.2 p. 326.</p>
 <p>E.g. why is <span class="math notranslate nohighlight">\(010101010101\ldots\)</span> not random? Because its initial segments have a short description: ‘repeat 0 and 1’, which is short because it takes like less than 20 characters.</p>
 </section>
 </section>
@@ -553,8 +570,8 @@ document.write(`
 <section id="response-1-degrees-of-difficulty">
 <h3>Response 1: degrees of difficulty<a class="headerlink" href="#response-1-degrees-of-difficulty" title="Link to this heading">#</a></h3>
 <p>Humans are interested in problems and how to solve them. Some problems are harder than others. One way to measure degree of difficulty is  by showing that a method of solving one problem leads to a method for solving the other problem. You can understand the degree of diffulcty of a problem without being able to solve that problem yourself.</p>
-<p>Kolmogorov <span id="id14">[<a class="reference internal" href="references.html#id48" title="A. N. Kolmogorov. Zur Deutung der intuitionistischen Logik. Mathematische Zeitschrift, 35:58-65, 1932.">Kolmogorov, 1932</a>]</span> <span id="id15">[<a class="reference internal" href="references.html#id49" title="A. N. Kolmogorov. On the interpretation of intuitionistic logic. In Paolo Mancosu, editor, From Brouwer to Hilbert: The Debate on the Foundations of Mathematics in the 1920s, pages 328-334. Oxford University Press, New York, 1998.">Kolmogorov, 1998</a>]</span> thought that this was what mathematical assertions were: claims about relative degrees of difficulty of solving mathematical problems. This is the basis of his problem interpretation of intuitionistic logic. E.g. he thinks <span class="math notranslate nohighlight">\(p\rightarrow q\)</span> means that one has a method by which to go from any method for solving problem <span class="math notranslate nohighlight">\(p\)</span> to a method for solving problem <span class="math notranslate nohighlight">\(q\)</span>.</p>
-<p>Hence what you are doing in studying non-computability is just studying the <em>computational</em> degree of difficulty of a problem. See <span id="id16">[<a class="reference internal" href="references.html#id52" title="Walter Dean. Degrees and difficulty. https://vai2015.sciencesconf.org/conference/vai2015/pages/heidelberg2015_distributed.pdf, 2015.">Dean, 2015</a>]</span>, <span id="id17">[<a class="reference internal" href="references.html#id51" title="Walter Dean and Alberto Naibo. Recursive Functions. https://plato.stanford.edu/archives/sum2024/entries/recursive-functions/, 2024.">Dean and Naibo, 2024</a>]</span> Section 3.5 and <span id="id18">[<a class="reference internal" href="references.html#id28" title="Stephen G Simpson. Degrees of unsolvability: a tutorial. In Evolving Computability, 83–94. Springer International Publishing, 2015.">Simpson, 2015</a>]</span>.</p>
+<p>Kolmogorov <span id="id14">[<a class="reference internal" href="references.html#id56" title="A. N. Kolmogorov. Zur Deutung der intuitionistischen Logik. Mathematische Zeitschrift, 35:58-65, 1932.">Kolmogorov, 1932</a>]</span> <span id="id15">[<a class="reference internal" href="references.html#id57" title="A. N. Kolmogorov. On the interpretation of intuitionistic logic. In Paolo Mancosu, editor, From Brouwer to Hilbert: The Debate on the Foundations of Mathematics in the 1920s, pages 328-334. Oxford University Press, New York, 1998.">Kolmogorov, 1998</a>]</span> thought that this was what mathematical assertions were: claims about relative degrees of difficulty of solving mathematical problems. This is the basis of his problem interpretation of intuitionistic logic. E.g. he thinks <span class="math notranslate nohighlight">\(p\rightarrow q\)</span> means that one has a method by which to go from any method for solving problem <span class="math notranslate nohighlight">\(p\)</span> to a method for solving problem <span class="math notranslate nohighlight">\(q\)</span>.</p>
+<p>Hence what you are doing in studying non-computability is just studying the <em>computational</em> degree of difficulty of a problem. See <span id="id16">[<a class="reference internal" href="references.html#id60" title="Walter Dean. Degrees and difficulty. https://vai2015.sciencesconf.org/conference/vai2015/pages/heidelberg2015_distributed.pdf, 2015.">Dean, 2015</a>]</span>, <span id="id17">[<a class="reference internal" href="references.html#id59" title="Walter Dean and Alberto Naibo. Recursive Functions. https://plato.stanford.edu/archives/sum2024/entries/recursive-functions/, 2024.">Dean and Naibo, 2024</a>]</span> Section 3.5 and <span id="id18">[<a class="reference internal" href="references.html#id36" title="Stephen G Simpson. Degrees of unsolvability: a tutorial. In Evolving Computability, 83–94. Springer International Publishing, 2015.">Simpson, 2015</a>]</span>.</p>
 </section>
 <section id="response-2-counterpossibles">
 <h3>Response 2: counterpossibles<a class="headerlink" href="#response-2-counterpossibles" title="Link to this heading">#</a></h3>
@@ -563,8 +580,8 @@ document.write(`
 <li><p>If New York City was in California, then New York City would be the biggest city in California.</p></li>
 <li><p>If 3+5 was 9 then 3+6 would be 10</p></li>
 </ol>
-<p>The antecedent of 2 is somehow much more impossible than the antecedent of 1. The received view is that the second is true but only vaucously so. A minority view is that both are equallly intelligble. See <span id="id19">[<a class="reference internal" href="references.html#id26" title="Alexander W Kocurek. Counterpossibles. Philosophy Compass, November 2021.">Kocurek, 2021</a>]</span> for an overview.</p>
-<p>Jenny <span id="id20">[<a class="reference internal" href="references.html#id27" title="Matthias Jenny. Counterpossibles in science: the case of relative computability. Nous, 52(3):530–560, 2018.">Jenny, 2018</a>]</span> suggests that there is parity between these two examples and the following two examples:</p>
+<p>The antecedent of 2 is somehow much more impossible than the antecedent of 1. The received view is that the second is true but only vaucously so. A minority view is that both are equallly intelligble. See <span id="id19">[<a class="reference internal" href="references.html#id34" title="Alexander W Kocurek. Counterpossibles. Philosophy Compass, November 2021.">Kocurek, 2021</a>]</span> for an overview.</p>
+<p>Jenny <span id="id20">[<a class="reference internal" href="references.html#id35" title="Matthias Jenny. Counterpossibles in science: the case of relative computability. Nous, 52(3):530–560, 2018.">Jenny, 2018</a>]</span> suggests that there is parity between these two examples and the following two examples:</p>
 <p>1’. If the set of even numbers was computable, then the set of odd numbers would be computable.</p>
 <p>2’. If the halting set was computable, then some completion of PA would be computable.</p>
 <p>The antecedent of 1’ is true and the antecedent of 2’ is false. Jenny thinks that the map is essentially the study of things like 2’. He views the theory of computation as a science dealing in counterpossibles and hence as a way to make the minority view more intelligble.</p>
@@ -572,7 +589,7 @@ document.write(`
 <section id="response-3-agent-meets-nature">
 <h3>Response 3: agent meets nature<a class="headerlink" href="#response-3-agent-meets-nature" title="Link to this heading">#</a></h3>
 <p>A third response is that one can study the relation between the computable agents and the possibly non-computable sets in nature that they are encountering.</p>
-<p>This is the perspective of <span id="id21">[<a class="reference internal" href="references.html#id47" title="Simon M Huttegger, Sean Walsh, and Francesca Zaffora Blando. Algorithmic randomness, effective disintegrations, and rates of convergence to the truth. https://arxiv.org/abs/2403.19978, 2024.">Huttegger <em>et al.</em>, 2024</a>]</span>. The agent has a computable random variable and a computable probability assignment, but they are updating on a Martin-Löf random data stream.</p>
+<p>This is the perspective of <span id="id21">[<a class="reference internal" href="references.html#id55" title="Simon M Huttegger, Sean Walsh, and Francesca Zaffora Blando. Algorithmic randomness, effective disintegrations, and rates of convergence to the truth. https://arxiv.org/abs/2403.19978, 2024.">Huttegger <em>et al.</em>, 2024</a>]</span>. The agent has a computable random variable and a computable probability assignment, but they are updating on a Martin-Löf random data stream.</p>
 <p>Maybe there is some dim analogue of this Gödel-like examples above: as an agent you are working with a computable commutative ring, and for various purposes you have to consult some external object like a prime ideal.</p>
 </section>
 </section>

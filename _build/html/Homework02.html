@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Homework 2 &#8212; Philcomp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Homework02';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 17" href="Chap17.html" />
+    <link rel="prev" title="Chapter 16" href="Chap16.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/philcomp.png" class="logo__image only-light" alt="Philcomp - Home"/>
+    <script>document.write(`<img src="_static/philcomp.png" class="logo__image only-dark" alt="Philcomp - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Philcomp
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap04.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap05.html">Chapter 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap06.html">Chapter 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap07.html">Chapter 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap09.html">Chapter 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap10.html">Chapter 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap13.html">Chapter 13</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chap14.html">Chapter 14</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap15.html">Chapter 15</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chap16.html">Chapter 16</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chap17.html">Chapter 17</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chap18.html">Chapter 18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/logic-teaching/philcompbook/main?urlpath=lab/tree/Homework02.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Homework02.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Homework 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4">Problem 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5">Problem 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6">Problem 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7">Problem 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8">Problem 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9">Problem 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10">Problem 10</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-2">
+<h1>Homework 2<a class="headerlink" href="#homework-2" title="Link to this heading">#</a></h1>
+<p>This is due Friday June 7 by 11:59pm, for full credit. It can be turned in Saturday June 8 by 11:59pm for a 10% reduction.</p>
+<p>You can work with 1-2 other students on it, you just have to indicate who else you worked with, and everyone has to write their own solutions.</p>
+<p>You submit <strong>via gradescope on bruinlearn</strong>: you do not turn in anything on this page.</p>
+<p>In terms of workflow, I would recommend:</p>
+<ul class="simple">
+<li><p>write it out by hand: everything is short and you should be able to write it out by hand easily</p></li>
+<li><p>you do not need to repeat the question in any way, just write down your answer</p></li>
+<li><p>after you done with it, scan it or take photos of it to put into gradescope in bruinlearn</p></li>
+<li><p>be working near a computer or phone so you can use the links on this page, which reference back to the book</p></li>
+</ul>
+<section id="problem-1">
+<h2>Problem 1<a class="headerlink" href="#problem-1" title="Link to this heading">#</a></h2>
+<p>This is practice with the untyped lambda calculus from <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap05.html#">Chapter 5</a>.</p>
+<p>This problem has three parts.</p>
+<p>First, <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap05.html#associativity-conventions">the associativity conventions</a> dictate that <span class="math notranslate nohighlight">\(PQR\)</span> and <span class="math notranslate nohighlight">\(OP(QR)\)</span> are abbreviations for terms with at one extra pair of parentheses. Indicate what these terms are.</p>
+<p>Second, give an intuitive example where <span class="math notranslate nohighlight">\(PQR\)</span> means something different than <span class="math notranslate nohighlight">\(P(QR)\)</span>. Your answer can just be a full English sentence with three intuitive functions <span class="math notranslate nohighlight">\(P,Q,R\)</span> which you can describe in prose (usually intuitive functions are implicitly typed, but just set that aside for the moment).</p>
+<p>Third consider Bluebird <span class="math notranslate nohighlight">\({\mathbf B}\)</span>: <span class="math notranslate nohighlight">\(\lambda xyz.x(yz)\)</span> and do two things with it.</p>
+<ul class="simple">
+<li><p>Replace all free and bound instances of <span class="math notranslate nohighlight">\(x,y,z\)</span> by <span class="math notranslate nohighlight">\(u,v,w\)</span> respectively to form the equivalent <span class="math notranslate nohighlight">\({\mathbf B}^{\prime}\)</span>: <span class="math notranslate nohighlight">\(\lambda uvw.u(vw)\)</span> (these are equivalent in the same way that formulas with renamed bound variables are equivalent).</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\({\mathbf B}{\mathbf B}^{\prime}\triangleright \lambda yzvw . yz(vw)\)</span>.</p></li>
+</ul>
+<p>Optionally, you may replace blackbird by <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">any other bird from the list</a>. That is, you choose a bird (a row), and prove that the term in the fourth column beta reduces to the lambda expression in the first column.</p>
+</section>
+<section id="problem-2">
+<h2>Problem 2<a class="headerlink" href="#problem-2" title="Link to this heading">#</a></h2>
+<p>This practice with the typed lambda calculus from <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap06.html#">Chapter 6</a>.</p>
+<p>Consider reviewing <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap06.html#typing-kestrel">the typing of Kestral and Starling before beginning</a>.</p>
+<p>This problem has three parts:</p>
+<p>First, suppose that <span class="math notranslate nohighlight">\(x:B\rightarrow C\)</span> and <span class="math notranslate nohighlight">\(y:A\rightarrow B\)</span> and <span class="math notranslate nohighlight">\(z:A\)</span>. Show that Bluebird <span class="math notranslate nohighlight">\({\mathbf B}\)</span> can be typed as <span class="math notranslate nohighlight">\({\mathbf B}:(B\rightarrow C)\rightarrow ((A\rightarrow B)\rightarrow (A\rightarrow C))\)</span></p>
+<p>The idea of the Curry-Howard isomorphism is that the types corresponds to propositions and that showing that an expression has a given type is the same as showing that the corresponding proposition has a proof.</p>
+<p>Second, write down a proof of the tautology <span class="math notranslate nohighlight">\((B\rightarrow C)\rightarrow ((A\rightarrow B)\rightarrow (A\rightarrow C))\)</span> (it should involve two applications of modus ponens). In 1-2 complete English sentences, describe whether intuitively you would take this proof to be the same as your earlier proof of the typing of bluebird.</p>
+<p>Third, indicate how when <span class="math notranslate nohighlight">\(x:B\rightarrow C\)</span> and <span class="math notranslate nohighlight">\(y:A\rightarrow B\)</span> are considered as functions, then <span class="math notranslate nohighlight">\({\mathbf B}xy\)</span> is the natural formula for the composition from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(C\)</span>. Optionally draw a picture of the composition.</p>
+<p>Finally, optionally, you may replace bluebird by <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">any other bird from the list</a></p>
+</section>
+<section id="problem-3">
+<h2>Problem 3<a class="headerlink" href="#problem-3" title="Link to this heading">#</a></h2>
+<p>This is a question related to <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap07.html">Chapter 7</a> and Kleene <span id="id1">[<a class="reference internal" href="references.html#id102" title="Stephen Cole Kleene. Introduction to Metamathematics. Bibliotheca Mathematica. North-Holland, 1952.">Kleene, 1952</a>]</span>.</p>
+<p>You will need to briefly reread the Kleene <span id="id2">[<a class="reference internal" href="references.html#id102" title="Stephen Cole Kleene. Introduction to Metamathematics. Bibliotheca Mathematica. North-Holland, 1952.">Kleene, 1952</a>]</span> before proceeding. Recall that it is in Perusall and in the google drive.</p>
+<p>Recall that Kleene presents four different lines of evidence for Church’s Thesis:</p>
+<ul class="simple">
+<li><p>A. <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap07.html#kleene-on-the-heuristic-evidence">Heuristic evidence</a></p></li>
+<li><p>B. <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap07.html#kleene-on-the-argument-from-confluence">Equivalence of diverse formulations</a></p></li>
+<li><p>C. <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap03.html#turing-on-turing-machines">Turing’s concept of computing machine</a></p></li>
+<li><p>D. <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap07.html#church-s-argument-from-algorithms">Symbolic logic and symbolic algorithms</a></p></li>
+</ul>
+<p>Recall that by Kleene’s time there were at least four intensionally distinct but extensionally identical notions of computation:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap03.html#key-definitions">Turing machine</a></p></li>
+<li><p><a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap04.html#kleene-s-characterization-of-computability-in-terms-of-definability">The definability characterization</a></p></li>
+<li><p><a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap05.html#lambda-definable">Lambda definability</a></p></li>
+<li><p><a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap07.html#godel-herbrand-recursivity">Gödel-Herbrand</a></p></li>
+</ol>
+<p>For each of the arguments A,B,C,D indicate whether Kleene’s arguments (or his representations of them) appeal to the definition in 1,2,3,4 by putting a check mark ✓ for yes and an ✗ for no.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>D</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>You don’t need to do anything else. The point of this exercise is just that it attunes us to the fact that philosophical arguments usually only appeal to the intensional features of models of computation.</p>
+</section>
+<section id="problem-4">
+<h2>Problem 4<a class="headerlink" href="#problem-4" title="Link to this heading">#</a></h2>
+<p>This is a problem related to Chapter 8 and Gödel <span id="id3">[<a class="reference internal" href="references.html#id106" title="Kurt Gödel. Some basic theorems on the foundations of mathematics and their implications [the Gibbs lecture]. In Collected Works. Vol. III. Unpublished Lectures and Essays, pages 304–323. Clarendon, New York, 1995.">Gödel, 1995</a>]</span>.</p>
+<p>Consider a theory <span class="math notranslate nohighlight">\(T\)</span> to which Gödel’s Second Incompleteness Theorem applies i.e. it satisfies conditions 1-3 in <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap08.html#godel-s-second-incompleteness-theorem">our description of the theorem</a>.</p>
+<p>Let <span class="math notranslate nohighlight">\(T^{+}\)</span> be <span class="math notranslate nohighlight">\(T\)</span> plus <span class="math notranslate nohighlight">\(\mathrm{Con}(T)\)</span>, and let <span class="math notranslate nohighlight">\(T^{-}\)</span> be <span class="math notranslate nohighlight">\(T\)</span> plus <span class="math notranslate nohighlight">\(\neg \mathrm{Con}(T)\)</span>, so that both <span class="math notranslate nohighlight">\(T^+\)</span> and <span class="math notranslate nohighlight">\(T^-\)</span> are deductively consistent.</p>
+<p>In one paragraph, explain why</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T^+\)</span> satisfies each of conditions 1-3</p></li>
+<li><p><span class="math notranslate nohighlight">\(T^-\)</span> fails to satisfy exactly one of conditions 1-3</p></li>
+</ol>
+<p><em>Note</em>: this again underscores a deep difference between <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap08.html#godel-s-first-incompleteness-theorem">Gödel’s First Incompleteness Theorem</a> and <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap08.html#godel-s-second-incompleteness-theorem">Gödel’s Second Incompleteness Theorem</a>, since it shows that we can repeatedly bifrucate our theories in the context of the First Incompleteness Theorem but not in the context of the Second Incompleteness Theorem.</p>
+<p><em>Hint</em>: for 2, use a process of elimination to help you get started.</p>
+</section>
+<section id="problem-5">
+<h2>Problem 5<a class="headerlink" href="#problem-5" title="Link to this heading">#</a></h2>
+<p>This is a problem related to <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap09.html">Chapter 9</a>.</p>
+<p>Recall that <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap09.html#status-and-significance-of-p-np">Arora and Barak</a> say:</p>
+<blockquote>
+<div><p>The P versus NP question aks whether exhaustive search can be avoided in general ([Arora and Barak, 2009] pp. 57-58).</p>
+</div></blockquote>
+<p>Come up with 2-3 examples of procedures which ostensibly proceed by exhaustive search and describe them in 1-2 complete English sentences, and after you have done this look quickly for whether your problem is known to be in NP but not known to be in P.</p>
+<p><em>Note</em>: You can look in Arora and Barak (in google drive). You can also google a short description of your problem and the phrase ‘NP complete’ or ‘NP hard’.</p>
+<p><em>Hint 1</em>: Recall <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap09.html#fagin-s-theorem-machine-independent-characterization-of-np">Fagin’s Theorem</a> and the subsequent list of examples.</p>
+<p><em>Hint 2</em>: usually scheduling problems are good sources of difficulty.</p>
+</section>
+<section id="problem-6">
+<h2>Problem 6<a class="headerlink" href="#problem-6" title="Link to this heading">#</a></h2>
+<p>This is a problem related to <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap10.html#if-then-else-is-continuous">Chapter 10</a>.</p>
+<p>This problem has two parts.</p>
+<p>First, draw a picture of <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap10.html#partial-orders"><span class="math notranslate nohighlight">\(\mathbb{N}_{\bot}\)</span></a>.</p>
+<p>Second, show that <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap10.html#if-then-else-is-continuous">if-then-else is continuous</a>.</p>
+<p><em>Note 1</em>: we drew the picture in lecture. If you don’t take a moment and do this, experience suggests that it is easy to get mixed up and think that the order on <span class="math notranslate nohighlight">\(\mathbb{N}_{\bot}\)</span> involves the order <span class="math notranslate nohighlight">\(0\leq 1\leq 2\leq \cdots\)</span> on the natural numbers.</p>
+<p><em>Note 2</em>: for a function <span class="math notranslate nohighlight">\(f(x,y,z)\)</span> with three inputs, the <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap10.html#the-continuous-functions">continuity conditions</a> are:</p>
+<ol class="arabic simple">
+<li><p><em>Monotonicity</em>: <span class="math notranslate nohighlight">\(d_1\sqsubseteq d_1^{\prime}, d_2\sqsubseteq d_2^{\prime}, d_3\sqsubseteq d_3^{\prime}\)</span> implies <span class="math notranslate nohighlight">\(f(d_1, d_2, d_3)\sqsubseteq f(d_1^{\prime}, d_2^{\prime}, d_3^{\prime})\)</span></p></li>
+<li><p><em>Continuity</em>: <span class="math notranslate nohighlight">\(d_{1}\sqsubseteq d_{2}\sqsubseteq d_{3}\sqsubseteq \cdots\)</span> and <span class="math notranslate nohighlight">\(d_{1}^{\prime}\sqsubseteq d_{2}^{\prime}\sqsubseteq d_{3}^{\prime}\sqsubseteq \cdots\)</span> and <span class="math notranslate nohighlight">\(d_{1}^{\prime\prime}\sqsubseteq d_{2}^{\prime\prime}\sqsubseteq d_{3}^{\prime\prime}\sqsubseteq \cdots\)</span> implies <span class="math notranslate nohighlight">\(\bigsqcup_{n&gt;0} f(d_{n}, d_n^{\prime}, d_n^{\prime\prime})=f(\bigsqcup_{n&gt;0} d_{n}, \bigsqcup_{n&gt;0} d_{n}^{\prime}, \bigsqcup_{n&gt;0} d_{n}^{\prime\prime})\)</span></p></li>
+</ol>
+</section>
+<section id="problem-7">
+<h2>Problem 7<a class="headerlink" href="#problem-7" title="Link to this heading">#</a></h2>
+<p>This is a problem related to <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap10.html#if-then-else-is-continuous">Chapter 10</a>.</p>
+<p>This problem lets one see in detail what the least fixed point of <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap10.html#three-simple-algorithms">Algorithm 2 is</a>.</p>
+<p>Let us define for each <span class="math notranslate nohighlight">\(s\geq 0\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f_0(x) = \bot\)</span> and <span class="math notranslate nohighlight">\(g_0(y)=\bot\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f_{s+1}(x) = F(f_s, g_s)(x) =\)</span> if <span class="math notranslate nohighlight">\(x\)</span> then <span class="math notranslate nohighlight">\(0\)</span> else <span class="math notranslate nohighlight">\(g_{s}(x-1)+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g_{s+1}(y) = (G(f_s, g_s))(y) =  f_s(x)+1\)</span>.</p></li>
+</ul>
+<p>Using this, fill in the table:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\bot\)</span></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_8\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_8\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_9\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_9\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_{10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_{11}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_{11}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bot\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>We set this problem out <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap10.html#illustrating-with-algorithm-2-further">in Chapter 10</a> but did not have time to do it in class.</p>
+</section>
+<section id="problem-8">
+<h2>Problem 8<a class="headerlink" href="#problem-8" title="Link to this heading">#</a></h2>
+<p>We have seen many different models of computation.</p>
+<p>Functionalism was inspired by the <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap03.html#key-definitions">Turing machine</a> model.</p>
+<p>Is there a notion of state in any of the other models (<a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap04.html#kleene-s-characterization-of-computability-in-terms-of-definability">definability</a>, <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap05.html#lambda-definable">Lambda definability</a>, <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap07.html#godel-herbrand-recursivity">Gödel-Herbrand</a>) which would similary support functionalism?</p>
+<p>Give your answer in a 1 paragraph response.</p>
+</section>
+<section id="problem-9">
+<h2>Problem 9<a class="headerlink" href="#problem-9" title="Link to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap14.html#the-perceptron-algorithm">perceptron example</a> is a paradigmatic example of how one can learn the coefficients in the linear equations which feature in moving from one layer to the next of a neural network.</p>
+<p>Can one also conceive of a process of learning the coefficients as a neural network? Or should this be described in terms of another computational model?</p>
+</section>
+<section id="problem-10">
+<h2>Problem 10<a class="headerlink" href="#problem-10" title="Link to this heading">#</a></h2>
+<p>Recall <a class="reference external" href="https://logic-teaching.github.io/philcompbook/Chap15.html#an-illustration">our pentagon example</a> which shows that 5 element sets of points are not shattered by lines.</p>
+<p>Are 4-element sets of points shattered by lines?</p>
+<p>Are 3-element sets of points shattered by lines?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chap16.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 16</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chap17.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 17</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4">Problem 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5">Problem 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6">Problem 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7">Problem 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8">Problem 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9">Problem 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10">Problem 10</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sean Walsh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
