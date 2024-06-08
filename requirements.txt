@@ -2,3 +2,6 @@ jupyter-book
 matplotlib
 numpy
 metakernel
+pygraphviz
+networkx
+matplotlib
