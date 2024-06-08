@@ -62,8 +62,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chap16';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Homework 2" href="Homework02.html" />
-    <link rel="prev" title="Chapter 15" href="Chap15.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,7 +178,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chap01.html">Chapter 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap02.html">Chapter 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap03.html">Chapter 3</a></li>
@@ -190,31 +190,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap09.html">Chapter 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap10.html">Chapter 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap11.html">Chapter 11</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap12.html">Chapter 12</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap13.html">Chapter 13</a></li>
 
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="Chap14.html">Chapter 14</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap15.html">Chapter 15</a></li>
-
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 16</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Homework02.html">Homework 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap17.html">Chapter 17</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Chap18.html">Chapter 18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -453,11 +434,11 @@ document.write(`
 <p>Vapnik was working in Russia during the 1960s and 1970s. He was hence removed from the then birth of contemporary philosophy of science during this period. Rather, for orientation, he looked back to earlier figures, such as Popper. Vapnik himself associates the philosophical significance of finite VC dimension with a type of falsifiability.</p>
 <p>Consider a case where we have infinite VC dimension, so that for all <span class="math notranslate nohighlight">\(k\geq 1\)</span> we have that <span class="math notranslate nohighlight">\(\mathcal{H}\upharpoonright \Omega_k\)</span> is <span class="math notranslate nohighlight">\(k\)</span>-shattered. Vapnik says of this:</p>
 <blockquote>
-<div><p>In other words, the set of functions of the learning machine is such that [<span class="math notranslate nohighlight">\(\Omega_k=\{\omega_1, \ldots, \omega_k\}\)</span>] can be separated in all possible ways by functions of this set. This implies that the minimal empirical risk for this machine equals zero. We call this learning machine nonfalisfiable because it can give a general explanation (function) for almost any data (<span id="id3">[<a class="reference internal" href="references.html#id94" title="Vladimir Naumovich Vapnik. Statistical Learning Theory. Wiley, 1998.">Vapnik, 1998</a>]</span> p. 108, <span id="id4">[<a class="reference internal" href="references.html#id95" title="Vladimir Vapnik. The Nature of Statistical Learning Theory. Springer, 2000.">Vapnik, 2000</a>]</span> p. 50; notation changed to match preceding).</p>
+<div><p>In other words, the set of functions of the learning machine is such that [<span class="math notranslate nohighlight">\(\Omega_k=\{\omega_1, \ldots, \omega_k\}\)</span>] can be separated in all possible ways by functions of this set. This implies that the minimal empirical risk for this machine equals zero. We call this learning machine nonfalisfiable because it can give a general explanation (function) for almost any data (<span id="id3">[<a class="reference internal" href="references.html#id87" title="Vladimir Naumovich Vapnik. Statistical Learning Theory. Wiley, 1998.">Vapnik, 1998</a>]</span> p. 108, <span id="id4">[<a class="reference internal" href="references.html#id88" title="Vladimir Vapnik. The Nature of Statistical Learning Theory. Springer, 2000.">Vapnik, 2000</a>]</span> p. 50; notation changed to match preceding).</p>
 </div></blockquote>
 <p>This argument is repeated in one of the few contemporary discussions of finite VC dimension due to Harman-Kulkarni:</p>
 <blockquote>
-<div><p>Rules in C shatter a set of N data points if and only if for every possible labeling of the N points with YESs and Nos, there is a rule in C that perfectly fits that labeling. [<span class="math notranslate nohighlight">\(\mathbb{P}\)</span>] In other words, there is no way to label those N points in a way that would falsify the claim that the rules in C are perfectly adequate. This points to a possible relationship between the role of VC dimension in learning by enumeration induction and the role of falsifiability in Karl Popper’s methodology […] (<span id="id5">[<a class="reference internal" href="references.html#id103" title="Gilbert Harman and Sanjeev Kulkarni. Reliable Reasoning: Induction and Statistical Learning Theory. MIT Press, 2012.">Harman and Kulkarni, 2012</a>]</span> p. 53)</p>
+<div><p>Rules in C shatter a set of N data points if and only if for every possible labeling of the N points with YESs and Nos, there is a rule in C that perfectly fits that labeling. [<span class="math notranslate nohighlight">\(\mathbb{P}\)</span>] In other words, there is no way to label those N points in a way that would falsify the claim that the rules in C are perfectly adequate. This points to a possible relationship between the role of VC dimension in learning by enumeration induction and the role of falsifiability in Karl Popper’s methodology […] (<span id="id5">[<a class="reference internal" href="references.html#id96" title="Gilbert Harman and Sanjeev Kulkarni. Reliable Reasoning: Induction and Statistical Learning Theory. MIT Press, 2012.">Harman and Kulkarni, 2012</a>]</span> p. 53)</p>
 </div></blockquote>
 <p>This argument is deserving of extended unpacking. For the moment, we make three observations:</p>
 <ol class="arabic simple">
@@ -498,24 +479,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Chap15.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Chapter 15</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Homework02.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 2</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

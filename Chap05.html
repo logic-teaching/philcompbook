@@ -190,31 +190,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Chap08.html">Chapter 8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap09.html">Chapter 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap10.html">Chapter 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap11.html">Chapter 11</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap12.html">Chapter 12</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chap13.html">Chapter 13</a></li>
 
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="Chap14.html">Chapter 14</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap15.html">Chapter 15</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Chap16.html">Chapter 16</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Homework02.html">Homework 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chap17.html">Chapter 17</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Chap18.html">Chapter 18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -432,8 +413,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-definable">Lambda definable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-equivalence-of-lambda-definability-and-computable">Theorem (equivalence of lambda definability and computable)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-fixed-point-theorem">Theorem (fixed point theorem)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-symmetric-transitive-closure-of-one-step-beta-reductions">The symmetric transitive closure of one-step beta reductions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-fixed-point-theorem-redeux">Theorem (fixed point theorem redeux)</a></li>
 </ul>
 </li>
 </ul>
@@ -483,8 +462,8 @@ document.write(`
 <p>If we use <span class="math notranslate nohighlight">\(M[u:=N]\)</span> for the latter, we define a <em>one-step beta reduction</em> as follows:</p>
 <div class="math notranslate nohighlight">
 \[(\lambda u.M)N \triangleright_1 M[u:=N]\]</div>
-<p>The intended interpretation of a one-step beta reduction is the following: when one inputs in the value <span class="math notranslate nohighlight">\(N\)</span> into the function <span class="math notranslate nohighlight">\(\lambda u. M\)</span>, one goes through the term <span class="math notranslate nohighlight">\(M\)</span>, and everywhere where one sees a free instance of the variable <span class="math notranslate nohighlight">\(u\)</span>, one replaces it with the input value <span class="math notranslate nohighlight">\(N\)</span>, and the result of doing so is <span class="math notranslate nohighlight">\(M[u:=N]\)</span>.</p>
-<p>Suppose <span class="math notranslate nohighlight">\(M\)</span> is <span class="math notranslate nohighlight">\(2\cdot u+5\)</span> and <span class="math notranslate nohighlight">\(N\)</span> is <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>The intended interpretation of a one-step beta reduction is the following: when one inputs in the value <span class="math notranslate nohighlight">\(N\)</span> into the function <span class="math notranslate nohighlight">\(\lambda u. M\)</span>, one goes through the term <span class="math notranslate nohighlight">\(M\)</span>, and everywhere where one sees an instance of the variable <span class="math notranslate nohighlight">\(u\)</span>, one replaces it with the input value <span class="math notranslate nohighlight">\(N\)</span>, and the result of doing so is <span class="math notranslate nohighlight">\(M[u:=N]\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(M = 2\cdot u+5\)</span> and <span class="math notranslate nohighlight">\(N=1\)</span>.</p>
 <p>Then <span class="math notranslate nohighlight">\((\lambda u.M)(N) =(\lambda u. 2\cdot u+5)(1)\triangleright_1 2\cdot 1+5\)</span>,</p>
 <p>Just as with the rules for quantifiers in predicate logic, so with Axiom Beta one should <em>only do the substitution if no free variables become bound as a result of the substitution</em>:</p>
 <p>E.g. from <span class="math notranslate nohighlight">\(\forall \; x \; \exists \; y \; x\cdot y=-1\)</span>, we do not allow ourselves to infer <span class="math notranslate nohighlight">\(\exists \; y \; y^2 = -1\)</span>.</p>
@@ -499,7 +478,7 @@ document.write(`
 <h2>The combinators<a class="headerlink" href="#the-combinators" title="Link to this heading">#</a></h2>
 <section id="the-three-most-famous-combinators">
 <h3>The three most famous combinators<a class="headerlink" href="#the-three-most-famous-combinators" title="Link to this heading">#</a></h3>
-<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id1">[<a class="reference internal" href="references.html#id32" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, November 2000.">Smullyan, 2000</a>]</span>:</p>
+<p>These are the three most famous combinators, whose <a class="reference external" href="https://www.angelfire.com/tx4/cus/combinator/birds.html">bird names</a> come from <span id="id1">[<a class="reference internal" href="references.html#id25" title="Raymond Smullyan. To Mock a Mockingbird. Oxford University Press, November 2000.">Smullyan, 2000</a>]</span>:</p>
 <ul class="simple">
 <li><p><em>Identity bird</em> (<em>I</em>) is <span class="math notranslate nohighlight">\(\lambda x.x\)</span></p></li>
 <li><p><em>Kestrel</em>  (<em>K</em>) is <span class="math notranslate nohighlight">\(\lambda xy.  x\)</span></p></li>
@@ -510,7 +489,7 @@ document.write(`
 <h3>Proposition (the action of identity bird)<a class="headerlink" href="#proposition-the-action-of-identity-bird" title="Link to this heading">#</a></h3>
 <p>For all terms <span class="math notranslate nohighlight">\(M\)</span>, one has <span class="math notranslate nohighlight">\(IM \triangleright M\)</span>.</p>
 <p><em>Proof</em></p>
-<p><span class="math notranslate nohighlight">\(IM = (\lambda x. x)M \triangleright M\)</span></p>
+<p><span class="math notranslate nohighlight">\(IM = (\lambda x. x)M = M\)</span></p>
 </section>
 <section id="corollary-identity-acting-on-itself-bird">
 <h3>Corollary (identity acting on itself bird)<a class="headerlink" href="#corollary-identity-acting-on-itself-bird" title="Link to this heading">#</a></h3>
@@ -522,19 +501,20 @@ document.write(`
 <h3>Proposition (the action of Kestral)<a class="headerlink" href="#proposition-the-action-of-kestral" title="Link to this heading">#</a></h3>
 <p>For any terms <span class="math notranslate nohighlight">\(M,N\)</span> one has <span class="math notranslate nohighlight">\(KMN \triangleright M\)</span>.</p>
 <p><em>Proof</em>:</p>
-<p><span class="math notranslate nohighlight">\(KMN = (\lambda xy.  x)MN \triangleright (\lambda y.M)N \triangleright M\)</span></p>
+<p><span class="math notranslate nohighlight">\((\lambda xy.  x)MN = (\lambda y.M)N = M\)</span></p>
 </section>
 <section id="proposition-the-action-of-starling">
 <h3>Proposition (the action of starling)<a class="headerlink" href="#proposition-the-action-of-starling" title="Link to this heading">#</a></h3>
 <p>For any terms <span class="math notranslate nohighlight">\(P,Q,R\)</span> one has <span class="math notranslate nohighlight">\(SPQR \triangleright PR(QR)\)</span></p>
 <p><em>Proof</em></p>
-<p><span class="math notranslate nohighlight">\(SPQR = (\lambda xyz. xz(yz))PQR \triangleright (\lambda yz. Pz(yz))QR \triangleright (\lambda z. Pz(Qz))R \triangleright PR(QR)\)</span></p>
+<p><span class="math notranslate nohighlight">\(SPQR = (\lambda xyz. xz(yz))PQR = (\lambda yz. Pz(yz))QR = (\lambda z. Pz(Qz))R = PR(QR)\)</span></p>
 </section>
 <section id="corollary-skk-acts-like-i">
 <h3>Corollary (SKK acts like I)<a class="headerlink" href="#corollary-skk-acts-like-i" title="Link to this heading">#</a></h3>
 <p>For any terms <span class="math notranslate nohighlight">\(M\)</span>, one has <span class="math notranslate nohighlight">\(SKKM \triangleright M\)</span>.</p>
 <p><em>Proof</em>:</p>
-<p>Let <span class="math notranslate nohighlight">\(P, Q\)</span> be <span class="math notranslate nohighlight">\(K\)</span> and let <span class="math notranslate nohighlight">\(M\)</span> be <span class="math notranslate nohighlight">\(R\)</span>. Then by the above one has  <span class="math notranslate nohighlight">\(SKKM \triangleright KM(KM)\triangleright M\)</span>, where the last identity follows from the action of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(P, Q\)</span> be <span class="math notranslate nohighlight">\(K\)</span> and let <span class="math notranslate nohighlight">\(M\)</span> be <span class="math notranslate nohighlight">\(R\)</span>. Then by the above one has</p>
+<p><span class="math notranslate nohighlight">\(SKKM = KM(KM)= M\)</span>, where the last identity follows from the action of <span class="math notranslate nohighlight">\(K\)</span>.</p>
 </section>
 </section>
 <section id="untypedness">
@@ -542,7 +522,7 @@ document.write(`
 <p>The untyped nature of this calclus is evident in claims like <span class="math notranslate nohighlight">\(II\triangleright I\)</span>. For instance, if <span class="math notranslate nohighlight">\(I\)</span> was just the identity function on natural numbers, it would make no sense to input in <span class="math notranslate nohighlight">\(I\)</span> to itself.</p>
 <p>Here’s what Church says about this in his 1951 book:</p>
 <blockquote>
-<div><p>In particular it is not excluded that one of the elements of the range of arguments of a function <span class="math notranslate nohighlight">\(f\)</span> should be the function <span class="math notranslate nohighlight">\(f\)</span> itself. This possibility has frequently been denied, and indeed, if a function is defined as a correspondence between two previously given ranges, the reason for the denial is clear. Here, however, we regard the operation or rule of correspondence, which constitutes the function, as being first given, and the range of arguments then determined as consisting of the things to which the operation is applicable (<span id="id2">[<a class="reference internal" href="references.html#id30" title="Alonzo Church. The Calculi of Lambda-conversion. Princeton University Press, 1951.">Church, 1951</a>]</span> p. 2).</p>
+<div><p>In particular it is not excluded that one of the elements of the range of arguments of a function <span class="math notranslate nohighlight">\(f\)</span> should be the function <span class="math notranslate nohighlight">\(f\)</span> itself. This possibility has frequently been denied, and indeed, if a function is defined as a correspondence between two previously given ranges, the reason for the denial is clear. Here, however, we regard the operation or rule of correspondence, which constitutes the function, as being first given, and the range of arguments then determined as consisting of the things to which the operation is applicable (<span id="id2">[<a class="reference internal" href="references.html#id23" title="Alonzo Church. The Calculi of Lambda-conversion. Princeton University Press, 1951.">Church, 1951</a>]</span> p. 2).</p>
 </div></blockquote>
 <p>Hence on Church’s way of thinking, since his calculus is one which tries to describe rules rather than the extensional functions which they determine, one should just take the rule to have primacy, and try to determine its range of application as one goes along. For instance, presumably identity is applicable to anything.</p>
 </section>
@@ -594,7 +574,7 @@ document.write(`
 <h3>Church-Rosser Theorem<a class="headerlink" href="#church-rosser-theorem" title="Link to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(L\triangleright M\)</span> and <span class="math notranslate nohighlight">\(L\triangleright N\)</span>, then there is <span class="math notranslate nohighlight">\(O\)</span> such that <span class="math notranslate nohighlight">\(M \triangleright O\)</span> and <span class="math notranslate nohighlight">\(N\triangleright O\)</span>.</p>
 <p><em>Proof</em>:</p>
-<p>This is a hard theorem. See e.g. <span id="id3">[<a class="reference internal" href="references.html#id31" title="Roger Hindley and Jonathan Seldin. Lambda-Calculus and Combinators: An Introduction. Cambridge University Press, July 2008.">Hindley and Seldin, 2008</a>]</span> p. 14 and Appendix A2.</p>
+<p>This is a hard theorem. See e.g. <span id="id3">[<a class="reference internal" href="references.html#id24" title="Roger Hindley and Jonathan Seldin. Lambda-Calculus and Combinators: An Introduction. Cambridge University Press, July 2008.">Hindley and Seldin, 2008</a>]</span> p. 14 and Appendix A2.</p>
 </section>
 <section id="corollary-normal-forms-are-unique">
 <h3>Corollary (normal forms are unique)<a class="headerlink" href="#corollary-normal-forms-are-unique" title="Link to this heading">#</a></h3>
@@ -642,7 +622,7 @@ document.write(`
 <p>A function <span class="math notranslate nohighlight">\(f:\mathbb{N}\rightarrow \mathbb{N}\)</span> is computable by a Turing machine iff it is lambda definable.</p>
 <p>For the right-to-left direction, one simply implements beta-reduction on a Turing machine. The Church-Rosser theorem says no matter how you reduce you will eventually get to the right answer. Indeed, Church even says that  beta reduction provides an intuitive algorithm for the calculation of the values:</p>
 <blockquote>
-<div><p>It is clear that, in the case of any <span class="math notranslate nohighlight">\(\lambda\)</span>-definable function of positive integers, the process of reduction of formulas to normal form provides an algorithm for the effective calculation of particular values of the function (<span id="id4">[<a class="reference internal" href="references.html#id28" title="Alonzo Church. An unsolvable problem of elementary number theory. Amer. J. Math., 58(2):345–363, 1936.">Church, 1936</a>]</span> p. 349, see remark on effectively calculability on p. 356).</p>
+<div><p>It is clear that, in the case of any <span class="math notranslate nohighlight">\(\lambda\)</span>-definable fucntion of positive integers, the process of reduction of formulas to normal form provides an algorithm for the effective calculation of particular values of the function (<span id="id4">[<a class="reference internal" href="references.html#id21" title="Alonzo Church. An unsolvable problem of elementary number theory. Amer. J. Math., 58(2):345–363, 1936.">Church, 1936</a>]</span> p. 349, see remark on effectively calucluability on p. 356).</p>
 </div></blockquote>
 <p>The hard part of the left to right direction is the fixed point theorem.</p>
 </section>
@@ -659,16 +639,6 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(\hspace{5mm}\triangleright \hspace{2mm} W[v:=M] W[v:=M]\)</span> by beta reduction</p>
 <p><span class="math notranslate nohighlight">\(\hspace{5mm}=\hspace{2mm} (\lambda x. M(xx)) W[v:=M]\)</span> by definition of <span class="math notranslate nohighlight">\(W\)</span></p>
 <p><span class="math notranslate nohighlight">\(\hspace{5mm}\triangleright\hspace{2mm} M(W[v:=M] W[v:=M])\)</span> by beta reduction</p>
-</section>
-<section id="the-symmetric-transitive-closure-of-one-step-beta-reductions">
-<h3>The symmetric transitive closure of one-step beta reductions<a class="headerlink" href="#the-symmetric-transitive-closure-of-one-step-beta-reductions" title="Link to this heading">#</a></h3>
-<p>Up above we showed things about the action of e.g. Starling: <span class="math notranslate nohighlight">\(SPQR \triangleright PR(QR)\)</span>. It would be natural in many settings to want to describe the process by which you can do the beta-reductions in reverse, and say that you can go from <span class="math notranslate nohighlight">\( PR(QR)\)</span> back to the more complicated <span class="math notranslate nohighlight">\(SPQR\)</span>.</p>
-<p>Many texts choose to write <span class="math notranslate nohighlight">\(PR(QR)=SPQR\)</span> to mean that one can go from <span class="math notranslate nohighlight">\(PR(QR)\)</span> on the left to <span class="math notranslate nohighlight">\(SPQR\)</span> on the right by doing finitely many <span class="math notranslate nohighlight">\(\beta\)</span>-reductions or reverse <span class="math notranslate nohighlight">\(\beta\)</span>-reductions. That is, <em>they repurpose the identity symbol</em> to mean the symmetric transitive closure of one-step beta-reductions. If one was working with the lambda calculus a whole lot, this would be natural enough to do. However, this can cause confusion when one is just dipping into the system.</p>
-<p>I mention this because it simplifies the statement of the fixed point theorem:</p>
-</section>
-<section id="theorem-fixed-point-theorem-redeux">
-<h3>Theorem (fixed point theorem redeux)<a class="headerlink" href="#theorem-fixed-point-theorem-redeux" title="Link to this heading">#</a></h3>
-<p>For each lambda-term <span class="math notranslate nohighlight">\(M\)</span> there is a lambda-term <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(MN= N\)</span>.</p>
 </section>
 </section>
 </section>
@@ -774,8 +744,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-definable">Lambda definable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-equivalence-of-lambda-definability-and-computable">Theorem (equivalence of lambda definability and computable)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-fixed-point-theorem">Theorem (fixed point theorem)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-symmetric-transitive-closure-of-one-step-beta-reductions">The symmetric transitive closure of one-step beta reductions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-fixed-point-theorem-redeux">Theorem (fixed point theorem redeux)</a></li>
 </ul>
 </li>
 </ul>
