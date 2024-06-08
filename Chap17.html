@@ -408,7 +408,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizing-from-n-1-to-n-geq-1">Generalizing from <span class="math notranslate nohighlight">\(n=1\)</span> to <span class="math notranslate nohighlight">\(n\geq 1\)</span></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notational-convention-from-quantum-mechanics">Notational convention from quantum mechanics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notational-conventions-from-quantum-mechanics">Notational conventions from quantum mechanics</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-n-1">The case <span class="math notranslate nohighlight">\(n=1\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-n-2">The case <span class="math notranslate nohighlight">\(n=2\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-case-n-geq-1">The general case <span class="math notranslate nohighlight">\(n\geq 1\)</span></a></li>
@@ -421,7 +421,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-one-place-operations">Examples of one-place operations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate-maps-a-dirac-to-a-uniform">Hadamard gate maps a Dirac to a uniform</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-place-operations">Two-place operations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truth-table-rendition-of-controlled-not">Truth table rendition of controlled not</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truth-table-rendition-of-alt-controlled-not">Truth table rendition of alt controlled not</a></li>
 </ul>
@@ -432,8 +432,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-computation">Quantum computation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#revisions-of-the-church-turing-thesis">Revisions of the Church-Turing thesis</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#revisions-of-the-church-turing-thesis">Revisions of the Church-Turing Thesis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deutsch-and-the-physical-church-turing-thesis">Deutsch and the physical Church-Turing Thesis</a></li>
 </ul>
 </li>
@@ -451,7 +451,7 @@ document.write(`
                   
   <section id="chapter-17">
 <h1>Chapter 17<a class="headerlink" href="#chapter-17" title="Link to this heading">#</a></h1>
-<p>In this chapter, we do a brief introduction to quantum computation. Given time constraints, we try to build a bridge from more familiar representations of probability to those that get used in quantum computation. And then we spend a lot of time working out some examples of quantum operations by hand, in a way that does not presuppose prior famliarity with linear algebra. In this, we are largely just trying to present a more philosopher-friendly introduction of the kind one finds in <span id="id1">[<a class="reference internal" href="references.html#id16" title="Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach. Cambridge University Press, April 2009.">Arora and Barak, 2009</a>]</span> Chapter 10 and <span id="id2">[<a class="reference internal" href="references.html#id41" title="Michael A Nielsen and Isaac L Chuang. Quantum Computation and Quantum Information. Cambridge University Press, anniversary edition edition, 2011.">Nielsen and Chuang, 2011</a>]</span> Chapter 1. Outside of these presentational matters, nothing here is new above and beyond these sources. We close with a brief discussion of how quantum computation might prompt revisions of the Church-Turing thesis, and essentialy just present a reading of Section 1 of Deutsch’s famous paper (<span id="id3">[<a class="reference internal" href="references.html#id2" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span>).</p>
+<p>In this chapter, we do a brief introduction to quantum computation. Given time constraints, we try to build a bridge from more familiar representations of probability to those that get used in quantum computation. And then we spend a lot of time working out some examples of quantum operations by hand, in a way that does not presuppose prior famliarity with linear algebra. In this, we are largely just trying to present a more philosopher-friendly introduction of the kind one finds in <span id="id1">[<a class="reference internal" href="references.html#id17" title="Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach. Cambridge University Press, April 2009.">Arora and Barak, 2009</a>]</span> Chapter 10 and <span id="id2">[<a class="reference internal" href="references.html#id42" title="Michael A Nielsen and Isaac L Chuang. Quantum Computation and Quantum Information. Cambridge University Press, anniversary edition edition, 2011.">Nielsen and Chuang, 2011</a>]</span> Chapter 1. Outside of these presentational matters, nothing here is new above and beyond these sources. We close with a brief discussion of how quantum computation might prompt revisions of the Church-Turing thesis, and essentialy just give a reading of Section 1 of Deutsch’s famous paper (<span id="id3">[<a class="reference internal" href="references.html#id3" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span>).</p>
 </section>
 <section id="probability">
 <h1>Probability<a class="headerlink" href="#probability" title="Link to this heading">#</a></h1>
@@ -461,7 +461,7 @@ document.write(`
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\{0,1\}^1 = \{0,1\}\)</span>, the two-element space space consisting just of a length-one string whose sole entry is 0, and a length-one string whose sole entry is 1.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\{0,1\}^2 = \{00,01,10,11\}\)</span>, the four element sample space consisting of four length-two binary strings.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\{0,1\}^3 = \{000, 001, 010, 011, 100, 101, 110, 111\}\)</span>, the eight element sample space consisting of eight length-three binary strings.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{0,1\}^3 = \{000, 001, 010, 011, 100, 101\)</span>, <span class="math notranslate nohighlight">\(110, 111\}\)</span>, the eight element sample space consisting of eight length-three binary strings.</p></li>
 </ul>
 <p>An alternative name for <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> is <span class="math notranslate nohighlight">\(2^n\)</span>.</p>
 <p>The elements of <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> can be viewed as the length <span class="math notranslate nohighlight">\(n\)</span> paths through the binary branching tree. Here is the a picture of it up to <span class="math notranslate nohighlight">\(n=3\)</span>.</p>
@@ -484,8 +484,9 @@ document.write(`
 </ul>
 <p>It is not too hard to see that these definitions are equivalent, in the following sense:</p>
 <ul class="simple">
-<li><p>If one starts with <span class="math notranslate nohighlight">\(P\)</span> as in Definition 1, one can define <span class="math notranslate nohighlight">\(p(\omega)=P(\{\omega\})\)</span> which will satisfy the conditions of Definition 2.</p></li>
-<li><p>If one starts with <span class="math notranslate nohighlight">\(p\)</span> as in Definition 2, one can define <span class="math notranslate nohighlight">\(P(A)=\sum_{\omega\in A} p(\omega)\)</span> which satisfies the conditions of Definition 1.</p></li>
+<li><p>If one starts with <span class="math notranslate nohighlight">\(P\)</span> as in Definition 1, one can construct <span class="math notranslate nohighlight">\(p(\omega)=P(\{\omega\})\)</span> which will satisfy the conditions of Definition 2.</p></li>
+<li><p>If one starts with <span class="math notranslate nohighlight">\(p\)</span> as in Definition 2, one can construct <span class="math notranslate nohighlight">\(P(A)=\sum_{\omega\in A} p(\omega)\)</span> which satisfies the conditions of Definition 1.</p></li>
+<li><p>If one does one construction followed by the other, one gets back to where one started from.</p></li>
 </ul>
 </section>
 <section id="examples">
@@ -498,9 +499,10 @@ document.write(`
 </section>
 <section id="three-ways-of-making-probability-and-computation-interact">
 <h1>Three ways of making probability and computation interact<a class="headerlink" href="#three-ways-of-making-probability-and-computation-interact" title="Link to this heading">#</a></h1>
+<p>Here are three basic ways, which are not exhaustive and not exclusive:</p>
 <ol class="arabic simple">
 <li><p>Relax “find program that does such-and-such on <em>all</em> inputs from <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span>” to “find program that does such-and-such on 75% of inputs from <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span>”. This is what we were doing when we talked about machine learning; it is also natural in many other contexts.</p></li>
-<li><p>Consider two Turing machine programs <span class="math notranslate nohighlight">\(M_0\)</span> and <span class="math notranslate nohighlight">\(M_1\)</span>, and then at each step of the computation flip a coin to decide whether you are going to follow <span class="math notranslate nohighlight">\(M_0\)</span> or <span class="math notranslate nohighlight">\(M_1\)</span>. These are so-called <em>randomized algorithms</em>.</p></li>
+<li><p>Consider two Turing machine programs <span class="math notranslate nohighlight">\(M_0\)</span> and <span class="math notranslate nohighlight">\(M_1\)</span>, and then at each step of the computation flip a coin to decide whether you are going to follow <span class="math notranslate nohighlight">\(M_0\)</span> or <span class="math notranslate nohighlight">\(M_1\)</span>. This is one way of thinking about <em>randomized algorithms</em> (<span id="id4">[<a class="reference internal" href="references.html#id2" title="Rajeev Motwani and Prabhakar Raghavan. Randomized Algorithms. Cambridge University Press, 1995.">Motwani and Raghavan, 1995</a>]</span>)</p></li>
 <li><p>Instead of computing on strings <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span>, compute on probability measures <span class="math notranslate nohighlight">\(p:\{0,1\}^n\rightarrow \mathbb{R}\)</span>.</p></li>
 </ol>
 <p>We work with 1 and 3 today, and start out with 3.</p>
@@ -540,8 +542,8 @@ document.write(`
 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;uniform&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;dirac_0&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;dirac_1&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Dirac_0&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Dirac_1&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># Set the x and y axis limits</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">.02</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">])</span>
@@ -557,7 +559,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/10cd543d4883d9ac298a41b88ae6e18d628a99e3b957cc59ee2c0bc87cd5ee21.png" src="_images/10cd543d4883d9ac298a41b88ae6e18d628a99e3b957cc59ee2c0bc87cd5ee21.png" />
+<img alt="_images/6432bb7e44709cef393d91149c3304c960f4c4684b51551037d32a947a73b4b8.png" src="_images/6432bb7e44709cef393d91149c3304c960f4c4684b51551037d32a947a73b4b8.png" />
 </div>
 </div>
 <p>Here’s a different approach:</p>
@@ -565,7 +567,7 @@ document.write(`
 <section id="option-2-the-circle-x-2-y-2-1">
 <h2>Option 2: the circle <span class="math notranslate nohighlight">\(x^2+y^2=1\)</span><a class="headerlink" href="#option-2-the-circle-x-2-y-2-1" title="Link to this heading">#</a></h2>
 <p>We represent probability measures as functions <span class="math notranslate nohighlight">\(\psi: \{0,1\}\rightarrow \mathbb{R}\)</span> satisfying <span class="math notranslate nohighlight">\(\psi(0)^2+\psi(1)^2=1\)</span> by setting <span class="math notranslate nohighlight">\(p(0)=\psi(0)^2\)</span> and <span class="math notranslate nohighlight">\(p(1)=\psi(1)^2\)</span>.</p>
-<p>That is, the way to read the below diagram is that each point <span class="math notranslate nohighlight">\((x,y)\)</span> on the circle <span class="math notranslate nohighlight">\(x^2+y^2\)</span> represents a probability measure <span class="math notranslate nohighlight">\(p:\{0,1\}\rightarrow \mathbb{R}\)</span> satisfying <span class="math notranslate nohighlight">\(p(0)=x^2\)</span> and <span class="math notranslate nohighlight">\(p(1)=y^2\)</span>.</p>
+<p>That is, the way to read the below diagram is that each point <span class="math notranslate nohighlight">\((x,y)\)</span> on the circle <span class="math notranslate nohighlight">\(x^2+y^2=1\)</span> represents a probability measure <span class="math notranslate nohighlight">\(p:\{0,1\}\rightarrow \mathbb{R}\)</span> satisfying <span class="math notranslate nohighlight">\(p(0)=x^2\)</span> and <span class="math notranslate nohighlight">\(p(1)=y^2\)</span>.</p>
 <p>This results in each probability measure being represented in a number of ways. We have in particular:</p>
 <ul class="simple">
 <li><p>The uniform measure is represented by any of the four blue dots.</p></li>
@@ -628,12 +630,12 @@ document.write(`
 <h2>Option 3: the one-dimensional sphere <span class="math notranslate nohighlight">\(x^2+y^2\leq 1\)</span><a class="headerlink" href="#option-3-the-one-dimensional-sphere-x-2-y-2-leq-1" title="Link to this heading">#</a></h2>
 <p>We represent probability measures as functions <span class="math notranslate nohighlight">\(\psi: \{0,1\}\rightarrow \mathbb{C}\)</span> satisfying <span class="math notranslate nohighlight">\(\left|\psi(0)\right|^2+\left|\psi(1)\right|^2=1\)</span> by setting <span class="math notranslate nohighlight">\(p(0)=\left|\psi(0)\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(1)=\left|\psi(1)\right|^2\)</span>.</p>
 <p>Recall that if a complex number <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span>  is given by its coordinates <span class="math notranslate nohighlight">\((x,y)\)</span> in the plane, then its absolute value is given by <span class="math notranslate nohighlight">\(\left|\alpha\right|=\left|(x,y)\right|=\sqrt{x^2+y^2}\)</span>, and hence <span class="math notranslate nohighlight">\(\left|\alpha\right|^2=\left|(x,y)\right|^2=x^2+y^2\)</span>. Note that <span class="math notranslate nohighlight">\(\left|\alpha\right|\leq 1\)</span> iff <span class="math notranslate nohighlight">\(\left|\alpha\right|^2\leq 1\)</span>.</p>
-<p>That is, the way to read the below diagram is that each complex number <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span> with <span class="math notranslate nohighlight">\(\left|\alpha\right|\leq 1\)</span>  represents a probability measure <span class="math notranslate nohighlight">\(p:\{0,1\}\rightarrow \mathbb{R}\)</span> satisfying <span class="math notranslate nohighlight">\(p(0)=\left|\alpha\right|^2\)</span>.</p>
+<p>The way to read the below diagram is that each complex number <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span> with <span class="math notranslate nohighlight">\(\left|\alpha\right|\leq 1\)</span>  represents a probability measure <span class="math notranslate nohighlight">\(p:\{0,1\}\rightarrow \mathbb{R}\)</span> satisfying <span class="math notranslate nohighlight">\(p(0)=\left|\alpha\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(1)=1-\left|\alpha\right|^2\)</span>. Note that only <span class="math notranslate nohighlight">\(\alpha\)</span> satisfying <span class="math notranslate nohighlight">\(\left|\alpha\right|\leq 1\)</span> is being represented in the diagram.</p>
 <p>This results in most probability measures being represented in a continuum number of ways. We have in particular:</p>
 <ul class="simple">
-<li><p>The uniform measure is represented by the points <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span> with <span class="math notranslate nohighlight">\(x^2+y^2=\left|\alpha\right|^2=\frac{1}{2}\)</span> and hence <span class="math notranslate nohighlight">\(\left|\alpha\right|=\frac{1}{\sqrt{2}}\)</span>, which are the points on the blue circle.</p></li>
+<li><p>The uniform measure is represented by the points <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span> with <span class="math notranslate nohighlight">\(x^2+y^2=\left|\alpha\right|^2=\frac{1}{2}\)</span> and hence <span class="math notranslate nohighlight">\(\left|\alpha\right|=\frac{1}{\sqrt{2}}\)</span>, which are the points directly on the blue circle.</p></li>
 <li><p>The Dirac measure that puts all the weight on 1 is represented by the points <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span> with <span class="math notranslate nohighlight">\(x^2+y^2=\left|\alpha\right|^2=0\)</span>, which is just the origin, the green dot.</p></li>
-<li><p>The Dirac measure that puts all the weight on 0 is represented by the points <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span> with <span class="math notranslate nohighlight">\(x^2+y^2=\left|\alpha\right|^2=1\)</span>, which are the points on the red circle.</p></li>
+<li><p>The Dirac measure that puts all the weight on 0 is represented by the points <span class="math notranslate nohighlight">\(\alpha = x+iy\)</span> with <span class="math notranslate nohighlight">\(x^2+y^2=\left|\alpha\right|^2=1\)</span>, which are the points directly on the red circle.</p></li>
 </ul>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -684,61 +686,61 @@ document.write(`
 </section>
 <section id="generalizing-from-n-1-to-n-geq-1">
 <h2>Generalizing from <span class="math notranslate nohighlight">\(n=1\)</span> to <span class="math notranslate nohighlight">\(n\geq 1\)</span><a class="headerlink" href="#generalizing-from-n-1-to-n-geq-1" title="Link to this heading">#</a></h2>
-<p>It is hard to visualize the case of <span class="math notranslate nohighlight">\(n\geq 1\)</span>. But formally, we just represent probability measures on the sample space <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}^n\rightarrow \mathbb{C}\)</span> satisfying</p>
+<p>It is hard to visualize the case of <span class="math notranslate nohighlight">\(n&gt; 1\)</span>. But formally, we just represent probability measures on the sample space <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}^n\rightarrow \mathbb{C}\)</span> satisfying</p>
 <div class="math notranslate nohighlight">
 \[\sum_{\sigma\in \{0,1\}^n} \left|\psi(\sigma)\right|^2 = 1\]</div>
 <p>The corresponding probability measure satisfies <span class="math notranslate nohighlight">\(p(\sigma) = \left|\psi(\sigma)\right|^2\)</span>.</p>
 </section>
 </section>
-<section id="notational-convention-from-quantum-mechanics">
-<h1>Notational convention from quantum mechanics<a class="headerlink" href="#notational-convention-from-quantum-mechanics" title="Link to this heading">#</a></h1>
+<section id="notational-conventions-from-quantum-mechanics">
+<h1>Notational conventions from quantum mechanics<a class="headerlink" href="#notational-conventions-from-quantum-mechanics" title="Link to this heading">#</a></h1>
 <section id="the-case-n-1">
 <h2>The case <span class="math notranslate nohighlight">\(n=1\)</span><a class="headerlink" href="#the-case-n-1" title="Link to this heading">#</a></h2>
-<p>Instead of representing probability measures by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}\rightarrow \mathbb{C}\)</span> satisfying <span class="math notranslate nohighlight">\(\left|\psi(0)\right|^2+\left|\psi(1)\right|^2=1\)</span>, we represent by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}\rightarrow \mathbb{C}^2\)</span> satisfying</p>
+<p>Instead of representing probability measures by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}\rightarrow \mathbb{C}\)</span> satisfying <span class="math notranslate nohighlight">\(\left|\psi(0)\right|^2+\left|\psi(1)\right|^2=1\)</span>, we represent by an element <span class="math notranslate nohighlight">\(\psi\)</span> of <span class="math notranslate nohighlight">\(\mathbb{C}^2\)</span> satisfying</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\psi = \alpha\cdot |0\rangle +\beta\cdot |1\rangle\)</span></p></li>
 <li><p>where <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> are complex numbers satisfying <span class="math notranslate nohighlight">\(\left|\alpha\right|^2+\left|\beta\right|^2=1\)</span></p></li>
 </ul>
-<p>This amounts the same thing because one can choose <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> to be points of <span class="math notranslate nohighlight">\(\mathbb{C}^2\)</span> which are linearly independent over the complex field. There are many choices but the most simple one is to choose <span class="math notranslate nohighlight">\(|0\rangle=(1,0)\)</span> and <span class="math notranslate nohighlight">\(|1\rangle=(0,1)\)</span>.</p>
+<p>This amounts the same thing as our functional representation <span class="math notranslate nohighlight">\(\psi:\{0,1\}\rightarrow \mathbb{C}\)</span> because one can choose <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> to be points of <span class="math notranslate nohighlight">\(\mathbb{C}^2\)</span> which are linearly independent over the complex field. There are many choices but the most simple one is to choose <span class="math notranslate nohighlight">\(|0\rangle=(1,0)\)</span> and <span class="math notranslate nohighlight">\(|1\rangle=(0,1)\)</span>.</p>
 <p>Under this representation, <span class="math notranslate nohighlight">\(\psi\)</span> represents the probability measure <span class="math notranslate nohighlight">\(p:\{0,1\}\rightarrow \mathbb{R}^{\geq 0}\)</span> satisfying <span class="math notranslate nohighlight">\(p(0)=\left|\alpha\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(1)=\left|\beta\right|^2\)</span>.</p>
 </section>
 <section id="the-case-n-2">
 <h2>The case <span class="math notranslate nohighlight">\(n=2\)</span><a class="headerlink" href="#the-case-n-2" title="Link to this heading">#</a></h2>
-<p>Instead of representing probability measures by functions <span class="math notranslate nohighlight">\(\psi:\{00, 01,10,11\}\rightarrow \mathbb{C}\)</span> satisfying <span class="math notranslate nohighlight">\(\left|\psi(00)\right|^2+\left|\psi(01)\right|^2+\left|\psi(10)\right|^2+\left|\psi(11)\right|^2=1\)</span>, we represent by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}\rightarrow \mathbb{C}^4\)</span> satisfying</p>
+<p>Instead of representing probability measures by functions <span class="math notranslate nohighlight">\(\psi:\{00, 01,10,11\}\rightarrow \mathbb{C}\)</span> satisfying <span class="math notranslate nohighlight">\(\left|\psi(00)\right|^2+\left|\psi(01)\right|^2+\left|\psi(10)\right|^2+\left|\psi(11)\right|^2=1\)</span>, we represent by elements <span class="math notranslate nohighlight">\(\psi\)</span> of <span class="math notranslate nohighlight">\(\mathbb{C}^4\)</span> satisfying</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\psi = \alpha\cdot |00\rangle +\beta\cdot |10\rangle+\gamma\cdot |01\rangle+\delta\cdot |11\rangle\)</span></p></li>
 <li><p>where <span class="math notranslate nohighlight">\(\alpha, \beta, \gamma, \delta\)</span> are complex numbers satisfying <span class="math notranslate nohighlight">\(\left|\alpha\right|^2+\left|\beta\right|^2+\left|\gamma\right|^2+\left|\delta\right|^2=1\)</span></p></li>
 </ul>
-<p>This amounts the same thing because one can choose <span class="math notranslate nohighlight">\(|00\rangle, |01\rangle, |10\rangle, |11\rangle\)</span> to be points of <span class="math notranslate nohighlight">\(\mathbb{C}^4\)</span> which are linearly independent over the complex field. E.g. one can choose <span class="math notranslate nohighlight">\(|00\rangle=(1,0,0,0), |01\rangle=(0,1,0,0), |10\rangle=(0,0,1,0), |11\rangle=(0,0,0,1)\)</span>.</p>
-<p>Under this representation, <span class="math notranslate nohighlight">\(\psi\)</span> represents the probability measure <span class="math notranslate nohighlight">\(p:\{00,01,10,11\}\rightarrow \mathbb{R}^{\geq 0}\)</span> satisfying <span class="math notranslate nohighlight">\(p(00)=\left|\alpha\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(01)=\left|\beta\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(10)=\left|\alpha\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(11)=\left|\beta\right|^2\)</span>.</p>
+<p>This amounts the same thing as the functional representation <span class="math notranslate nohighlight">\(\psi:\{00, 01,10,11\}\rightarrow \mathbb{C}\)</span> because one can choose <span class="math notranslate nohighlight">\(|00\rangle, |01\rangle, |10\rangle, |11\rangle\)</span> to be points of <span class="math notranslate nohighlight">\(\mathbb{C}^4\)</span> which are linearly independent over the complex field. E.g. one can choose <span class="math notranslate nohighlight">\(|00\rangle=(1,0,0,0), |01\rangle=(0,1,0,0), |10\rangle=(0,0,1,0), |11\rangle=(0,0,0,1)\)</span>.</p>
+<p>Under this representation, <span class="math notranslate nohighlight">\(\psi\)</span> represents the probability measure <span class="math notranslate nohighlight">\(p:\{00,01,10,11\}\rightarrow \mathbb{R}^{\geq 0}\)</span> satisfying <span class="math notranslate nohighlight">\(p(00)=\left|\alpha\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(01)=\left|\beta\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(10)=\left|\gamma\right|^2\)</span> and <span class="math notranslate nohighlight">\(p(11)=\left|\delta\right|^2\)</span>.</p>
 </section>
 <section id="the-general-case-n-geq-1">
 <h2>The general case <span class="math notranslate nohighlight">\(n\geq 1\)</span><a class="headerlink" href="#the-general-case-n-geq-1" title="Link to this heading">#</a></h2>
-<p>Instead of representing probability measures by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}^n\rightarrow \mathbb{C}\)</span> satisfying <span class="math notranslate nohighlight">\(\sum_{\sigma\in \{0,1\}^n} \left|\psi(\sigma)\right|^2 = 1\)</span>, we represent by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}\rightarrow \mathbb{C}^{2^n}\)</span> satisfying</p>
+<p>Instead of representing probability measures by functions <span class="math notranslate nohighlight">\(\psi:\{0,1\}^n\rightarrow \mathbb{C}\)</span> satisfying <span class="math notranslate nohighlight">\(\sum_{\sigma\in \{0,1\}^n} \left|\psi(\sigma)\right|^2 = 1\)</span>, we represent by elements <span class="math notranslate nohighlight">\(\psi\)</span> of <span class="math notranslate nohighlight">\(\mathbb{C}^{2^n}\)</span> satisfying</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\psi = \sum_{\sigma\in \{0,1\}^n} \alpha_{\sigma}\cdot |\sigma\rangle\)</span></p></li>
 <li><p>where <span class="math notranslate nohighlight">\(\alpha_{\sigma}\)</span> are complex numbers satisfying <span class="math notranslate nohighlight">\(\sum_{\sigma\in \{0,1\}^n} \left|\alpha_{\sigma}\right|^2 = 1\)</span></p></li>
 </ul>
-<p>This amounts the same thing because one can choose <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span> to be points of <span class="math notranslate nohighlight">\(\mathbb{C}^{2^n}\)</span> which are linearly independent over the complex field. There are various choices, but the simpliest is to order <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> lexicographically from left to right and to set <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span> equal to the <span class="math notranslate nohighlight">\(2^n\)</span>-tuple of complex numbers which is zero on all entries except the <span class="math notranslate nohighlight">\(\sigma\)</span>-th, where it is one, and where the order of <span class="math notranslate nohighlight">\(\sigma\)</span>-th is dicated by the lexiographic ordering.</p>
+<p>This amounts the same thing as the functional representation <span class="math notranslate nohighlight">\(\psi:\{0,1\}^n\rightarrow \mathbb{C}\)</span> because one can choose <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span> to be points of <span class="math notranslate nohighlight">\(\mathbb{C}^{2^n}\)</span> which are linearly independent over the complex field. There are various choices, but the simpliest is to order <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> lexicographically from left to right and to set <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span> equal to the <span class="math notranslate nohighlight">\(2^n\)</span>-tuple of complex numbers which is zero on all entries except the <span class="math notranslate nohighlight">\(\sigma\)</span>-th, where it is one, and where the order of <span class="math notranslate nohighlight">\(\sigma\)</span>-th is dicated by the lexiographic ordering.</p>
 <p>Under this representation, <span class="math notranslate nohighlight">\(\psi\)</span> represents the probability measure <span class="math notranslate nohighlight">\(p:\{0,1\}^n\rightarrow \mathbb{R}^{\geq 0}\)</span> satisfying <span class="math notranslate nohighlight">\(p(\sigma)=\left|\alpha_{\sigma}\right|^2\)</span>.</p>
 </section>
 <section id="quantum-mechanics-vocabulary">
 <h2>Quantum mechanics vocabulary<a class="headerlink" href="#quantum-mechanics-vocabulary" title="Link to this heading">#</a></h2>
 <p>We are accustomed in more elementary contexts to thinking about the elements of <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> as recording the possible outcomes of a single physical process, e.g. elements of <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> represent the possible outcomes of flipping a single coin <span class="math notranslate nohighlight">\(n\)</span>-times.</p>
 <p>In the quantum mechanics vocabulary:</p>
-<p>For <span class="math notranslate nohighlight">\(n=1\)</span>, they refer to <span class="math notranslate nohighlight">\(\psi=\alpha\cdot |0\rangle +\beta\cdot |1\rangle\)</span> as above as a <em>superposition of a single qubit (quantum bit)</em>.</p>
+<p>For <span class="math notranslate nohighlight">\(n=1\)</span>, the element <span class="math notranslate nohighlight">\(\psi=\alpha\cdot |0\rangle +\beta\cdot |1\rangle\)</span> as is referred to as a <em>superposition of a single qubit (quantum bit)</em>.</p>
 <ul class="simple">
 <li><p>This single qubit is in state <span class="math notranslate nohighlight">\(0\)</span> with probability <span class="math notranslate nohighlight">\(\left|\alpha\right|^2\)</span></p></li>
 <li><p>This single qubit is in state <span class="math notranslate nohighlight">\(1\)</span> with probability <span class="math notranslate nohighlight">\(\left|\beta\right|^2\)</span>.</p></li>
 </ul>
-<p>For <span class="math notranslate nohighlight">\(n=2\)</span>, they refer to <span class="math notranslate nohighlight">\(\psi = \alpha\cdot |00\rangle +\beta\cdot |10\rangle+\gamma\cdot |01\rangle+\delta\cdot |11\rangle\)</span> as above as a <em>superposition of two qubits</em>.</p>
+<p>For <span class="math notranslate nohighlight">\(n=2\)</span>, the element <span class="math notranslate nohighlight">\(\psi = \alpha\cdot |00\rangle +\beta\cdot |01\rangle+\gamma\cdot |10\rangle+\delta\cdot |11\rangle\)</span> as above is referred to as a <em>superposition of two qubits</em>.</p>
 <ul class="simple">
-<li><p>This pair of qubits is such that the first is in state <span class="math notranslate nohighlight">\(0\)</span> and the second is in state <span class="math notranslate nohighlight">\(0\)</span> with probability  <span class="math notranslate nohighlight">\(\left|\alpha\right|^2\)</span></p></li>
-<li><p>This pair of qubits is such that the first is in state <span class="math notranslate nohighlight">\(0\)</span> and the second is in state <span class="math notranslate nohighlight">\(1\)</span> with probability  <span class="math notranslate nohighlight">\(\left|\beta\right|^2\)</span></p></li>
-<li><p>This pair of qubits is such that the first is in state <span class="math notranslate nohighlight">\(1\)</span> and the second is in state <span class="math notranslate nohighlight">\(0\)</span> with probability  <span class="math notranslate nohighlight">\(\left|\gamma\right|^2\)</span></p></li>
-<li><p>This pair of qubits is such that the first is in state <span class="math notranslate nohighlight">\(1\)</span> and the second is in state <span class="math notranslate nohighlight">\(1\)</span> with probability  <span class="math notranslate nohighlight">\(\left|\delta\right|^2\)</span></p></li>
+<li><p>This pair of qubits is such that “the first is in state <span class="math notranslate nohighlight">\(0\)</span> and the second is in state <span class="math notranslate nohighlight">\(0\)</span>” with probability  <span class="math notranslate nohighlight">\(\left|\alpha\right|^2\)</span></p></li>
+<li><p>This pair of qubits is such that “the first is in state <span class="math notranslate nohighlight">\(0\)</span> and the second is in state <span class="math notranslate nohighlight">\(1\)</span>” with probability  <span class="math notranslate nohighlight">\(\left|\beta\right|^2\)</span></p></li>
+<li><p>This pair of qubits is such that “the first is in state <span class="math notranslate nohighlight">\(1\)</span> and the second is in state <span class="math notranslate nohighlight">\(0\)</span>” with probability  <span class="math notranslate nohighlight">\(\left|\gamma\right|^2\)</span></p></li>
+<li><p>This pair of qubits is such that “the first is in state <span class="math notranslate nohighlight">\(1\)</span> and the second is in state <span class="math notranslate nohighlight">\(1\)</span>” with probability  <span class="math notranslate nohighlight">\(\left|\delta\right|^2\)</span></p></li>
 </ul>
-<p>In general, for <span class="math notranslate nohighlight">\(n\geq 1\)</span>, they refer to <span class="math notranslate nohighlight">\(\psi = \sum_{\sigma\in \{0,1\}^n} \alpha_{\sigma}\cdot |\sigma\rangle\)</span> as a <em>superposition of <span class="math notranslate nohighlight">\(n\)</span>-qubits</em>.</p>
+<p>In general, for <span class="math notranslate nohighlight">\(n\geq 1\)</span>, the element <span class="math notranslate nohighlight">\(\psi = \sum_{\sigma\in \{0,1\}^n} \alpha_{\sigma}\cdot |\sigma\rangle\)</span> as above is referred to as a <em>superposition of <span class="math notranslate nohighlight">\(n\)</span>-qubits</em>.</p>
 <ul class="simple">
 <li><p>This <span class="math notranslate nohighlight">\(n\)</span>-tuple of qubits is in state <span class="math notranslate nohighlight">\(\sigma\)</span> with probability <span class="math notranslate nohighlight">\(\left|\alpha_{\sigma}\right|^2\)</span>.</p></li>
 </ul>
@@ -759,8 +761,8 @@ document.write(`
 <li><p><em>linear</em>: <span class="math notranslate nohighlight">\(F(\psi+\psi^{\prime}) = F(\psi)+F(\psi^{\prime})\)</span> and <span class="math notranslate nohighlight">\(F(\alpha \cdot \psi)=\alpha \cdot F(\psi)\)</span></p></li>
 <li><p><em>preserves norm</em>: <span class="math notranslate nohighlight">\(\|F(\psi)\| = \|\psi\|\)</span></p></li>
 </ul>
-<p>We write these in terms of <span class="math notranslate nohighlight">\(\psi, \psi^{\prime}\)</span> which range over all of <span class="math notranslate nohighlight">\(\mathbb{C}^2\)</span>, even though we are most interested in the case where they are superpositions of a qubit. In the linearlity clause, <span class="math notranslate nohighlight">\(\alpha\)</span> ranges over complex numbers.</p>
-<p>The restriction to linearity is motivated by empirical considerations in quantum mechanics (<span id="id4">[<a class="reference internal" href="references.html#id41" title="Michael A Nielsen and Isaac L Chuang. Quantum Computation and Quantum Information. Cambridge University Press, anniversary edition edition, 2011.">Nielsen and Chuang, 2011</a>]</span> p. 18). We want norm preservation since <strong>our operations should map superpositions of qubits to superpositions of qubits</strong>. One can check:</p>
+<p>We write these in terms of <span class="math notranslate nohighlight">\(\psi, \psi^{\prime}\)</span> which range over all of <span class="math notranslate nohighlight">\(\mathbb{C}^2\)</span>, even though we are most interested in the case where they are superpositions of qubits. In the linearlity clause, <span class="math notranslate nohighlight">\(\alpha\)</span> ranges over complex numbers.</p>
+<p>The restriction to linearity is motivated by empirical considerations in quantum mechanics (<span id="id5">[<a class="reference internal" href="references.html#id42" title="Michael A Nielsen and Isaac L Chuang. Quantum Computation and Quantum Information. Cambridge University Press, anniversary edition edition, 2011.">Nielsen and Chuang, 2011</a>]</span> p. 18). We want norm preservation since <strong>our operations should map superpositions of qubits to superpositions of qubits</strong>. One can check:</p>
 <p><em>Proposition</em> A linear map <span class="math notranslate nohighlight">\(F:\mathbb{C}^2\rightarrow \mathbb{C}^2\)</span> perserves norm iff it sends superpositions of qubits to superpositions of qubits, i.e. if <span class="math notranslate nohighlight">\(\|\psi\|=1\)</span> then <span class="math notranslate nohighlight">\(\|F(\psi)\|=1\)</span>.</p>
 <p><em>Proof</em>: The forward direction is obvious. For the backward direction, we may suppose that <span class="math notranslate nohighlight">\(\|\psi\|\neq 0\)</span>. Then let <span class="math notranslate nohighlight">\(\psi^{\prime}=\frac{1}{\|\psi\|}\cdot \psi\)</span>, so that <span class="math notranslate nohighlight">\(\|\psi^{\prime}\|=1\)</span>. Then by hypothesis <span class="math notranslate nohighlight">\(\|F(\psi^{\prime})\|=1\)</span>. But by linearity, we have <span class="math notranslate nohighlight">\(1=\|F(\psi^{\prime})\| =\frac{1}{\|\psi\|} \cdot \|F(\psi)\|\)</span> and hence  <span class="math notranslate nohighlight">\(\|F(\psi)\| = \|\psi\|\)</span>.</p>
 </section>
@@ -788,22 +790,22 @@ document.write(`
 <li><p><em>preserves norm</em>: <span class="math notranslate nohighlight">\(\|F(\psi)\| = \|\psi\|\)</span></p></li>
 </ul>
 </section>
-<section id="id5">
-<h2>Examples<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
-<p>Here are some examples of one-place quantum operations on <span class="math notranslate nohighlight">\(\psi = \alpha\cdot |00\rangle +\beta\cdot |10\rangle+\gamma\cdot |01\rangle+\delta\cdot |11\rangle\)</span>:</p>
-<p><em>Controlled not</em>: <span class="math notranslate nohighlight">\(CN(\psi) = \alpha\cdot |00\rangle +\beta\cdot |10\rangle+\delta\cdot |01\rangle+\gamma\cdot |11\rangle\)</span>.</p>
-<p><em>Alternative controlled not</em>: <span class="math notranslate nohighlight">\(AltCN(\psi) = \alpha\cdot |00\rangle +\delta\cdot |10\rangle+\gamma\cdot |01\rangle+\beta\cdot |11\rangle\)</span>.</p>
-<p>Since these are given by permutations, it is easy to see that they are linear and norm preserving.</p>
+<section id="id6">
+<h2>Examples<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Here are some examples of two-place quantum operations on <span class="math notranslate nohighlight">\(\psi = \alpha\cdot |00\rangle +\beta\cdot |01\rangle+\gamma\cdot |10\rangle+\delta\cdot |11\rangle\)</span>, where we use the color blue to highlight what has been swapped:</p>
+<p><em>Controlled not</em>: <span class="math notranslate nohighlight">\(CN(\psi) = \alpha\cdot |00\rangle +\beta\cdot |01\rangle+\textcolor{blue}{\delta}\cdot |10\rangle+\textcolor{blue}{\gamma}\cdot |11\rangle\)</span>.</p>
+<p><em>Alternative controlled not</em>: <span class="math notranslate nohighlight">\(AltCN(\psi) = \alpha\cdot |00\rangle +\textcolor{blue}{\delta}\cdot |01\rangle+\gamma\cdot |10\rangle+\textcolor{blue}{\beta}\cdot |11\rangle\)</span>.</p>
+<p>Since these are given by permutations of the coefficients on the basis elements, it is easy to see that they are linear and norm preserving.</p>
 </section>
 <section id="truth-table-rendition-of-controlled-not">
 <h2>Truth table rendition of controlled not<a class="headerlink" href="#truth-table-rendition-of-controlled-not" title="Link to this heading">#</a></h2>
-<p>One can describe controlled not in a truth-table like way as follows. It is the function which sends <span class="math notranslate nohighlight">\(|j,k\rangle\)</span> to <span class="math notranslate nohighlight">\(|j,j\oplus k\rangle\)</span>, where <span class="math notranslate nohighlight">\(j\oplus k\)</span> is exlusive or (or alternatively is addition mod 2):</p>
+<p>One can describe controlled not in a truth-table like way as follows. It is the function which sends <span class="math notranslate nohighlight">\(|j,k\rangle\)</span> to <span class="math notranslate nohighlight">\(|j,k\oplus j\rangle\)</span>, where <span class="math notranslate nohighlight">\(j\oplus k\)</span> is exlusive or (or alternatively is addition mod 2):</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(j\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(k\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(j\oplus k\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(j,j\oplus k\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k\oplus j\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(j,k\oplus j\)</span></p></th>
 </tr>
 </thead>
 <tbody>
@@ -834,8 +836,8 @@ document.write(`
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(p\oplus q\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(p,p\oplus q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\oplus p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p,q\oplus p\)</span></p></th>
 </tr>
 </thead>
 <tbody>
@@ -847,7 +849,7 @@ document.write(`
 <tr class="row-odd"><td><p>F</p></td>
 <td><p>T</p></td>
 <td><p>T</p></td>
-<td><p>TF</p></td>
+<td><p>FT</p></td>
 </tr>
 <tr class="row-even"><td><p>T</p></td>
 <td><p>F</p></td>
@@ -936,21 +938,21 @@ document.write(`
 <p>Here are some simple examples:</p>
 <section id="bell-states">
 <h2>Bell states<a class="headerlink" href="#bell-states" title="Link to this heading">#</a></h2>
-<p>These arise by applying Hadmard to the first component and then doing controlled not:</p>
+<p>These arise by applying Hadmard to the first component and then doing controlled not (whose application is in blue):</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(|00\rangle \mapsto \frac{|00\rangle +|10\rangle}{\sqrt{2}}\mapsto \frac{|00\rangle +|11\rangle}{\sqrt{2}}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(|01\rangle \mapsto \frac{|01\rangle +|11\rangle}{\sqrt{2}}\mapsto \frac{|01\rangle +|10\rangle}{\sqrt{2}}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(|10\rangle \mapsto \frac{|00\rangle -|10\rangle}{\sqrt{2}}\mapsto \frac{|00\rangle -|11\rangle}{\sqrt{2}}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(|11\rangle \mapsto \frac{|01\rangle -|11\rangle}{\sqrt{2}}\mapsto \frac{|01\rangle -|10\rangle}{\sqrt{2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|00\rangle \mapsto \frac{|00\rangle +|\textcolor{blue}{10}\rangle}{\sqrt{2}}\mapsto \frac{|00\rangle +|\textcolor{blue}{11}\rangle}{\sqrt{2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|01\rangle \mapsto \frac{|01\rangle +|\textcolor{blue}{11}\rangle}{\sqrt{2}}\mapsto \frac{|01\rangle +|\textcolor{blue}{10}\rangle}{\sqrt{2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|10\rangle \mapsto \frac{|00\rangle -|\textcolor{blue}{10}\rangle}{\sqrt{2}}\mapsto \frac{|00\rangle -|\textcolor{blue}{11}\rangle}{\sqrt{2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|11\rangle \mapsto \frac{|01\rangle -|\textcolor{blue}{11}\rangle}{\sqrt{2}}\mapsto \frac{|01\rangle -|\textcolor{blue}{10}\rangle}{\sqrt{2}}\)</span></p></li>
 </ul>
 </section>
 <section id="swap-two-qubits">
 <h2>Swap two qubits<a class="headerlink" href="#swap-two-qubits" title="Link to this heading">#</a></h2>
-<p>Suppose <span class="math notranslate nohighlight">\(\psi = \alpha\cdot |00\rangle +\beta\cdot |10\rangle+\gamma\cdot |01\rangle+\delta\cdot |11\rangle\)</span>.</p>
-<p>Define <span class="math notranslate nohighlight">\(SWAP(\psi) = \alpha\cdot |00\rangle +\gamma\cdot |10\rangle+\beta\cdot |01\rangle+\delta\cdot |11\rangle\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\psi = \alpha\cdot |00\rangle +\beta\cdot |01\rangle+\gamma\cdot |10\rangle+\delta\cdot |11\rangle\)</span>.</p>
+<p>Define <span class="math notranslate nohighlight">\(SWAP(\psi) = \alpha\cdot |00\rangle +\textcolor{blue}{\gamma}\cdot |01\rangle+\textcolor{blue}{\beta}\cdot |10\rangle+\delta\cdot |11\rangle\)</span>.</p>
 <p>Defined this way it is easy to see that it is a quantum operation.</p>
-<p>But one can also define it by <span class="math notranslate nohighlight">\(|00\rangle\mapsto |00\rangle\)</span>, <span class="math notranslate nohighlight">\(|01\rangle \mapsto |10\rangle\)</span>, <span class="math notranslate nohighlight">\(|10\rangle \mapsto |01\rangle\)</span>, and <span class="math notranslate nohighlight">\(|11\rangle \mapsto |11\rangle\)</span>. And in general <span class="math notranslate nohighlight">\(|i,j\rangle \mapsto |j,i\rangle\)</span>.</p>
-<p>One can then check that swap is a quantum operation by showing that it is the result of first doing alt controlled not, and then second doing controlled not.</p>
+<p>But one can also define it by <span class="math notranslate nohighlight">\(|00\rangle\mapsto |00\rangle\)</span>, <span class="math notranslate nohighlight">\(|01\rangle \mapsto |10\rangle\)</span>, <span class="math notranslate nohighlight">\(|10\rangle \mapsto |01\rangle\)</span>, and <span class="math notranslate nohighlight">\(|11\rangle \mapsto |11\rangle\)</span>. And in general <span class="math notranslate nohighlight">\(|i,j\rangle \mapsto |j,i\rangle\)</span>, hence the name <em>swap</em>.</p>
+<p>One can then check that swap is a quantum operation by showing that it is the result of doing controlled not, followed by alt controlled not, followed by controlled not.</p>
 </section>
 </section>
 <section id="quantum-computation">
@@ -959,17 +961,17 @@ document.write(`
 <p>At first approximation, the idea is to say that <span class="math notranslate nohighlight">\(f:\{0,1\}^n\rightarrow \{0,1\}\)</span> is computable if there is a quantum operation <span class="math notranslate nohighlight">\(F:\mathbb{C}^n\rightarrow \mathbb{C}^n\)</span> such that for all <span class="math notranslate nohighlight">\(\sigma\)</span> in <span class="math notranslate nohighlight">\(\{0,1\}^n\)</span> with <span class="math notranslate nohighlight">\(F(|\sigma \rangle) = \sum_{\tau\in \{0,1\}^n} \alpha_{\tau}\cdot |\tau\rangle\)</span> one has <span class="math notranslate nohighlight">\(\left|\alpha_{f(\sigma)^n}\right|\geq \frac{2}{3}\)</span>.</p>
 <p>Hence, the idea is to think of the comptuation as follows:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f(\sigma)=0\)</span> iff when one applies the quantum operation <span class="math notranslate nohighlight">\(F\)</span> to <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span>, one gets a representation of a probability measure which thinks that <span class="math notranslate nohighlight">\(0^n\)</span> has probability <span class="math notranslate nohighlight">\(\geq \frac{2}{3}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(\sigma)=1\)</span> iff when one applies the quantum operation <span class="math notranslate nohighlight">\(F\)</span> to <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span>, one gets a representation of a probability measure which thinks that <span class="math notranslate nohighlight">\(1^n\)</span> has probability <span class="math notranslate nohighlight">\(\geq \frac{2}{3}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(\sigma)=0\)</span> iff when one applies the quantum operation <span class="math notranslate nohighlight">\(F\)</span> to <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span>, one gets a representation of a probability measure which thinks that <span class="math notranslate nohighlight">\(0^n\)</span> has probability <span class="math notranslate nohighlight">\(\geq \frac{2}{3}\)</span>, where <span class="math notranslate nohighlight">\(O^n\)</span> is the length <span class="math notranslate nohighlight">\(n\)</span> binary string whose entries are all zero.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(\sigma)=1\)</span> iff when one applies the quantum operation <span class="math notranslate nohighlight">\(F\)</span> to <span class="math notranslate nohighlight">\(|\sigma\rangle\)</span>, one gets a representation of a probability measure which thinks that <span class="math notranslate nohighlight">\(1^n\)</span> has probability <span class="math notranslate nohighlight">\(\geq \frac{2}{3}\)</span>, where <span class="math notranslate nohighlight">\(1^n\)</span> is the length <span class="math notranslate nohighlight">\(n\)</span> binary string whose entries are all one.</p></li>
 </ul>
 <p>(There is nothing specific about <span class="math notranslate nohighlight">\(\frac{2}{3}\)</span> that makes this work out: you could choose any number between <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(1\)</span>).</p>
 <p>Since this only applies to length <span class="math notranslate nohighlight">\(n\)</span> strings, one makes it apply uniformly to all strings by requiring for each <span class="math notranslate nohighlight">\(n\)</span> a quantum operation <span class="math notranslate nohighlight">\(F_n\)</span> which acts appropriately <em>vis-à-vis</em> <span class="math notranslate nohighlight">\(f\)</span> restricted to length <span class="math notranslate nohighlight">\(n\)</span> strings. And since there are uncountably many quantum operations one wants to restrict to some countable class. One natural option is to close the basic examples like the examples up above under composition.</p>
-<p>For more details, see <span id="id6">[<a class="reference internal" href="references.html#id16" title="Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach. Cambridge University Press, April 2009.">Arora and Barak, 2009</a>]</span> p. 213.</p>
+<p>For more details, see <span id="id7">[<a class="reference internal" href="references.html#id17" title="Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach. Cambridge University Press, April 2009.">Arora and Barak, 2009</a>]</span> p. 213.</p>
 </section>
 <section id="revisions-of-the-church-turing-thesis">
-<h1>Revisions of the Church-Turing thesis<a class="headerlink" href="#revisions-of-the-church-turing-thesis" title="Link to this heading">#</a></h1>
-<section id="id7">
-<h2><a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<h1>Revisions of the Church-Turing Thesis<a class="headerlink" href="#revisions-of-the-church-turing-thesis" title="Link to this heading">#</a></h1>
+<section id="id8">
+<h2><a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>If one builds feasibility constraints in the above characterization of quantum computation, one gets complexity classes such as <span class="math notranslate nohighlight">\({\bf BQP}\)</span>, which is inbetween <span class="math notranslate nohighlight">\({\bf P}\)</span> and <span class="math notranslate nohighlight">\({\bf EXPTIME}\)</span> and which may, for all we know, be orthogonal to <span class="math notranslate nohighlight">\({\bf NP}\)</span>.</p>
 <p>In the event that some future separation is achieved, this then might suggest revisions of the Church-Turing thesis. In particular, suppose that it turned out that <span class="math notranslate nohighlight">\({\bf P}\subsetneq {\bf BQP}\)</span>. One might then have two rival versions of feasible computation, <span class="math notranslate nohighlight">\({\bf P}\)</span> and <span class="math notranslate nohighlight">\({\bf BQP}\)</span>, and hence two different version of the feasible Church-Turing thesis.</p>
 <p>Which of these would be right and what reasons would be relevant to this decision? Some part of it no doubt would involve whether it is okay to get things right just most of the time. And another part of it would involve whether the distinctive quantum apparatus was available to you.</p>
@@ -979,15 +981,15 @@ document.write(`
 <h2>Deutsch and the physical Church-Turing Thesis<a class="headerlink" href="#deutsch-and-the-physical-church-turing-thesis" title="Link to this heading">#</a></h2>
 <p>Here is Deutsch’s physical Church-Turing thesis:</p>
 <blockquote>
-<div><p>Every finitely realizable physical system can be perfectly simulated by a universal model computing machine operating by finite means (<span id="id8">[<a class="reference internal" href="references.html#id2" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span> pp. 97, 99).</p>
+<div><p>Every finitely realizable physical system can be perfectly simulated by a universal model computing machine operating by finite means (<span id="id9">[<a class="reference internal" href="references.html#id3" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span> pp. 97, 99).</p>
 </div></blockquote>
-<p>His notion of ‘by finite means’ refers to Turing-Gandy-Sieg’s boundedness and locality conditions (<span id="id9">[<a class="reference internal" href="references.html#id2" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span> p. 100), which on his view are compatible with certain forms of indeterminacy.</p>
+<p>His notion of ‘by finite means’ refers to Turing-Gandy-Sieg’s boundedness and locality conditions (<span id="id10">[<a class="reference internal" href="references.html#id3" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span> p. 100), which on his view are compatible with certain forms of indeterminacy.</p>
 <p>Imagine, as above, that it comes to pass that <span class="math notranslate nohighlight">\({\bf P}\subsetneq {\bf BQP}\)</span>. Further, imagine that this is not just a mathematical possibility, but that the relevant computation is physically realized, in a quantum manner: that is, imagine that the quantum physicists and the computer scientists succeed in using the best parts of their knowledge and science to build a device which implements it in a natural way. Deutsch’s thought is that our acceptance of the physical Church-Turing thesis would require us to revise our concept or model of computation from the feasible Turing model to a feasible quantum model. On this way of thinking about it, the physical Church-Turing thesis comes first, and then we apply it in light of advances in the relevant domains of physics.</p>
 <p>But why accept the physical Church-Turing thesis, as a constraint on our concept of computation? Deutsch’s view is that it has the same status as a law of physics, which is an empirical law even if it is only indirectly testable. It will feature further as part of our best explanations of the relevant physical phenomena. To wit:</p>
 <blockquote>
-<div><p>The reason why we are confident that the machines we call calculators do indeed compute the arithmetic functions they calim to compute is not that we can ‘check’ their answers, for this is ultimately a futile process of comparing one machine with another: <em>Quis custodiet custodios ipos</em>? [<em>Who watches the watchers?</em>] The real reason is that we believe the detailed physical theory that was used in their design. That theory, including its assertion that the abstract functions of arithmetic are realized in Nature, is empirical (<span id="id10">[<a class="reference internal" href="references.html#id2" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span> pp. 101-102).</p>
+<div><p>The reason why we are confident that the machines we call calculators do indeed compute the arithmetic functions they claim to compute is not that we can ‘check’ their answers, for this is ultimately a futile process of comparing one machine with another: <em>Quis custodiet custodios ipos</em>? [<em>Who watches the watchers?</em>] The real reason is that we believe the detailed physical theory that was used in their design. That theory, including its assertion that the abstract functions of arithmetic are realized in Nature, is empirical (<span id="id11">[<a class="reference internal" href="references.html#id3" title="David Deutsch. Quantum theory, the Church–Turing principle and the universal quantum computer. Proceedings of the Royal Society of London. Series A, Mathematical and physical sciences, 400(1818):97–117, 1985.">Deutsch, 1985</a>]</span> pp. 101-102).</p>
 </div></blockquote>
-<p>Hence, on this way of thinking, we are wondering what the best explanation is of the observed phenomena that a constructed physical system (e.g. a calculator) is performing its task correctly. That explanation goes through the physical Church-Turing thesis which says that this can be simulated by a certain kind of formal model, presumably along with some verification proof using the formal model. If this happens enough times across a wide swath of experience, we would then take this to be part of a cumulative evidence for the physical Church-Turing thesis. Of course, the suasiveness of inference to the best explanation is a large topic in philosophy of science, where the key question is usually “why should the lovelist explanation be the likeliest?” (cf. <span id="id11">[<a class="reference internal" href="references.html#id3" title="Peter Lipton. Inference to the Best Explanation. Routledge, London, second edition, 2004.">Lipton, 2004</a>]</span> pp. 59-60). But bracketing that question, one can see then why a physical realization of <span class="math notranslate nohighlight">\({\bf P}\subsetneq {\bf BQP}\)</span> would, by Deutsch’s lights, prompt a revision of the notion of computation: if we did not revise, we would not have an explanation of the physical systems in question. And noting this makes clear the sense in which the physical Church-Turing Thesis is a constraint on our notion of computation: it is a constraint only to the extent that we are using it as part of our explanation of why physical systems are doing what we say that they are doing.</p>
+<p>Hence, on this way of thinking, we are wondering what the best explanation is of the observed phenomena that a constructed physical system (e.g. a calculator) is performing its task correctly. That explanation goes through the physical Church-Turing thesis which says that this can be simulated by a certain kind of formal model, presumably along with some verification proof using the formal model. If this happens enough times across a wide swath of experience, we would then take this to be part of a cumulative evidence for the physical Church-Turing thesis. Of course, the suasiveness of inference to the best explanation is a large topic in philosophy of science, where the key question is usually “why should the lovelist explanation be the likeliest?” (cf. <span id="id12">[<a class="reference internal" href="references.html#id4" title="Peter Lipton. Inference to the Best Explanation. Routledge, London, second edition, 2004.">Lipton, 2004</a>]</span> pp. 59-60). But bracketing that question, one can see then why a physical realization of <span class="math notranslate nohighlight">\({\bf P}\subsetneq {\bf BQP}\)</span> would, by Deutsch’s lights, prompt a revision of the notion of computation: if we did not revise, we would not have an explanation of the physical systems in question. And noting this makes clear the sense in which the physical Church-Turing Thesis is a constraint on our notion of computation: it is a constraint to the extent that we are using it as part of our explanation of why physical systems are doing what we say that they are doing.</p>
 </section>
 </section>
 
@@ -1070,7 +1072,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizing-from-n-1-to-n-geq-1">Generalizing from <span class="math notranslate nohighlight">\(n=1\)</span> to <span class="math notranslate nohighlight">\(n\geq 1\)</span></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notational-convention-from-quantum-mechanics">Notational convention from quantum mechanics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notational-conventions-from-quantum-mechanics">Notational conventions from quantum mechanics</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-n-1">The case <span class="math notranslate nohighlight">\(n=1\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-n-2">The case <span class="math notranslate nohighlight">\(n=2\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-case-n-geq-1">The general case <span class="math notranslate nohighlight">\(n\geq 1\)</span></a></li>
@@ -1083,7 +1085,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-one-place-operations">Examples of one-place operations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate-maps-a-dirac-to-a-uniform">Hadamard gate maps a Dirac to a uniform</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-place-operations">Two-place operations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truth-table-rendition-of-controlled-not">Truth table rendition of controlled not</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truth-table-rendition-of-alt-controlled-not">Truth table rendition of alt controlled not</a></li>
 </ul>
@@ -1094,8 +1096,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-computation">Quantum computation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#revisions-of-the-church-turing-thesis">Revisions of the Church-Turing thesis</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#revisions-of-the-church-turing-thesis">Revisions of the Church-Turing Thesis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deutsch-and-the-physical-church-turing-thesis">Deutsch and the physical Church-Turing Thesis</a></li>
 </ul>
 </li>
